@@ -1,18 +1,19 @@
 /**
- * Country Macro Map Data
- * Generated: 2026-02-25T01:16:33.051Z
- * Sources: World Bank + UN Comtrade
+ * Country Macro Intelligence — dataset
+ * Generated: 2026-06-22T07:13:28.077Z
+ * Sources: World Bank (GDP & trade totals) + UN Comtrade (bilateral & sector trade)
  */
 
 window.countryMacroData = {
   "meta": {
-    "generatedAt": "2026-02-25T01:16:33.046Z",
+    "generatedAt": "2026-06-22T07:13:28.077Z",
     "sources": {
-      "gdp": "World Bank API (NY.GDP.MKTP.CD)",
-      "trade": "UN Comtrade Public Preview (HS TOTAL, exports); totals: World Bank API (NE.EXP.GNFS.CD, NE.IMP.GNFS.CD)",
-      "sectors": "UN Comtrade Public Preview (HS chapters, exports)"
+      "gdp": "World Bank API (NY.GDP.MKTP.CD, current USD)",
+      "tradeTotals": "World Bank API (NE.EXP.GNFS.CD, NE.IMP.GNFS.CD)",
+      "bilateralLinks": "UN Comtrade (HS TOTAL goods exports, annual)",
+      "sectors": "UN Comtrade (HS chapters, goods exports)"
     },
-    "snapshotDate": "2026-02-25",
+    "snapshotDate": "2026-06-22",
     "linkYears": [
       2024,
       2023
@@ -20,7 +21,12 @@ window.countryMacroData = {
     "sectorYears": [
       2024,
       2023
-    ]
+    ],
+    "coverage": {
+      "countries": 102,
+      "bilateralLinks": 3814,
+      "note": "Bilateral links cover economies that report goods trade to UN Comtrade. A few late/non-reporters (e.g. Russia, Taiwan) appear without outbound links."
+    }
   },
   "nodes": [
     {
@@ -1148,6 +1154,38 @@ window.countryMacroData = {
   ],
   "links": [
     {
+      "s": "CN",
+      "t": "US",
+      "tradeUsd": 525648764497,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "US",
+      "tradeUsd": 503418271236,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "US",
+      "tradeUsd": 501220722660,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "US",
+      "tradeUsd": 475203155269,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "CN",
       "tradeUsd": 377803724680,
@@ -1156,9 +1194,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "CA",
+      "tradeUsd": 352760090331,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CA",
+      "tradeUsd": 348413969749,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "MX",
+      "tradeUsd": 334041339409,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "CN",
       "tradeUsd": 329897390109,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "MX",
+      "tradeUsd": 323227903905,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1180,9 +1250,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CA",
+      "t": "US",
+      "tradeUsd": 218448370652,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "US",
+      "tradeUsd": 167780705639,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "DE",
-      "tradeUsd": 167235215761,
+      "tradeUsd": 163737654795,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1228,9 +1314,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "CN",
+      "tradeUsd": 147805519996,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "KR",
       "tradeUsd": 146229383764,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "US",
+      "tradeUsd": 145131057969,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CN",
+      "tradeUsd": 143545716168,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "US",
+      "tradeUsd": 141522567941,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1247,6 +1365,14 @@ window.countryMacroData = {
       "s": "KR",
       "t": "CN",
       "tradeUsd": 132902972287,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "US",
+      "tradeUsd": 128368519881,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1276,10 +1402,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "NL",
-      "tradeUsd": 121179828523,
-      "year": 2023,
+      "s": "CN",
+      "t": "IN",
+      "tradeUsd": 120463271143,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -1293,16 +1419,24 @@ window.countryMacroData = {
     },
     {
       "s": "CN",
-      "t": "RU",
-      "tradeUsd": 115275861485,
-      "year": 2024,
+      "t": "IN",
+      "tradeUsd": 117678762947,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "NL",
-      "tradeUsd": 113843985001,
+      "s": "KR",
+      "t": "US",
+      "tradeUsd": 116290387484,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "RU",
+      "tradeUsd": 115275861485,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1311,6 +1445,14 @@ window.countryMacroData = {
       "s": "CN",
       "t": "RU",
       "tradeUsd": 110935409106,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "FR",
+      "tradeUsd": 110736875330,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1340,6 +1482,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "US",
+      "tradeUsd": 105551276720,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "CN",
       "tradeUsd": 104324811805,
@@ -1359,6 +1509,14 @@ window.countryMacroData = {
       "s": "AU",
       "t": "CN",
       "tradeUsd": 102629123797,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "FR",
+      "tradeUsd": 102618930175,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1389,8 +1547,8 @@ window.countryMacroData = {
     },
     {
       "s": "DE",
-      "t": "PL",
-      "tradeUsd": 98515801223,
+      "t": "NL",
+      "tradeUsd": 98717990470,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1404,10 +1562,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CN",
-      "tradeUsd": 94621854899,
-      "year": 2024,
+      "s": "VN",
+      "t": "US",
+      "tradeUsd": 97071533043,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -1416,14 +1574,6 @@ window.countryMacroData = {
       "t": "CN",
       "tradeUsd": 94411140802,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "IT",
-      "tradeUsd": 92853716303,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -1439,6 +1589,14 @@ window.countryMacroData = {
       "s": "CN",
       "t": "MX",
       "tradeUsd": 90229344099,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "NL",
+      "tradeUsd": 89643260827,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1468,25 +1626,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AT",
-      "tradeUsd": 85015346215,
+      "s": "NL",
+      "t": "BE",
+      "tradeUsd": 84700927171,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "GB",
-      "tradeUsd": 84652730224,
+      "s": "NL",
+      "t": "BE",
+      "tradeUsd": 84182554831,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DE",
-      "t": "IT",
-      "tradeUsd": 83842563594,
+      "t": "GB",
+      "tradeUsd": 83575288827,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1500,9 +1658,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "DE",
-      "tradeUsd": 83188059598,
+      "s": "US",
+      "t": "NL",
+      "tradeUsd": 82186249692,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1518,8 +1676,40 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "DE",
-      "tradeUsd": 80719218894,
+      "tradeUsd": 80799805325,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IT",
+      "tradeUsd": 80441946034,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "GB",
+      "tradeUsd": 79887476638,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "JP",
+      "tradeUsd": 79715080653,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "US",
+      "tradeUsd": 79441705218,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -1540,9 +1730,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AT",
-      "tradeUsd": 78399779001,
+      "s": "IE",
+      "t": "US",
+      "tradeUsd": 78611986810,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1572,6 +1762,46 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "DE",
+      "tradeUsd": 76472551326,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "DE",
+      "tradeUsd": 76342630105,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "JP",
+      "tradeUsd": 76154045176,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "DE",
+      "tradeUsd": 76083352258,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "US",
+      "tradeUsd": 75805285416,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "TH",
       "tradeUsd": 75732738143,
@@ -1580,18 +1810,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CH",
-      "tradeUsd": 75244010322,
-      "year": 2023,
+      "s": "US",
+      "t": "DE",
+      "tradeUsd": 75381806630,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "DE",
-      "tradeUsd": 73908885533,
-      "year": 2024,
+      "s": "US",
+      "t": "GB",
+      "tradeUsd": 74054013691,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -1604,10 +1834,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CH",
-      "tradeUsd": 73464025983,
+      "s": "CA",
+      "t": "US",
+      "tradeUsd": 73626227036,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "US",
+      "tradeUsd": 73142702975,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "US",
+      "tradeUsd": 72634196246,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -1636,6 +1882,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "US",
+      "tradeUsd": 70374186328,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "FR",
+      "tradeUsd": 68733503665,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "FR",
+      "tradeUsd": 66767784164,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "AE",
       "tradeUsd": 65592681317,
@@ -1652,6 +1922,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "KR",
+      "tradeUsd": 65541464288,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "ID",
       "tradeUsd": 65195769414,
@@ -1662,7 +1940,39 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "CN",
-      "tradeUsd": 64934538026,
+      "tradeUsd": 65036643203,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "KR",
+      "tradeUsd": 64835853630,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "DE",
+      "tradeUsd": 63491795196,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "BE",
+      "tradeUsd": 63272791790,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "FR",
+      "tradeUsd": 63198028875,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1678,7 +1988,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "CN",
-      "tradeUsd": 62739602300,
+      "tradeUsd": 62739517134,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1687,6 +1997,14 @@ window.countryMacroData = {
       "s": "AT",
       "t": "DE",
       "tradeUsd": 61210277248,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "US",
+      "tradeUsd": 61040830052,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1708,9 +2026,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "ES",
-      "tradeUsd": 58905787973,
+      "s": "IE",
+      "t": "US",
+      "tradeUsd": 58828192395,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1724,17 +2042,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CZ",
-      "tradeUsd": 56886485670,
+      "s": "NL",
+      "t": "FR",
+      "tradeUsd": 57721841843,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "ES",
-      "tradeUsd": 56319766670,
+      "s": "BE",
+      "t": "DE",
+      "tradeUsd": 55714115600,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1756,6 +2074,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "FR",
+      "tradeUsd": 54813169633,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "VN",
       "tradeUsd": 53473586565,
@@ -1768,6 +2094,14 @@ window.countryMacroData = {
       "t": "CZ",
       "tradeUsd": 53128761619,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "NL",
+      "tradeUsd": 52603993880,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -1796,17 +2130,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "DE",
-      "tradeUsd": 51306363361,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "DE",
-      "tradeUsd": 51147895608,
+      "s": "BE",
+      "t": "FR",
+      "tradeUsd": 51313375845,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1836,6 +2162,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "BR",
+      "tradeUsd": 49666969471,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "SG",
       "tradeUsd": 48092322740,
@@ -1844,26 +2178,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "ES",
+      "tradeUsd": 48012581072,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "NL",
+      "tradeUsd": 46856202378,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "FR",
+      "tradeUsd": 46822512898,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "KR",
       "tradeUsd": 46802111277,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "GB",
-      "tradeUsd": 46564022681,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "CN",
-      "tradeUsd": 46475012092,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -1892,6 +2234,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "SG",
+      "tradeUsd": 46017200514,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "DE",
+      "tradeUsd": 45626898870,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "GB",
+      "tradeUsd": 45414510861,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "FR",
+      "tradeUsd": 45255934885,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CH",
       "t": "CN",
       "tradeUsd": 45163448766,
@@ -1903,6 +2277,30 @@ window.countryMacroData = {
       "s": "CN",
       "t": "CA",
       "tradeUsd": 45074269772,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "FR",
+      "tradeUsd": 45007570090,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "US",
+      "tradeUsd": 44922912847,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "BR",
+      "tradeUsd": 44807817218,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1924,9 +2322,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "FR",
+      "tradeUsd": 44391819243,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "US",
+      "tradeUsd": 44029884561,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "GB",
       "tradeUsd": 43893527703,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "US",
+      "tradeUsd": 43434916631,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1940,17 +2362,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CN",
-      "tradeUsd": 42338190212,
-      "year": 2024,
+      "s": "US",
+      "t": "SG",
+      "tradeUsd": 42433068231,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ES",
       "t": "DE",
-      "tradeUsd": 42267935776,
+      "tradeUsd": 42229849587,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1964,9 +2386,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "FR",
+      "tradeUsd": 42112745547,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IN",
+      "tradeUsd": 41752370779,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HU",
       "t": "DE",
-      "tradeUsd": 41666842062,
+      "tradeUsd": 41598113626,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -1975,6 +2413,14 @@ window.countryMacroData = {
       "s": "MY",
       "t": "CN",
       "tradeUsd": 41008240379,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "US",
+      "tradeUsd": 40916672535,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -1990,8 +2436,24 @@ window.countryMacroData = {
     {
       "s": "ES",
       "t": "DE",
-      "tradeUsd": 40500650594,
+      "tradeUsd": 40455745579,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HK",
+      "t": "US",
+      "tradeUsd": 40128389773,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IN",
+      "tradeUsd": 40116453423,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2020,14 +2482,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "DE",
-      "tradeUsd": 39590607373,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "CN",
       "t": "TR",
       "tradeUsd": 38872861571,
@@ -2036,10 +2490,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "DE",
-      "tradeUsd": 38166706336,
-      "year": 2024,
+      "s": "US",
+      "t": "BE",
+      "tradeUsd": 38827845472,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2060,9 +2514,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "CN",
-      "tradeUsd": 37820913948,
+      "s": "NL",
+      "t": "US",
+      "tradeUsd": 38003705294,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "US",
+      "tradeUsd": 37451904934,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "ES",
+      "tradeUsd": 37338969377,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2070,8 +2540,8 @@ window.countryMacroData = {
     {
       "s": "CL",
       "t": "CN",
-      "tradeUsd": 37449226454,
-      "year": 2023,
+      "tradeUsd": 37327494007,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2084,10 +2554,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "NL",
-      "tradeUsd": 36870866575,
-      "year": 2023,
+      "s": "IN",
+      "t": "AE",
+      "tradeUsd": 37103479102,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2096,14 +2566,6 @@ window.countryMacroData = {
       "t": "JP",
       "tradeUsd": 36190353028,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "ES",
-      "tradeUsd": 36148631633,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2118,15 +2580,23 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "ES",
-      "tradeUsd": 35641097196,
+      "tradeUsd": 35803963681,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CH",
-      "tradeUsd": 35631872143,
+      "s": "CL",
+      "t": "CN",
+      "tradeUsd": 35589329061,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "US",
+      "tradeUsd": 35455220163,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2148,10 +2618,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "CN",
-      "tradeUsd": 35230853460,
-      "year": 2024,
+      "s": "NL",
+      "t": "US",
+      "tradeUsd": 35225350903,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2164,73 +2634,73 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "IT",
-      "tradeUsd": 34857585604,
+      "s": "HK",
+      "t": "US",
+      "tradeUsd": 34843437280,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CN",
-      "tradeUsd": 34286412814,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CN",
-      "tradeUsd": 34173311558,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "TR",
-      "tradeUsd": 33767609029,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "IT",
-      "tradeUsd": 33737882542,
+      "s": "US",
+      "t": "AU",
+      "tradeUsd": 34582880814,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "HU",
-      "tradeUsd": 33668984853,
+      "s": "US",
+      "t": "BE",
+      "tradeUsd": 34177403180,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PT",
-      "tradeUsd": 33573982173,
+      "s": "US",
+      "t": "AU",
+      "tradeUsd": 33672030175,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "NL",
-      "tradeUsd": 33290239804,
-      "year": 2024,
+      "s": "NO",
+      "t": "DE",
+      "tradeUsd": 33274826468,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PT",
-      "tradeUsd": 33229744902,
+      "s": "NO",
+      "t": "GB",
+      "tradeUsd": 33253367322,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AE",
+      "tradeUsd": 33021240273,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CH",
+      "tradeUsd": 32988836568,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "BE",
+      "tradeUsd": 32973808430,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2238,8 +2708,8 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "CH",
-      "tradeUsd": 33040891942,
-      "year": 2023,
+      "tradeUsd": 32677115413,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2252,6 +2722,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "BE",
+      "tradeUsd": 32551817533,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IT",
+      "tradeUsd": 32400555611,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DE",
       "t": "SE",
       "tradeUsd": 32362977506,
@@ -2260,9 +2746,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "CH",
-      "tradeUsd": 31635394003,
+      "s": "NO",
+      "t": "GB",
+      "tradeUsd": 31658732067,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2276,17 +2762,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "IT",
-      "tradeUsd": 30115678284,
+      "s": "BE",
+      "t": "US",
+      "tradeUsd": 30538315644,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "TR",
-      "tradeUsd": 29925971427,
+      "s": "ES",
+      "t": "PT",
+      "tradeUsd": 29862778807,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "PT",
+      "tradeUsd": 29681740865,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "GB",
+      "tradeUsd": 29635932090,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2300,6 +2802,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CH",
+      "t": "SI",
+      "tradeUsd": 29567428854,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AE",
       "t": "SA",
       "tradeUsd": 29464758708,
@@ -2308,10 +2818,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "SE",
-      "tradeUsd": 29288214324,
-      "year": 2024,
+      "s": "NL",
+      "t": "IT",
+      "tradeUsd": 29416373231,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2319,6 +2829,14 @@ window.countryMacroData = {
       "s": "JP",
       "t": "TH",
       "tradeUsd": 29288203351,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "FR",
+      "tradeUsd": 29168552289,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2332,26 +2850,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "IT",
+      "tradeUsd": 28916814190,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "GB",
       "t": "CH",
-      "tradeUsd": 28963918470,
+      "tradeUsd": 28829049728,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "GB",
-      "tradeUsd": 28691161275,
+      "s": "BE",
+      "t": "US",
+      "tradeUsd": 28706577212,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "GB",
-      "t": "IE",
-      "tradeUsd": 28637577676,
-      "year": 2023,
+      "t": "FR",
+      "tradeUsd": 28582449989,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2366,16 +2892,8 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "GB",
-      "tradeUsd": 28208955327,
+      "tradeUsd": 28170667121,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "IT",
-      "tradeUsd": 28029044749,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2388,10 +2906,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "IT",
-      "tradeUsd": 27017648469,
+      "s": "US",
+      "t": "CH",
+      "tradeUsd": 27872814191,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "HK",
+      "tradeUsd": 27869863276,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "HK",
+      "tradeUsd": 27744741789,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "MY",
+      "tradeUsd": 27700176334,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "HU",
+      "tradeUsd": 27093314956,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "AE",
+      "tradeUsd": 26969000572,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "US",
+      "tradeUsd": 26593055006,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2399,6 +2965,14 @@ window.countryMacroData = {
       "s": "JP",
       "t": "TH",
       "tradeUsd": 26571832587,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "DE",
+      "tradeUsd": 25889444000,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2412,6 +2986,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AE",
+      "t": "IN",
+      "tradeUsd": 25019313073,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "ES",
+      "tradeUsd": 25000478724,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CH",
+      "tradeUsd": 24964718949,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "NL",
       "tradeUsd": 24887000728,
@@ -2420,9 +3018,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "AE",
+      "tradeUsd": 24857035171,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PE",
       "t": "CN",
       "tradeUsd": 24839120163,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "DE",
+      "tradeUsd": 24730967028,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2436,22 +3050,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "JP",
-      "tradeUsd": 24594124229,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "GB",
-      "tradeUsd": 24403543817,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "GB",
       "tradeUsd": 24306654811,
@@ -2460,10 +3058,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "GB",
-      "tradeUsd": 24244334570,
-      "year": 2023,
+      "s": "IN",
+      "t": "NL",
+      "tradeUsd": 24219665340,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2484,9 +3082,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "RO",
-      "tradeUsd": 24053520788,
+      "s": "US",
+      "t": "ES",
+      "tradeUsd": 23910016058,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "GB",
+      "tradeUsd": 23749959039,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2500,25 +3106,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "DK",
-      "tradeUsd": 23590209700,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "ES",
-      "tradeUsd": 23449351151,
+      "s": "VN",
+      "t": "KR",
+      "tradeUsd": 23447750678,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "VN",
-      "t": "KR",
-      "tradeUsd": 23447750678,
+      "s": "PL",
+      "t": "FR",
+      "tradeUsd": 23426166448,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2540,18 +3138,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "JP",
-      "tradeUsd": 23300330857,
-      "year": 2024,
+      "s": "ID",
+      "t": "US",
+      "tradeUsd": 23309897736,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DE",
       "t": "RO",
-      "tradeUsd": 23202126490,
-      "year": 2024,
+      "tradeUsd": 23280406127,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2572,9 +3170,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IE",
-      "tradeUsd": 23134798966,
+      "s": "PL",
+      "t": "FR",
+      "tradeUsd": 23130626768,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "NL",
+      "tradeUsd": 23108491097,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "GB",
+      "tradeUsd": 23104438175,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2596,10 +3210,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "JP",
-      "tradeUsd": 22874200739,
-      "year": 2024,
+      "s": "NL",
+      "t": "ES",
+      "tradeUsd": 22762446460,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2612,42 +3226,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CN",
-      "tradeUsd": 22612235335,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "GB",
       "tradeUsd": 22583569421,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "GB",
-      "tradeUsd": 22509550506,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "KR",
-      "tradeUsd": 22357918997,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "JP",
-      "tradeUsd": 22349338110,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2676,6 +3258,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CA",
+      "t": "CN",
+      "tradeUsd": 21891763330,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "ZA",
       "tradeUsd": 21812478117,
@@ -2692,17 +3282,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "ES",
-      "tradeUsd": 21543062321,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "ES",
-      "tradeUsd": 21529416286,
+      "s": "HK",
+      "t": "IN",
+      "tradeUsd": 21694005672,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2710,8 +3292,16 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "PL",
-      "tradeUsd": 21405579738,
+      "tradeUsd": 21374698668,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "PL",
+      "tradeUsd": 21274461943,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2719,14 +3309,6 @@ window.countryMacroData = {
       "s": "SG",
       "t": "KR",
       "tradeUsd": 21270810760,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "CN",
-      "tradeUsd": 21107725618,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2748,10 +3330,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "DE",
-      "tradeUsd": 20973001598,
-      "year": 2023,
+      "s": "CA",
+      "t": "GB",
+      "tradeUsd": 20978773388,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2764,25 +3346,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "JP",
-      "tradeUsd": 20786151065,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "MX",
-      "tradeUsd": 20743576212,
+      "s": "IT",
+      "t": "BE",
+      "tradeUsd": 20869402205,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
+      "t": "NL",
+      "tradeUsd": 20816256951,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "JP",
+      "tradeUsd": 20787683641,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "BE",
+      "tradeUsd": 20776716765,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
       "t": "CN",
-      "tradeUsd": 20729621691,
+      "tradeUsd": 20728303835,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2790,7 +3388,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "JP",
-      "tradeUsd": 20721078985,
+      "tradeUsd": 20715076707,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -2812,42 +3410,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CH",
+      "t": "FR",
+      "tradeUsd": 20488201166,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "IN",
+      "tradeUsd": 20380929676,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DE",
       "t": "KR",
-      "tradeUsd": 20630415480,
+      "tradeUsd": 20359765923,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "PL",
-      "tradeUsd": 20628081651,
+      "s": "ID",
+      "t": "IN",
+      "tradeUsd": 20297081443,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "DE",
-      "tradeUsd": 20618519653,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PL",
-      "tradeUsd": 20596248391,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "DE",
-      "tradeUsd": 20430836597,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2860,9 +3450,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "DE",
-      "tradeUsd": 20181365557,
+      "s": "NL",
+      "t": "PL",
+      "tradeUsd": 20183816459,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -2876,10 +3466,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "NL",
-      "tradeUsd": 20152650624,
-      "year": 2024,
+      "s": "CH",
+      "t": "FR",
+      "tradeUsd": 20106535671,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2894,16 +3484,16 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "NL",
-      "tradeUsd": 20012227412,
+      "tradeUsd": 20001191306,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "GB",
-      "tradeUsd": 19955984591,
-      "year": 2024,
+      "s": "IE",
+      "t": "BE",
+      "tradeUsd": 19965102929,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -2956,18 +3546,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MY",
-      "t": "HK",
-      "tradeUsd": 19411764754,
-      "year": 2024,
+      "s": "US",
+      "t": "MY",
+      "tradeUsd": 19439249564,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "CN",
-      "tradeUsd": 19402904225,
-      "year": 2023,
+      "s": "MY",
+      "t": "HK",
+      "tradeUsd": 19411764754,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -2988,9 +3578,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "PL",
-      "tradeUsd": 19308153550,
+      "s": "IT",
+      "t": "TR",
+      "tradeUsd": 19292153832,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3004,10 +3594,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "CN",
+      "tradeUsd": 19173147316,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HK",
+      "t": "IN",
+      "tradeUsd": 19136959182,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SG",
       "t": "TH",
       "tradeUsd": 19097136793,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CO",
+      "tradeUsd": 19037609854,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3068,6 +3682,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "CL",
+      "tradeUsd": 18723684801,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AE",
       "t": "TR",
       "tradeUsd": 18723105855,
@@ -3076,17 +3698,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "TR",
-      "tradeUsd": 18677134745,
+      "s": "KZ",
+      "t": "IT",
+      "tradeUsd": 18662972957,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "KZ",
-      "t": "IT",
-      "tradeUsd": 18662972957,
+      "s": "KR",
+      "t": "IN",
+      "tradeUsd": 18661493798,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3108,10 +3730,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "MX",
-      "tradeUsd": 18483939281,
+      "s": "IE",
+      "t": "BE",
+      "tradeUsd": 18434405347,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "CN",
+      "tradeUsd": 18427549207,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -3127,6 +3757,22 @@ window.countryMacroData = {
       "s": "MA",
       "t": "ES",
       "tradeUsd": 18209308135,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IN",
+      "tradeUsd": 18169667812,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CL",
+      "tradeUsd": 18167563889,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3150,8 +3796,32 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "DE",
-      "tradeUsd": 17965930048,
+      "tradeUsd": 18022041927,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "SK",
+      "tradeUsd": 17978174459,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IT",
+      "tradeUsd": 17930462028,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "IN",
+      "tradeUsd": 17905049257,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -3180,9 +3850,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "TH",
+      "tradeUsd": 17719046382,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DK",
       "t": "DE",
       "tradeUsd": 17608217282,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "NL",
+      "tradeUsd": 17598733943,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RO",
+      "t": "DE",
+      "tradeUsd": 17595690402,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CO",
+      "tradeUsd": 17552368192,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -3212,6 +3914,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PT",
+      "t": "ES",
+      "tradeUsd": 17501825723,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "US",
+      "tradeUsd": 17501510938,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "SI",
+      "tradeUsd": 17449916166,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IN",
+      "tradeUsd": 17438981814,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "DE",
       "tradeUsd": 17369405214,
@@ -3228,6 +3962,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IL",
+      "t": "US",
+      "tradeUsd": 17332451000,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "PK",
       "tradeUsd": 17298320975,
@@ -3239,6 +3981,14 @@ window.countryMacroData = {
       "s": "PL",
       "t": "IT",
       "tradeUsd": 17292957923,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "PL",
+      "tradeUsd": 17282049604,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3261,6 +4011,14 @@ window.countryMacroData = {
     },
     {
       "s": "JP",
+      "t": "IN",
+      "tradeUsd": 17208192383,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
       "t": "VN",
       "tradeUsd": 17204795282,
       "year": 2023,
@@ -3268,9 +4026,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IL",
+      "t": "US",
+      "tradeUsd": 17126854000,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "VN",
       "tradeUsd": 17079741189,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IE",
+      "tradeUsd": 16942392091,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "SK",
+      "tradeUsd": 16923205015,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3308,10 +4090,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "TR",
-      "tradeUsd": 16301077903,
-      "year": 2023,
+      "s": "IT",
+      "t": "CN",
+      "tradeUsd": 16598216573,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IE",
+      "tradeUsd": 16533301213,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "IN",
+      "tradeUsd": 16478727809,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IT",
+      "tradeUsd": 16477257237,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3324,17 +4130,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "HK",
-      "tradeUsd": 16152182456,
+      "s": "IN",
+      "t": "CN",
+      "tradeUsd": 16245421867,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
+      "s": "AO",
       "t": "CN",
-      "tradeUsd": 16069078142,
+      "tradeUsd": 16235639041,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "IN",
+      "tradeUsd": 16177355222,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "NO",
+      "tradeUsd": 16010809074,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3356,10 +4178,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "SE",
-      "tradeUsd": 15892770555,
+      "s": "JP",
+      "t": "IN",
+      "tradeUsd": 15909855203,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "FR",
+      "tradeUsd": 15837620636,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "US",
+      "tradeUsd": 15677802398,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "TH",
+      "tradeUsd": 15653217465,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "SG",
+      "tradeUsd": 15616718209,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3372,6 +4226,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SE",
+      "t": "NO",
+      "tradeUsd": 15573923547,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "US",
+      "tradeUsd": 15570434615,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "AE",
       "tradeUsd": 15556029772,
@@ -3380,34 +4250,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "TR",
-      "tradeUsd": 15426480624,
+      "s": "NL",
+      "t": "SE",
+      "tradeUsd": 15495561640,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "GB",
-      "tradeUsd": 15288583548,
-      "year": 2024,
+      "s": "IT",
+      "t": "TR",
+      "tradeUsd": 15378840995,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
       "t": "AT",
-      "tradeUsd": 15244225723,
+      "tradeUsd": 15349894980,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "CH",
-      "t": "HK",
-      "tradeUsd": 15213139374,
-      "year": 2023,
+      "t": "GB",
+      "tradeUsd": 15344793856,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "KH",
+      "tradeUsd": 15325877130,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "TR",
+      "tradeUsd": 15292979687,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "IN",
+      "tradeUsd": 15131155552,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3428,10 +4322,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "MX",
+      "tradeUsd": 14941282217,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "EG",
       "tradeUsd": 14934546799,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CN",
+      "tradeUsd": 14899427450,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3460,6 +4370,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "IL",
+      "tradeUsd": 14790380668,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "CO",
       "tradeUsd": 14784393208,
@@ -3476,9 +4394,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "GB",
-      "tradeUsd": 14712665693,
+      "s": "AU",
+      "t": "US",
+      "tradeUsd": 14732951468,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "TR",
+      "tradeUsd": 14693841812,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -3488,6 +4414,30 @@ window.countryMacroData = {
       "t": "AE",
       "tradeUsd": 14520817594,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "NL",
+      "tradeUsd": 14462195603,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "US",
+      "tradeUsd": 14448210874,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "IN",
+      "tradeUsd": 14436042973,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -3548,26 +4498,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "BR",
-      "tradeUsd": 14076463087,
+      "s": "SK",
+      "t": "CZ",
+      "tradeUsd": 14124227844,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "BR",
-      "tradeUsd": 13998341930,
+      "s": "US",
+      "t": "IL",
+      "tradeUsd": 14032404266,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "CZ",
+      "tradeUsd": 14014011294,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CA",
-      "tradeUsd": 13988731286,
-      "year": 2023,
+      "s": "IN",
+      "t": "GB",
+      "tradeUsd": 13962058873,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3596,9 +4554,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "DK",
-      "tradeUsd": 13829566918,
+      "s": "US",
+      "t": "SA",
+      "tradeUsd": 13872813911,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -3628,14 +4586,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "CA",
-      "tradeUsd": 13605486769,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "MX",
       "tradeUsd": 13596301337,
@@ -3644,9 +4594,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "FI",
-      "tradeUsd": 13575226120,
+      "s": "IT",
+      "t": "AT",
+      "tradeUsd": 13573471283,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "US",
+      "tradeUsd": 13544960705,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -3660,9 +4618,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "DK",
-      "tradeUsd": 13243381059,
+      "s": "NO",
+      "t": "SE",
+      "tradeUsd": 13202591878,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "SA",
+      "tradeUsd": 13176652913,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3684,9 +4650,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "AT",
-      "tradeUsd": 13140759415,
+      "s": "ES",
+      "t": "BE",
+      "tradeUsd": 13134037563,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "VN",
+      "tradeUsd": 13098155121,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3700,17 +4674,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "FI",
-      "tradeUsd": 13054191185,
+      "s": "US",
+      "t": "DO",
+      "tradeUsd": 13081646176,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "IQ",
-      "tradeUsd": 13001359310,
+      "s": "US",
+      "t": "DO",
+      "tradeUsd": 13062566548,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "FI",
+      "tradeUsd": 13054191185,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3724,42 +4706,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "NL",
-      "tradeUsd": 12949822245,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "TR",
       "t": "IT",
-      "tradeUsd": 12947403048,
+      "tradeUsd": 12945151495,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "TH",
-      "tradeUsd": 12888705828,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "TH",
-      "tradeUsd": 12873639855,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "AU",
-      "tradeUsd": 12856348024,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -3772,18 +4722,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "MA",
-      "tradeUsd": 12819541660,
+      "s": "DE",
+      "t": "FI",
+      "tradeUsd": 12813492662,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "FI",
-      "tradeUsd": 12813492662,
+      "s": "ID",
+      "t": "MY",
+      "tradeUsd": 12804353913,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "PA",
+      "tradeUsd": 12767213515,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3796,9 +4754,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "IQ",
-      "tradeUsd": 12759358310,
+      "s": "CN",
+      "t": "KH",
+      "tradeUsd": 12753001460,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -3807,14 +4765,6 @@ window.countryMacroData = {
       "s": "JP",
       "t": "AE",
       "tradeUsd": 12725639363,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "NL",
-      "tradeUsd": 12647937669,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -3830,72 +4780,56 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "SG",
-      "tradeUsd": 12606784043,
+      "tradeUsd": 12607603597,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PT",
-      "tradeUsd": 12599004977,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "MY",
-      "tradeUsd": 12548774080,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CN",
-      "tradeUsd": 12482432180,
+      "s": "AU",
+      "t": "US",
+      "tradeUsd": 12593054655,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "US",
+      "tradeUsd": 12587332418,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ES",
-      "t": "MA",
-      "tradeUsd": 12469835005,
+      "t": "BE",
+      "tradeUsd": 12575269731,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "GB",
-      "tradeUsd": 12463115637,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "MY",
-      "tradeUsd": 12459865136,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CN",
-      "tradeUsd": 12405010256,
+      "tradeUsd": 12548138588,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "IT",
-      "tradeUsd": 12372778520,
+      "s": "IN",
+      "t": "GB",
+      "tradeUsd": 12479605338,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "IT",
+      "tradeUsd": 12435692363,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3904,22 +4838,6 @@ window.countryMacroData = {
       "t": "CO",
       "tradeUsd": 12371570749,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "MY",
-      "tradeUsd": 12326419324,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "AU",
-      "tradeUsd": 12320277039,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3948,26 +4866,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "AE",
-      "tradeUsd": 12262799457,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "MY",
       "t": "KR",
       "tradeUsd": 12251988522,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "HK",
-      "tradeUsd": 12218303861,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -3980,17 +4882,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "AU",
-      "tradeUsd": 12214614480,
-      "year": 2023,
+      "s": "ID",
+      "t": "SG",
+      "tradeUsd": 12204376812,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "SG",
-      "tradeUsd": 12205017684,
+      "s": "PH",
+      "t": "US",
+      "tradeUsd": 12198440327,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "PT",
+      "tradeUsd": 12170855207,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4004,6 +4914,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CZ",
+      "t": "FR",
+      "tradeUsd": 12113952661,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "PE",
       "tradeUsd": 12110982799,
@@ -4012,10 +4930,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IT",
-      "tradeUsd": 12071983252,
+      "s": "IN",
+      "t": "SA",
+      "tradeUsd": 12096541938,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "PE",
+      "tradeUsd": 12039068958,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "SG",
+      "tradeUsd": 12035719279,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "HK",
+      "tradeUsd": 12026194310,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4028,17 +4970,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "MY",
-      "tradeUsd": 11965144908,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "ID",
-      "tradeUsd": 11888026303,
+      "s": "US",
+      "t": "PL",
+      "tradeUsd": 11943002539,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4052,18 +4986,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AU",
-      "tradeUsd": 11851225050,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "HK",
-      "tradeUsd": 11841508069,
-      "year": 2024,
+      "s": "PL",
+      "t": "US",
+      "tradeUsd": 11839090711,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4100,10 +5026,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "VN",
-      "tradeUsd": 11760220381,
-      "year": 2024,
+      "s": "QA",
+      "t": "IN",
+      "tradeUsd": 11757664263,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4111,22 +5037,6 @@ window.countryMacroData = {
       "s": "CA",
       "t": "JP",
       "tradeUsd": 11736988182,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "ES",
-      "tradeUsd": 11720180125,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "ES",
-      "tradeUsd": 11710020724,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4140,10 +5050,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NO",
+      "t": "SE",
+      "tradeUsd": 11607395004,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "US",
+      "tradeUsd": 11564939802,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "NL",
       "tradeUsd": 11508634552,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "AR",
+      "tradeUsd": 11441926314,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4164,9 +5098,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "FI",
-      "tradeUsd": 11392773238,
+      "s": "CN",
+      "t": "MM",
+      "tradeUsd": 11401007018,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "IN",
+      "tradeUsd": 11391187905,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "PA",
+      "tradeUsd": 11319905306,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "BD",
+      "tradeUsd": 11317821378,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4180,18 +5138,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "GB",
-      "tradeUsd": 11282908107,
+      "s": "GB",
+      "t": "DE",
+      "tradeUsd": 11275057292,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AE",
-      "tradeUsd": 11260186365,
+      "s": "BE",
+      "t": "ES",
+      "tradeUsd": 11253732767,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "BD",
+      "tradeUsd": 11252649454,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4204,9 +5170,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "VN",
-      "tradeUsd": 11217485531,
+      "s": "US",
+      "t": "PE",
+      "tradeUsd": 11223793499,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "BE",
+      "tradeUsd": 11213565253,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "PA",
+      "tradeUsd": 11203749267,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4220,14 +5202,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MY",
-      "t": "ID",
-      "tradeUsd": 11162555980,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "JP",
       "t": "CA",
       "tradeUsd": 11161002105,
@@ -4236,17 +5210,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AE",
-      "tradeUsd": 11115559752,
+      "s": "QA",
+      "t": "IN",
+      "tradeUsd": 11151271577,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "CN",
+      "tradeUsd": 11129810863,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RO",
+      "tradeUsd": 11122335852,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "HK",
-      "tradeUsd": 11097128878,
+      "s": "CH",
+      "t": "AE",
+      "tradeUsd": 11115559752,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4260,25 +5250,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IT",
-      "tradeUsd": 11066129017,
+      "s": "CH",
+      "t": "AE",
+      "tradeUsd": 11045279342,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "RO",
-      "tradeUsd": 11045928274,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "PH",
-      "tradeUsd": 11039943441,
+      "tradeUsd": 11040135400,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "ES",
+      "tradeUsd": 11025414114,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4292,10 +5282,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "PL",
+      "tradeUsd": 10989843619,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RO",
+      "tradeUsd": 10982621302,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DE",
       "t": "ZA",
       "tradeUsd": 10962398850,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "JP",
+      "tradeUsd": 10947444500,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4308,17 +5322,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "GB",
-      "tradeUsd": 10937475443,
-      "year": 2024,
+      "s": "JP",
+      "t": "CA",
+      "tradeUsd": 10937236174,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "JP",
-      "t": "CA",
-      "tradeUsd": 10937236174,
+      "s": "PH",
+      "t": "CN",
+      "tradeUsd": 10925417700,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "OM",
+      "tradeUsd": 10914799952,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4332,17 +5354,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "HK",
-      "tradeUsd": 10845242658,
-      "year": 2024,
+      "s": "ES",
+      "t": "GB",
+      "tradeUsd": 10851258296,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "SG",
-      "tradeUsd": 10841187019,
+      "s": "IN",
+      "t": "SA",
+      "tradeUsd": 10832202792,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "US",
+      "tradeUsd": 10814039869,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4366,7 +5396,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "KR",
-      "tradeUsd": 10773905030,
+      "tradeUsd": 10773835588,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4396,10 +5426,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AT",
-      "tradeUsd": 10736535821,
-      "year": 2023,
+      "s": "US",
+      "t": "PA",
+      "tradeUsd": 10699682297,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4408,30 +5438,6 @@ window.countryMacroData = {
       "t": "SE",
       "tradeUsd": 10670302321,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "CN",
-      "tradeUsd": 10647895908,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "AT",
-      "tradeUsd": 10637727160,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "RO",
-      "tradeUsd": 10632503747,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4460,10 +5466,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "JP",
-      "tradeUsd": 10565525814,
-      "year": 2024,
+      "s": "NO",
+      "t": "PL",
+      "tradeUsd": 10545794725,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4478,15 +5484,23 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "SE",
-      "tradeUsd": 10489954770,
+      "tradeUsd": 10506980008,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "GB",
-      "tradeUsd": 10482607953,
+      "s": "PH",
+      "t": "JP",
+      "tradeUsd": 10455788964,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "SK",
+      "tradeUsd": 10454920958,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4516,25 +5530,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "JP",
-      "tradeUsd": 10425159521,
+      "s": "NO",
+      "t": "FR",
+      "tradeUsd": 10399529309,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AE",
-      "tradeUsd": 10369091422,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "IE",
-      "tradeUsd": 10354070865,
+      "s": "BE",
+      "t": "PL",
+      "tradeUsd": 10373922063,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4564,6 +5570,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PH",
+      "t": "JP",
+      "tradeUsd": 10330392751,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "DE",
       "tradeUsd": 10312048824,
@@ -4574,15 +5588,15 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "KR",
-      "tradeUsd": 10301405898,
+      "tradeUsd": 10304777159,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "KR",
-      "tradeUsd": 10265822735,
+      "s": "TR",
+      "t": "US",
+      "tradeUsd": 10270969352,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4596,42 +5610,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "IT",
-      "tradeUsd": 10255407762,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "JP",
-      "tradeUsd": 10254403056,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "DE",
-      "tradeUsd": 10248889794,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "PH",
       "tradeUsd": 10246502988,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "SG",
-      "tradeUsd": 10240028034,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4644,10 +5626,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "IT",
-      "tradeUsd": 10226832173,
-      "year": 2023,
+      "s": "IN",
+      "t": "DE",
+      "tradeUsd": 10232667976,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4660,18 +5642,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "GB",
-      "tradeUsd": 10178220462,
+      "s": "US",
+      "t": "ID",
+      "tradeUsd": 10202095720,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "IT",
-      "tradeUsd": 10175534828,
+      "s": "NO",
+      "t": "FR",
+      "tradeUsd": 10167900432,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "KR",
+      "tradeUsd": 10161782789,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4692,6 +5682,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PL",
+      "t": "SK",
+      "tradeUsd": 10146168030,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "PH",
       "tradeUsd": 10132294493,
@@ -4700,9 +5698,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ID",
-      "tradeUsd": 10092102341,
+      "s": "BE",
+      "t": "PL",
+      "tradeUsd": 10112945173,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "IT",
+      "tradeUsd": 10108951901,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4740,10 +5746,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PL",
-      "tradeUsd": 9986528606,
-      "year": 2024,
+      "s": "MY",
+      "t": "IN",
+      "tradeUsd": 9984902056,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4756,9 +5762,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "RU",
-      "tradeUsd": 9968465531,
+      "s": "US",
+      "t": "ID",
+      "tradeUsd": 9943228472,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4789,6 +5795,30 @@ window.countryMacroData = {
     },
     {
       "s": "CN",
+      "t": "GH",
+      "tradeUsd": 9843738727,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "GB",
+      "tradeUsd": 9829553353,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "VN",
+      "tradeUsd": 9811558938,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
       "t": "HU",
       "tradeUsd": 9795312791,
       "year": 2023,
@@ -4804,30 +5834,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "ES",
-      "tradeUsd": 9783655162,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "ES",
-      "tradeUsd": 9781478731,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "PL",
-      "tradeUsd": 9781253030,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "MY",
       "tradeUsd": 9754887002,
@@ -4836,18 +5842,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "CH",
-      "tradeUsd": 9700462017,
+      "s": "US",
+      "t": "GT",
+      "tradeUsd": 9739080916,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "ZA",
-      "tradeUsd": 9693724456,
+      "s": "US",
+      "t": "GT",
+      "tradeUsd": 9714681499,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "CR",
+      "tradeUsd": 9676788152,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "DE",
+      "tradeUsd": 9667108811,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4862,7 +5884,7 @@ window.countryMacroData = {
     {
       "s": "PH",
       "t": "HK",
-      "tradeUsd": 9600440968,
+      "tradeUsd": 9605262937,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4876,17 +5898,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "GB",
-      "tradeUsd": 9594023098,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "IT",
-      "tradeUsd": 9573697828,
+      "s": "PE",
+      "t": "US",
+      "tradeUsd": 9581557154,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4900,9 +5914,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AE",
-      "tradeUsd": 9560118373,
+      "s": "TR",
+      "t": "IQ",
+      "tradeUsd": 9568563461,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -4916,10 +5930,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NO",
+      "t": "PL",
+      "tradeUsd": 9540903481,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "KR",
       "tradeUsd": 9537471011,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "US",
+      "tradeUsd": 9527331703,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -4934,8 +5964,16 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "VN",
-      "tradeUsd": 9508007588,
+      "tradeUsd": 9508007602,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "BE",
+      "tradeUsd": 9484782689,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -4956,6 +5994,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "CH",
+      "tradeUsd": 9465030653,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CA",
+      "tradeUsd": 9458135542,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "DZ",
       "tradeUsd": 9457689464,
@@ -4964,9 +6018,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ID",
-      "tradeUsd": 9455803737,
+      "s": "PH",
+      "t": "CN",
+      "tradeUsd": 9444743061,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -4976,14 +6030,6 @@ window.countryMacroData = {
       "t": "SE",
       "tradeUsd": 9437936333,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "CN",
-      "tradeUsd": 9422725498,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5006,23 +6052,7 @@ window.countryMacroData = {
     {
       "s": "ES",
       "t": "TR",
-      "tradeUsd": 9383036712,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "DK",
-      "tradeUsd": 9370124887,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "CZ",
-      "tradeUsd": 9363832059,
+      "tradeUsd": 9381784222,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5036,6 +6066,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "AE",
+      "tradeUsd": 9327473395,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "AR",
       "tradeUsd": 9314531082,
@@ -5044,9 +6082,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "TR",
-      "tradeUsd": 9295832500,
+      "s": "US",
+      "t": "PH",
+      "tradeUsd": 9297313129,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5060,26 +6098,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "JP",
-      "tradeUsd": 9277854177,
-      "year": 2024,
+      "s": "US",
+      "t": "PH",
+      "tradeUsd": 9287844821,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "DK",
+      "tradeUsd": 9273753843,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DE",
-      "t": "SA",
-      "tradeUsd": 9238023022,
+      "t": "RU",
+      "tradeUsd": 9240775152,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "GH",
+      "tradeUsd": 9226909089,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "MM",
+      "tradeUsd": 9211852759,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "AE",
-      "tradeUsd": 9211652137,
+      "s": "PE",
+      "t": "US",
+      "tradeUsd": 9180565446,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "AR",
+      "tradeUsd": 9170997286,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5092,9 +6162,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "IT",
-      "tradeUsd": 9151371742,
+      "s": "US",
+      "t": "CR",
+      "tradeUsd": 9144096353,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5108,26 +6178,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "HU",
-      "tradeUsd": 9136672825,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "PL",
       "t": "HU",
       "tradeUsd": 9127062985,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "TR",
-      "tradeUsd": 9122435763,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5148,9 +6202,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "GR",
-      "tradeUsd": 9088041420,
+      "s": "SE",
+      "t": "BE",
+      "tradeUsd": 9093062590,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CZ",
+      "tradeUsd": 9081441302,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5164,18 +6226,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "CZ",
-      "tradeUsd": 9069259629,
+      "s": "PL",
+      "t": "BE",
+      "tradeUsd": 9070631363,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "GR",
-      "tradeUsd": 9054509830,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5199,6 +6253,14 @@ window.countryMacroData = {
       "s": "KR",
       "t": "PH",
       "tradeUsd": 9008417184,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "US",
+      "tradeUsd": 8995880632,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5228,26 +6290,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "SA",
-      "tradeUsd": 8964202403,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "CN",
       "t": "IR",
       "tradeUsd": 8953689705,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "DE",
-      "tradeUsd": 8952285079,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5260,17 +6306,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "UA",
-      "tradeUsd": 8900446165,
+      "s": "IT",
+      "t": "JP",
+      "tradeUsd": 8905927096,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "NL",
-      "t": "AT",
-      "tradeUsd": 8830070713,
+      "t": "CZ",
+      "tradeUsd": 8896543361,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "IT",
+      "tradeUsd": 8878418428,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "IT",
+      "tradeUsd": 8870977806,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5278,8 +6340,16 @@ window.countryMacroData = {
     {
       "s": "PH",
       "t": "HK",
-      "tradeUsd": 8772505939,
+      "tradeUsd": 8843731591,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CZ",
+      "tradeUsd": 8841130116,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5292,14 +6362,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AT",
-      "tradeUsd": 8768028287,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "NL",
       "t": "CH",
       "tradeUsd": 8758856633,
@@ -5308,9 +6370,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "DE",
-      "tradeUsd": 8746321275,
+      "s": "IN",
+      "t": "HK",
+      "tradeUsd": 8730767799,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "AT",
+      "tradeUsd": 8705918540,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "FR",
+      "tradeUsd": 8698159680,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "DK",
+      "tradeUsd": 8690727771,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5318,31 +6404,7 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "JP",
-      "tradeUsd": 8699634781,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "IE",
-      "tradeUsd": 8698793287,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "SE",
-      "tradeUsd": 8677482885,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "DE",
-      "tradeUsd": 8638343488,
+      "tradeUsd": 8687651327,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5356,18 +6418,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "JP",
-      "tradeUsd": 8622012962,
+      "s": "NL",
+      "t": "IE",
+      "tradeUsd": 8619314981,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "IE",
-      "tradeUsd": 8619314981,
-      "year": 2024,
+      "s": "US",
+      "t": "SE",
+      "tradeUsd": 8615037541,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5396,6 +6458,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "KE",
+      "tradeUsd": 8582431786,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CZ",
       "t": "NL",
       "tradeUsd": 8573114420,
@@ -5404,10 +6474,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
+      "s": "IT",
       "t": "AE",
-      "tradeUsd": 8572808888,
-      "year": 2023,
+      "tradeUsd": 8572875768,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5420,33 +6490,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "NL",
-      "tradeUsd": 8567464309,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "HU",
       "t": "RO",
       "tradeUsd": 8563637445,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "RU",
-      "tradeUsd": 8561685561,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "CZ",
-      "tradeUsd": 8559281660,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5460,18 +6506,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "JP",
-      "tradeUsd": 8545987234,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "TR",
-      "tradeUsd": 8534216950,
-      "year": 2023,
+      "s": "TR",
+      "t": "NL",
+      "tradeUsd": 8555175262,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5484,10 +6522,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "JP",
-      "tradeUsd": 8488195935,
-      "year": 2024,
+      "s": "VN",
+      "t": "IN",
+      "tradeUsd": 8497250442,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5508,6 +6546,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PL",
+      "t": "BE",
+      "tradeUsd": 8452120064,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "CA",
       "tradeUsd": 8434174094,
@@ -5516,9 +6562,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "RO",
-      "tradeUsd": 8418066439,
+      "s": "TR",
+      "t": "DE",
+      "tradeUsd": 8415315786,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IT",
+      "tradeUsd": 8398556021,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5532,9 +6586,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PL",
-      "tradeUsd": 8382982171,
+      "s": "SK",
+      "t": "HU",
+      "tradeUsd": 8388355901,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "JP",
+      "tradeUsd": 8359996103,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5548,26 +6610,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "NL",
-      "tradeUsd": 8310293473,
+      "s": "NL",
+      "t": "TR",
+      "tradeUsd": 8349636146,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IE",
+      "tradeUsd": 8348819846,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "US",
+      "tradeUsd": 8344832017,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IT",
+      "tradeUsd": 8329367816,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "AE",
-      "tradeUsd": 8299579055,
-      "year": 2024,
+      "s": "ZA",
+      "t": "US",
+      "tradeUsd": 8319539966,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "TR",
       "t": "AE",
-      "tradeUsd": 8295812197,
+      "tradeUsd": 8296567512,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "BE",
+      "tradeUsd": 8282520628,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "RO",
+      "tradeUsd": 8265167561,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5588,18 +6690,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "SG",
-      "tradeUsd": 8214570591,
+      "s": "GB",
+      "t": "PL",
+      "tradeUsd": 8187136393,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PL",
-      "tradeUsd": 8214379783,
-      "year": 2023,
+      "s": "US",
+      "t": "SE",
+      "tradeUsd": 8186983781,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5612,9 +6714,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "RU",
-      "tradeUsd": 8167376828,
+      "s": "CN",
+      "t": "TZ",
+      "tradeUsd": 8174403793,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5628,10 +6730,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "TR",
-      "tradeUsd": 8142013795,
-      "year": 2023,
+      "s": "IN",
+      "t": "ZA",
+      "tradeUsd": 8136478254,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FR",
+      "t": "PT",
+      "tradeUsd": 8134840457,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -5644,17 +6754,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CN",
-      "tradeUsd": 8042715438,
+      "s": "AT",
+      "t": "BE",
+      "tradeUsd": 8120891118,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "TZ",
+      "tradeUsd": 8091859941,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "GB",
-      "t": "SG",
-      "tradeUsd": 8030856920,
+      "t": "TR",
+      "tradeUsd": 8059044033,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "MY",
+      "tradeUsd": 8042748001,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "DK",
+      "tradeUsd": 8039902155,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5676,9 +6810,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PH",
-      "tradeUsd": 7982177726,
+      "s": "SI",
+      "t": "DE",
+      "tradeUsd": 8021141918,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "ZA",
+      "tradeUsd": 8019745302,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "JP",
+      "tradeUsd": 7995254440,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "BE",
+      "tradeUsd": 7971887646,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5692,9 +6850,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "EC",
+      "tradeUsd": 7947678748,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "ID",
       "tradeUsd": 7946873322,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "FR",
+      "tradeUsd": 7945631290,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5740,17 +6914,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "TR",
-      "tradeUsd": 7889551948,
-      "year": 2024,
+      "s": "AE",
+      "t": "QA",
+      "tradeUsd": 7887152548,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "AE",
-      "t": "QA",
-      "tradeUsd": 7887152548,
+      "s": "CN",
+      "t": "KE",
+      "tradeUsd": 7879355154,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5796,17 +6970,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "NL",
-      "tradeUsd": 7857412257,
-      "year": 2023,
+      "s": "IT",
+      "t": "GR",
+      "tradeUsd": 7854660957,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "UA",
-      "tradeUsd": 7850949916,
+      "s": "AT",
+      "t": "FR",
+      "tradeUsd": 7831438475,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -5838,7 +7012,7 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "NL",
-      "tradeUsd": 7793637908,
+      "tradeUsd": 7795487538,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5852,9 +7026,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "RO",
-      "tradeUsd": 7779939548,
+      "s": "CZ",
+      "t": "NL",
+      "tradeUsd": 7782693464,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5863,14 +7037,6 @@ window.countryMacroData = {
       "s": "AU",
       "t": "HK",
       "tradeUsd": 7776787235,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "ES",
-      "tradeUsd": 7773620061,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5887,6 +7053,14 @@ window.countryMacroData = {
       "s": "PL",
       "t": "AT",
       "tradeUsd": 7749229523,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AU",
+      "tradeUsd": 7742428297,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5916,6 +7090,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "AU",
+      "tradeUsd": 7721948101,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "HU",
       "tradeUsd": 7719136793,
@@ -5924,17 +7106,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PH",
-      "tradeUsd": 7718801627,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "CN",
-      "tradeUsd": 7687337503,
+      "s": "IN",
+      "t": "FR",
+      "tradeUsd": 7705184757,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -5948,14 +7122,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CA",
-      "tradeUsd": 7661782593,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "IT",
       "tradeUsd": 7655115002,
@@ -5964,10 +7130,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "JP",
-      "tradeUsd": 7617407270,
-      "year": 2024,
+      "s": "DE",
+      "t": "GR",
+      "tradeUsd": 7619765198,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5980,10 +7146,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "GR",
-      "tradeUsd": 7604260382,
+      "s": "IN",
+      "t": "TR",
+      "tradeUsd": 7574272308,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "FR",
+      "tradeUsd": 7565152815,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "VN",
+      "tradeUsd": 7544855982,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -5991,14 +7173,6 @@ window.countryMacroData = {
       "s": "KR",
       "t": "TH",
       "tradeUsd": 7539783519,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "VN",
-      "tradeUsd": 7536663556,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6012,10 +7186,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "SG",
-      "tradeUsd": 7526408163,
-      "year": 2023,
+      "s": "US",
+      "t": "EC",
+      "tradeUsd": 7526660153,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "FR",
+      "tradeUsd": 7520239866,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6038,7 +7220,15 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "TH",
-      "tradeUsd": 7508493126,
+      "tradeUsd": 7507640780,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "PL",
+      "tradeUsd": 7505213873,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6060,6 +7250,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "GR",
+      "tradeUsd": 7478092819,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AU",
       "t": "ID",
       "tradeUsd": 7477464251,
@@ -6076,17 +7274,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
+      "s": "BR",
       "t": "SG",
-      "tradeUsd": 7460610542,
-      "year": 2024,
+      "tradeUsd": 7459246165,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "BR",
-      "t": "SG",
-      "tradeUsd": 7459246165,
+      "s": "HU",
+      "t": "SK",
+      "tradeUsd": 7455532785,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "DE",
+      "tradeUsd": 7451270052,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "LU",
+      "tradeUsd": 7423732071,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6100,9 +7314,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "GR",
-      "tradeUsd": 7400168742,
+      "s": "EC",
+      "t": "US",
+      "tradeUsd": 7402729242,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "ID",
+      "tradeUsd": 7397899301,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6124,17 +7346,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "AU",
-      "t": "SG",
-      "tradeUsd": 7335702388,
+      "s": "DE",
+      "t": "RU",
+      "tradeUsd": 7380502314,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "SA",
-      "tradeUsd": 7323581067,
+      "s": "IE",
+      "t": "FR",
+      "tradeUsd": 7350464609,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "SG",
+      "tradeUsd": 7335702388,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6150,31 +7380,47 @@ window.countryMacroData = {
     {
       "s": "HU",
       "t": "PL",
-      "tradeUsd": 7270643210,
+      "tradeUsd": 7285860564,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "SK",
+      "tradeUsd": 7255722266,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "NP",
+      "tradeUsd": 7247741657,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "US",
+      "tradeUsd": 7239825708,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
       "t": "KR",
-      "tradeUsd": 7250403208,
+      "tradeUsd": 7225553710,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "NL",
-      "tradeUsd": 7224382456,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "TH",
-      "tradeUsd": 7222863355,
+      "tradeUsd": 7222872396,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6182,24 +7428,64 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "AE",
-      "tradeUsd": 7221282010,
+      "tradeUsd": 7208949486,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "CN",
-      "tradeUsd": 7183840714,
+      "s": "IN",
+      "t": "FR",
+      "tradeUsd": 7188438181,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "CN",
-      "tradeUsd": 7163632190,
+      "s": "CH",
+      "t": "TR",
+      "tradeUsd": 7178918232,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "US",
+      "tradeUsd": 7175760140,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MX",
+      "tradeUsd": 7175052955,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DO",
+      "t": "US",
+      "tradeUsd": 7161801443,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "CZ",
+      "tradeUsd": 7157672531,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "ZA",
+      "tradeUsd": 7155082196,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6212,26 +7498,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
+      "s": "BG",
       "t": "DE",
-      "tradeUsd": 7133909140,
+      "tradeUsd": 7105685470,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "CH",
-      "tradeUsd": 7128441767,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "CZ",
-      "tradeUsd": 7102264885,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6240,14 +7510,6 @@ window.countryMacroData = {
       "t": "SG",
       "tradeUsd": 7082478600,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "DE",
-      "tradeUsd": 7077750905,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6268,33 +7530,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "MY",
-      "tradeUsd": 6996641499,
+      "s": "CH",
+      "t": "AT",
+      "tradeUsd": 7059681944,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "JP",
-      "tradeUsd": 6978414564,
+      "s": "US",
+      "t": "HN",
+      "tradeUsd": 7057473677,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SE",
+      "tradeUsd": 7048783374,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "RO",
-      "tradeUsd": 6951714093,
+      "s": "JP",
+      "t": "FR",
+      "tradeUsd": 7021386766,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "MX",
-      "tradeUsd": 6946317763,
+      "s": "DK",
+      "t": "NO",
+      "tradeUsd": 6994337349,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IE",
+      "t": "FR",
+      "tradeUsd": 6976370171,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "NP",
+      "tradeUsd": 6951283336,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6308,17 +7594,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "MY",
-      "tradeUsd": 6900534555,
+      "s": "NL",
+      "t": "NO",
+      "tradeUsd": 6883765289,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "HK",
-      "tradeUsd": 6887886123,
+      "s": "BE",
+      "t": "CN",
+      "tradeUsd": 6882910462,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6332,6 +7618,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "NO",
+      "tradeUsd": 6848924520,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "LU",
+      "tradeUsd": 6848751405,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "NL",
       "tradeUsd": 6845754223,
@@ -6340,9 +7642,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CL",
+      "t": "JP",
+      "tradeUsd": 6837152259,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IT",
       "t": "CA",
-      "tradeUsd": 6839691263,
+      "tradeUsd": 6828513380,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6356,9 +7666,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "JP",
-      "tradeUsd": 6803034661,
+      "s": "DE",
+      "t": "MY",
+      "tradeUsd": 6811128527,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "HN",
+      "tradeUsd": 6793660832,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6380,17 +7698,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "SA",
-      "tradeUsd": 6768762040,
+      "s": "CZ",
+      "t": "US",
+      "tradeUsd": 6775203192,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "CH",
+      "tradeUsd": 6758628560,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CA",
-      "tradeUsd": 6767136532,
+      "s": "HU",
+      "t": "FR",
+      "tradeUsd": 6749782953,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "SA",
+      "tradeUsd": 6736369699,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "NO",
+      "tradeUsd": 6728487474,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6399,6 +7741,22 @@ window.countryMacroData = {
       "s": "QA",
       "t": "JP",
       "tradeUsd": 6719356751,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "KR",
+      "tradeUsd": 6715834478,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "ES",
+      "tradeUsd": 6704726643,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6414,7 +7772,15 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "MX",
-      "tradeUsd": 6684929471,
+      "tradeUsd": 6679194405,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "MY",
+      "tradeUsd": 6677685666,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6436,6 +7802,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "BR",
+      "tradeUsd": 6664514172,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "CL",
       "tradeUsd": 6658098288,
@@ -6444,10 +7818,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "SE",
-      "tradeUsd": 6641454403,
-      "year": 2023,
+      "s": "JP",
+      "t": "FR",
+      "tradeUsd": 6657240495,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6456,6 +7830,22 @@ window.countryMacroData = {
       "t": "GB",
       "tradeUsd": 6640188367,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CA",
+      "tradeUsd": 6638743304,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "UA",
+      "tradeUsd": 6638504021,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6476,17 +7866,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "BR",
-      "t": "JP",
-      "tradeUsd": 6620217025,
+      "s": "IT",
+      "t": "SE",
+      "tradeUsd": 6620514141,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "NL",
-      "tradeUsd": 6589872671,
+      "s": "BR",
+      "t": "JP",
+      "tradeUsd": 6620217025,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6508,18 +7898,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "SA",
-      "tradeUsd": 6521619393,
+      "s": "IN",
+      "t": "BE",
+      "tradeUsd": 6568640136,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "DE",
+      "tradeUsd": 6548606857,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "HK",
+      "tradeUsd": 6497858762,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
-      "t": "KR",
-      "tradeUsd": 6501738819,
-      "year": 2024,
+      "t": "SI",
+      "tradeUsd": 6496193284,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6532,9 +7938,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "SG",
-      "tradeUsd": 6462061607,
+      "s": "AR",
+      "t": "US",
+      "tradeUsd": 6476353028,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "FR",
+      "tradeUsd": 6460355075,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6548,6 +7962,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "US",
+      "tradeUsd": 6458701039,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "MA",
       "tradeUsd": 6454069521,
@@ -6556,34 +7978,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "NL",
-      "tradeUsd": 6428707944,
+      "s": "BE",
+      "t": "CN",
+      "tradeUsd": 6451698068,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
-      "t": "CA",
-      "tradeUsd": 6427105253,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
       "t": "SE",
-      "tradeUsd": 6399733859,
+      "tradeUsd": 6443210687,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "AT",
-      "tradeUsd": 6375195934,
+      "s": "IN",
+      "t": "BR",
+      "tradeUsd": 6442893030,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "LT",
+      "tradeUsd": 6432406772,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "ES",
+      "tradeUsd": 6399012909,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "BE",
+      "tradeUsd": 6391340244,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "IN",
+      "tradeUsd": 6391336746,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SE",
+      "tradeUsd": 6379594041,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6608,6 +8062,14 @@ window.countryMacroData = {
       "t": "GB",
       "tradeUsd": 6341117740,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "MX",
+      "tradeUsd": 6327195023,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6638,7 +8100,23 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "HU",
-      "tradeUsd": 6285617231,
+      "tradeUsd": 6287940738,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "KR",
+      "tradeUsd": 6285118877,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "GB",
+      "tradeUsd": 6272992674,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6652,33 +8130,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "MX",
-      "tradeUsd": 6272467186,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "PL",
-      "tradeUsd": 6262363002,
+      "s": "IT",
+      "t": "BR",
+      "tradeUsd": 6267451588,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
-      "t": "SE",
-      "tradeUsd": 6237806065,
+      "t": "HU",
+      "tradeUsd": 6252850996,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "KR",
-      "tradeUsd": 6206041986,
+      "s": "PL",
+      "t": "LT",
+      "tradeUsd": 6244045783,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "IN",
+      "tradeUsd": 6216188884,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "SI",
+      "tradeUsd": 6198145264,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6700,10 +8186,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "PT",
+      "tradeUsd": 6133061683,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NG",
       "t": "ES",
       "tradeUsd": 6132983736,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "TR",
+      "tradeUsd": 6128654222,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "SI",
+      "tradeUsd": 6125633463,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6716,17 +8226,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "MX",
-      "tradeUsd": 6119243729,
+      "s": "CN",
+      "t": "PT",
+      "tradeUsd": 6112620649,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CN",
-      "t": "PT",
-      "tradeUsd": 6112620649,
+      "s": "IT",
+      "t": "SI",
+      "tradeUsd": 6099706086,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "EG",
+      "tradeUsd": 6092022475,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -6748,30 +8266,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "KR",
-      "tradeUsd": 6073058406,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "HK",
-      "tradeUsd": 6070011596,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "BR",
-      "tradeUsd": 6067650032,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "JP",
       "t": "SA",
       "tradeUsd": 6063377909,
@@ -6788,10 +8282,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "HU",
-      "tradeUsd": 6053514895,
-      "year": 2024,
+      "s": "IN",
+      "t": "IL",
+      "tradeUsd": 6048680407,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6804,17 +8298,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "MX",
-      "tradeUsd": 6024290489,
+      "s": "IT",
+      "t": "HR",
+      "tradeUsd": 6043735986,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "DE",
+      "tradeUsd": 6022702287,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "KR",
-      "tradeUsd": 6020496191,
+      "s": "IT",
+      "t": "PT",
+      "tradeUsd": 6017457982,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6828,9 +8330,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "SE",
-      "tradeUsd": 5984757972,
+      "s": "IT",
+      "t": "HR",
+      "tradeUsd": 5997460233,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6844,34 +8346,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CH",
-      "tradeUsd": 5978479551,
+      "s": "SE",
+      "t": "GB",
+      "tradeUsd": 5974227081,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "AT",
-      "tradeUsd": 5978374867,
+      "s": "CN",
+      "t": "EC",
+      "tradeUsd": 5968590359,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PT",
-      "tradeUsd": 5955694387,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "PL",
-      "tradeUsd": 5955208383,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -6884,25 +8370,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "KR",
-      "tradeUsd": 5938643837,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PT",
-      "tradeUsd": 5937544374,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "FI",
-      "tradeUsd": 5899462696,
+      "s": "HU",
+      "t": "US",
+      "tradeUsd": 5933069730,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6925,17 +8395,25 @@ window.countryMacroData = {
     },
     {
       "s": "DE",
-      "t": "IL",
-      "tradeUsd": 5881688889,
+      "t": "LT",
+      "tradeUsd": 5882971212,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "EG",
-      "tradeUsd": 5878948992,
-      "year": 2023,
+      "s": "IN",
+      "t": "KR",
+      "tradeUsd": 5882853207,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "AU",
+      "tradeUsd": 5881211725,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -6948,17 +8426,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "TH",
-      "tradeUsd": 5868744806,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "AU",
-      "tradeUsd": 5865635240,
+      "s": "CN",
+      "t": "EC",
+      "tradeUsd": 5861207557,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6972,17 +8442,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "NL",
-      "tradeUsd": 5842645909,
-      "year": 2023,
+      "s": "JP",
+      "t": "BE",
+      "tradeUsd": 5833587743,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "ZA",
+      "tradeUsd": 5818797117,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "DK",
+      "tradeUsd": 5805427273,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "PA",
+      "tradeUsd": 5804311014,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
       "t": "BR",
-      "tradeUsd": 5809996415,
+      "tradeUsd": 5799898396,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -6992,6 +8486,14 @@ window.countryMacroData = {
       "t": "PH",
       "tradeUsd": 5798651241,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "OM",
+      "tradeUsd": 5795822220,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7007,6 +8509,22 @@ window.countryMacroData = {
       "s": "CN",
       "t": "PT",
       "tradeUsd": 5792299358,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "FI",
+      "tradeUsd": 5776886378,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "FI",
+      "tradeUsd": 5776878291,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7028,18 +8546,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "IT",
-      "tradeUsd": 5753270347,
+      "s": "DE",
+      "t": "EG",
+      "tradeUsd": 5767805139,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "GB",
-      "tradeUsd": 5751737770,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7060,9 +8570,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "NL",
-      "tradeUsd": 5744442094,
+      "s": "DK",
+      "t": "GB",
+      "tradeUsd": 5747495869,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7076,33 +8586,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "GB",
-      "tradeUsd": 5732984950,
+      "s": "IN",
+      "t": "JP",
+      "tradeUsd": 5731428985,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "HU",
-      "tradeUsd": 5698840951,
+      "s": "CL",
+      "t": "KR",
+      "tradeUsd": 5697212692,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "AU",
-      "tradeUsd": 5693723200,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "AU",
-      "tradeUsd": 5666560844,
+      "s": "EC",
+      "t": "CN",
+      "tradeUsd": 5672881876,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7112,6 +8614,30 @@ window.countryMacroData = {
       "t": "IT",
       "tradeUsd": 5662220920,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "AU",
+      "tradeUsd": 5660945987,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "VN",
+      "tradeUsd": 5651505598,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AR",
+      "t": "US",
+      "tradeUsd": 5648061872,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7132,17 +8658,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "IL",
-      "tradeUsd": 5627649309,
+      "s": "IT",
+      "t": "IN",
+      "tradeUsd": 5640511954,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "IT",
-      "tradeUsd": 5624031474,
+      "s": "MX",
+      "t": "DE",
+      "tradeUsd": 5634084857,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "MX",
+      "tradeUsd": 5632215226,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7156,6 +8690,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "KR",
+      "t": "FR",
+      "tradeUsd": 5619969249,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "CA",
       "tradeUsd": 5614652284,
@@ -7164,17 +8706,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "SA",
-      "tradeUsd": 5613230806,
+      "s": "ES",
+      "t": "CN",
+      "tradeUsd": 5612179925,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "GB",
-      "tradeUsd": 5600921471,
+      "s": "PK",
+      "t": "US",
+      "tradeUsd": 5610806113,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "FR",
+      "tradeUsd": 5604400064,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IN",
+      "tradeUsd": 5589957893,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7188,18 +8746,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "AU",
-      "tradeUsd": 5548310020,
+      "s": "IN",
+      "t": "TR",
+      "tradeUsd": 5536703947,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "NL",
-      "tradeUsd": 5513765654,
-      "year": 2023,
+      "s": "DE",
+      "t": "LT",
+      "tradeUsd": 5508277476,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7212,9 +8770,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "ES",
-      "tradeUsd": 5496406842,
+      "s": "US",
+      "t": "AT",
+      "tradeUsd": 5500813097,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "FI",
+      "tradeUsd": 5495433688,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7228,10 +8794,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "VN",
+      "tradeUsd": 5475609855,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NG",
+      "t": "IN",
+      "tradeUsd": 5446923883,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "IL",
       "tradeUsd": 5434606318,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "ID",
+      "tradeUsd": 5434312819,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NZ",
+      "t": "US",
+      "tradeUsd": 5433820881,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "HK",
+      "tradeUsd": 5433603409,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "PA",
+      "tradeUsd": 5433558389,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "FR",
+      "tradeUsd": 5417081453,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7252,10 +8874,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "HK",
-      "tradeUsd": 5403866129,
-      "year": 2023,
+      "s": "SG",
+      "t": "PA",
+      "tradeUsd": 5404300316,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7268,17 +8890,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SG",
-      "t": "GB",
-      "tradeUsd": 5381656893,
+      "s": "IT",
+      "t": "HK",
+      "tradeUsd": 5393072969,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "US",
+      "tradeUsd": 5385282593,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "KR",
-      "tradeUsd": 5374122195,
+      "s": "SG",
+      "t": "GB",
+      "tradeUsd": 5381656893,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7309,9 +8939,9 @@ window.countryMacroData = {
     },
     {
       "s": "DE",
-      "t": "TH",
-      "tradeUsd": 5334249577,
-      "year": 2024,
+      "t": "IT",
+      "tradeUsd": 5338602878,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7324,17 +8954,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "DE",
-      "tradeUsd": 5326146224,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "HU",
-      "tradeUsd": 5325392534,
+      "s": "NO",
+      "t": "US",
+      "tradeUsd": 5331014651,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7343,6 +8965,22 @@ window.countryMacroData = {
       "s": "KR",
       "t": "SA",
       "tradeUsd": 5316030539,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "TR",
+      "tradeUsd": 5314953588,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "US",
+      "tradeUsd": 5313519324,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7358,7 +8996,7 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "PL",
-      "tradeUsd": 5297342201,
+      "tradeUsd": 5297611103,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7380,17 +9018,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "GB",
-      "tradeUsd": 5274032009,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "SA",
-      "tradeUsd": 5272356699,
+      "s": "IN",
+      "t": "MX",
+      "tradeUsd": 5283663735,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7404,9 +9034,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "MA",
+      "tradeUsd": 5268646115,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "AU",
       "tradeUsd": 5267685435,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "SA",
+      "tradeUsd": 5265632325,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7420,10 +9066,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "HK",
-      "tradeUsd": 5260384294,
+      "s": "BR",
+      "t": "IN",
+      "tradeUsd": 5260909480,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "DK",
+      "tradeUsd": 5254749208,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "IT",
+      "tradeUsd": 5253853009,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7447,22 +9109,6 @@ window.countryMacroData = {
       "s": "CN",
       "t": "KW",
       "tradeUsd": 5224580255,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "SA",
-      "tradeUsd": 5219538764,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "JP",
-      "tradeUsd": 5207941054,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7516,6 +9162,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "RS",
+      "tradeUsd": 5143797826,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "KR",
+      "tradeUsd": 5143278609,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "NO",
+      "tradeUsd": 5140349884,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SG",
       "t": "AE",
       "tradeUsd": 5123295784,
@@ -7524,9 +9194,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SI",
+      "t": "HR",
+      "tradeUsd": 5109961692,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CH",
+      "tradeUsd": 5085365043,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "JP",
+      "tradeUsd": 5084239600,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "JO",
+      "tradeUsd": 5080581592,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "ID",
       "tradeUsd": 5076377075,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NZ",
+      "t": "US",
+      "tradeUsd": 5072805154,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7540,10 +9250,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "BR",
-      "tradeUsd": 5060269724,
-      "year": 2024,
+      "s": "IN",
+      "t": "TH",
+      "tradeUsd": 5056577127,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7572,25 +9282,81 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "RU",
-      "tradeUsd": 5038715019,
+      "s": "BE",
+      "t": "NG",
+      "tradeUsd": 5042759202,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "TH",
-      "tradeUsd": 5014565146,
+      "s": "RS",
+      "t": "DE",
+      "tradeUsd": 5025778769,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
+      "s": "US",
+      "t": "NO",
+      "tradeUsd": 5025604073,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "BE",
+      "tradeUsd": 5021450948,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
       "t": "NL",
-      "tradeUsd": 5007028231,
+      "tradeUsd": 5020422382,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "BR",
+      "tradeUsd": 5012994091,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "IT",
+      "tradeUsd": 5011332056,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PK",
+      "t": "US",
+      "tradeUsd": 5010808642,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RU",
+      "tradeUsd": 5009628035,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "KR",
+      "tradeUsd": 5002695962,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7604,18 +9370,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "AU",
-      "tradeUsd": 4966818527,
+      "s": "CN",
+      "t": "NO",
+      "tradeUsd": 4991224704,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "NL",
-      "tradeUsd": 4966281367,
-      "year": 2023,
+      "s": "BE",
+      "t": "TR",
+      "tradeUsd": 4980413073,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "LK",
+      "tradeUsd": 4968694576,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "AU",
+      "tradeUsd": 4966793612,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TH",
+      "t": "HK",
+      "tradeUsd": 4953028865,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7623,6 +9413,30 @@ window.countryMacroData = {
       "s": "KR",
       "t": "IT",
       "tradeUsd": 4949981838,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "DE",
+      "tradeUsd": 4947496173,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "ES",
+      "tradeUsd": 4943162942,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "RU",
+      "tradeUsd": 4942106294,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7644,6 +9458,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "GT",
+      "tradeUsd": 4939388997,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "AE",
       "tradeUsd": 4934679618,
@@ -7652,9 +9474,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "HU",
-      "tradeUsd": 4902224702,
+      "s": "CN",
+      "t": "JO",
+      "tradeUsd": 4928928896,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CH",
+      "tradeUsd": 4928475598,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "TZ",
+      "tradeUsd": 4903099551,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IN",
+      "tradeUsd": 4890690227,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7668,10 +9514,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GT",
+      "t": "US",
+      "tradeUsd": 4881810013,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "BE",
+      "tradeUsd": 4875617018,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "MY",
       "tradeUsd": 4862760371,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NG",
+      "t": "US",
+      "tradeUsd": 4860249603,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "RU",
+      "tradeUsd": 4841029765,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7700,10 +9578,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "KR",
-      "tradeUsd": 4781663401,
+      "s": "IN",
+      "t": "TH",
+      "tradeUsd": 4803381443,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "VE",
+      "tradeUsd": 4801347537,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "ES",
+      "tradeUsd": 4793499839,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "JP",
+      "tradeUsd": 4759560483,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7718,7 +9620,39 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "NL",
-      "tradeUsd": 4749664450,
+      "tradeUsd": 4749664455,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "VN",
+      "t": "KH",
+      "tradeUsd": 4748323252,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RU",
+      "tradeUsd": 4745736109,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "IN",
+      "tradeUsd": 4743514414,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "LV",
+      "tradeUsd": 4738593620,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7732,10 +9666,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "ES",
-      "tradeUsd": 4728806770,
-      "year": 2023,
+      "s": "IN",
+      "t": "LK",
+      "tradeUsd": 4715241964,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7743,6 +9677,22 @@ window.countryMacroData = {
       "s": "UA",
       "t": "PL",
       "tradeUsd": 4708911951,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "HU",
+      "tradeUsd": 4707219647,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NG",
+      "t": "FR",
+      "tradeUsd": 4703371428,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7756,9 +9706,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "DE",
-      "tradeUsd": 4689133059,
+      "s": "PE",
+      "t": "IN",
+      "tradeUsd": 4693696603,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7772,18 +9722,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "NL",
-      "tradeUsd": 4686398581,
+      "s": "SG",
+      "t": "BE",
+      "tradeUsd": 4687909369,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "US",
+      "tradeUsd": 4687233034,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "KR",
-      "tradeUsd": 4670208640,
-      "year": 2024,
+      "s": "BR",
+      "t": "IN",
+      "tradeUsd": 4686024342,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "BH",
+      "tradeUsd": 4675651449,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7796,9 +9762,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HU",
+      "t": "US",
+      "tradeUsd": 4663577861,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "DE",
+      "tradeUsd": 4662611259,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CO",
+      "t": "PA",
+      "tradeUsd": 4659338272,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "QA",
+      "tradeUsd": 4658192456,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "GB",
+      "tradeUsd": 4651084811,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "CH",
       "tradeUsd": 4643181051,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "CN",
+      "tradeUsd": 4643172339,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -7820,18 +9834,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CA",
-      "tradeUsd": 4624660693,
+      "s": "JP",
+      "t": "PA",
+      "tradeUsd": 4637017863,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "RU",
-      "tradeUsd": 4594445677,
+      "s": "CN",
+      "t": "DO",
+      "tradeUsd": 4628341574,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "ES",
+      "tradeUsd": 4623263626,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "RO",
+      "tradeUsd": 4616649491,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "US",
+      "tradeUsd": 4610996491,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "GT",
+      "tradeUsd": 4598170987,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "LV",
+      "tradeUsd": 4586087737,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -7839,6 +9893,14 @@ window.countryMacroData = {
       "s": "HK",
       "t": "MX",
       "tradeUsd": 4580460766,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "FR",
+      "tradeUsd": 4571290269,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7852,10 +9914,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "DE",
-      "tradeUsd": 4555813582,
-      "year": 2023,
+      "s": "US",
+      "t": "NO",
+      "tradeUsd": 4554791508,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "KR",
+      "tradeUsd": 4553020073,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CH",
+      "tradeUsd": 4550107876,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "SV",
+      "tradeUsd": 4544989563,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7868,9 +9954,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "QA",
-      "tradeUsd": 4528159565,
+      "s": "US",
+      "t": "CZ",
+      "tradeUsd": 4535708330,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "SI",
+      "tradeUsd": 4532768394,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7892,6 +9986,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "FR",
+      "tradeUsd": 4521717774,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "CH",
+      "tradeUsd": 4516182539,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "SA",
       "tradeUsd": 4509370642,
@@ -7900,10 +10010,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "TR",
+      "t": "NL",
+      "tradeUsd": 4500718659,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "CH",
       "tradeUsd": 4493579971,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "NZ",
+      "tradeUsd": 4493534160,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7932,9 +10058,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "BR",
-      "tradeUsd": 4473625320,
+      "s": "US",
+      "t": "EG",
+      "tradeUsd": 4486971384,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "OM",
+      "tradeUsd": 4479588073,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "PA",
+      "tradeUsd": 4472870278,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -7964,10 +10106,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "PT",
-      "tradeUsd": 4435074764,
-      "year": 2023,
+      "s": "US",
+      "t": "AT",
+      "tradeUsd": 4434816941,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -7983,6 +10125,14 @@ window.countryMacroData = {
       "s": "IE",
       "t": "CA",
       "tradeUsd": 4430770970,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "US",
+      "tradeUsd": 4426990185,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8004,14 +10154,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "MX",
-      "tradeUsd": 4413230783,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "AE",
       "tradeUsd": 4407280710,
@@ -8020,18 +10162,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MA",
-      "t": "DE",
-      "tradeUsd": 4401896994,
+      "s": "AT",
+      "t": "SI",
+      "tradeUsd": 4404339035,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "RO",
-      "tradeUsd": 4400176945,
-      "year": 2023,
+      "s": "MA",
+      "t": "DE",
+      "tradeUsd": 4401896994,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8052,17 +10194,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CA",
-      "tradeUsd": 4379578376,
+      "s": "IT",
+      "t": "SK",
+      "tradeUsd": 4378260137,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CH",
-      "tradeUsd": 4358857365,
+      "s": "TR",
+      "t": "BE",
+      "tradeUsd": 4365608163,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "IN",
+      "tradeUsd": 4358099905,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "JP",
+      "tradeUsd": 4357001032,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "PT",
+      "tradeUsd": 4355537340,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "NZ",
+      "tradeUsd": 4351765963,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "FR",
+      "tradeUsd": 4343948416,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8071,6 +10253,38 @@ window.countryMacroData = {
       "s": "KR",
       "t": "BR",
       "tradeUsd": 4337681216,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "BR",
+      "tradeUsd": 4337453563,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "FR",
+      "tradeUsd": 4335923328,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "DO",
+      "tradeUsd": 4335503580,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "GB",
+      "tradeUsd": 4332227803,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8108,6 +10322,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "KR",
+      "t": "BE",
+      "tradeUsd": 4305793456,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SE",
       "t": "ES",
       "tradeUsd": 4302996114,
@@ -8116,17 +10338,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "NL",
-      "tradeUsd": 4297969855,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "CA",
-      "tradeUsd": 4292376256,
+      "s": "CN",
+      "t": "SK",
+      "tradeUsd": 4300503831,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8140,18 +10354,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "BR",
-      "tradeUsd": 4279282311,
-      "year": 2023,
+      "s": "US",
+      "t": "CZ",
+      "tradeUsd": 4279321941,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ZA",
       "t": "NL",
-      "tradeUsd": 4275678665,
+      "tradeUsd": 4271670585,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IE",
+      "tradeUsd": 4265023614,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8167,6 +10389,22 @@ window.countryMacroData = {
       "s": "NG",
       "t": "ID",
       "tradeUsd": 4262213389,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "SV",
+      "tradeUsd": 4260238254,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NG",
+      "t": "FR",
+      "tradeUsd": 4257507043,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8188,10 +10426,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CL",
+      "t": "BR",
+      "tradeUsd": 4241721467,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "BR",
       "tradeUsd": 4237865061,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "VE",
+      "tradeUsd": 4232021935,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8204,17 +10458,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "IE",
-      "tradeUsd": 4223522652,
+      "s": "JP",
+      "t": "PL",
+      "tradeUsd": 4208143214,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "JP",
-      "t": "PL",
-      "tradeUsd": 4208143214,
+      "s": "CN",
+      "t": "CI",
+      "tradeUsd": 4208097072,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8228,9 +10482,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "GB",
-      "tradeUsd": 4198866832,
+      "s": "OM",
+      "t": "AE",
+      "tradeUsd": 4200749156,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8244,9 +10498,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "EG",
-      "tradeUsd": 4175857770,
+      "s": "US",
+      "t": "NG",
+      "tradeUsd": 4174298267,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8262,8 +10516,16 @@ window.countryMacroData = {
     {
       "s": "TR",
       "t": "GR",
-      "tradeUsd": 4171507125,
+      "tradeUsd": 4171476752,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "DK",
+      "tradeUsd": 4167172616,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8276,9 +10538,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "EG",
-      "tradeUsd": 4149606870,
+      "s": "HU",
+      "t": "BE",
+      "tradeUsd": 4163628274,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "CI",
+      "tradeUsd": 4155532133,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "FR",
+      "tradeUsd": 4148241823,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "NG",
+      "tradeUsd": 4146201696,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8287,6 +10573,30 @@ window.countryMacroData = {
       "s": "CZ",
       "t": "RO",
       "tradeUsd": 4144836527,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "AO",
+      "tradeUsd": 4141201134,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "TZ",
+      "tradeUsd": 4134349396,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "SK",
+      "tradeUsd": 4129579689,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8332,14 +10642,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "SE",
-      "tradeUsd": 4092998539,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "JP",
       "t": "PL",
       "tradeUsd": 4092189730,
@@ -8348,17 +10650,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "RO",
-      "tradeUsd": 4091530367,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "ES",
       "t": "CZ",
-      "tradeUsd": 4087487151,
+      "tradeUsd": 4086057060,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8372,25 +10666,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "GB",
-      "tradeUsd": 4076340020,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "SA",
-      "tradeUsd": 4074398068,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "KR",
-      "tradeUsd": 4070877066,
+      "s": "IN",
+      "t": "CA",
+      "tradeUsd": 4073031544,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8412,10 +10690,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "KR",
-      "tradeUsd": 4065202081,
+      "s": "CN",
+      "t": "MT",
+      "tradeUsd": 4060759585,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "RU",
+      "tradeUsd": 4057640415,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8423,6 +10709,38 @@ window.countryMacroData = {
       "s": "KZ",
       "t": "NL",
       "tradeUsd": 4057549069,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "DK",
+      "tradeUsd": 4055595250,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "SE",
+      "tradeUsd": 4054169394,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "SK",
+      "tradeUsd": 4052206265,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PY",
+      "t": "AR",
+      "tradeUsd": 4051009548,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8436,41 +10754,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "CH",
-      "tradeUsd": 4040044021,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "DK",
-      "tradeUsd": 4034326345,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "DK",
-      "tradeUsd": 4031835438,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "PL",
-      "tradeUsd": 4021540945,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "NL",
-      "t": "AE",
-      "tradeUsd": 4019027406,
+      "t": "RO",
+      "tradeUsd": 4024367731,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8500,6 +10786,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "AT",
+      "tradeUsd": 3989092585,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "TR",
       "tradeUsd": 3987325700,
@@ -8524,9 +10818,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "CA",
+      "tradeUsd": 3970152720,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KZ",
       "t": "TR",
       "tradeUsd": 3969147175,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "SK",
+      "tradeUsd": 3967198766,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "NG",
+      "tradeUsd": 3958507035,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8536,6 +10854,30 @@ window.countryMacroData = {
       "t": "CH",
       "tradeUsd": 3957368514,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "EG",
+      "tradeUsd": 3956061431,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "OM",
+      "tradeUsd": 3955945770,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "AE",
+      "tradeUsd": 3955267472,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8556,10 +10898,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "IE",
-      "tradeUsd": 3941890679,
+      "s": "CN",
+      "t": "SK",
+      "tradeUsd": 3949681213,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "PA",
+      "tradeUsd": 3946992418,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "PL",
+      "tradeUsd": 3943872797,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8572,25 +10930,73 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CZ",
-      "tradeUsd": 3925282552,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "VN",
-      "tradeUsd": 3924396776,
+      "s": "LT",
+      "t": "PL",
+      "tradeUsd": 3937411457,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "CH",
-      "tradeUsd": 3915922974,
+      "s": "AR",
+      "t": "IN",
+      "tradeUsd": 3933795963,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HK",
+      "t": "FR",
+      "tradeUsd": 3932784097,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IE",
+      "tradeUsd": 3926238791,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "AE",
+      "tradeUsd": 3920193616,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "BE",
+      "tradeUsd": 3915489700,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "BE",
+      "tradeUsd": 3911793056,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "LY",
+      "tradeUsd": 3901492658,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LU",
+      "t": "DE",
+      "tradeUsd": 3898943791,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8604,6 +11010,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CA",
+      "t": "IN",
+      "tradeUsd": 3879593932,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "SA",
+      "tradeUsd": 3877814695,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "ID",
       "tradeUsd": 3874600088,
@@ -8612,9 +11034,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "VN",
-      "tradeUsd": 3869576279,
+      "s": "ID",
+      "t": "NL",
+      "tradeUsd": 3869457870,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8628,10 +11050,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "NL",
-      "tradeUsd": 3866795393,
-      "year": 2023,
+      "s": "DE",
+      "t": "VN",
+      "tradeUsd": 3863672979,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8652,14 +11074,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "JP",
-      "tradeUsd": 3846200470,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "MY",
       "t": "TR",
       "tradeUsd": 3844132644,
@@ -8676,9 +11090,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "IL",
+      "tradeUsd": 3838145978,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IN",
+      "tradeUsd": 3835166016,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "CO",
       "tradeUsd": 3822571869,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CZ",
+      "tradeUsd": 3815577284,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "FR",
+      "tradeUsd": 3813206962,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8700,25 +11146,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "KR",
-      "tradeUsd": 3806882258,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "IE",
-      "tradeUsd": 3801073306,
+      "s": "US",
+      "t": "QA",
+      "tradeUsd": 3804239904,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "AU",
-      "tradeUsd": 3791168325,
+      "s": "CN",
+      "t": "OM",
+      "tradeUsd": 3798023173,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8736,14 +11174,6 @@ window.countryMacroData = {
       "t": "GB",
       "tradeUsd": 3786548035,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "GB",
-      "tradeUsd": 3784264374,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8788,9 +11218,81 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SE",
-      "tradeUsd": 3750054744,
+      "s": "OM",
+      "t": "AE",
+      "tradeUsd": 3760125984,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CA",
+      "tradeUsd": 3758769290,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "LK",
+      "tradeUsd": 3755454037,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CZ",
+      "tradeUsd": 3755386974,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "IT",
+      "tradeUsd": 3753591984,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "PY",
+      "tradeUsd": 3753100818,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "MA",
+      "tradeUsd": 3752347491,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "BR",
+      "tradeUsd": 3749666619,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "FR",
+      "tradeUsd": 3746252964,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GR",
+      "t": "BG",
+      "tradeUsd": 3742981415,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8799,46 +11301,6 @@ window.countryMacroData = {
       "s": "NL",
       "t": "GR",
       "tradeUsd": 3742281766,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "DE",
-      "tradeUsd": 3741878392,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "GR",
-      "tradeUsd": 3738482272,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "ID",
-      "tradeUsd": 3737848113,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "CL",
-      "tradeUsd": 3733309923,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "IT",
-      "tradeUsd": 3732253158,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -8853,8 +11315,16 @@ window.countryMacroData = {
     },
     {
       "s": "CZ",
-      "t": "CH",
-      "tradeUsd": 3722518400,
+      "t": "RO",
+      "tradeUsd": 3728420293,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "BE",
+      "tradeUsd": 3727844302,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8868,6 +11338,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HK",
+      "t": "FR",
+      "tradeUsd": 3720415152,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "BE",
+      "tradeUsd": 3719317246,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "PT",
       "tradeUsd": 3716013615,
@@ -8876,10 +11362,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "IL",
-      "tradeUsd": 3715788824,
-      "year": 2024,
+      "s": "CN",
+      "t": "CM",
+      "tradeUsd": 3715031809,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "US",
+      "tradeUsd": 3711763685,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8892,25 +11386,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "CN",
-      "tradeUsd": 3705636170,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "MA",
-      "tradeUsd": 3704624328,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "MX",
-      "tradeUsd": 3704064268,
+      "s": "NI",
+      "t": "US",
+      "tradeUsd": 3706839776,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8924,10 +11402,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "PL",
-      "tradeUsd": 3703106856,
+      "s": "LV",
+      "t": "LT",
+      "tradeUsd": 3697611801,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KZ",
+      "t": "FR",
+      "tradeUsd": 3688742025,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "KR",
+      "tradeUsd": 3688485823,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -8940,10 +11434,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "NL",
-      "tradeUsd": 3652578171,
+      "s": "CN",
+      "t": "LA",
+      "tradeUsd": 3675902149,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "IT",
+      "tradeUsd": 3673222153,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CL",
+      "tradeUsd": 3670560983,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "PY",
+      "tradeUsd": 3668617673,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "GR",
+      "tradeUsd": 3668072060,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "AT",
+      "tradeUsd": 3652124800,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IL",
+      "tradeUsd": 3649015433,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8956,9 +11498,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "HK",
-      "tradeUsd": 3637125267,
+      "s": "CN",
+      "t": "CM",
+      "tradeUsd": 3643309434,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NI",
+      "t": "US",
+      "tradeUsd": 3640687704,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "BG",
+      "tradeUsd": 3640394755,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8972,10 +11530,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "AE",
-      "tradeUsd": 3632869031,
-      "year": 2024,
+      "s": "TR",
+      "t": "PL",
+      "tradeUsd": 3632799539,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -8983,6 +11541,14 @@ window.countryMacroData = {
       "s": "GR",
       "t": "DE",
       "tradeUsd": 3631100490,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "EG",
+      "tradeUsd": 3630952951,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -8996,30 +11562,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "RO",
-      "tradeUsd": 3625617872,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "IL",
-      "tradeUsd": 3625130853,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "SG",
-      "tradeUsd": 3623740993,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "JP",
       "tradeUsd": 3623141936,
@@ -9028,10 +11570,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "IT",
-      "tradeUsd": 3620133042,
+      "s": "IT",
+      "t": "TN",
+      "tradeUsd": 3617021903,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "VN",
+      "tradeUsd": 3615550127,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9044,9 +11594,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "TR",
-      "tradeUsd": 3605016174,
+      "s": "IT",
+      "t": "BG",
+      "tradeUsd": 3608325274,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9068,26 +11618,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "KZ",
-      "tradeUsd": 3596808775,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "EG",
-      "tradeUsd": 3594995583,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "ES",
       "t": "IE",
-      "tradeUsd": 3594553380,
+      "tradeUsd": 3591529494,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "BD",
+      "tradeUsd": 3586197610,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "LY",
+      "tradeUsd": 3585674959,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9100,74 +11650,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "CN",
-      "tradeUsd": 3578376989,
+      "s": "MM",
+      "t": "TH",
+      "tradeUsd": 3580394204,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "LK",
+      "tradeUsd": 3578261692,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "TN",
+      "tradeUsd": 3572322295,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "BD",
-      "tradeUsd": 3577791736,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "KR",
-      "tradeUsd": 3574339633,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "TR",
-      "tradeUsd": 3567942491,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "PH",
       "t": "KR",
-      "tradeUsd": 3564020867,
+      "tradeUsd": 3570292996,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
+      "s": "LV",
+      "t": "LT",
+      "tradeUsd": 3555443176,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "AU",
+      "tradeUsd": 3540411485,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PY",
       "t": "BR",
-      "tradeUsd": 3558550453,
+      "tradeUsd": 3536322767,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "MA",
-      "tradeUsd": 3556099281,
+      "s": "PH",
+      "t": "KR",
+      "tradeUsd": 3533831874,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "CH",
-      "tradeUsd": 3542935680,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "UA",
-      "tradeUsd": 3537513881,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9180,9 +11722,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ZA",
-      "tradeUsd": 3529011311,
+      "s": "NL",
+      "t": "SG",
+      "tradeUsd": 3533167896,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "NO",
+      "tradeUsd": 3528781672,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "SG",
+      "tradeUsd": 3528073982,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9190,23 +11748,31 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "PK",
-      "tradeUsd": 3522263690,
+      "tradeUsd": 3522263691,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "SG",
-      "tradeUsd": 3521225397,
+      "s": "TR",
+      "t": "BG",
+      "tradeUsd": 3518066952,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "NO",
+      "tradeUsd": 3513148830,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "GR",
-      "tradeUsd": 3512388659,
+      "s": "IT",
+      "t": "SG",
+      "tradeUsd": 3507432736,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9228,18 +11794,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "AU",
-      "t": "NL",
-      "tradeUsd": 3492203588,
+      "s": "NO",
+      "t": "CN",
+      "tradeUsd": 3503839802,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "KR",
-      "tradeUsd": 3478977342,
-      "year": 2023,
+      "s": "LT",
+      "t": "DE",
+      "tradeUsd": 3499483029,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "NL",
+      "tradeUsd": 3492203588,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9252,18 +11826,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "PL",
-      "tradeUsd": 3470316569,
+      "s": "IN",
+      "t": "IQ",
+      "tradeUsd": 3470878249,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "AT",
+      "tradeUsd": 3470427406,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "BR",
-      "tradeUsd": 3462406057,
-      "year": 2024,
+      "s": "CZ",
+      "t": "CH",
+      "tradeUsd": 3468004654,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9276,10 +11858,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "GR",
-      "tradeUsd": 3454840989,
-      "year": 2023,
+      "s": "MM",
+      "t": "CN",
+      "tradeUsd": 3456722381,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "TR",
+      "tradeUsd": 3455273090,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9300,17 +11890,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "UA",
-      "tradeUsd": 3443799775,
+      "s": "CN",
+      "t": "VE",
+      "tradeUsd": 3450891154,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "MA",
-      "tradeUsd": 3440902761,
+      "s": "CN",
+      "t": "RS",
+      "tradeUsd": 3445691013,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9319,6 +11909,30 @@ window.countryMacroData = {
       "s": "QA",
       "t": "IT",
       "tradeUsd": 3434836184,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "BE",
+      "tradeUsd": 3432725603,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "JO",
+      "tradeUsd": 3431139883,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "CN",
+      "tradeUsd": 3428022335,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9348,9 +11962,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "NL",
-      "tradeUsd": 3401444673,
+      "s": "MX",
+      "t": "KR",
+      "tradeUsd": 3412314044,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TH",
+      "t": "JP",
+      "tradeUsd": 3404439276,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "GB",
+      "tradeUsd": 3403336070,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IL",
+      "tradeUsd": 3400811576,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9364,14 +12002,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "SG",
-      "tradeUsd": 3395618467,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "SG",
       "t": "NZ",
       "tradeUsd": 3389541285,
@@ -9380,10 +12010,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "CN",
-      "tradeUsd": 3388418250,
-      "year": 2024,
+      "s": "CA",
+      "t": "CH",
+      "tradeUsd": 3389503675,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9404,6 +12034,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SI",
+      "t": "AT",
+      "tradeUsd": 3381003867,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "EG",
       "t": "IT",
       "tradeUsd": 3380241065,
@@ -9412,9 +12050,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PE",
-      "t": "JP",
-      "tradeUsd": 3375285024,
+      "s": "TR",
+      "t": "CN",
+      "tradeUsd": 3379892402,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "CR",
+      "tradeUsd": 3379477600,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9423,6 +12069,14 @@ window.countryMacroData = {
       "s": "EG",
       "t": "SA",
       "tradeUsd": 3363183481,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PY",
+      "t": "AR",
+      "tradeUsd": 3363125249,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9444,9 +12098,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GR",
+      "t": "CY",
+      "tradeUsd": 3354502795,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "EG",
       "tradeUsd": 3352651094,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "LA",
+      "tradeUsd": 3350822924,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9460,14 +12130,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "PL",
-      "tradeUsd": 3347890671,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "QA",
       "t": "PK",
       "tradeUsd": 3345223472,
@@ -9476,25 +12138,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "CZ",
-      "tradeUsd": 3343658254,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "BR",
       "t": "GB",
       "tradeUsd": 3343092336,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "BR",
-      "tradeUsd": 3342871135,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9508,17 +12154,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "QA",
-      "tradeUsd": 3337279903,
-      "year": 2024,
+      "s": "KR",
+      "t": "ES",
+      "tradeUsd": 3332223565,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "KR",
-      "t": "ES",
-      "tradeUsd": 3332223565,
+      "s": "BG",
+      "t": "RO",
+      "tradeUsd": 3330734050,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9540,10 +12186,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "SG",
+      "tradeUsd": 3321852018,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "KZ",
       "tradeUsd": 3315526768,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "NO",
+      "tradeUsd": 3315489501,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9556,9 +12218,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "AE",
-      "tradeUsd": 3314907298,
+      "s": "LT",
+      "t": "DE",
+      "tradeUsd": 3309957455,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9580,9 +12242,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "TR",
-      "tradeUsd": 3307236717,
+      "s": "BE",
+      "t": "AT",
+      "tradeUsd": 3303172784,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "TH",
+      "tradeUsd": 3302430870,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9590,8 +12260,40 @@ window.countryMacroData = {
     {
       "s": "TR",
       "t": "CN",
-      "tradeUsd": 3306083517,
+      "tradeUsd": 3299341300,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "PL",
+      "tradeUsd": 3293024864,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "KE",
+      "tradeUsd": 3291835289,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "IE",
+      "tradeUsd": 3291368411,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "NL",
+      "tradeUsd": 3289639203,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9604,9 +12306,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "CN",
-      "tradeUsd": 3283463797,
+      "s": "HU",
+      "t": "BE",
+      "tradeUsd": 3283594121,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9620,10 +12322,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JO",
+      "t": "US",
+      "tradeUsd": 3280166647,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "MA",
+      "tradeUsd": 3275163378,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CN",
       "t": "FI",
       "tradeUsd": 3268533963,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "UY",
+      "tradeUsd": 3268080693,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9636,9 +12362,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "DK",
-      "tradeUsd": 3260292418,
+      "s": "IN",
+      "t": "IQ",
+      "tradeUsd": 3263678644,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "BE",
+      "tradeUsd": 3261531325,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HN",
+      "t": "US",
+      "tradeUsd": 3261182581,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "HU",
+      "tradeUsd": 3260920987,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9652,10 +12402,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SE",
-      "tradeUsd": 3251039912,
-      "year": 2024,
+      "s": "CA",
+      "t": "IN",
+      "tradeUsd": 3253212607,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9668,10 +12418,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "ES",
-      "tradeUsd": 3245855018,
-      "year": 2023,
+      "s": "CN",
+      "t": "AO",
+      "tradeUsd": 3243273029,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9684,10 +12434,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "CZ",
-      "tradeUsd": 3239112666,
-      "year": 2023,
+      "s": "BG",
+      "t": "IT",
+      "tradeUsd": 3237029301,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9700,10 +12450,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "IR",
-      "tradeUsd": 3231184075,
-      "year": 2024,
+      "s": "HN",
+      "t": "US",
+      "tradeUsd": 3228891055,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9716,6 +12466,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "VN",
+      "t": "BE",
+      "tradeUsd": 3227772980,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "CN",
+      "tradeUsd": 3226542029,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "IR",
       "tradeUsd": 3225774461,
@@ -9724,34 +12490,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GB",
+      "t": "AE",
+      "tradeUsd": 3222278903,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DE",
-      "t": "CL",
-      "tradeUsd": 3224657671,
+      "t": "AU",
+      "tradeUsd": 3208422643,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "DK",
-      "tradeUsd": 3223736431,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "CN",
-      "tradeUsd": 3221862722,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "BR",
-      "tradeUsd": 3205396827,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9764,10 +12514,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SG",
+      "t": "KH",
+      "tradeUsd": 3196952393,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "PE",
       "tradeUsd": 3196094519,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RS",
+      "tradeUsd": 3195716505,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "BE",
+      "tradeUsd": 3194962691,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "BH",
+      "tradeUsd": 3189546958,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "HK",
+      "tradeUsd": 3188152085,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "EG",
+      "tradeUsd": 3182402723,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "NO",
+      "tradeUsd": 3182140725,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9780,9 +12586,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "AU",
-      "tradeUsd": 3178356525,
+      "s": "BR",
+      "t": "UY",
+      "tradeUsd": 3180924402,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9796,6 +12602,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ID",
+      "t": "AU",
+      "tradeUsd": 3176774968,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "ES",
       "tradeUsd": 3174180231,
@@ -9804,10 +12618,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "GB",
+      "tradeUsd": 3168999416,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "AE",
       "tradeUsd": 3165705594,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "PY",
+      "tradeUsd": 3158414426,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9828,17 +12658,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "GB",
-      "tradeUsd": 3151669860,
-      "year": 2024,
+      "s": "BE",
+      "t": "IE",
+      "tradeUsd": 3150649389,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "UA",
-      "tradeUsd": 3149750907,
+      "s": "CN",
+      "t": "ET",
+      "tradeUsd": 3143304595,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -9852,26 +12682,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "GB",
-      "tradeUsd": 3132097498,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "BR",
-      "tradeUsd": 3126138703,
+      "s": "NO",
+      "t": "CN",
+      "tradeUsd": 3132433135,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "KZ",
-      "tradeUsd": 3121733838,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -9884,10 +12698,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "ES",
-      "tradeUsd": 3118641804,
-      "year": 2024,
+      "s": "US",
+      "t": "HU",
+      "tradeUsd": 3119806963,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -9908,6 +12722,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "RO",
+      "t": "PL",
+      "tradeUsd": 3106361054,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "ID",
       "tradeUsd": 3106008327,
@@ -9916,9 +12738,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HR",
+      "t": "DE",
+      "tradeUsd": 3103744285,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "FI",
+      "tradeUsd": 3102305272,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "KR",
+      "tradeUsd": 3099503104,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "AE",
+      "tradeUsd": 3099281298,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ES",
       "t": "RO",
       "tradeUsd": 3088634353,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "NL",
+      "tradeUsd": 3088586285,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9940,9 +12802,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "NL",
-      "tradeUsd": 3085164321,
+      "s": "VN",
+      "t": "FR",
+      "tradeUsd": 3084731984,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IE",
+      "tradeUsd": 3083270520,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "CH",
+      "tradeUsd": 3079227627,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -9958,31 +12836,55 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "SG",
-      "tradeUsd": 3072445719,
+      "tradeUsd": 3071137090,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "KE",
+      "tradeUsd": 3068914001,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "NO",
+      "tradeUsd": 3068100999,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "AE",
-      "tradeUsd": 3065473504,
+      "tradeUsd": 3065473512,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ZA",
-      "tradeUsd": 3065348086,
+      "s": "CA",
+      "t": "BE",
+      "tradeUsd": 3063532761,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "KZ",
+      "tradeUsd": 3060429658,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "MA",
-      "tradeUsd": 3060347102,
+      "s": "BE",
+      "t": "CA",
+      "tradeUsd": 3058751104,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10005,64 +12907,88 @@ window.countryMacroData = {
     },
     {
       "s": "IT",
-      "t": "DZ",
-      "tradeUsd": 3045135627,
-      "year": 2023,
+      "t": "EG",
+      "tradeUsd": 3049671009,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "BR",
-      "tradeUsd": 3044130225,
+      "s": "US",
+      "t": "PT",
+      "tradeUsd": 3048409026,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "DZ",
+      "tradeUsd": 3047112078,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "DZ",
+      "tradeUsd": 3041549224,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "BD",
-      "tradeUsd": 3040462871,
+      "tradeUsd": 3040462873,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "ID",
-      "tradeUsd": 3033331908,
+      "s": "ZA",
+      "t": "BE",
+      "tradeUsd": 3027785576,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "BR",
-      "tradeUsd": 3031437605,
+      "s": "FI",
+      "t": "EE",
+      "tradeUsd": 3016543980,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "PK",
-      "tradeUsd": 3030723027,
+      "s": "HR",
+      "t": "IT",
+      "tradeUsd": 3013865693,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "DE",
+      "tradeUsd": 3012854813,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ES",
-      "t": "JP",
-      "tradeUsd": 3011788771,
-      "year": 2023,
+      "t": "BR",
+      "tradeUsd": 3009273805,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "MA",
-      "tradeUsd": 3010351465,
+      "s": "BE",
+      "t": "DK",
+      "tradeUsd": 3006484000,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10084,6 +13010,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BR",
+      "t": "FR",
+      "tradeUsd": 2999341894,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MA",
+      "tradeUsd": 2998182381,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MA",
+      "tradeUsd": 2997964737,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PY",
+      "t": "BR",
+      "tradeUsd": 2993356119,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PE",
       "t": "CA",
       "tradeUsd": 2987637612,
@@ -10092,9 +13050,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "NL",
-      "tradeUsd": 2975971758,
+      "s": "KR",
+      "t": "SK",
+      "tradeUsd": 2975719627,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "FR",
+      "tradeUsd": 2975519909,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IN",
+      "tradeUsd": 2970366224,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "UY",
+      "tradeUsd": 2969285962,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "ES",
+      "tradeUsd": 2968703761,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "IT",
+      "tradeUsd": 2967609225,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10116,22 +13114,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "GB",
-      "tradeUsd": 2960094625,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "NL",
-      "tradeUsd": 2958955466,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "PL",
       "t": "RU",
       "tradeUsd": 2958843377,
@@ -10142,7 +13124,7 @@ window.countryMacroData = {
     {
       "s": "PH",
       "t": "TH",
-      "tradeUsd": 2953955971,
+      "tradeUsd": 2956105868,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10156,41 +13138,81 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "EG",
-      "tradeUsd": 2952449833,
-      "year": 2024,
+      "s": "KZ",
+      "t": "FR",
+      "tradeUsd": 2949673223,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "DZ",
-      "tradeUsd": 2949972479,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "ID",
-      "tradeUsd": 2940266027,
-      "year": 2024,
+      "s": "SG",
+      "t": "MM",
+      "tradeUsd": 2945850284,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "PH",
       "t": "SG",
-      "tradeUsd": 2935068874,
+      "tradeUsd": 2942607700,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "NI",
+      "tradeUsd": 2940985161,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "SA",
+      "tradeUsd": 2940513426,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "PH",
       "t": "TH",
-      "tradeUsd": 2930067773,
+      "tradeUsd": 2931640278,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "RS",
+      "tradeUsd": 2927171407,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "RS",
+      "tradeUsd": 2923285822,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "KW",
+      "tradeUsd": 2918910848,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "GT",
+      "tradeUsd": 2915309267,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10204,18 +13226,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AT",
-      "tradeUsd": 2910763938,
+      "s": "BH",
+      "t": "SA",
+      "tradeUsd": 2913822673,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "MA",
-      "tradeUsd": 2902602623,
+      "s": "US",
+      "t": "FI",
+      "tradeUsd": 2905742087,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "TH",
+      "tradeUsd": 2903829927,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IN",
+      "tradeUsd": 2898541934,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "JP",
+      "tradeUsd": 2893228422,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10228,18 +13274,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "GB",
-      "tradeUsd": 2889612053,
+      "s": "NO",
+      "t": "IT",
+      "tradeUsd": 2889251132,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "JP",
-      "tradeUsd": 2884878983,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10247,6 +13285,38 @@ window.countryMacroData = {
       "s": "HK",
       "t": "IT",
       "tradeUsd": 2882600740,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "US",
+      "tradeUsd": 2882245427,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "DK",
+      "tradeUsd": 2881294660,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JO",
+      "t": "US",
+      "tradeUsd": 2881096561,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "GT",
+      "tradeUsd": 2880631863,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10268,17 +13338,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "RU",
-      "tradeUsd": 2878047258,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "QA",
-      "tradeUsd": 2869576885,
+      "s": "US",
+      "t": "LT",
+      "tradeUsd": 2874680706,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10286,7 +13348,7 @@ window.countryMacroData = {
     {
       "s": "PH",
       "t": "NL",
-      "tradeUsd": 2866803761,
+      "tradeUsd": 2867919609,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10295,6 +13357,14 @@ window.countryMacroData = {
       "s": "UA",
       "t": "ES",
       "tradeUsd": 2863456979,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BH",
+      "t": "SA",
+      "tradeUsd": 2861712813,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10316,10 +13386,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "SA",
-      "tradeUsd": 2852300182,
-      "year": 2024,
+      "s": "IT",
+      "t": "QA",
+      "tradeUsd": 2850161337,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10340,10 +13410,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AT",
-      "tradeUsd": 2841104483,
+      "s": "IN",
+      "t": "NG",
+      "tradeUsd": 2843787155,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "SI",
+      "tradeUsd": 2843762179,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "NL",
+      "tradeUsd": 2843091212,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10351,6 +13437,22 @@ window.countryMacroData = {
       "s": "UA",
       "t": "DE",
       "tradeUsd": 2840754727,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "US",
+      "tradeUsd": 2840475945,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "BG",
+      "tradeUsd": 2834857025,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10364,22 +13466,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AU",
-      "tradeUsd": 2830969505,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "UA",
-      "tradeUsd": 2828833585,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "SG",
       "t": "MX",
       "tradeUsd": 2828833511,
@@ -10388,26 +13474,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "DK",
-      "tradeUsd": 2821133086,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "AU",
-      "tradeUsd": 2818566330,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "DE",
-      "t": "AR",
-      "tradeUsd": 2815600443,
+      "t": "LV",
+      "tradeUsd": 2819063695,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "US",
+      "tradeUsd": 2815935171,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10420,10 +13498,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "MX",
-      "tradeUsd": 2814045670,
-      "year": 2023,
+      "s": "KR",
+      "t": "SK",
+      "tradeUsd": 2813376326,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10431,6 +13509,14 @@ window.countryMacroData = {
       "s": "MX",
       "t": "CO",
       "tradeUsd": 2813043491,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "JP",
+      "tradeUsd": 2812856042,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10444,25 +13530,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "TR",
-      "tradeUsd": 2805281375,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "FI",
       "t": "GB",
-      "tradeUsd": 2799244520,
+      "tradeUsd": 2794909321,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "ZA",
-      "tradeUsd": 2798496193,
+      "s": "LK",
+      "t": "US",
+      "tradeUsd": 2790861568,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10476,9 +13554,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "PL",
-      "tradeUsd": 2781459984,
+      "s": "CN",
+      "t": "CR",
+      "tradeUsd": 2784230656,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10492,6 +13570,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "MX",
+      "tradeUsd": 2778730184,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "ZA",
+      "tradeUsd": 2776943226,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "CN",
+      "tradeUsd": 2768213205,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KZ",
       "t": "RO",
       "tradeUsd": 2767115842,
@@ -10500,9 +13602,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SA",
-      "tradeUsd": 2762463453,
+      "s": "BE",
+      "t": "BR",
+      "tradeUsd": 2765853042,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "PY",
+      "tradeUsd": 2765465933,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "SI",
+      "tradeUsd": 2763298757,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "US",
+      "tradeUsd": 2758936587,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10516,10 +13642,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "CH",
+      "tradeUsd": 2751688782,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
-      "t": "DZ",
-      "tradeUsd": 2756022225,
-      "year": 2023,
+      "t": "RO",
+      "tradeUsd": 2746293950,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10548,9 +13682,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "SA",
-      "tradeUsd": 2732088534,
+      "s": "TR",
+      "t": "IR",
+      "tradeUsd": 2735987035,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "AR",
+      "tradeUsd": 2719493406,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "FR",
+      "tradeUsd": 2714233810,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "UY",
+      "tradeUsd": 2707636243,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "RS",
+      "tradeUsd": 2705251277,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10564,25 +13730,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "IT",
-      "tradeUsd": 2697107921,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "CZ",
-      "tradeUsd": 2693363067,
+      "s": "CN",
+      "t": "RS",
+      "tradeUsd": 2699232134,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "UA",
-      "tradeUsd": 2688458645,
+      "s": "LT",
+      "t": "NL",
+      "tradeUsd": 2697319849,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "HR",
+      "tradeUsd": 2693710841,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "IN",
+      "tradeUsd": 2692825233,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "TR",
+      "tradeUsd": 2687316806,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "TR",
+      "tradeUsd": 2686601152,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10596,6 +13786,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BE",
+      "t": "CA",
+      "tradeUsd": 2677339278,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "EG",
       "t": "SA",
       "tradeUsd": 2671806901,
@@ -10604,17 +13802,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "CA",
-      "tradeUsd": 2660110461,
+      "s": "TN",
+      "t": "DE",
+      "tradeUsd": 2666849310,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "IT",
+      "tradeUsd": 2666557858,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "ID",
+      "tradeUsd": 2651685447,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "HK",
-      "tradeUsd": 2650809025,
+      "tradeUsd": 2651473706,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "GR",
+      "tradeUsd": 2650123091,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10630,24 +13852,48 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "AE",
-      "tradeUsd": 2648681384,
+      "tradeUsd": 2648715165,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PE",
-      "t": "CH",
-      "tradeUsd": 2645979447,
+      "s": "CN",
+      "t": "BG",
+      "tradeUsd": 2645857184,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "GB",
+      "tradeUsd": 2638515551,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "IT",
-      "tradeUsd": 2645136344,
-      "year": 2024,
+      "s": "TN",
+      "t": "DE",
+      "tradeUsd": 2636702746,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "DZ",
+      "tradeUsd": 2630553352,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "LV",
+      "tradeUsd": 2628186811,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10655,6 +13901,14 @@ window.countryMacroData = {
       "s": "SA",
       "t": "EG",
       "tradeUsd": 2627354814,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "RO",
+      "tradeUsd": 2625380516,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10670,7 +13924,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "HK",
-      "tradeUsd": 2622638019,
+      "tradeUsd": 2622638034,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10684,18 +13938,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "SA",
-      "tradeUsd": 2621415516,
+      "s": "NG",
+      "t": "CI",
+      "tradeUsd": 2616161050,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "CN",
-      "tradeUsd": 2611518329,
-      "year": 2023,
+      "s": "ES",
+      "t": "AT",
+      "tradeUsd": 2612324950,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "GR",
+      "tradeUsd": 2610099086,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UG",
+      "t": "AE",
+      "tradeUsd": 2609435055,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MT",
+      "tradeUsd": 2608378372,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10708,18 +13986,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "RU",
-      "tradeUsd": 2604368586,
+      "s": "US",
+      "t": "NG",
+      "tradeUsd": 2599318014,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "HK",
-      "tradeUsd": 2595536256,
+      "s": "DZ",
+      "t": "US",
+      "tradeUsd": 2594098930,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "HR",
+      "tradeUsd": 2590636236,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "ET",
+      "tradeUsd": 2588704848,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10732,33 +14026,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "RO",
-      "tradeUsd": 2577483523,
+      "s": "PL",
+      "t": "LV",
+      "tradeUsd": 2580800889,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "TR",
-      "tradeUsd": 2576735081,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "SA",
-      "tradeUsd": 2575137132,
+      "tradeUsd": 2575053212,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "DK",
-      "tradeUsd": 2568225981,
+      "s": "CL",
+      "t": "IN",
+      "tradeUsd": 2573504402,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10768,6 +14054,30 @@ window.countryMacroData = {
       "t": "DZ",
       "tradeUsd": 2567007389,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "FI",
+      "tradeUsd": 2564034042,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "QA",
+      "tradeUsd": 2558294311,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "RO",
+      "tradeUsd": 2555268442,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10796,6 +14106,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AO",
+      "t": "ES",
+      "tradeUsd": 2546407522,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "IT",
+      "tradeUsd": 2546284975,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "PL",
+      "tradeUsd": 2543746718,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "PY",
+      "tradeUsd": 2536023577,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "AT",
       "tradeUsd": 2535976318,
@@ -10812,18 +14154,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "RU",
-      "tradeUsd": 2532686061,
-      "year": 2024,
+      "s": "LT",
+      "t": "NL",
+      "tradeUsd": 2527947040,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "MX",
-      "tradeUsd": 2529521337,
-      "year": 2024,
+      "s": "PE",
+      "t": "IN",
+      "tradeUsd": 2525742612,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10838,8 +14180,24 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "DE",
-      "tradeUsd": 2523565230,
+      "tradeUsd": 2523283401,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "QA",
+      "t": "BE",
+      "tradeUsd": 2521735317,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "NL",
+      "tradeUsd": 2512773257,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10852,9 +14210,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "LY",
+      "tradeUsd": 2506926721,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "NG",
-      "tradeUsd": 2503746395,
+      "tradeUsd": 2503532701,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "VE",
+      "tradeUsd": 2501338460,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "PL",
+      "tradeUsd": 2497257514,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "BE",
+      "tradeUsd": 2497028795,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10863,6 +14253,22 @@ window.countryMacroData = {
       "s": "SA",
       "t": "SG",
       "tradeUsd": 2490476622,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "RO",
+      "tradeUsd": 2488925977,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "DE",
+      "tradeUsd": 2486640766,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -10884,18 +14290,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "DE",
-      "tradeUsd": 2478856916,
+      "s": "DE",
+      "t": "ES",
+      "tradeUsd": 2476395042,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "QA",
-      "tradeUsd": 2476737848,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -10916,14 +14314,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "CN",
-      "tradeUsd": 2469306485,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "BR",
       "t": "BD",
       "tradeUsd": 2468166639,
@@ -10932,9 +14322,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CZ",
-      "tradeUsd": 2461705265,
+      "s": "NO",
+      "t": "IT",
+      "tradeUsd": 2467512856,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "BE",
+      "tradeUsd": 2463647284,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10948,9 +14346,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "DK",
-      "tradeUsd": 2457813070,
+      "s": "PH",
+      "t": "DE",
+      "tradeUsd": 2458244716,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -10964,14 +14362,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "DE",
-      "tradeUsd": 2456297681,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "VN",
       "t": "PL",
       "tradeUsd": 2450927490,
@@ -10980,10 +14370,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "AR",
-      "tradeUsd": 2443956531,
-      "year": 2024,
+      "s": "AR",
+      "t": "IN",
+      "tradeUsd": 2450585879,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -10996,10 +14386,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AE",
-      "tradeUsd": 2442094384,
+      "s": "BG",
+      "t": "GR",
+      "tradeUsd": 2440950415,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IS",
+      "t": "NL",
+      "tradeUsd": 2439633318,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11007,14 +14405,6 @@ window.countryMacroData = {
       "s": "VN",
       "t": "BR",
       "tradeUsd": 2437590966,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "IL",
-      "tradeUsd": 2429909673,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11028,10 +14418,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "CA",
-      "tradeUsd": 2416770224,
+      "s": "KH",
+      "t": "US",
+      "tradeUsd": 2424937178,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "US",
+      "tradeUsd": 2420911494,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "HU",
+      "tradeUsd": 2417149455,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "KW",
+      "tradeUsd": 2411823129,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "NL",
+      "tradeUsd": 2409825292,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "RU",
+      "tradeUsd": 2407535339,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "FR",
+      "tradeUsd": 2407416589,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "IT",
+      "tradeUsd": 2406618213,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11039,6 +14485,22 @@ window.countryMacroData = {
       "s": "UA",
       "t": "CN",
       "tradeUsd": 2406413385,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LU",
+      "t": "FR",
+      "tradeUsd": 2400405190,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "NL",
+      "tradeUsd": 2400103065,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11053,24 +14515,40 @@ window.countryMacroData = {
     },
     {
       "s": "IT",
-      "t": "ZA",
-      "tradeUsd": 2398701994,
+      "t": "FI",
+      "tradeUsd": 2398429616,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CO",
+      "t": "IN",
+      "tradeUsd": 2397798394,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "HR",
+      "tradeUsd": 2396054007,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
-      "t": "KW",
-      "tradeUsd": 2394088369,
-      "year": 2023,
+      "t": "NO",
+      "tradeUsd": 2394454879,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "DE",
-      "tradeUsd": 2394059039,
+      "tradeUsd": 2394059054,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11084,6 +14562,46 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "ZA",
+      "tradeUsd": 2392323221,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "BG",
+      "tradeUsd": 2391388947,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "ZA",
+      "tradeUsd": 2388974065,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "KW",
+      "tradeUsd": 2387993508,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "UA",
+      "tradeUsd": 2383120341,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "IL",
       "tradeUsd": 2378100663,
@@ -11092,9 +14610,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "CN",
-      "tradeUsd": 2377153409,
+      "s": "CN",
+      "t": "TN",
+      "tradeUsd": 2376458069,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11103,6 +14621,14 @@ window.countryMacroData = {
       "s": "PK",
       "t": "CN",
       "tradeUsd": 2375627611,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "HU",
+      "tradeUsd": 2375110123,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11124,9 +14650,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "FI",
-      "tradeUsd": 2370632949,
+      "s": "LT",
+      "t": "EE",
+      "tradeUsd": 2371634150,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "NI",
+      "tradeUsd": 2370792167,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11140,17 +14674,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CZ",
-      "tradeUsd": 2360159238,
-      "year": 2024,
+      "s": "US",
+      "t": "LU",
+      "tradeUsd": 2365373019,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "AU",
-      "tradeUsd": 2352021332,
+      "s": "HU",
+      "t": "SI",
+      "tradeUsd": 2363085904,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "NL",
+      "tradeUsd": 2360897011,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "EE",
+      "tradeUsd": 2352182806,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11159,6 +14709,22 @@ window.countryMacroData = {
       "s": "NG",
       "t": "ZA",
       "tradeUsd": 2351193346,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "BE",
+      "tradeUsd": 2347837008,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "BR",
+      "tradeUsd": 2347030069,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11180,6 +14746,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AO",
+      "t": "IN",
+      "tradeUsd": 2342586973,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DE",
       "t": "DZ",
       "tradeUsd": 2341667522,
@@ -11188,18 +14762,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "UA",
-      "tradeUsd": 2330799739,
+      "s": "SV",
+      "t": "US",
+      "tradeUsd": 2339341087,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IL",
+      "tradeUsd": 2337635653,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "SI",
+      "tradeUsd": 2332996905,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CZ",
-      "tradeUsd": 2330309977,
-      "year": 2023,
+      "s": "DK",
+      "t": "ES",
+      "tradeUsd": 2330243335,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11214,15 +14804,31 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "FI",
-      "tradeUsd": 2324758255,
+      "tradeUsd": 2328067275,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "CH",
-      "tradeUsd": 2324579558,
+      "s": "OM",
+      "t": "SA",
+      "tradeUsd": 2327115016,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "LV",
+      "tradeUsd": 2325944158,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "NO",
+      "tradeUsd": 2325543191,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11236,17 +14842,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CA",
-      "tradeUsd": 2322665114,
+      "s": "LT",
+      "t": "EE",
+      "tradeUsd": 2323740700,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "IT",
-      "tradeUsd": 2321830600,
+      "s": "IN",
+      "t": "PL",
+      "tradeUsd": 2322029082,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "RU",
+      "tradeUsd": 2321474234,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11260,10 +14874,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "ES",
-      "tradeUsd": 2316607805,
-      "year": 2024,
+      "s": "LT",
+      "t": "RU",
+      "tradeUsd": 2316467042,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11271,6 +14885,14 @@ window.countryMacroData = {
       "s": "NZ",
       "t": "JP",
       "tradeUsd": 2316038393,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "UA",
+      "tradeUsd": 2315934345,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11292,26 +14914,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "ZA",
-      "tradeUsd": 2312815402,
+      "s": "SG",
+      "t": "MM",
+      "tradeUsd": 2312940863,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "DZ",
-      "tradeUsd": 2310007848,
+      "s": "KR",
+      "t": "MT",
+      "tradeUsd": 2312205443,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "JP",
-      "tradeUsd": 2306069266,
+      "s": "LA",
+      "t": "CN",
+      "tradeUsd": 2310166085,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "EE",
+      "tradeUsd": 2307220319,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "BH",
+      "tradeUsd": 2307202773,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11324,9 +14962,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SA",
-      "tradeUsd": 2298400771,
+      "s": "BE",
+      "t": "BR",
+      "tradeUsd": 2299475885,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11340,33 +14978,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "DK",
-      "tradeUsd": 2295701585,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "IT",
-      "tradeUsd": 2290792053,
+      "s": "SK",
+      "t": "GB",
+      "tradeUsd": 2295261733,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "TR",
-      "t": "CZ",
-      "tradeUsd": 2286620954,
+      "t": "RS",
+      "tradeUsd": 2294707818,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CA",
-      "tradeUsd": 2279529864,
+      "s": "TZ",
+      "t": "ZA",
+      "tradeUsd": 2292706654,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "AU",
+      "tradeUsd": 2289194265,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GR",
+      "t": "US",
+      "tradeUsd": 2289041403,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "PT",
+      "tradeUsd": 2281543455,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IS",
+      "t": "NL",
+      "tradeUsd": 2277781898,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11380,9 +15042,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AE",
+      "t": "KE",
+      "tradeUsd": 2272116518,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "ES",
+      "tradeUsd": 2269407894,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "CH",
-      "tradeUsd": 2266641943,
+      "tradeUsd": 2266559699,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MT",
+      "tradeUsd": 2266168300,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11396,9 +15082,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "EG",
+      "t": "US",
+      "tradeUsd": 2259579847,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "MX",
-      "tradeUsd": 2259018303,
+      "tradeUsd": 2259018308,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11408,6 +15102,14 @@ window.countryMacroData = {
       "t": "CA",
       "tradeUsd": 2258522504,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IQ",
+      "tradeUsd": 2258506365,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11428,34 +15130,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "BD",
+      "tradeUsd": 2251990367,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "IT",
-      "tradeUsd": 2251657918,
+      "tradeUsd": 2251657928,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "HU",
-      "tradeUsd": 2245386831,
+      "s": "CA",
+      "t": "NO",
+      "tradeUsd": 2251222719,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "ES",
+      "tradeUsd": 2247201499,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "BR",
-      "tradeUsd": 2244048222,
+      "s": "BE",
+      "t": "PT",
+      "tradeUsd": 2243832757,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "NL",
+      "tradeUsd": 2241404029,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "UA",
-      "tradeUsd": 2242104132,
-      "year": 2024,
+      "s": "NL",
+      "t": "SK",
+      "tradeUsd": 2240820158,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "IN",
+      "tradeUsd": 2239612000,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11464,14 +15198,6 @@ window.countryMacroData = {
       "t": "MX",
       "tradeUsd": 2234646311,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "MY",
-      "tradeUsd": 2231350841,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11492,6 +15218,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PH",
+      "t": "MY",
+      "tradeUsd": 2226530982,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "EG",
       "t": "AE",
       "tradeUsd": 2223717332,
@@ -11500,10 +15234,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AU",
-      "tradeUsd": 2223655570,
-      "year": 2024,
+      "s": "BE",
+      "t": "SA",
+      "tradeUsd": 2222341450,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11524,6 +15258,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ES",
+      "t": "GR",
+      "tradeUsd": 2217594535,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PE",
       "t": "JP",
       "tradeUsd": 2215389299,
@@ -11532,26 +15274,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "MY",
-      "tradeUsd": 2213503060,
+      "s": "OM",
+      "t": "IN",
+      "tradeUsd": 2214884262,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "BD",
+      "tradeUsd": 2213964142,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "AU",
-      "tradeUsd": 2211417830,
+      "s": "IL",
+      "t": "IN",
+      "tradeUsd": 2211745000,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "NL",
-      "tradeUsd": 2210629333,
+      "s": "BE",
+      "t": "PT",
+      "tradeUsd": 2210468063,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "PY",
+      "tradeUsd": 2209125626,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11580,17 +15338,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "ES",
-      "tradeUsd": 2194487208,
+      "s": "IN",
+      "t": "PH",
+      "tradeUsd": 2198964585,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "BG",
+      "tradeUsd": 2194696761,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "NL",
-      "tradeUsd": 2193055083,
+      "s": "ID",
+      "t": "ES",
+      "tradeUsd": 2194417763,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11599,6 +15365,14 @@ window.countryMacroData = {
       "s": "HK",
       "t": "IL",
       "tradeUsd": 2190206687,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "MX",
+      "tradeUsd": 2188499289,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11620,6 +15394,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "FI",
+      "tradeUsd": 2184313991,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "MY",
+      "tradeUsd": 2183647959,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "BE",
+      "tradeUsd": 2180715642,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SE",
       "t": "TR",
       "tradeUsd": 2180382122,
@@ -11628,18 +15426,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "MY",
-      "tradeUsd": 2175836999,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "CO",
-      "tradeUsd": 2173512522,
-      "year": 2023,
+      "s": "SV",
+      "t": "US",
+      "tradeUsd": 2164992774,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11652,18 +15442,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "US",
+      "tradeUsd": 2161902850,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "MX",
-      "tradeUsd": 2160537156,
+      "tradeUsd": 2161004953,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "IT",
-      "tradeUsd": 2154921602,
+      "s": "CN",
+      "t": "NP",
+      "tradeUsd": 2159980736,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "SK",
+      "tradeUsd": 2157442197,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "UA",
+      "tradeUsd": 2154955363,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11672,6 +15486,14 @@ window.countryMacroData = {
       "t": "BD",
       "tradeUsd": 2149946415,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "DK",
+      "tradeUsd": 2148141777,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11692,17 +15514,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "AT",
-      "tradeUsd": 2143710341,
-      "year": 2023,
+      "s": "AT",
+      "t": "HR",
+      "tradeUsd": 2135578461,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "CA",
-      "tradeUsd": 2131185059,
+      "s": "US",
+      "t": "PK",
+      "tradeUsd": 2135147106,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IL",
+      "tradeUsd": 2130422923,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "LU",
+      "tradeUsd": 2128978921,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11716,17 +15554,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "HK",
-      "tradeUsd": 2119698487,
+      "s": "SA",
+      "t": "JO",
+      "tradeUsd": 2125875094,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "KR",
+      "tradeUsd": 2122674376,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "GB",
-      "tradeUsd": 2118843814,
+      "s": "IN",
+      "t": "KW",
+      "tradeUsd": 2121103522,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "UA",
+      "tradeUsd": 2119431080,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "ZA",
+      "tradeUsd": 2119253191,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11748,25 +15610,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SA",
+      "t": "BE",
+      "tradeUsd": 2117298250,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IT",
-      "t": "FI",
-      "tradeUsd": 2114679734,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
       "t": "TH",
-      "tradeUsd": 2112188491,
+      "tradeUsd": 2117026425,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PH",
-      "tradeUsd": 2111520962,
+      "s": "IN",
+      "t": "CZ",
+      "tradeUsd": 2113173742,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "NL",
+      "tradeUsd": 2112201700,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "HK",
+      "tradeUsd": 2111487674,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11782,7 +15660,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "ES",
-      "tradeUsd": 2110458550,
+      "tradeUsd": 2110458559,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11791,6 +15669,14 @@ window.countryMacroData = {
       "s": "PE",
       "t": "CL",
       "tradeUsd": 2108338967,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "CA",
+      "tradeUsd": 2108265641,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11812,9 +15698,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "ZA",
-      "tradeUsd": 2105954256,
+      "s": "BE",
+      "t": "RU",
+      "tradeUsd": 2104132500,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11828,9 +15714,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MA",
-      "t": "TR",
-      "tradeUsd": 2100948191,
+      "s": "HK",
+      "t": "BE",
+      "tradeUsd": 2100084554,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11838,24 +15724,16 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "IT",
-      "tradeUsd": 2098415419,
+      "tradeUsd": 2098323762,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "IT",
-      "tradeUsd": 2098183697,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "AT",
-      "tradeUsd": 2097678482,
-      "year": 2023,
+      "s": "ES",
+      "t": "IN",
+      "tradeUsd": 2093907040,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11863,6 +15741,14 @@ window.countryMacroData = {
       "s": "AR",
       "t": "VN",
       "tradeUsd": 2093184114,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "HR",
+      "tradeUsd": 2090865121,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11876,25 +15762,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CO",
+      "t": "IN",
+      "tradeUsd": 2082631073,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "SA",
-      "tradeUsd": 2078715417,
+      "tradeUsd": 2078708838,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "MY",
-      "tradeUsd": 2078410577,
+      "s": "HU",
+      "t": "SE",
+      "tradeUsd": 2077056652,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "TH",
-      "tradeUsd": 2076471791,
+      "s": "US",
+      "t": "PK",
+      "tradeUsd": 2075496757,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -11908,10 +15802,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "TH",
+      "tradeUsd": 2070918177,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "PT",
       "tradeUsd": 2062252626,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UY",
+      "t": "BR",
+      "tradeUsd": 2060209579,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -11924,17 +15834,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "IL",
-      "tradeUsd": 2055143426,
+      "s": "GB",
+      "t": "IE",
+      "tradeUsd": 2055638870,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PH",
-      "tradeUsd": 2054711986,
+      "s": "MY",
+      "t": "TH",
+      "tradeUsd": 2053766213,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LU",
+      "t": "BE",
+      "tradeUsd": 2051690908,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -11948,26 +15866,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "TH",
-      "tradeUsd": 2049537244,
+      "s": "DE",
+      "t": "ID",
+      "tradeUsd": 2048590366,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "NL",
-      "tradeUsd": 2042399894,
+      "s": "MY",
+      "t": "BE",
+      "tradeUsd": 2048333568,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "AT",
-      "tradeUsd": 2040407784,
+      "s": "DE",
+      "t": "LV",
+      "tradeUsd": 2047562213,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "RU",
+      "tradeUsd": 2045823581,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "US",
+      "tradeUsd": 2041223928,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "TH",
+      "tradeUsd": 2038845998,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HK",
+      "t": "BE",
+      "tradeUsd": 2037631562,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -11988,9 +15938,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "AT",
-      "tradeUsd": 2034482549,
+      "s": "SA",
+      "t": "JO",
+      "tradeUsd": 2035442958,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "AU",
+      "tradeUsd": 2031353409,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12004,26 +15962,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "UA",
-      "tradeUsd": 2029290268,
+      "s": "US",
+      "t": "JO",
+      "tradeUsd": 2030784950,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "AT",
-      "tradeUsd": 2029234921,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "KR",
-      "tradeUsd": 2027007875,
-      "year": 2024,
+      "s": "DE",
+      "t": "TN",
+      "tradeUsd": 2025842840,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12036,9 +15986,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "SE",
-      "tradeUsd": 2024282443,
+      "s": "CN",
+      "t": "TN",
+      "tradeUsd": 2024502307,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12060,25 +16010,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "MX",
-      "tradeUsd": 2014231364,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "JP",
-      "tradeUsd": 2012903054,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "AT",
-      "tradeUsd": 2008988677,
+      "s": "CO",
+      "t": "EC",
+      "tradeUsd": 2014886227,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12100,6 +16034,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "EG",
+      "t": "US",
+      "tradeUsd": 2004737637,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CH",
       "t": "SE",
       "tradeUsd": 2002887995,
@@ -12108,10 +16050,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "IT",
-      "tradeUsd": 2001202669,
-      "year": 2024,
+      "s": "SG",
+      "t": "KH",
+      "tradeUsd": 2001699952,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "BE",
+      "tradeUsd": 2000596334,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12132,17 +16082,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "IT",
-      "tradeUsd": 1994016166,
-      "year": 2023,
+      "s": "LT",
+      "t": "US",
+      "tradeUsd": 1998015500,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "UA",
-      "tradeUsd": 1992521866,
+      "s": "GB",
+      "t": "IT",
+      "tradeUsd": 1994256969,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12156,17 +16106,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AE",
-      "tradeUsd": 1991814508,
-      "year": 2023,
+      "s": "UA",
+      "t": "NL",
+      "tradeUsd": 1990367909,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "UA",
-      "t": "NL",
-      "tradeUsd": 1990367909,
+      "s": "CN",
+      "t": "LT",
+      "tradeUsd": 1987780975,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "CN",
+      "tradeUsd": 1987064773,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "EG",
+      "tradeUsd": 1986828785,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12180,18 +16146,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "MX",
-      "tradeUsd": 1982497893,
+      "s": "PL",
+      "t": "GR",
+      "tradeUsd": 1977994871,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "GB",
+      "tradeUsd": 1977944436,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "US",
+      "tradeUsd": 1977154694,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PL",
-      "t": "GR",
-      "tradeUsd": 1977994871,
-      "year": 2024,
+      "s": "NL",
+      "t": "LU",
+      "tradeUsd": 1975981901,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12204,10 +16186,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "SE",
-      "tradeUsd": 1972599619,
+      "s": "GH",
+      "t": "ZA",
+      "tradeUsd": 1973761604,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KZ",
+      "t": "US",
+      "tradeUsd": 1971356248,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "FR",
+      "tradeUsd": 1969328713,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12228,58 +16226,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "IE",
-      "tradeUsd": 1964668349,
+      "s": "SE",
+      "t": "IN",
+      "tradeUsd": 1964287103,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "EG",
-      "tradeUsd": 1964288087,
+      "s": "DE",
+      "t": "IL",
+      "tradeUsd": 1962051997,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "TH",
-      "tradeUsd": 1957103695,
+      "s": "CN",
+      "t": "LT",
+      "tradeUsd": 1959336413,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "MX",
-      "tradeUsd": 1956613614,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "EG",
-      "tradeUsd": 1950202404,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "ZA",
-      "tradeUsd": 1949440830,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
+      "s": "BE",
       "t": "AU",
-      "tradeUsd": 1948332946,
+      "tradeUsd": 1959293731,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "OM",
+      "tradeUsd": 1954232484,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "BG",
+      "tradeUsd": 1952175041,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "LY",
+      "tradeUsd": 1950875109,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "SV",
+      "tradeUsd": 1950620317,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12292,10 +16298,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "CH",
+      "tradeUsd": 1946508565,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "KW",
       "tradeUsd": 1945403172,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "CN",
+      "tradeUsd": 1945299397,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "KR",
+      "tradeUsd": 1941465477,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12318,7 +16348,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "TR",
-      "tradeUsd": 1939074769,
+      "tradeUsd": 1939074770,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12332,10 +16362,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PE",
-      "t": "AE",
-      "tradeUsd": 1937799759,
-      "year": 2024,
+      "s": "IN",
+      "t": "PH",
+      "tradeUsd": 1936035548,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12344,6 +16374,22 @@ window.countryMacroData = {
       "t": "IT",
       "tradeUsd": 1935701501,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "HN",
+      "tradeUsd": 1935385887,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IL",
+      "tradeUsd": 1935242347,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12364,18 +16410,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "CN",
-      "tradeUsd": 1929971348,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "KR",
-      "tradeUsd": 1927646908,
-      "year": 2023,
+      "s": "US",
+      "t": "LT",
+      "tradeUsd": 1929010719,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12383,6 +16421,14 @@ window.countryMacroData = {
       "s": "CO",
       "t": "BR",
       "tradeUsd": 1927266825,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SA",
+      "tradeUsd": 1927166158,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12396,17 +16442,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "RO",
-      "tradeUsd": 1924619480,
-      "year": 2024,
+      "s": "AU",
+      "t": "DE",
+      "tradeUsd": 1923262714,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "AU",
-      "t": "DE",
-      "tradeUsd": 1923262714,
+      "s": "ES",
+      "t": "AU",
+      "tradeUsd": 1921542896,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GR",
+      "t": "FR",
+      "tradeUsd": 1920476443,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12428,25 +16482,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "QA",
-      "t": "KW",
-      "tradeUsd": 1913461458,
+      "s": "RS",
+      "t": "IT",
+      "tradeUsd": 1913578528,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "ZA",
-      "tradeUsd": 1913455025,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "KR",
-      "tradeUsd": 1912705618,
+      "s": "QA",
+      "t": "KW",
+      "tradeUsd": 1913461458,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12456,6 +16502,14 @@ window.countryMacroData = {
       "t": "MY",
       "tradeUsd": 1909179975,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "AU",
+      "tradeUsd": 1907379330,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12476,14 +16530,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "CA",
-      "tradeUsd": 1903805628,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "HK",
       "t": "IL",
       "tradeUsd": 1901980683,
@@ -12492,9 +16538,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "UA",
-      "tradeUsd": 1894857923,
+      "s": "NL",
+      "t": "LT",
+      "tradeUsd": 1894709873,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12516,9 +16562,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DZ",
+      "t": "TN",
+      "tradeUsd": 1892259483,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "UA",
+      "tradeUsd": 1890894817,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "BG",
+      "tradeUsd": 1888137747,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CO",
       "t": "BR",
       "tradeUsd": 1885420724,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "FI",
+      "tradeUsd": 1884201517,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12528,6 +16606,14 @@ window.countryMacroData = {
       "t": "PL",
       "tradeUsd": 1884170814,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UY",
+      "t": "BR",
+      "tradeUsd": 1881373299,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12556,6 +16642,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ES",
+      "t": "AU",
+      "tradeUsd": 1880758925,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PE",
       "t": "ES",
       "tradeUsd": 1879948422,
@@ -12564,34 +16658,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "MX",
-      "tradeUsd": 1878578601,
+      "s": "US",
+      "t": "UY",
+      "tradeUsd": 1878741511,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IL",
-      "tradeUsd": 1876743133,
+      "s": "AO",
+      "t": "FR",
+      "tradeUsd": 1876891816,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "IT",
+      "tradeUsd": 1876260499,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "SV",
+      "tradeUsd": 1874544953,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "ES",
+      "tradeUsd": 1870261505,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "CL",
-      "t": "ES",
-      "tradeUsd": 1867906028,
+      "t": "NL",
+      "tradeUsd": 1868727760,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "KR",
-      "tradeUsd": 1864650354,
-      "year": 2024,
+      "s": "US",
+      "t": "OM",
+      "tradeUsd": 1862409322,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12612,6 +16730,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CL",
+      "t": "ES",
+      "tradeUsd": 1851291466,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "JP",
       "tradeUsd": 1846698682,
@@ -12620,10 +16746,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CL",
-      "tradeUsd": 1845119169,
+      "s": "SG",
+      "t": "MT",
+      "tradeUsd": 1845210684,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "FI",
+      "tradeUsd": 1844383677,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "LY",
+      "tradeUsd": 1839878400,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12631,6 +16773,54 @@ window.countryMacroData = {
       "s": "SG",
       "t": "BR",
       "tradeUsd": 1839531142,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "SE",
+      "tradeUsd": 1839342356,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "LY",
+      "tradeUsd": 1836807850,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "LY",
+      "tradeUsd": 1836078959,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "UA",
+      "tradeUsd": 1834285611,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MY",
+      "tradeUsd": 1830958888,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "HN",
+      "tradeUsd": 1828411646,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12644,9 +16834,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "MT",
+      "tradeUsd": 1827577581,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AU",
       "t": "DE",
       "tradeUsd": 1826079685,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CL",
+      "tradeUsd": 1823841191,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12660,25 +16866,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "KR",
-      "t": "IL",
-      "tradeUsd": 1821086145,
+      "s": "ES",
+      "t": "NO",
+      "tradeUsd": 1821917094,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "BR",
-      "tradeUsd": 1820859503,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AE",
-      "tradeUsd": 1818032884,
+      "s": "KR",
+      "t": "IL",
+      "tradeUsd": 1821086145,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12692,9 +16890,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "NL",
-      "tradeUsd": 1817697093,
+      "s": "PL",
+      "t": "HR",
+      "tradeUsd": 1816779563,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12716,9 +16914,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "CZ",
-      "tradeUsd": 1811577188,
+      "s": "HU",
+      "t": "CN",
+      "tradeUsd": 1809354894,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12732,9 +16930,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "NG",
-      "tradeUsd": 1806212926,
+      "s": "OM",
+      "t": "IN",
+      "tradeUsd": 1807704523,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "TN",
+      "tradeUsd": 1807039961,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "UA",
+      "tradeUsd": 1806387689,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12750,16 +16964,8 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "GB",
-      "tradeUsd": 1805023964,
+      "tradeUsd": 1805020428,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "CL",
-      "tradeUsd": 1804518345,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12768,6 +16974,14 @@ window.countryMacroData = {
       "t": "DK",
       "tradeUsd": 1800942498,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "BO",
+      "tradeUsd": 1798535294,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12788,10 +17002,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "IL",
-      "tradeUsd": 1786116156,
+      "s": "CA",
+      "t": "FR",
+      "tradeUsd": 1793761380,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "SV",
+      "tradeUsd": 1789132868,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "CL",
+      "tradeUsd": 1787699175,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -12804,9 +17034,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "GR",
+      "tradeUsd": 1783433382,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "IL",
+      "tradeUsd": 1778441451,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "UA",
+      "tradeUsd": 1777542610,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SE",
       "t": "CH",
       "tradeUsd": 1777335572,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "KW",
+      "tradeUsd": 1777227059,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "LT",
+      "tradeUsd": 1776299344,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "BE",
+      "tradeUsd": 1775789620,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12820,9 +17098,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "MY",
-      "tradeUsd": 1772589321,
+      "s": "ES",
+      "t": "DK",
+      "tradeUsd": 1774705802,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AR",
+      "t": "UY",
+      "tradeUsd": 1773038774,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BH",
+      "t": "AE",
+      "tradeUsd": 1771266925,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "IL",
+      "tradeUsd": 1770226130,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "BG",
+      "tradeUsd": 1769185712,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12831,6 +17141,22 @@ window.countryMacroData = {
       "s": "VN",
       "t": "TR",
       "tradeUsd": 1767941249,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "NP",
+      "tradeUsd": 1765023876,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "SK",
+      "tradeUsd": 1764978938,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -12860,25 +17186,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "KR",
-      "tradeUsd": 1758838249,
-      "year": 2024,
+      "s": "PL",
+      "t": "IN",
+      "tradeUsd": 1757778117,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "BR",
-      "tradeUsd": 1757455527,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "FI",
-      "tradeUsd": 1752668863,
+      "s": "IN",
+      "t": "QA",
+      "tradeUsd": 1753965532,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12900,18 +17218,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "MX",
-      "tradeUsd": 1750587052,
+      "s": "PL",
+      "t": "EE",
+      "tradeUsd": 1749743833,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "AT",
-      "tradeUsd": 1744955539,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12924,25 +17234,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "NZ",
-      "tradeUsd": 1741069968,
-      "year": 2023,
+      "s": "MY",
+      "t": "BE",
+      "tradeUsd": 1743878879,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "RU",
-      "tradeUsd": 1740863714,
+      "tradeUsd": 1740863719,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "MX",
-      "tradeUsd": 1739996390,
+      "s": "NO",
+      "t": "LT",
+      "tradeUsd": 1740208421,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -12964,10 +17274,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "AT",
-      "tradeUsd": 1733727171,
-      "year": 2023,
+      "s": "PL",
+      "t": "EE",
+      "tradeUsd": 1734150303,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -12988,6 +17298,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JO",
+      "t": "IN",
+      "tradeUsd": 1730648421,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CA",
       "t": "ID",
       "tradeUsd": 1728518658,
@@ -13000,6 +17318,14 @@ window.countryMacroData = {
       "t": "BR",
       "tradeUsd": 1727058565,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "MX",
+      "tradeUsd": 1726804384,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13022,15 +17348,23 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "BR",
-      "tradeUsd": 1725621829,
+      "tradeUsd": 1725621832,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "CH",
-      "tradeUsd": 1721909559,
+      "s": "BE",
+      "t": "GR",
+      "tradeUsd": 1725040949,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "SI",
+      "tradeUsd": 1724159324,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13040,6 +17374,14 @@ window.countryMacroData = {
       "t": "DE",
       "tradeUsd": 1720898418,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "HR",
+      "tradeUsd": 1719629660,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13060,17 +17402,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "FI",
-      "tradeUsd": 1709554746,
+      "s": "CR",
+      "t": "NL",
+      "tradeUsd": 1714447314,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "AE",
+      "tradeUsd": 1713456901,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IL",
-      "tradeUsd": 1706686662,
+      "s": "BH",
+      "t": "AE",
+      "tradeUsd": 1707203598,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13079,6 +17429,22 @@ window.countryMacroData = {
       "s": "TR",
       "t": "CA",
       "tradeUsd": 1705758191,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "KR",
+      "tradeUsd": 1705276822,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "SE",
+      "tradeUsd": 1704277090,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13100,9 +17466,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "ES",
-      "tradeUsd": 1697516989,
+      "s": "MX",
+      "t": "GB",
+      "tradeUsd": 1699136502,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13112,6 +17478,14 @@ window.countryMacroData = {
       "t": "NL",
       "tradeUsd": 1697199340,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "SE",
+      "tradeUsd": 1696931748,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13132,17 +17506,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "MX",
-      "tradeUsd": 1694482097,
-      "year": 2024,
+      "s": "PH",
+      "t": "VN",
+      "tradeUsd": 1694890634,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "VN",
-      "tradeUsd": 1690272283,
+      "s": "CL",
+      "t": "MX",
+      "tradeUsd": 1694597895,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "HU",
+      "tradeUsd": 1692606251,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13164,10 +17546,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "IE",
-      "tradeUsd": 1685429002,
+      "s": "BE",
+      "t": "GR",
+      "tradeUsd": 1686939422,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "UA",
+      "tradeUsd": 1683510839,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13180,26 +17570,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "EG",
-      "tradeUsd": 1681395789,
+      "s": "US",
+      "t": "BH",
+      "tradeUsd": 1676246189,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "ES",
-      "tradeUsd": 1679528072,
+      "s": "HU",
+      "t": "MX",
+      "tradeUsd": 1673588998,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "MY",
-      "tradeUsd": 1663958066,
+      "s": "GT",
+      "t": "HN",
+      "tradeUsd": 1673245245,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "HK",
+      "tradeUsd": 1673058214,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "VN",
+      "tradeUsd": 1669669937,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "RS",
+      "tradeUsd": 1665271456,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "EG",
+      "tradeUsd": 1664522579,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13212,9 +17634,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "IE",
-      "tradeUsd": 1658315663,
+      "s": "CL",
+      "t": "NL",
+      "tradeUsd": 1661216076,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IQ",
+      "tradeUsd": 1660554212,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AR",
+      "t": "UY",
+      "tradeUsd": 1658956907,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "VN",
+      "tradeUsd": 1657646957,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13236,26 +17682,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "VN",
-      "tradeUsd": 1654505437,
-      "year": 2024,
+      "s": "IN",
+      "t": "QA",
+      "tradeUsd": 1652083607,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "KR",
-      "tradeUsd": 1653697228,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "CH",
-      "tradeUsd": 1652120258,
-      "year": 2024,
+      "s": "IN",
+      "t": "RO",
+      "tradeUsd": 1652059001,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13276,17 +17714,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "TR",
-      "tradeUsd": 1643900369,
+      "s": "CA",
+      "t": "FR",
+      "tradeUsd": 1649275956,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "HU",
-      "tradeUsd": 1643573907,
+      "s": "US",
+      "t": "UY",
+      "tradeUsd": 1649000113,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "BH",
+      "tradeUsd": 1646230202,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13296,6 +17742,14 @@ window.countryMacroData = {
       "t": "ZA",
       "tradeUsd": 1642492859,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "SG",
+      "tradeUsd": 1641873591,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13316,10 +17770,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "SE",
+      "tradeUsd": 1638881982,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TZ",
+      "t": "IN",
+      "tradeUsd": 1637027879,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "US",
+      "tradeUsd": 1636863557,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "UA",
       "t": "EG",
       "tradeUsd": 1636384448,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JO",
+      "t": "SA",
+      "tradeUsd": 1634512590,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "BE",
+      "tradeUsd": 1634445757,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "SV",
+      "tradeUsd": 1633520047,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13332,6 +17834,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CH",
+      "t": "MY",
+      "tradeUsd": 1632065871,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "JP",
       "tradeUsd": 1630986067,
@@ -13340,18 +17850,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HR",
+      "t": "RS",
+      "tradeUsd": 1629486234,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "HU",
-      "tradeUsd": 1629714732,
+      "tradeUsd": 1629409926,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "ID",
-      "tradeUsd": 1629608572,
-      "year": 2024,
+      "s": "EE",
+      "t": "LT",
+      "tradeUsd": 1629385761,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13364,33 +17882,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "NG",
-      "tradeUsd": 1627942901,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "CA",
-      "tradeUsd": 1627370715,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "HU",
-      "tradeUsd": 1627096926,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "ZA",
-      "tradeUsd": 1626048480,
+      "s": "GT",
+      "t": "HN",
+      "tradeUsd": 1629132577,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13404,9 +17898,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GB",
+      "t": "HU",
+      "tradeUsd": 1623780064,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "GB",
+      "tradeUsd": 1620305422,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "PT",
       "tradeUsd": 1620159434,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "LT",
+      "tradeUsd": 1619401541,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13420,10 +17938,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "NL",
-      "tradeUsd": 1617085400,
-      "year": 2023,
+      "s": "BE",
+      "t": "MX",
+      "tradeUsd": 1617064651,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13432,14 +17950,6 @@ window.countryMacroData = {
       "t": "ES",
       "tradeUsd": 1616886786,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "VN",
-      "tradeUsd": 1616442138,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13460,26 +17970,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "PT",
-      "tradeUsd": 1612446171,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "NZ",
-      "tradeUsd": 1608182984,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "SA",
-      "tradeUsd": 1605308312,
+      "s": "IN",
+      "t": "JO",
+      "tradeUsd": 1612604778,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "HU",
+      "tradeUsd": 1609583301,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "GB",
+      "tradeUsd": 1605803240,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13488,6 +17998,14 @@ window.countryMacroData = {
       "t": "IL",
       "tradeUsd": 1605059488,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "LT",
+      "tradeUsd": 1605006916,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13532,14 +18050,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PT",
-      "tradeUsd": 1599759046,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "ZA",
       "t": "ES",
       "tradeUsd": 1596247167,
@@ -13548,9 +18058,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "NZ",
-      "tradeUsd": 1590569855,
+      "s": "NL",
+      "t": "SI",
+      "tradeUsd": 1595865232,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13558,32 +18068,48 @@ window.countryMacroData = {
     {
       "s": "TR",
       "t": "CH",
-      "tradeUsd": 1587739479,
+      "tradeUsd": 1587624490,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "SG",
-      "tradeUsd": 1584820334,
+      "s": "ZA",
+      "t": "KR",
+      "tradeUsd": 1586574848,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "SE",
-      "tradeUsd": 1583104642,
+      "s": "ID",
+      "t": "BE",
+      "tradeUsd": 1581233241,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "AR",
-      "tradeUsd": 1579783271,
-      "year": 2024,
+      "s": "IT",
+      "t": "LT",
+      "tradeUsd": 1580048213,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "BR",
+      "tradeUsd": 1576261066,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "MT",
+      "tradeUsd": 1575651647,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13612,9 +18138,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AO",
+      "t": "ID",
+      "tradeUsd": 1569389616,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "AT",
       "tradeUsd": 1568434631,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "FR",
+      "tradeUsd": 1568384688,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "BE",
+      "tradeUsd": 1566065000,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13628,10 +18178,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "PE",
-      "tradeUsd": 1564967709,
-      "year": 2023,
+      "s": "IT",
+      "t": "LT",
+      "tradeUsd": 1562791556,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "CN",
+      "tradeUsd": 1561618123,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13644,9 +18202,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "CH",
-      "tradeUsd": 1560649640,
+      "s": "CL",
+      "t": "PE",
+      "tradeUsd": 1560534235,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13660,18 +18218,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "RO",
-      "tradeUsd": 1557746787,
-      "year": 2024,
+      "s": "SI",
+      "t": "RS",
+      "tradeUsd": 1558569692,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "IE",
-      "tradeUsd": 1552936135,
+      "s": "QA",
+      "t": "FR",
+      "tradeUsd": 1555293206,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TZ",
+      "t": "IN",
+      "tradeUsd": 1553951718,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "RO",
+      "tradeUsd": 1552081608,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13692,10 +18266,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "TR",
-      "tradeUsd": 1544957625,
+      "s": "UY",
+      "t": "CN",
+      "tradeUsd": 1548330588,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "BH",
+      "tradeUsd": 1546803683,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "FR",
+      "tradeUsd": 1545182286,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "RS",
+      "tradeUsd": 1545123709,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CO",
+      "t": "NL",
+      "tradeUsd": 1544007234,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13708,25 +18314,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "NL",
-      "tradeUsd": 1543041518,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "AR",
-      "tradeUsd": 1540828163,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AE",
-      "tradeUsd": 1539957914,
+      "s": "TR",
+      "t": "CY",
+      "tradeUsd": 1539728237,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13734,7 +18324,7 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "TR",
-      "tradeUsd": 1538293742,
+      "tradeUsd": 1538388094,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13756,6 +18346,46 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "TR",
+      "tradeUsd": 1535503504,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "BG",
+      "tradeUsd": 1532666373,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "JO",
+      "tradeUsd": 1532178906,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "TR",
+      "tradeUsd": 1530458676,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "BR",
+      "tradeUsd": 1528032469,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IL",
       "t": "GB",
       "tradeUsd": 1527951000,
@@ -13772,26 +18402,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "CH",
-      "tradeUsd": 1526193304,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "ID",
       "t": "GB",
-      "tradeUsd": 1521698140,
+      "tradeUsd": 1526743130,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "IL",
-      "tradeUsd": 1521540410,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13812,9 +18426,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "EG",
-      "tradeUsd": 1515690995,
+      "s": "TR",
+      "t": "IN",
+      "tradeUsd": 1516990851,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "CN",
+      "tradeUsd": 1514642808,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "NL",
+      "tradeUsd": 1514509150,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13828,9 +18458,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "ID",
-      "tradeUsd": 1508929852,
+      "s": "AU",
+      "t": "BH",
+      "tradeUsd": 1511109077,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KZ",
+      "t": "US",
+      "tradeUsd": 1509870177,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13852,6 +18490,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "CH",
+      "tradeUsd": 1507240573,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "BE",
+      "tradeUsd": 1506371665,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "SI",
+      "tradeUsd": 1504510888,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "CH",
+      "tradeUsd": 1504436806,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "SA",
       "tradeUsd": 1503690660,
@@ -13860,9 +18530,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "MA",
-      "tradeUsd": 1502508600,
+      "s": "IT",
+      "t": "ID",
+      "tradeUsd": 1502801801,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "FR",
+      "tradeUsd": 1502745962,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13870,24 +18548,24 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "CH",
-      "tradeUsd": 1502183043,
+      "tradeUsd": 1502183046,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "CH",
-      "tradeUsd": 1501651757,
+      "s": "QA",
+      "t": "US",
+      "tradeUsd": 1501947378,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "ES",
-      "tradeUsd": 1498142444,
-      "year": 2023,
+      "s": "BE",
+      "t": "HK",
+      "tradeUsd": 1498896917,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13901,9 +18579,9 @@ window.countryMacroData = {
     },
     {
       "s": "CL",
-      "t": "PE",
-      "tradeUsd": 1494527069,
-      "year": 2024,
+      "t": "IN",
+      "tradeUsd": 1495820153,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -13919,6 +18597,22 @@ window.countryMacroData = {
       "s": "JP",
       "t": "SE",
       "tradeUsd": 1492987859,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "LK",
+      "tradeUsd": 1492911383,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "PE",
+      "tradeUsd": 1492677931,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -13940,9 +18634,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "MY",
-      "tradeUsd": 1485511676,
+      "s": "NL",
+      "t": "MA",
+      "tradeUsd": 1485638988,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -13964,10 +18658,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "CH",
-      "tradeUsd": 1483414056,
+      "s": "IL",
+      "t": "BE",
+      "tradeUsd": 1484135000,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "MY",
+      "tradeUsd": 1483033646,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "ES",
+      "tradeUsd": 1482987717,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -13988,9 +18698,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "QA",
+      "t": "US",
+      "tradeUsd": 1480342258,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "LT",
+      "tradeUsd": 1479521609,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "RS",
+      "tradeUsd": 1477109041,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IL",
       "t": "TR",
       "tradeUsd": 1474790000,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "SI",
+      "tradeUsd": 1474154444,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "FR",
+      "tradeUsd": 1472016624,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14004,25 +18754,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PT",
-      "tradeUsd": 1469445617,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "ZA",
-      "tradeUsd": 1468324336,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "MY",
       "t": "IT",
       "tradeUsd": 1467124945,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "FR",
+      "tradeUsd": 1464442478,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14044,10 +18786,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "AR",
-      "tradeUsd": 1462580530,
-      "year": 2023,
+      "s": "ES",
+      "t": "ZA",
+      "tradeUsd": 1461346924,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14060,10 +18802,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "AR",
+      "tradeUsd": 1460285833,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DK",
       "t": "JP",
-      "tradeUsd": 1456072717,
+      "tradeUsd": 1460150761,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "BE",
+      "tradeUsd": 1458906153,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "PA",
+      "tradeUsd": 1457326767,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SG",
+      "tradeUsd": 1456978868,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14092,6 +18866,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SI",
+      "t": "PL",
+      "tradeUsd": 1450827279,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "BR",
       "t": "RU",
       "tradeUsd": 1450252285,
@@ -14100,9 +18882,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "FI",
-      "tradeUsd": 1447087660,
+      "s": "NL",
+      "t": "HR",
+      "tradeUsd": 1447408076,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PL",
+      "t": "IN",
+      "tradeUsd": 1447106170,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JO",
+      "t": "SA",
+      "tradeUsd": 1445740687,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "CH",
+      "tradeUsd": 1444020630,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14118,7 +18924,23 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "CA",
-      "tradeUsd": 1442772081,
+      "tradeUsd": 1442772086,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "ZA",
+      "tradeUsd": 1442068102,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AR",
+      "t": "PY",
+      "tradeUsd": 1441604957,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14132,9 +18954,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
+      "s": "BE",
       "t": "EG",
-      "tradeUsd": 1440778320,
+      "tradeUsd": 1440145866,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14148,34 +18970,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "ES",
-      "tradeUsd": 1433886032,
+      "s": "BE",
+      "t": "SG",
+      "tradeUsd": 1436168410,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "BR",
-      "tradeUsd": 1432754500,
+      "s": "GB",
+      "t": "ZA",
+      "tradeUsd": 1434749032,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "QA",
-      "tradeUsd": 1431702876,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "CH",
-      "tradeUsd": 1425522941,
+      "s": "BR",
+      "t": "NO",
+      "tradeUsd": 1430231462,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "FR",
+      "tradeUsd": 1423884000,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "BO",
+      "tradeUsd": 1423707173,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14188,9 +19018,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "SA",
-      "tradeUsd": 1421971726,
+      "s": "HU",
+      "t": "TR",
+      "tradeUsd": 1422076601,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14204,17 +19034,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "IQ",
-      "tradeUsd": 1421831685,
+      "s": "KR",
+      "t": "AT",
+      "tradeUsd": 1419812386,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "KR",
-      "t": "AT",
-      "tradeUsd": 1419812386,
+      "s": "IT",
+      "t": "CL",
+      "tradeUsd": 1419502683,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14244,6 +19074,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AT",
+      "t": "IN",
+      "tradeUsd": 1414721663,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SG",
       "t": "PK",
       "tradeUsd": 1409550842,
@@ -14252,25 +19090,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "NZ",
-      "tradeUsd": 1406887111,
+      "s": "JP",
+      "t": "QA",
+      "tradeUsd": 1403911227,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "NL",
-      "t": "VN",
-      "tradeUsd": 1406140344,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "QA",
-      "tradeUsd": 1403911227,
+      "t": "SI",
+      "tradeUsd": 1403886547,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14300,14 +19130,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "FI",
-      "tradeUsd": 1398521953,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "NL",
       "t": "TH",
       "tradeUsd": 1397299708,
@@ -14316,9 +19138,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JO",
+      "t": "IN",
+      "tradeUsd": 1397279896,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "SI",
+      "tradeUsd": 1396338704,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "VN",
+      "tradeUsd": 1396164960,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UY",
+      "t": "CN",
+      "tradeUsd": 1393788912,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "FR",
+      "tradeUsd": 1392127000,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "DE",
+      "tradeUsd": 1391368298,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "ID",
-      "tradeUsd": 1393121287,
+      "tradeUsd": 1390428725,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14340,6 +19210,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "QA",
+      "tradeUsd": 1386496385,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "EG",
       "t": "GR",
       "tradeUsd": 1386134135,
@@ -14356,10 +19234,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "QA",
-      "tradeUsd": 1385527965,
-      "year": 2024,
+      "s": "HU",
+      "t": "CH",
+      "tradeUsd": 1385203594,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14372,10 +19250,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CN",
+      "t": "UG",
+      "tradeUsd": 1383881623,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "GB",
+      "tradeUsd": 1383632465,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "ES",
       "tradeUsd": 1383027116,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "AT",
+      "tradeUsd": 1382446780,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14388,9 +19290,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "CH",
+      "tradeUsd": 1381205357,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "FR",
+      "tradeUsd": 1379702190,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IT",
       "t": "CL",
-      "tradeUsd": 1380306174,
+      "tradeUsd": 1379513355,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14412,6 +19330,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AT",
+      "t": "IN",
+      "tradeUsd": 1377733216,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "HU",
+      "tradeUsd": 1377361195,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "CN",
+      "tradeUsd": 1376604967,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "IT",
       "tradeUsd": 1376447328,
@@ -14420,25 +19362,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "AR",
-      "tradeUsd": 1375841905,
+      "s": "AE",
+      "t": "FR",
+      "tradeUsd": 1374128666,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "CL",
-      "tradeUsd": 1374250025,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "RO",
-      "tradeUsd": 1371915349,
+      "s": "BR",
+      "t": "NO",
+      "tradeUsd": 1372189981,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14452,10 +19386,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "UA",
-      "tradeUsd": 1368186134,
-      "year": 2023,
+      "s": "MY",
+      "t": "FR",
+      "tradeUsd": 1368642222,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14476,17 +19410,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "MX",
-      "tradeUsd": 1364937289,
-      "year": 2024,
+      "s": "UG",
+      "t": "AE",
+      "tradeUsd": 1366070575,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "EG",
-      "tradeUsd": 1363594812,
+      "s": "DE",
+      "t": "CO",
+      "tradeUsd": 1365248889,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "DE",
+      "tradeUsd": 1364940430,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CO",
+      "tradeUsd": 1363330259,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14540,17 +19490,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "KW",
-      "t": "AE",
-      "tradeUsd": 1357971914,
+      "s": "IN",
+      "t": "AT",
+      "tradeUsd": 1359703665,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "HK",
-      "tradeUsd": 1357682682,
+      "s": "JO",
+      "t": "IQ",
+      "tradeUsd": 1358765250,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KW",
+      "t": "AE",
+      "tradeUsd": 1357977058,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "SG",
+      "tradeUsd": 1355479843,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14564,10 +19530,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "TR",
-      "tradeUsd": 1353896680,
+      "s": "NL",
+      "t": "GH",
+      "tradeUsd": 1353014363,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "ID",
+      "tradeUsd": 1352946478,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "CH",
+      "tradeUsd": 1351409538,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "CN",
+      "tradeUsd": 1350791389,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14575,6 +19565,22 @@ window.countryMacroData = {
       "s": "SE",
       "t": "EG",
       "tradeUsd": 1350339566,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "UA",
+      "tradeUsd": 1348566688,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "BH",
+      "tradeUsd": 1348460784,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14588,10 +19594,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "GR",
-      "tradeUsd": 1344336817,
+      "s": "BE",
+      "t": "EG",
+      "tradeUsd": 1348156202,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "ZA",
+      "tradeUsd": 1347024698,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "OM",
+      "tradeUsd": 1346066365,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "UA",
+      "tradeUsd": 1345957232,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "US",
+      "tradeUsd": 1343924552,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14612,26 +19650,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "UA",
-      "tradeUsd": 1343017928,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "IR",
-      "tradeUsd": 1342600172,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "IQ",
-      "tradeUsd": 1339377714,
+      "s": "CZ",
+      "t": "IE",
+      "tradeUsd": 1341389817,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "CZ",
+      "tradeUsd": 1339660146,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "MA",
+      "tradeUsd": 1338548690,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14644,17 +19682,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "TH",
-      "tradeUsd": 1336715075,
-      "year": 2023,
+      "s": "SE",
+      "t": "SA",
+      "tradeUsd": 1335031698,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "SA",
-      "tradeUsd": 1335031698,
+      "s": "BR",
+      "t": "BO",
+      "tradeUsd": 1334856950,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14670,7 +19708,39 @@ window.countryMacroData = {
     {
       "s": "TR",
       "t": "PT",
-      "tradeUsd": 1333394221,
+      "tradeUsd": 1333329385,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "CZ",
+      "tradeUsd": 1331957657,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "TH",
+      "tradeUsd": 1331866783,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "HU",
+      "tradeUsd": 1330173162,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "UA",
+      "tradeUsd": 1329849150,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14692,26 +19762,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "CA",
-      "tradeUsd": 1327161455,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "DK",
-      "tradeUsd": 1326824886,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IT",
-      "t": "VN",
-      "tradeUsd": 1326468733,
-      "year": 2023,
+      "t": "KW",
+      "tradeUsd": 1327529534,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14724,10 +19778,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "VN",
+      "tradeUsd": 1324871573,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "HU",
+      "tradeUsd": 1324355904,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "MY",
       "tradeUsd": 1322015870,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "HR",
+      "tradeUsd": 1321615343,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14740,9 +19818,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "DK",
-      "tradeUsd": 1318931456,
+      "s": "SA",
+      "t": "OM",
+      "tradeUsd": 1321135673,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "CA",
+      "tradeUsd": 1320074486,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "AT",
+      "tradeUsd": 1319958772,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "BR",
+      "tradeUsd": 1319036625,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "IN",
+      "tradeUsd": 1318680918,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14756,14 +19866,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "IR",
-      "tradeUsd": 1317239919,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "SG",
       "t": "SA",
       "tradeUsd": 1316602591,
@@ -14772,9 +19874,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "KW",
-      "tradeUsd": 1315092998,
+      "s": "PA",
+      "t": "CN",
+      "tradeUsd": 1316419741,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "RS",
+      "tradeUsd": 1313897125,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -14782,32 +19892,32 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "EG",
-      "tradeUsd": 1312346584,
+      "tradeUsd": 1312345795,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "ES",
-      "tradeUsd": 1311634144,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DK",
       "t": "TR",
-      "tradeUsd": 1310887345,
+      "tradeUsd": 1310425798,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "ID",
-      "tradeUsd": 1309815581,
-      "year": 2024,
+      "s": "NL",
+      "t": "AR",
+      "tradeUsd": 1308207611,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "RO",
+      "tradeUsd": 1304268392,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14836,10 +19946,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AU",
+      "t": "BE",
+      "tradeUsd": 1300783980,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "BD",
       "tradeUsd": 1300586822,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "CA",
+      "tradeUsd": 1300168638,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -14852,18 +19978,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "PE",
-      "tradeUsd": 1299543625,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "CA",
-      "tradeUsd": 1299065731,
-      "year": 2023,
+      "s": "RS",
+      "t": "HU",
+      "tradeUsd": 1299302181,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -14876,33 +19994,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AT",
+      "t": "BG",
+      "tradeUsd": 1298845663,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "IL",
       "tradeUsd": 1298322224,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "DK",
-      "tradeUsd": 1298270148,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "ES",
-      "tradeUsd": 1296907224,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "DK",
-      "tradeUsd": 1295877851,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14926,39 +20028,7 @@ window.countryMacroData = {
     {
       "s": "NL",
       "t": "MY",
-      "tradeUsd": 1294280501,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "MY",
-      "tradeUsd": 1293623377,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "PT",
-      "tradeUsd": 1292050307,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "HU",
-      "tradeUsd": 1291204870,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "EG",
-      "tradeUsd": 1290933692,
+      "tradeUsd": 1293405393,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -14996,18 +20066,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "KW",
-      "tradeUsd": 1285208909,
+      "s": "IN",
+      "t": "GH",
+      "tradeUsd": 1285774217,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "DK",
-      "tradeUsd": 1283645414,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15020,17 +20082,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "DK",
-      "tradeUsd": 1280923516,
+      "s": "AT",
+      "t": "BG",
+      "tradeUsd": 1283318532,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "SG",
-      "tradeUsd": 1280514990,
+      "s": "EE",
+      "t": "DE",
+      "tradeUsd": 1281581967,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15039,6 +20101,22 @@ window.countryMacroData = {
       "s": "AU",
       "t": "BR",
       "tradeUsd": 1279311526,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "AR",
+      "tradeUsd": 1278905613,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "CH",
+      "tradeUsd": 1278788155,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15054,8 +20132,16 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "BR",
-      "tradeUsd": 1277469547,
+      "tradeUsd": 1277882550,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "DE",
+      "tradeUsd": 1277359646,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15068,17 +20154,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "PT",
-      "tradeUsd": 1276343770,
+      "s": "MM",
+      "t": "IN",
+      "tradeUsd": 1275728434,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "JP",
-      "tradeUsd": 1274664238,
+      "s": "SE",
+      "t": "KR",
+      "tradeUsd": 1275377446,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "KZ",
+      "tradeUsd": 1272780470,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SK",
+      "tradeUsd": 1270674701,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CZ",
+      "tradeUsd": 1270582605,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "RS",
+      "tradeUsd": 1266418139,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "SK",
+      "tradeUsd": 1264424365,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15100,18 +20226,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "MA",
-      "tradeUsd": 1261219375,
+      "s": "HK",
+      "t": "HU",
+      "tradeUsd": 1260368183,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "PL",
+      "tradeUsd": 1259803313,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HK",
-      "t": "HU",
-      "tradeUsd": 1260368183,
-      "year": 2023,
+      "s": "US",
+      "t": "RO",
+      "tradeUsd": 1259203990,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15132,18 +20266,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "GB",
-      "tradeUsd": 1256597729,
+      "s": "DE",
+      "t": "KW",
+      "tradeUsd": 1255177381,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "KW",
-      "tradeUsd": 1254315262,
+      "s": "NL",
+      "t": "GH",
+      "tradeUsd": 1253584590,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "US",
+      "tradeUsd": 1253441804,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "ES",
+      "tradeUsd": 1253332408,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IR",
+      "tradeUsd": 1252909857,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15164,46 +20322,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "CL",
-      "tradeUsd": 1248207550,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "NZ",
-      "tradeUsd": 1247798246,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "NL",
-      "tradeUsd": 1247693656,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "HU",
-      "tradeUsd": 1247267728,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "AR",
-      "tradeUsd": 1246492901,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "CL",
       "tradeUsd": 1246361509,
@@ -15212,10 +20330,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "FI",
-      "tradeUsd": 1245748594,
-      "year": 2023,
+      "s": "QA",
+      "t": "BE",
+      "tradeUsd": 1244978631,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15228,18 +20346,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "MX",
-      "tradeUsd": 1242497327,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "SA",
-      "tradeUsd": 1241981725,
-      "year": 2023,
+      "s": "CL",
+      "t": "CA",
+      "tradeUsd": 1243921087,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15252,9 +20362,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "PL",
-      "tradeUsd": 1240577343,
+      "s": "TR",
+      "t": "MX",
+      "tradeUsd": 1241747327,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "AE",
+      "tradeUsd": 1241316108,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15268,14 +20386,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "SG",
-      "tradeUsd": 1239400231,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "BR",
       "t": "MA",
       "tradeUsd": 1238351221,
@@ -15284,17 +20394,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "AR",
-      "tradeUsd": 1238135082,
-      "year": 2024,
+      "s": "RS",
+      "t": "CN",
+      "tradeUsd": 1238306464,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "PL",
-      "tradeUsd": 1236937486,
+      "s": "KW",
+      "t": "IN",
+      "tradeUsd": 1237229985,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15318,8 +20428,24 @@ window.countryMacroData = {
     {
       "s": "HU",
       "t": "MX",
-      "tradeUsd": 1235969593,
+      "tradeUsd": 1235989984,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "UG",
+      "tradeUsd": 1235781413,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "ES",
+      "tradeUsd": 1235243479,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15332,34 +20458,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "TR",
-      "tradeUsd": 1232541640,
+      "s": "SV",
+      "t": "GT",
+      "tradeUsd": 1232561364,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "KZ",
-      "tradeUsd": 1232205203,
-      "year": 2024,
+      "s": "AU",
+      "t": "BE",
+      "tradeUsd": 1230388808,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "MA",
-      "tradeUsd": 1231667884,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "PE",
-      "tradeUsd": 1229815959,
-      "year": 2024,
+      "s": "PY",
+      "t": "CL",
+      "tradeUsd": 1229550263,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15372,10 +20490,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "CA",
-      "tradeUsd": 1228432062,
-      "year": 2024,
+      "s": "AE",
+      "t": "TZ",
+      "tradeUsd": 1229056864,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15388,9 +20506,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SE",
+      "t": "IN",
+      "tradeUsd": 1227196465,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DK",
       "t": "TR",
       "tradeUsd": 1226345050,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "ZA",
+      "tradeUsd": 1225645345,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "SE",
+      "tradeUsd": 1224004360,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15404,9 +20546,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "MX",
-      "tradeUsd": 1218970334,
+      "s": "SA",
+      "t": "OM",
+      "tradeUsd": 1219814243,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CY",
+      "tradeUsd": 1219438856,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "OM",
+      "tradeUsd": 1219213736,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "IN",
+      "tradeUsd": 1217486197,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15420,9 +20586,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "IL",
-      "tradeUsd": 1216653756,
+      "s": "TR",
+      "t": "MT",
+      "tradeUsd": 1216086743,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "DZ",
+      "tradeUsd": 1214448016,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "ID",
+      "tradeUsd": 1213619590,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "ES",
+      "tradeUsd": 1212443629,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15436,10 +20626,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "PL",
-      "tradeUsd": 1211171075,
+      "s": "US",
+      "t": "ET",
+      "tradeUsd": 1210864884,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "PE",
+      "tradeUsd": 1210029885,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "CR",
+      "tradeUsd": 1209788255,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15447,6 +20653,54 @@ window.countryMacroData = {
       "s": "SA",
       "t": "KR",
       "tradeUsd": 1207007223,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "US",
+      "tradeUsd": 1205801798,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AR",
+      "t": "PY",
+      "tradeUsd": 1205406358,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "KE",
+      "tradeUsd": 1205366250,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "OM",
+      "tradeUsd": 1204542089,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "KR",
+      "tradeUsd": 1204321701,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LA",
+      "t": "VN",
+      "tradeUsd": 1204067467,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15460,18 +20714,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PE",
-      "tradeUsd": 1201980083,
+      "s": "NO",
+      "t": "NG",
+      "tradeUsd": 1200256663,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "ES",
-      "tradeUsd": 1197001535,
+      "s": "MM",
+      "t": "JP",
+      "tradeUsd": 1200128027,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "VE",
+      "tradeUsd": 1199828855,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "BE",
+      "tradeUsd": 1198730900,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SV",
+      "t": "GT",
+      "tradeUsd": 1198586883,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CO",
+      "tradeUsd": 1198486670,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "SE",
+      "tradeUsd": 1198205350,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "PE",
+      "tradeUsd": 1196326884,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15480,6 +20782,14 @@ window.countryMacroData = {
       "t": "IQ",
       "tradeUsd": 1195974426,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "UA",
+      "tradeUsd": 1195435057,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15500,17 +20810,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "BR",
-      "tradeUsd": 1194135769,
+      "s": "MX",
+      "t": "FR",
+      "tradeUsd": 1193845064,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "IL",
-      "tradeUsd": 1192907609,
+      "s": "DK",
+      "t": "CH",
+      "tradeUsd": 1193210200,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15532,6 +20842,46 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BR",
+      "t": "OM",
+      "tradeUsd": 1191451418,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "BE",
+      "tradeUsd": 1191035319,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "RU",
+      "tradeUsd": 1189827356,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "RU",
+      "tradeUsd": 1189321472,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "MA",
+      "tradeUsd": 1188929481,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HU",
       "t": "IE",
       "tradeUsd": 1187835062,
@@ -15540,10 +20890,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "CA",
-      "tradeUsd": 1186232004,
+      "s": "GR",
+      "t": "LY",
+      "tradeUsd": 1187170253,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IR",
+      "tradeUsd": 1186576443,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "RS",
+      "tradeUsd": 1185862915,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15580,9 +20946,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CO",
-      "tradeUsd": 1183609423,
+      "s": "MY",
+      "t": "KE",
+      "tradeUsd": 1184250394,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15596,6 +20962,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "PK",
+      "tradeUsd": 1183104667,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "RU",
+      "tradeUsd": 1183088812,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "KR",
+      "tradeUsd": 1182815420,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "PT",
+      "tradeUsd": 1181055516,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CO",
       "t": "KR",
       "tradeUsd": 1180226241,
@@ -15604,10 +21002,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "GR",
-      "tradeUsd": 1180049650,
-      "year": 2023,
+      "s": "GR",
+      "t": "UA",
+      "tradeUsd": 1179665216,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15620,9 +21018,65 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "KH",
+      "t": "JP",
+      "tradeUsd": 1177726347,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "RS",
+      "tradeUsd": 1174379788,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "EE",
+      "tradeUsd": 1174048403,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "CN",
+      "tradeUsd": 1173101875,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HU",
       "t": "RU",
-      "tradeUsd": 1173037088,
+      "tradeUsd": 1172845242,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "AE",
+      "tradeUsd": 1172384027,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "CZ",
+      "tradeUsd": 1171861786,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "BH",
+      "tradeUsd": 1171058995,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15636,9 +21090,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "PE",
-      "tradeUsd": 1169398965,
+      "s": "IN",
+      "t": "GR",
+      "tradeUsd": 1170472866,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CL",
+      "tradeUsd": 1169609706,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "DE",
+      "tradeUsd": 1168468249,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15652,18 +21122,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "IQ",
-      "tradeUsd": 1163234516,
-      "year": 2024,
+      "s": "ES",
+      "t": "CO",
+      "tradeUsd": 1163381806,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "JP",
-      "tradeUsd": 1162849443,
-      "year": 2023,
+      "s": "BE",
+      "t": "SK",
+      "tradeUsd": 1162565133,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -15676,18 +21146,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "CO",
-      "tradeUsd": 1161389876,
+      "s": "CN",
+      "t": "NI",
+      "tradeUsd": 1160813790,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "NZ",
-      "tradeUsd": 1160325748,
-      "year": 2024,
+      "s": "US",
+      "t": "KZ",
+      "tradeUsd": 1160434961,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "IN",
+      "tradeUsd": 1159366605,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PE",
+      "t": "EC",
+      "tradeUsd": 1158948062,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15700,25 +21186,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "PE",
-      "tradeUsd": 1157416520,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "ES",
-      "tradeUsd": 1154616154,
+      "s": "DE",
+      "t": "CH",
+      "tradeUsd": 1158104771,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "KZ",
-      "tradeUsd": 1153892412,
+      "s": "CM",
+      "t": "NL",
+      "tradeUsd": 1152959358,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "VE",
+      "tradeUsd": 1152749458,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15740,6 +21226,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CZ",
+      "t": "LT",
+      "tradeUsd": 1149961619,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PK",
       "t": "IT",
       "tradeUsd": 1149124839,
@@ -15751,6 +21245,22 @@ window.countryMacroData = {
       "s": "SG",
       "t": "CA",
       "tradeUsd": 1149083123,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "DK",
+      "tradeUsd": 1148965377,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "IL",
+      "tradeUsd": 1148816208,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15772,9 +21282,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "CH",
-      "tradeUsd": 1146030326,
+      "s": "CH",
+      "t": "HU",
+      "tradeUsd": 1146228114,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15788,18 +21298,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "BD",
-      "tradeUsd": 1140763056,
+      "s": "ID",
+      "t": "RU",
+      "tradeUsd": 1144654245,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "DE",
-      "tradeUsd": 1138373830,
+      "s": "MA",
+      "t": "BE",
+      "tradeUsd": 1144235973,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "KZ",
+      "tradeUsd": 1144043181,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "FR",
+      "tradeUsd": 1142858122,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "MT",
+      "tradeUsd": 1138697200,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15807,14 +21341,6 @@ window.countryMacroData = {
       "s": "IE",
       "t": "AU",
       "tradeUsd": 1138198696,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "DE",
-      "tradeUsd": 1137930926,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15836,18 +21362,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "SE",
-      "tradeUsd": 1136177838,
-      "year": 2023,
+      "s": "US",
+      "t": "LU",
+      "tradeUsd": 1136073186,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "SE",
-      "tradeUsd": 1135591556,
-      "year": 2024,
+      "s": "CN",
+      "t": "BO",
+      "tradeUsd": 1134352744,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15860,9 +21386,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "SG",
-      "tradeUsd": 1132257924,
+      "s": "SI",
+      "t": "CZ",
+      "tradeUsd": 1133745434,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "BG",
+      "tradeUsd": 1133587224,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "PT",
+      "tradeUsd": 1132787216,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -15884,26 +21426,90 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NO",
+      "t": "TR",
+      "tradeUsd": 1128285506,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "PE",
+      "tradeUsd": 1128024009,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "HK",
+      "tradeUsd": 1126876326,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "CL",
+      "tradeUsd": 1126382342,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "SI",
+      "tradeUsd": 1125580846,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IT",
       "t": "NG",
-      "tradeUsd": 1126922651,
+      "tradeUsd": 1124777490,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "BR",
-      "tradeUsd": 1125990790,
-      "year": 2023,
+      "s": "CN",
+      "t": "CY",
+      "tradeUsd": 1124321890,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DK",
       "t": "AU",
-      "tradeUsd": 1123067892,
+      "tradeUsd": 1124146408,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TZ",
+      "t": "ZA",
+      "tradeUsd": 1123455080,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "CH",
+      "tradeUsd": 1123199719,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "PL",
+      "tradeUsd": 1122268245,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15916,6 +21522,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AO",
+      "t": "BR",
+      "tradeUsd": 1119212568,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IS",
+      "tradeUsd": 1118889452,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CL",
+      "tradeUsd": 1118725544,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AR",
       "t": "CA",
       "tradeUsd": 1115585422,
@@ -15924,10 +21554,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "GR",
-      "tradeUsd": 1107265301,
+      "s": "IN",
+      "t": "MA",
+      "tradeUsd": 1112100112,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AT",
+      "tradeUsd": 1111760619,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "EC",
+      "tradeUsd": 1110177865,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "CA",
+      "tradeUsd": 1109869329,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CY",
+      "tradeUsd": 1107595945,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "US",
+      "tradeUsd": 1107151516,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "IN",
+      "tradeUsd": 1103888271,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -15943,6 +21621,14 @@ window.countryMacroData = {
       "s": "SG",
       "t": "TR",
       "tradeUsd": 1102528334,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "FR",
+      "tradeUsd": 1102359767,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -15964,10 +21650,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "MA",
-      "tradeUsd": 1100152501,
-      "year": 2023,
+      "s": "CZ",
+      "t": "RS",
+      "tradeUsd": 1100519606,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16004,6 +21690,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PH",
+      "t": "IN",
+      "tradeUsd": 1097038987,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "GR",
+      "tradeUsd": 1096897328,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "RS",
+      "tradeUsd": 1096622528,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "BR",
       "tradeUsd": 1095884095,
@@ -16020,18 +21730,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "GR",
-      "tradeUsd": 1092308162,
-      "year": 2023,
+      "s": "BH",
+      "t": "US",
+      "tradeUsd": 1091348809,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SG",
-      "tradeUsd": 1091389511,
-      "year": 2024,
+      "s": "KR",
+      "t": "PA",
+      "tradeUsd": 1087489253,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16040,14 +21750,6 @@ window.countryMacroData = {
       "t": "MX",
       "tradeUsd": 1086894022,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "JP",
-      "tradeUsd": 1086682007,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16068,18 +21770,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "AU",
-      "tradeUsd": 1085662067,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "SE",
       "tradeUsd": 1085384783,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "AE",
+      "tradeUsd": 1085058115,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16116,18 +21818,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "SG",
-      "tradeUsd": 1084285467,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "SG",
       "t": "IT",
       "tradeUsd": 1083643570,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AU",
+      "t": "BH",
+      "tradeUsd": 1081476329,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "FR",
+      "tradeUsd": 1080700373,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16148,6 +21858,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "RS",
+      "t": "TR",
+      "tradeUsd": 1078747498,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IL",
       "t": "KR",
       "tradeUsd": 1077474000,
@@ -16156,10 +21874,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "MX",
-      "tradeUsd": 1076970574,
-      "year": 2023,
+      "s": "US",
+      "t": "KZ",
+      "tradeUsd": 1077097171,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16180,10 +21898,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CZ",
+      "t": "NO",
+      "tradeUsd": 1075125982,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "DK",
       "t": "CH",
       "tradeUsd": 1075102391,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "JP",
+      "tradeUsd": 1073788072,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16196,6 +21930,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "UA",
+      "t": "SK",
+      "tradeUsd": 1073667468,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MA",
       "t": "BD",
       "tradeUsd": 1073202745,
@@ -16204,26 +21946,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "IL",
-      "tradeUsd": 1072431388,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "MA",
-      "tradeUsd": 1071639797,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "JP",
-      "tradeUsd": 1071488782,
+      "s": "SE",
+      "t": "SA",
+      "tradeUsd": 1071612126,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "VN",
+      "tradeUsd": 1071349401,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IQ",
+      "tradeUsd": 1070450232,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16231,6 +21973,14 @@ window.countryMacroData = {
       "s": "SA",
       "t": "QA",
       "tradeUsd": 1070316219,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "MY",
+      "tradeUsd": 1069637532,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16244,9 +21994,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "AU",
-      "tradeUsd": 1066744556,
+      "s": "BR",
+      "t": "DO",
+      "tradeUsd": 1067075215,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "SI",
+      "tradeUsd": 1066800740,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16260,10 +22018,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "IL",
-      "tradeUsd": 1065357805,
-      "year": 2023,
+      "s": "NO",
+      "t": "NG",
+      "tradeUsd": 1065419193,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16284,17 +22042,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ES",
-      "tradeUsd": 1064744884,
+      "s": "NL",
+      "t": "EE",
+      "tradeUsd": 1063744533,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PK",
-      "tradeUsd": 1064040001,
+      "s": "LT",
+      "t": "NO",
+      "tradeUsd": 1063434161,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KW",
+      "t": "IN",
+      "tradeUsd": 1063184200,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16308,9 +22074,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "AE",
-      "tradeUsd": 1061917515,
+      "s": "GT",
+      "t": "NI",
+      "tradeUsd": 1061762438,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "DO",
+      "tradeUsd": 1060640960,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SV",
+      "t": "HN",
+      "tradeUsd": 1059182596,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "NL",
+      "tradeUsd": 1059014094,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16320,6 +22110,22 @@ window.countryMacroData = {
       "t": "SG",
       "tradeUsd": 1058646464,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "ES",
+      "tradeUsd": 1058448336,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "NL",
+      "tradeUsd": 1058419411,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16340,10 +22146,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "TR",
+      "t": "IQ",
+      "tradeUsd": 1058214447,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SG",
       "t": "IE",
       "tradeUsd": 1055526051,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "ES",
+      "tradeUsd": 1055407765,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "FR",
+      "tradeUsd": 1053509476,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "DE",
+      "tradeUsd": 1053498369,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16364,6 +22202,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PE",
+      "t": "EC",
+      "tradeUsd": 1052330064,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "ID",
+      "tradeUsd": 1052165226,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "HR",
+      "tradeUsd": 1052116586,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "AU",
       "tradeUsd": 1050661382,
@@ -16372,9 +22234,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "ID",
-      "tradeUsd": 1050660183,
+      "s": "KR",
+      "t": "SI",
+      "tradeUsd": 1050610796,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16383,6 +22245,30 @@ window.countryMacroData = {
       "s": "AT",
       "t": "DK",
       "tradeUsd": 1050293376,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "UA",
+      "tradeUsd": 1048496703,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "RU",
+      "tradeUsd": 1047640927,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "PE",
+      "tradeUsd": 1047072553,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16412,6 +22298,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "LV",
+      "t": "GB",
+      "tradeUsd": 1043580788,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NZ",
       "t": "SG",
       "tradeUsd": 1042796677,
@@ -16420,9 +22314,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "BD",
-      "tradeUsd": 1041976352,
+      "s": "SG",
+      "t": "LK",
+      "tradeUsd": 1042235608,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "ES",
+      "tradeUsd": 1041663549,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "BO",
+      "tradeUsd": 1040824013,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16430,31 +22340,23 @@ window.countryMacroData = {
     {
       "s": "TR",
       "t": "KR",
-      "tradeUsd": 1041594965,
+      "tradeUsd": 1040079997,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "CL",
-      "tradeUsd": 1040754919,
+      "s": "BH",
+      "t": "US",
+      "tradeUsd": 1039410499,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "PT",
-      "tradeUsd": 1040304480,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "VN",
-      "tradeUsd": 1038985601,
+      "s": "NL",
+      "t": "RS",
+      "tradeUsd": 1039280318,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16476,34 +22378,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "PE",
-      "tradeUsd": 1038651563,
+      "s": "VN",
+      "t": "SK",
+      "tradeUsd": 1037476110,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "TN",
+      "tradeUsd": 1037118083,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MA",
-      "t": "RO",
-      "tradeUsd": 1038297036,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CZ",
-      "tradeUsd": 1036695502,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "IQ",
-      "tradeUsd": 1036325099,
-      "year": 2024,
+      "s": "PT",
+      "t": "PL",
+      "tradeUsd": 1035315004,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16540,6 +22434,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "HR",
+      "tradeUsd": 1032209363,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "CO",
       "tradeUsd": 1030985238,
@@ -16564,9 +22466,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CR",
+      "t": "GT",
+      "tradeUsd": 1027311339,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "AT",
       "tradeUsd": 1027243105,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "GR",
+      "tradeUsd": 1026145685,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "IS",
+      "tradeUsd": 1025437669,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16604,10 +22530,66 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "DE",
-      "tradeUsd": 1016892632,
+      "s": "DZ",
+      "t": "IN",
+      "tradeUsd": 1019406473,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "IE",
+      "tradeUsd": 1019013486,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SV",
+      "t": "HN",
+      "tradeUsd": 1018836976,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "ET",
+      "tradeUsd": 1017706562,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "ES",
+      "tradeUsd": 1017259953,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "NO",
+      "tradeUsd": 1016691932,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "EG",
+      "tradeUsd": 1016625728,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AR",
+      "tradeUsd": 1016155360,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16620,9 +22602,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "AU",
-      "tradeUsd": 1015713656,
+      "s": "CA",
+      "t": "BE",
+      "tradeUsd": 1015791010,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16636,10 +22618,50 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "TR",
-      "tradeUsd": 1015371861,
+      "s": "BG",
+      "t": "BE",
+      "tradeUsd": 1015283867,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "DZ",
+      "tradeUsd": 1014504109,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "RS",
+      "tradeUsd": 1014324653,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "FR",
+      "tradeUsd": 1012774663,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "BO",
+      "tradeUsd": 1012707916,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "SG",
+      "tradeUsd": 1012600138,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16660,6 +22682,38 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "LT",
+      "t": "IT",
+      "tradeUsd": 1011561924,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "KE",
+      "tradeUsd": 1011442837,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "NL",
+      "tradeUsd": 1009935267,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NI",
+      "t": "MX",
+      "tradeUsd": 1009725405,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SA",
       "t": "GB",
       "tradeUsd": 1009226889,
@@ -16676,33 +22730,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "BR",
-      "tradeUsd": 1007651721,
+      "s": "IN",
+      "t": "RO",
+      "tradeUsd": 1008200051,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "MA",
-      "tradeUsd": 1004484568,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "PT",
-      "tradeUsd": 1003947016,
-      "year": 2023,
+      "s": "ES",
+      "t": "DO",
+      "tradeUsd": 1003979116,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "TR",
       "t": "IE",
-      "tradeUsd": 1003705193,
+      "tradeUsd": 1003651759,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16716,9 +22762,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "JP",
-      "tradeUsd": 1001975378,
+      "s": "BR",
+      "t": "BH",
+      "tradeUsd": 1002887515,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16727,6 +22773,54 @@ window.countryMacroData = {
       "s": "IE",
       "t": "SA",
       "tradeUsd": 1001267153,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "IS",
+      "tradeUsd": 1000735883,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "GH",
+      "tradeUsd": 999357527,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "LV",
+      "tradeUsd": 997333484,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "TR",
+      "tradeUsd": 996955301,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "AR",
+      "tradeUsd": 996720600,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AR",
+      "tradeUsd": 996312743,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16748,18 +22842,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "QA",
-      "tradeUsd": 994020652,
+      "s": "US",
+      "t": "HR",
+      "tradeUsd": 993902407,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "ID",
-      "tradeUsd": 989156023,
-      "year": 2023,
+      "s": "QA",
+      "t": "MM",
+      "tradeUsd": 992084286,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "IN",
+      "tradeUsd": 991167300,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16772,17 +22874,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "SG",
-      "tradeUsd": 988418931,
+      "s": "CN",
+      "t": "LV",
+      "tradeUsd": 987916085,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "CA",
-      "t": "PH",
-      "tradeUsd": 986559109,
+      "t": "AE",
+      "tradeUsd": 987672594,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "BE",
+      "tradeUsd": 986903380,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16796,9 +22906,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "UA",
-      "tradeUsd": 983235329,
+      "s": "DE",
+      "t": "PH",
+      "tradeUsd": 985936630,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "IS",
+      "tradeUsd": 985844921,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "NI",
+      "tradeUsd": 985644546,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LU",
+      "t": "NL",
+      "tradeUsd": 984530026,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "DK",
+      "tradeUsd": 983810544,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NI",
+      "t": "MX",
+      "tradeUsd": 983424875,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16820,26 +22970,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "AR",
-      "tradeUsd": 981517147,
+      "s": "GB",
+      "t": "UA",
+      "tradeUsd": 981492101,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "DZ",
-      "tradeUsd": 980921268,
+      "s": "RS",
+      "t": "PL",
+      "tradeUsd": 979934030,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "EG",
-      "tradeUsd": 980849115,
-      "year": 2024,
+      "s": "EC",
+      "t": "CL",
+      "tradeUsd": 978394908,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -16847,6 +22997,14 @@ window.countryMacroData = {
       "s": "BR",
       "t": "NG",
       "tradeUsd": 977496973,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "BG",
+      "tradeUsd": 977399174,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -16876,6 +23034,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ES",
+      "t": "AR",
+      "tradeUsd": 975719238,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "ZA",
       "tradeUsd": 975607224,
@@ -16884,9 +23050,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "BD",
-      "tradeUsd": 975369708,
+      "s": "LT",
+      "t": "DK",
+      "tradeUsd": 975534724,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16895,6 +23061,14 @@ window.countryMacroData = {
       "s": "PL",
       "t": "ZA",
       "tradeUsd": 975366936,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "PE",
+      "tradeUsd": 974808197,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -16924,18 +23098,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "IQ",
-      "tradeUsd": 973174755,
+      "s": "LV",
+      "t": "GB",
+      "tradeUsd": 971649306,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "DZ",
-      "tradeUsd": 971333449,
-      "year": 2023,
+      "s": "BR",
+      "t": "EC",
+      "tradeUsd": 971429141,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -16956,17 +23130,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "ID",
-      "tradeUsd": 970874301,
-      "year": 2024,
+      "s": "SE",
+      "t": "EG",
+      "tradeUsd": 970344208,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "EG",
-      "tradeUsd": 970344208,
+      "s": "IT",
+      "t": "IQ",
+      "tradeUsd": 970087148,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17004,10 +23178,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "SG",
-      "tradeUsd": 967678707,
+      "s": "RS",
+      "t": "HR",
+      "tradeUsd": 968785101,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "GH",
+      "tradeUsd": 967304543,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "PT",
+      "tradeUsd": 967083525,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "FR",
+      "tradeUsd": 965540362,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17016,6 +23214,38 @@ window.countryMacroData = {
       "t": "DZ",
       "tradeUsd": 962692142,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "NL",
+      "tradeUsd": 962606160,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "DZ",
+      "tradeUsd": 962343276,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "FR",
+      "tradeUsd": 962312668,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "RU",
+      "tradeUsd": 961744619,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17030,7 +23260,7 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "CO",
-      "tradeUsd": 961244132,
+      "tradeUsd": 959487121,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17044,6 +23274,86 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "PH",
+      "tradeUsd": 958816211,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "GB",
+      "tradeUsd": 958737701,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "CO",
+      "tradeUsd": 957941603,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "CY",
+      "tradeUsd": 957589178,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RO",
+      "t": "HU",
+      "tradeUsd": 957380182,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "BG",
+      "tradeUsd": 956481525,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UY",
+      "t": "US",
+      "tradeUsd": 955473166,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "IS",
+      "tradeUsd": 955335169,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "JO",
+      "tradeUsd": 954347792,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "SE",
+      "tradeUsd": 953787202,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "VN",
       "t": "CZ",
       "tradeUsd": 953082949,
@@ -17052,9 +23362,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ES",
+      "t": "GR",
+      "tradeUsd": 952865972,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NG",
       "t": "DE",
       "tradeUsd": 952732628,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "PA",
+      "tradeUsd": 949864982,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17084,6 +23410,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CZ",
+      "t": "IT",
+      "tradeUsd": 949079641,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "LV",
+      "tradeUsd": 948925558,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "MA",
+      "tradeUsd": 948776916,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HU",
       "t": "JP",
       "tradeUsd": 947692758,
@@ -17100,6 +23450,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JP",
+      "t": "KE",
+      "tradeUsd": 946846691,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CO",
       "t": "PL",
       "tradeUsd": 946708761,
@@ -17108,10 +23466,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PH",
-      "tradeUsd": 945012554,
-      "year": 2024,
+      "s": "JO",
+      "t": "IQ",
+      "tradeUsd": 945668222,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -17124,10 +23482,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "AU",
-      "tradeUsd": 944264046,
+      "s": "ES",
+      "t": "BG",
+      "tradeUsd": 943713931,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "DZ",
+      "tradeUsd": 943706512,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17140,10 +23506,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JP",
+      "t": "NO",
+      "tradeUsd": 943180493,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "IE",
       "tradeUsd": 943037168,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "KR",
+      "tradeUsd": 942962993,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "SK",
+      "tradeUsd": 942632122,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17156,25 +23546,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "HK",
-      "tradeUsd": 941316639,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IL",
       "t": "ES",
       "tradeUsd": 941257000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "CH",
-      "tradeUsd": 940913105,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17188,6 +23562,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CA",
+      "t": "SA",
+      "tradeUsd": 940592093,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "MA",
       "tradeUsd": 940257631,
@@ -17196,9 +23578,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "HR",
+      "tradeUsd": 940191390,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "LV",
+      "tradeUsd": 940073981,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "AR",
       "tradeUsd": 939548232,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "IR",
+      "tradeUsd": 939464342,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17212,6 +23618,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BG",
+      "t": "IT",
+      "tradeUsd": 937621115,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "CO",
       "tradeUsd": 937473547,
@@ -17220,33 +23634,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "MY",
-      "tradeUsd": 936815233,
+      "s": "KE",
+      "t": "UG",
+      "tradeUsd": 936429262,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "BD",
-      "tradeUsd": 936504574,
+      "s": "NL",
+      "t": "LV",
+      "tradeUsd": 936101215,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PE",
-      "t": "DE",
-      "tradeUsd": 936403176,
+      "s": "ES",
+      "t": "HR",
+      "tradeUsd": 935959296,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "SV",
+      "tradeUsd": 935549371,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "IT",
+      "tradeUsd": 934296369,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "KR",
-      "tradeUsd": 934050365,
+      "s": "EC",
+      "t": "ES",
+      "tradeUsd": 933688653,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17268,34 +23698,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DE",
-      "t": "NG",
-      "tradeUsd": 932440463,
+      "s": "IN",
+      "t": "PE",
+      "tradeUsd": 933114003,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PK",
-      "tradeUsd": 932291252,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PH",
-      "tradeUsd": 928249884,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "VN",
-      "tradeUsd": 927864249,
+      "s": "CA",
+      "t": "DZ",
+      "tradeUsd": 932827093,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PY",
+      "t": "CL",
+      "tradeUsd": 932071287,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "CN",
+      "tradeUsd": 930520538,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "IT",
+      "tradeUsd": 930200364,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "BE",
+      "tradeUsd": 930025646,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "SV",
+      "tradeUsd": 927659817,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17316,26 +23770,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "CN",
-      "tradeUsd": 926227977,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "PL",
       "t": "MA",
       "tradeUsd": 925938781,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PH",
-      "tradeUsd": 925005942,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -17348,18 +23786,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "AU",
-      "tradeUsd": 922961053,
+      "s": "LT",
+      "t": "IT",
+      "tradeUsd": 924236110,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "GB",
+      "tradeUsd": 923734773,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "IE",
-      "tradeUsd": 922150080,
+      "s": "EC",
+      "t": "RU",
+      "tradeUsd": 923610727,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "US",
+      "tradeUsd": 922489018,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17367,6 +23821,14 @@ window.countryMacroData = {
       "s": "JP",
       "t": "KZ",
       "tradeUsd": 921647478,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "BG",
+      "tradeUsd": 921278113,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17380,9 +23842,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "RU",
-      "tradeUsd": 920274666,
+      "s": "HU",
+      "t": "DK",
+      "tradeUsd": 920500817,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17412,6 +23874,30 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "MX",
+      "t": "NI",
+      "tradeUsd": 919627380,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "PA",
+      "tradeUsd": 919298837,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "JP",
+      "tradeUsd": 918546783,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "PK",
       "tradeUsd": 918027963,
@@ -17420,9 +23906,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "TH",
+      "t": "JP",
+      "tradeUsd": 917040781,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "CO",
+      "tradeUsd": 917024854,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "SA",
       "tradeUsd": 916551961,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "PE",
+      "tradeUsd": 916313095,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17452,17 +23962,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SA",
-      "t": "CH",
-      "tradeUsd": 913441182,
-      "year": 2023,
+      "s": "BE",
+      "t": "LT",
+      "tradeUsd": 914134855,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CO",
-      "tradeUsd": 913196325,
+      "s": "SA",
+      "t": "CH",
+      "tradeUsd": 913441182,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17476,9 +23986,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "RU",
-      "tradeUsd": 912925526,
+      "s": "CI",
+      "t": "MY",
+      "tradeUsd": 912415909,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "VN",
+      "tradeUsd": 912234598,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17492,10 +24010,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "EC",
+      "t": "CL",
+      "tradeUsd": 911746308,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "DE",
+      "tradeUsd": 911208306,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CA",
       "t": "MY",
       "tradeUsd": 910006923,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "CH",
+      "tradeUsd": 909908947,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17516,10 +24058,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "MX",
+      "t": "PA",
+      "tradeUsd": 906846799,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "MX",
+      "tradeUsd": 906709604,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "AU",
       "tradeUsd": 905521688,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "CY",
+      "tradeUsd": 905225975,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17532,17 +24098,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MY",
-      "t": "BR",
-      "tradeUsd": 904309589,
+      "s": "RS",
+      "t": "RO",
+      "tradeUsd": 904768594,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "ZA",
-      "tradeUsd": 902829229,
+      "s": "UA",
+      "t": "BG",
+      "tradeUsd": 904607794,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "CZ",
+      "tradeUsd": 904605546,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "BR",
+      "tradeUsd": 904309589,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17556,26 +24138,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "KZ",
-      "tradeUsd": 901879349,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "JP",
       "t": "IQ",
       "tradeUsd": 901561027,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "IQ",
-      "tradeUsd": 901349056,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -17589,16 +24155,24 @@ window.countryMacroData = {
     },
     {
       "s": "DE",
-      "t": "PK",
-      "tradeUsd": 899988322,
-      "year": 2024,
+      "t": "CY",
+      "tradeUsd": 900226987,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "MX",
-      "tradeUsd": 898880842,
+      "s": "MX",
+      "t": "HN",
+      "tradeUsd": 899601592,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "MT",
+      "tradeUsd": 899375561,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17612,17 +24186,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "UA",
-      "tradeUsd": 897841577,
+      "s": "BE",
+      "t": "LT",
+      "tradeUsd": 897927303,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "GR",
-      "tradeUsd": 897604108,
+      "s": "QA",
+      "t": "MM",
+      "tradeUsd": 896937619,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17632,6 +24206,14 @@ window.countryMacroData = {
       "t": "AR",
       "tradeUsd": 896835702,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "UG",
+      "tradeUsd": 896602947,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -17652,9 +24234,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "HK",
-      "tradeUsd": 893554537,
+      "s": "BO",
+      "t": "AE",
+      "tradeUsd": 893577116,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "PT",
+      "tradeUsd": 893435347,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17668,18 +24258,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MY",
-      "t": "RU",
-      "tradeUsd": 891404443,
+      "s": "IN",
+      "t": "CI",
+      "tradeUsd": 892493735,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "RU",
-      "tradeUsd": 891270766,
+      "s": "IN",
+      "t": "BH",
+      "tradeUsd": 891949177,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "DO",
+      "tradeUsd": 891661581,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "RU",
+      "tradeUsd": 891404443,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17700,25 +24306,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "CO",
-      "tradeUsd": 887790804,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PL",
-      "tradeUsd": 886850675,
+      "s": "DE",
+      "t": "SA",
+      "tradeUsd": 888714508,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "TR",
-      "tradeUsd": 886554106,
+      "s": "CR",
+      "t": "GT",
+      "tradeUsd": 887998387,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "IN",
+      "tradeUsd": 886483061,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17728,6 +24334,30 @@ window.countryMacroData = {
       "t": "QA",
       "tradeUsd": 886188370,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "LV",
+      "tradeUsd": 886069638,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "NO",
+      "tradeUsd": 885019191,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "JO",
+      "tradeUsd": 884813264,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17748,9 +24378,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "RU",
-      "tradeUsd": 882578336,
+      "s": "CL",
+      "t": "AR",
+      "tradeUsd": 882682104,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "MT",
+      "tradeUsd": 882677264,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "LU",
+      "tradeUsd": 882481747,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17759,14 +24405,6 @@ window.countryMacroData = {
       "s": "KR",
       "t": "ZA",
       "tradeUsd": 882122874,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AR",
-      "tradeUsd": 882105109,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17796,10 +24434,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PH",
-      "tradeUsd": 880636879,
-      "year": 2023,
+      "s": "PH",
+      "t": "MX",
+      "tradeUsd": 881546636,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -17812,33 +24450,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MA",
-      "t": "AU",
-      "tradeUsd": 879862591,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "CL",
       "t": "IT",
-      "tradeUsd": 879025246,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "HK",
-      "tradeUsd": 878985822,
+      "tradeUsd": 879338765,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "CO",
-      "tradeUsd": 878396609,
+      "s": "UA",
+      "t": "US",
+      "tradeUsd": 878862907,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "FR",
+      "tradeUsd": 878746084,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GR",
+      "t": "TR",
+      "tradeUsd": 878618630,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "MM",
+      "tradeUsd": 877942927,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17852,17 +24498,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "DK",
-      "tradeUsd": 877253051,
-      "year": 2023,
+      "s": "ES",
+      "t": "SI",
+      "tradeUsd": 875471499,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "MX",
-      "tradeUsd": 875361010,
+      "s": "AO",
+      "t": "NL",
+      "tradeUsd": 874498454,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "US",
+      "tradeUsd": 873448718,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17876,9 +24530,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "LU",
+      "tradeUsd": 873129200,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "BD",
       "tradeUsd": 872126750,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "DE",
+      "tradeUsd": 871216711,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17892,9 +24562,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "ZA",
-      "tradeUsd": 870058932,
+      "s": "CZ",
+      "t": "SK",
+      "tradeUsd": 870432194,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "DK",
+      "tradeUsd": 870154009,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CY",
+      "tradeUsd": 869984819,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "CA",
+      "tradeUsd": 869552662,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17902,15 +24596,7 @@ window.countryMacroData = {
     {
       "s": "IT",
       "t": "PH",
-      "tradeUsd": 869334620,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "HK",
-      "tradeUsd": 868757213,
+      "tradeUsd": 868774038,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17940,17 +24626,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "AE",
-      "tradeUsd": 867997315,
-      "year": 2023,
+      "s": "SK",
+      "t": "HU",
+      "tradeUsd": 868281837,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "ES",
-      "tradeUsd": 867567713,
+      "s": "BE",
+      "t": "VN",
+      "tradeUsd": 867897120,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -17972,9 +24658,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PE",
-      "t": "MX",
-      "tradeUsd": 865183106,
+      "s": "CN",
+      "t": "LV",
+      "tradeUsd": 865678619,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "ID",
+      "tradeUsd": 865623474,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "DO",
+      "tradeUsd": 865244877,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -17988,6 +24690,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "MX",
+      "t": "NI",
+      "tradeUsd": 863634135,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IL",
       "t": "JP",
       "tradeUsd": 863616000,
@@ -17996,17 +24706,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "CZ",
-      "tradeUsd": 860095934,
+      "s": "EG",
+      "t": "FR",
+      "tradeUsd": 862295661,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "FI",
+      "tradeUsd": 861480444,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "PT",
-      "tradeUsd": 859730368,
+      "s": "LK",
+      "t": "GB",
+      "tradeUsd": 861107526,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "CZ",
+      "tradeUsd": 860825893,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "IN",
+      "tradeUsd": 860791227,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "DK",
+      "tradeUsd": 859963884,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "JO",
+      "tradeUsd": 859944266,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18044,10 +24794,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "AT",
+      "tradeUsd": 858355092,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AU",
       "t": "TR",
       "tradeUsd": 857639547,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "MX",
+      "tradeUsd": 857497324,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18060,10 +24826,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "AT",
-      "tradeUsd": 855024787,
-      "year": 2024,
+      "s": "ID",
+      "t": "KH",
+      "tradeUsd": 856078480,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "MY",
+      "tradeUsd": 855546191,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "CA",
+      "tradeUsd": 855487729,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "LY",
+      "tradeUsd": 855397326,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IS",
+      "tradeUsd": 854990455,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -18084,10 +24882,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PK",
-      "tradeUsd": 854413824,
-      "year": 2023,
+      "s": "UA",
+      "t": "BE",
+      "tradeUsd": 854415421,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18108,17 +24906,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SA",
-      "t": "BR",
-      "tradeUsd": 852759545,
+      "s": "EC",
+      "t": "ES",
+      "tradeUsd": 853976721,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "HU",
-      "tradeUsd": 851724810,
+      "s": "DE",
+      "t": "CZ",
+      "tradeUsd": 853343546,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "NL",
+      "tradeUsd": 852856134,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "BR",
+      "tradeUsd": 852759545,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18132,6 +24946,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "GH",
+      "tradeUsd": 850833145,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "TR",
       "tradeUsd": 850555860,
@@ -18140,18 +24962,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "GR",
-      "tradeUsd": 850460551,
+      "s": "SK",
+      "t": "SI",
+      "tradeUsd": 849587741,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "BH",
+      "tradeUsd": 849201496,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "TR",
-      "tradeUsd": 848363148,
+      "s": "HU",
+      "t": "GR",
+      "tradeUsd": 848677027,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "AR",
+      "tradeUsd": 848542354,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18159,14 +24997,6 @@ window.countryMacroData = {
       "s": "NL",
       "t": "QA",
       "tradeUsd": 848045267,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "SA",
-      "tradeUsd": 848005051,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18180,10 +25010,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "IT",
-      "tradeUsd": 846937643,
-      "year": 2023,
+      "s": "CI",
+      "t": "FR",
+      "tradeUsd": 846532641,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MT",
+      "t": "DE",
+      "tradeUsd": 846315450,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "BG",
+      "tradeUsd": 845687137,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "SK",
+      "tradeUsd": 845078839,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18191,6 +25045,14 @@ window.countryMacroData = {
       "s": "MX",
       "t": "HK",
       "tradeUsd": 845037059,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "TH",
+      "tradeUsd": 844900806,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18204,34 +25066,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CH",
-      "tradeUsd": 843265585,
-      "year": 2024,
+      "s": "IN",
+      "t": "GR",
+      "tradeUsd": 843309501,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "ZA",
-      "tradeUsd": 843105998,
+      "tradeUsd": 843091616,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AR",
-      "tradeUsd": 842841630,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "GB",
-      "tradeUsd": 842765059,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18260,17 +25106,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "JP",
-      "tradeUsd": 839169516,
+      "s": "LV",
+      "t": "DK",
+      "tradeUsd": 840391828,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CH",
-      "tradeUsd": 838908464,
+      "s": "NL",
+      "t": "CO",
+      "tradeUsd": 840247181,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "IN",
+      "tradeUsd": 839430998,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "BE",
+      "tradeUsd": 839061128,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18292,9 +25154,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NO",
+      "t": "BR",
+      "tradeUsd": 836969264,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NG",
       "t": "BR",
       "tradeUsd": 835792908,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "CY",
+      "tradeUsd": 835596262,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "PT",
+      "tradeUsd": 835139097,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "FR",
+      "tradeUsd": 834866467,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18316,6 +25210,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ID",
+      "t": "KH",
+      "tradeUsd": 833293189,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "GR",
       "tradeUsd": 832518354,
@@ -18324,17 +25226,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HK",
-      "t": "BD",
-      "tradeUsd": 831914280,
+      "s": "BE",
+      "t": "TH",
+      "tradeUsd": 832469702,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CN",
-      "tradeUsd": 831886048,
+      "s": "HK",
+      "t": "BD",
+      "tradeUsd": 831914280,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18356,9 +25258,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "VN",
+      "tradeUsd": 830663722,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MX",
       "t": "IT",
       "tradeUsd": 830577004,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "NL",
+      "tradeUsd": 829614736,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18372,17 +25290,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "DZ",
-      "tradeUsd": 828115079,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "MY",
-      "tradeUsd": 827971414,
+      "s": "QA",
+      "t": "OM",
+      "tradeUsd": 828379295,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18396,26 +25306,50 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "KR",
-      "tradeUsd": 824802034,
+      "s": "BE",
+      "t": "TH",
+      "tradeUsd": 825052073,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "BE",
+      "tradeUsd": 824917212,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "EE",
+      "tradeUsd": 824856739,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "JP",
-      "tradeUsd": 824495559,
+      "s": "CN",
+      "t": "NI",
+      "tradeUsd": 824516081,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "BR",
-      "tradeUsd": 823429120,
+      "s": "BE",
+      "t": "AR",
+      "tradeUsd": 824421078,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "CO",
+      "tradeUsd": 824036718,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18428,9 +25362,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "DK",
+      "tradeUsd": 822836568,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "NL",
+      "tradeUsd": 822123703,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PE",
       "t": "CO",
       "tradeUsd": 821816488,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "PT",
+      "tradeUsd": 821814845,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18444,14 +25402,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "RU",
-      "tradeUsd": 820829717,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "EG",
       "t": "DE",
       "tradeUsd": 820630111,
@@ -18460,10 +25410,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "KW",
-      "tradeUsd": 819354176,
-      "year": 2023,
+      "s": "MX",
+      "t": "PA",
+      "tradeUsd": 820080353,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IE",
+      "tradeUsd": 818904273,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18476,17 +25434,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AR",
-      "tradeUsd": 818185060,
+      "s": "BG",
+      "t": "EG",
+      "tradeUsd": 818367871,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "RO",
+      "tradeUsd": 817940652,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "CH",
-      "tradeUsd": 817716660,
+      "s": "LT",
+      "t": "FI",
+      "tradeUsd": 817781114,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18500,26 +25466,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "GR",
-      "tradeUsd": 816877520,
+      "s": "CA",
+      "t": "CO",
+      "tradeUsd": 816875361,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "RU",
-      "tradeUsd": 816366888,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "KZ",
-      "tradeUsd": 816220662,
+      "s": "CA",
+      "t": "PH",
+      "tradeUsd": 816730716,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "CN",
+      "tradeUsd": 816678337,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18527,6 +25493,14 @@ window.countryMacroData = {
       "s": "EG",
       "t": "IQ",
       "tradeUsd": 815882281,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CN",
+      "t": "EE",
+      "tradeUsd": 815288902,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18548,33 +25522,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "RU",
-      "tradeUsd": 814337272,
+      "s": "CH",
+      "t": "SK",
+      "tradeUsd": 814717784,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "RU",
+      "tradeUsd": 814196246,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "CA",
+      "tradeUsd": 813640392,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "CL",
       "t": "CO",
-      "tradeUsd": 814080753,
+      "tradeUsd": 813028519,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PE",
-      "tradeUsd": 813428765,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "IL",
-      "tradeUsd": 813256463,
+      "s": "NO",
+      "t": "JP",
+      "tradeUsd": 812979844,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18596,9 +25578,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "SE",
-      "tradeUsd": 811709467,
+      "s": "IT",
+      "t": "EE",
+      "tradeUsd": 812210121,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18612,17 +25594,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "SE",
-      "tradeUsd": 808851108,
-      "year": 2024,
+      "s": "DK",
+      "t": "SG",
+      "tradeUsd": 808335296,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "SG",
-      "tradeUsd": 808335296,
+      "s": "DO",
+      "t": "CH",
+      "tradeUsd": 807827868,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18652,6 +25634,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "IS",
+      "tradeUsd": 805288590,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KR",
       "t": "IE",
       "tradeUsd": 804549481,
@@ -18662,7 +25652,7 @@ window.countryMacroData = {
     {
       "s": "DK",
       "t": "SA",
-      "tradeUsd": 803725379,
+      "tradeUsd": 803885796,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18679,6 +25669,38 @@ window.countryMacroData = {
       "s": "IE",
       "t": "BR",
       "tradeUsd": 803003940,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "FR",
+      "tradeUsd": 802289123,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "LT",
+      "tradeUsd": 801261786,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "NL",
+      "tradeUsd": 801258519,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IS",
+      "t": "US",
+      "tradeUsd": 800495119,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18708,18 +25730,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "TH",
-      "tradeUsd": 799549400,
+      "s": "LV",
+      "t": "PL",
+      "tradeUsd": 799181162,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "PT",
-      "tradeUsd": 799537345,
-      "year": 2023,
+      "s": "SK",
+      "t": "ES",
+      "tradeUsd": 797981462,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18728,6 +25750,22 @@ window.countryMacroData = {
       "t": "MY",
       "tradeUsd": 797591183,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "KW",
+      "tradeUsd": 796566101,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "GB",
+      "tradeUsd": 796480561,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -18748,9 +25786,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "KZ",
+      "tradeUsd": 795883525,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "HU",
       "tradeUsd": 795561471,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "TR",
+      "tradeUsd": 795490418,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TH",
+      "t": "VN",
+      "tradeUsd": 795293139,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18764,25 +25826,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "PL",
-      "tradeUsd": 792583613,
-      "year": 2024,
+      "s": "LA",
+      "t": "TH",
+      "tradeUsd": 791923888,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "NZ",
-      "tradeUsd": 791313886,
-      "year": 2023,
+      "s": "MX",
+      "t": "HN",
+      "tradeUsd": 791682675,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "ZA",
-      "tradeUsd": 790386723,
+      "tradeUsd": 790386725,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18804,34 +25866,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CO",
-      "tradeUsd": 789186128,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CZ",
-      "tradeUsd": 787480395,
+      "s": "GR",
+      "t": "BE",
+      "tradeUsd": 788823233,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "QA",
-      "tradeUsd": 787420539,
+      "s": "TN",
+      "t": "LY",
+      "tradeUsd": 788804675,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "US",
+      "tradeUsd": 787790987,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "AR",
-      "tradeUsd": 786829311,
-      "year": 2024,
+      "s": "BE",
+      "t": "CI",
+      "tradeUsd": 787509107,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -18844,18 +25906,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "IT",
-      "tradeUsd": 785073517,
+      "s": "RS",
+      "t": "BG",
+      "tradeUsd": 785604074,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "IL",
-      "tradeUsd": 784064411,
-      "year": 2023,
+      "s": "US",
+      "t": "KE",
+      "tradeUsd": 782524079,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18868,26 +25930,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "KR",
-      "tradeUsd": 781546141,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "NL",
-      "t": "CL",
-      "tradeUsd": 780283113,
+      "t": "NZ",
+      "tradeUsd": 781983634,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "CN",
-      "tradeUsd": 779681882,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18900,14 +25946,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "ZA",
-      "tradeUsd": 779379192,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "PK",
       "t": "BD",
       "tradeUsd": 778114978,
@@ -18916,9 +25954,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "TR",
+      "t": "NO",
+      "tradeUsd": 776899776,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "CN",
+      "tradeUsd": 776713193,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "CO",
+      "tradeUsd": 775949971,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "EG",
       "tradeUsd": 775652175,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "CY",
+      "tradeUsd": 775397000,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -18932,9 +26002,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "UA",
-      "tradeUsd": 774700127,
+      "s": "CH",
+      "t": "IT",
+      "tradeUsd": 774910667,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "SK",
+      "tradeUsd": 773838147,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18958,8 +26036,24 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "PL",
-      "tradeUsd": 772129489,
+      "tradeUsd": 772086092,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "AT",
+      "tradeUsd": 771811643,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "NO",
+      "tradeUsd": 771700584,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -18972,9 +26066,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "PE",
-      "tradeUsd": 771143047,
+      "s": "RS",
+      "t": "SK",
+      "tradeUsd": 770941941,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "QA",
+      "tradeUsd": 770468833,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -18988,25 +26090,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PH",
-      "tradeUsd": 769060236,
+      "s": "KR",
+      "t": "EC",
+      "tradeUsd": 768651658,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "US",
+      "tradeUsd": 767938166,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "CL",
+      "tradeUsd": 767200907,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ES",
-      "t": "UA",
-      "tradeUsd": 767994198,
-      "year": 2024,
+      "t": "PE",
+      "tradeUsd": 767129236,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "HK",
-      "tradeUsd": 766748945,
+      "s": "BG",
+      "t": "UA",
+      "tradeUsd": 766840740,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19068,18 +26186,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "AR",
-      "tradeUsd": 761563764,
+      "s": "SA",
+      "t": "AU",
+      "tradeUsd": 761420005,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SA",
-      "t": "AU",
-      "tradeUsd": 761420005,
+      "s": "IN",
+      "t": "MM",
+      "tradeUsd": 760321014,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "SI",
+      "tradeUsd": 760187863,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19100,17 +26226,89 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "SG",
-      "tradeUsd": 755244269,
+      "s": "CA",
+      "t": "SA",
+      "tradeUsd": 758824564,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "JO",
+      "tradeUsd": 758796316,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SI",
+      "t": "ES",
+      "tradeUsd": 757585150,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "BD",
+      "tradeUsd": 757412441,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "AE",
+      "tradeUsd": 754977084,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "DK",
       "t": "IE",
-      "tradeUsd": 753987500,
+      "tradeUsd": 754897100,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "AE",
+      "tradeUsd": 753877053,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "ES",
+      "tradeUsd": 753743083,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "CH",
+      "tradeUsd": 753581922,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "ZA",
+      "tradeUsd": 753136432,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "JO",
+      "tradeUsd": 751960100,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19119,6 +26317,22 @@ window.countryMacroData = {
       "s": "SA",
       "t": "MA",
       "tradeUsd": 751790558,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "FI",
+      "tradeUsd": 751221603,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "DZ",
+      "tradeUsd": 750718231,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19140,9 +26354,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PK",
-      "tradeUsd": 749727400,
+      "s": "PH",
+      "t": "ID",
+      "tradeUsd": 748941349,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CI",
+      "tradeUsd": 748930231,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "CR",
+      "tradeUsd": 748928770,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19156,14 +26386,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "ID",
-      "tradeUsd": 747840748,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "PE",
       "t": "IT",
       "tradeUsd": 747651048,
@@ -19172,17 +26394,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "PT",
-      "tradeUsd": 747351909,
-      "year": 2024,
+      "s": "UY",
+      "t": "US",
+      "tradeUsd": 746916881,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "PE",
-      "tradeUsd": 746853722,
+      "s": "SI",
+      "t": "RO",
+      "tradeUsd": 746427362,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "ES",
+      "tradeUsd": 745977890,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19196,9 +26426,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "BD",
-      "tradeUsd": 744191804,
+      "s": "LT",
+      "t": "KZ",
+      "tradeUsd": 745142782,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IL",
+      "t": "CY",
+      "tradeUsd": 744824000,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "EE",
+      "tradeUsd": 743960529,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19220,6 +26466,46 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CA",
+      "t": "VN",
+      "tradeUsd": 742137759,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "LK",
+      "tradeUsd": 741890380,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "QA",
+      "tradeUsd": 740361161,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "MY",
+      "tradeUsd": 740215028,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "FR",
+      "tradeUsd": 739653230,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NZ",
       "t": "HK",
       "tradeUsd": 739276261,
@@ -19228,10 +26514,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "EC",
+      "t": "DE",
+      "tradeUsd": 737794174,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "NI",
+      "tradeUsd": 737246162,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "RS",
+      "t": "US",
+      "tradeUsd": 737108738,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IR",
+      "tradeUsd": 737029646,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UG",
+      "t": "KE",
+      "tradeUsd": 736834343,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SA",
       "t": "IT",
       "tradeUsd": 736636411,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "NL",
+      "tradeUsd": 736295648,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19252,18 +26586,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PK",
-      "t": "SA",
-      "tradeUsd": 734357586,
+      "s": "BG",
+      "t": "AT",
+      "tradeUsd": 734425341,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CL",
-      "tradeUsd": 734029699,
-      "year": 2023,
+      "s": "PK",
+      "t": "SA",
+      "tradeUsd": 734357586,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19276,33 +26610,65 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "IE",
-      "tradeUsd": 733056861,
+      "s": "DE",
+      "t": "IS",
+      "tradeUsd": 732500971,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "RU",
-      "tradeUsd": 731314948,
+      "s": "BE",
+      "t": "MY",
+      "tradeUsd": 729882494,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "DO",
+      "tradeUsd": 729641915,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "DZ",
-      "tradeUsd": 730958026,
-      "year": 2023,
+      "s": "AO",
+      "t": "CA",
+      "tradeUsd": 729539074,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "LV",
+      "tradeUsd": 729387909,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "CN",
+      "tradeUsd": 728950972,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "IT",
       "t": "NZ",
-      "tradeUsd": 728884426,
+      "tradeUsd": 728878778,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UG",
+      "t": "IN",
+      "tradeUsd": 728427842,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19316,9 +26682,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "TH",
-      "tradeUsd": 728338334,
+      "s": "GT",
+      "t": "MX",
+      "tradeUsd": 728034214,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19332,9 +26698,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "MY",
+      "t": "LK",
+      "tradeUsd": 726982823,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "ID",
       "t": "PL",
-      "tradeUsd": 726805743,
+      "tradeUsd": 726805747,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19348,9 +26722,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "FI",
-      "tradeUsd": 725320588,
+      "s": "BE",
+      "t": "ID",
+      "tradeUsd": 725392115,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19380,33 +26754,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "ES",
-      "tradeUsd": 723059662,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "ZA",
-      "tradeUsd": 723041774,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "TR",
       "t": "NG",
       "tradeUsd": 721460299,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "BR",
-      "tradeUsd": 720779418,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19420,41 +26770,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "KW",
-      "tradeUsd": 720319504,
+      "s": "IN",
+      "t": "CI",
+      "tradeUsd": 719830952,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "TR",
-      "tradeUsd": 720164062,
+      "s": "DK",
+      "t": "BR",
+      "tradeUsd": 719651954,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "BR",
-      "tradeUsd": 719140497,
-      "year": 2023,
+      "s": "DK",
+      "t": "IN",
+      "tradeUsd": 718373749,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "IE",
-      "tradeUsd": 718929285,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "GR",
-      "tradeUsd": 718450192,
+      "s": "NL",
+      "t": "DZ",
+      "tradeUsd": 718166939,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19468,9 +26810,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
+      "s": "BO",
       "t": "JP",
-      "tradeUsd": 717102545,
+      "tradeUsd": 716984028,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19484,6 +26826,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "ES",
+      "tradeUsd": 716811099,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PL",
       "t": "BR",
       "tradeUsd": 716479549,
@@ -19492,17 +26842,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "KW",
-      "tradeUsd": 716449282,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "VN",
-      "tradeUsd": 715552276,
+      "s": "BE",
+      "t": "SI",
+      "tradeUsd": 716383562,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19516,6 +26858,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "MY",
+      "tradeUsd": 715291982,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "ZA",
       "tradeUsd": 715049190,
@@ -19524,25 +26874,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "QA",
-      "tradeUsd": 714136308,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "KW",
-      "tradeUsd": 714028772,
+      "s": "SE",
+      "t": "LV",
+      "tradeUsd": 714940373,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "QA",
-      "tradeUsd": 713533204,
+      "s": "LU",
+      "t": "IT",
+      "tradeUsd": 714922201,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "ES",
+      "tradeUsd": 713479228,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "CA",
+      "tradeUsd": 713099816,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19572,26 +26930,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "RU",
-      "tradeUsd": 712317658,
+      "s": "BG",
+      "t": "EG",
+      "tradeUsd": 712522834,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "RO",
-      "tradeUsd": 712044572,
-      "year": 2023,
+      "s": "GB",
+      "t": "RU",
+      "tradeUsd": 711790075,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "MA",
-      "tradeUsd": 711633716,
-      "year": 2023,
+      "s": "IT",
+      "t": "JO",
+      "tradeUsd": 711451462,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19604,10 +26962,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "SG",
-      "tradeUsd": 711242903,
-      "year": 2024,
+      "s": "ID",
+      "t": "QA",
+      "tradeUsd": 710696947,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -19620,10 +26978,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BE",
+      "t": "AR",
+      "tradeUsd": 710326551,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "QA",
       "t": "ID",
       "tradeUsd": 710314402,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "AO",
+      "tradeUsd": 709556923,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19636,10 +27010,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CZ",
-      "tradeUsd": 708331850,
-      "year": 2024,
+      "s": "IL",
+      "t": "SI",
+      "tradeUsd": 708399000,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -19655,6 +27029,22 @@ window.countryMacroData = {
       "s": "AU",
       "t": "QA",
       "tradeUsd": 707379028,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "AR",
+      "tradeUsd": 706778566,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HK",
+      "t": "KH",
+      "tradeUsd": 706450080,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19676,6 +27066,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "BE",
+      "t": "RS",
+      "tradeUsd": 706139125,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KW",
       "t": "SA",
       "tradeUsd": 705432212,
@@ -19684,18 +27082,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "SA",
-      "tradeUsd": 704712407,
-      "year": 2024,
+      "s": "AE",
+      "t": "ET",
+      "tradeUsd": 704738628,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "CO",
-      "tradeUsd": 704221247,
-      "year": 2023,
+      "s": "MY",
+      "t": "LK",
+      "tradeUsd": 703876588,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19716,17 +27114,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ZA",
-      "t": "SG",
-      "tradeUsd": 702235135,
+      "s": "SA",
+      "t": "MY",
+      "tradeUsd": 700687858,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SA",
-      "t": "MY",
-      "tradeUsd": 700687858,
+      "s": "ES",
+      "t": "SG",
+      "tradeUsd": 700517528,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19756,14 +27154,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "UA",
-      "tradeUsd": 698804723,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "AE",
       "tradeUsd": 698727867,
@@ -19772,17 +27162,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "PH",
-      "tradeUsd": 696231534,
+      "s": "HK",
+      "t": "LU",
+      "tradeUsd": 698560561,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "CO",
+      "tradeUsd": 698405161,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PH",
-      "tradeUsd": 694694332,
+      "s": "BG",
+      "t": "GB",
+      "tradeUsd": 698180034,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "MM",
+      "tradeUsd": 697715926,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "NZ",
+      "tradeUsd": 697049373,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PK",
+      "t": "BE",
+      "tradeUsd": 696233635,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19804,10 +27226,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "TH",
-      "tradeUsd": 693726687,
+      "s": "CH",
+      "t": "RS",
+      "tradeUsd": 693252288,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "IS",
+      "tradeUsd": 693123900,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -19815,6 +27245,22 @@ window.countryMacroData = {
       "s": "CZ",
       "t": "GR",
       "tradeUsd": 692818410,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "NI",
+      "tradeUsd": 692530662,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "MM",
+      "tradeUsd": 691988872,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19828,18 +27274,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "MA",
-      "tradeUsd": 691106137,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "KR",
       "t": "DK",
       "tradeUsd": 690986327,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "HU",
+      "tradeUsd": 690669461,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19852,18 +27298,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "HU",
-      "tradeUsd": 690324841,
+      "s": "EG",
+      "t": "IQ",
+      "tradeUsd": 690313936,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "VN",
+      "tradeUsd": 689659276,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "EG",
-      "t": "IQ",
-      "tradeUsd": 690313936,
-      "year": 2023,
+      "s": "BE",
+      "t": "DZ",
+      "tradeUsd": 689426823,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "SE",
+      "tradeUsd": 689158524,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -19884,9 +27346,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AR",
+      "t": "EC",
+      "tradeUsd": 688794406,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KW",
       "t": "CN",
       "tradeUsd": 688495560,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "RU",
+      "tradeUsd": 688152423,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -19908,18 +27386,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PL",
-      "tradeUsd": 686425634,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "TH",
-      "tradeUsd": 686189165,
-      "year": 2024,
+      "s": "TZ",
+      "t": "AE",
+      "tradeUsd": 686436289,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -19948,9 +27418,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "TH",
-      "tradeUsd": 685002409,
+      "s": "AO",
+      "t": "SG",
+      "tradeUsd": 685509106,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "FI",
+      "t": "LV",
+      "tradeUsd": 684366947,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "PH",
+      "tradeUsd": 684332037,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "IT",
+      "tradeUsd": 684271371,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19966,8 +27460,40 @@ window.countryMacroData = {
     {
       "s": "ID",
       "t": "NZ",
-      "tradeUsd": 682957985,
+      "tradeUsd": 682957992,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "AO",
+      "tradeUsd": 682352869,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "TH",
+      "tradeUsd": 680986599,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "FR",
+      "tradeUsd": 680373833,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "JO",
+      "tradeUsd": 680044491,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -19980,9 +27506,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "IQ",
-      "tradeUsd": 679565736,
+      "s": "ID",
+      "t": "MM",
+      "tradeUsd": 679599816,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -19996,6 +27522,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CL",
+      "t": "CH",
+      "tradeUsd": 678543532,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "PT",
       "tradeUsd": 678226071,
@@ -20004,10 +27538,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CZ",
-      "tradeUsd": 677436254,
+      "s": "PK",
+      "t": "BE",
+      "tradeUsd": 677250153,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "IT",
+      "tradeUsd": 676901433,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20020,18 +27562,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "CH",
-      "tradeUsd": 675378313,
+      "s": "MX",
+      "t": "FR",
+      "tradeUsd": 676681629,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "NZ",
-      "tradeUsd": 674827972,
+      "s": "NO",
+      "t": "RO",
+      "tradeUsd": 675263757,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "CR",
+      "tradeUsd": 674395319,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GT",
+      "t": "MX",
+      "tradeUsd": 674148260,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20047,6 +27605,14 @@ window.countryMacroData = {
       "s": "SE",
       "t": "TH",
       "tradeUsd": 673183045,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "FR",
+      "tradeUsd": 672987237,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20084,17 +27650,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "CA",
-      "tradeUsd": 672395801,
+      "s": "BO",
+      "t": "JP",
+      "tradeUsd": 671264283,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CO",
-      "tradeUsd": 672001435,
+      "s": "HK",
+      "t": "KH",
+      "tradeUsd": 671094590,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20116,10 +27682,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NL",
+      "t": "IQ",
+      "tradeUsd": 670291785,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NZ",
       "t": "AE",
       "tradeUsd": 669833758,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "KW",
+      "tradeUsd": 669291452,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20132,17 +27714,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "EG",
-      "tradeUsd": 668365810,
+      "s": "MY",
+      "t": "KH",
+      "tradeUsd": 667517568,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "EG",
-      "tradeUsd": 667914134,
+      "s": "IS",
+      "t": "GB",
+      "tradeUsd": 667346655,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "HR",
+      "tradeUsd": 667033315,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20164,6 +27754,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "SK",
+      "t": "PL",
+      "tradeUsd": 665917059,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AR",
       "t": "GB",
       "tradeUsd": 665466553,
@@ -20172,9 +27770,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "DO",
+      "tradeUsd": 665164303,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "NO",
+      "tradeUsd": 665124054,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "UA",
       "tradeUsd": 665036903,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GH",
+      "t": "NL",
+      "tradeUsd": 664142739,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "SI",
+      "tradeUsd": 663245396,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20188,9 +27818,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "CA",
-      "tradeUsd": 663195823,
+      "s": "KE",
+      "t": "US",
+      "tradeUsd": 662506729,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20212,6 +27842,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "QA",
+      "t": "FR",
+      "tradeUsd": 661594230,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IS",
+      "t": "US",
+      "tradeUsd": 660896747,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AU",
       "t": "QA",
       "tradeUsd": 660850014,
@@ -20220,9 +27866,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "NL",
-      "t": "PK",
-      "tradeUsd": 660772250,
+      "s": "EG",
+      "t": "JO",
+      "tradeUsd": 660411191,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20244,9 +27890,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "SG",
-      "tradeUsd": 659490625,
+      "s": "NL",
+      "t": "PK",
+      "tradeUsd": 660091095,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "GH",
+      "tradeUsd": 659620022,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HU",
+      "t": "NO",
+      "tradeUsd": 659508083,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20268,6 +27930,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "SG",
+      "tradeUsd": 658136380,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "HK",
+      "tradeUsd": 657691667,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "CL",
       "tradeUsd": 657689058,
@@ -20276,17 +27954,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IQ",
-      "tradeUsd": 655623207,
+      "s": "IN",
+      "t": "LY",
+      "tradeUsd": 657645883,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "ZA",
-      "tradeUsd": 655341714,
+      "s": "IT",
+      "t": "DO",
+      "tradeUsd": 657333778,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "SI",
+      "tradeUsd": 657183433,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "KH",
+      "tradeUsd": 656890489,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "LY",
+      "tradeUsd": 654870151,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EE",
+      "t": "PL",
+      "tradeUsd": 654857301,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20300,17 +28010,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "KR",
-      "tradeUsd": 654607871,
-      "year": 2023,
+      "s": "CO",
+      "t": "BE",
+      "tradeUsd": 654655588,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "PE",
-      "tradeUsd": 654594332,
+      "s": "GR",
+      "t": "KR",
+      "tradeUsd": 654607871,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20324,25 +28034,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "PE",
+      "tradeUsd": 653491545,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "TR",
       "t": "ZA",
       "tradeUsd": 653346254,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DE",
-      "t": "BD",
-      "tradeUsd": 652827578,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "MY",
-      "tradeUsd": 652777167,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20356,9 +28058,65 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ID",
-      "t": "QA",
-      "tradeUsd": 650425718,
+      "s": "CA",
+      "t": "TR",
+      "tradeUsd": 651914554,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "BG",
+      "tradeUsd": 651795189,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "MT",
+      "tradeUsd": 651380046,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "IE",
+      "tradeUsd": 650508684,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "DE",
+      "tradeUsd": 650013102,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "US",
+      "tradeUsd": 649872912,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "ID",
+      "tradeUsd": 649526725,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "AU",
+      "tradeUsd": 649304978,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20380,14 +28138,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "IR",
-      "tradeUsd": 648843481,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "AU",
       "t": "PK",
       "tradeUsd": 648721379,
@@ -20404,6 +28154,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ID",
+      "t": "PK",
+      "tradeUsd": 648345271,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "SK",
+      "tradeUsd": 648023810,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AU",
       "t": "SA",
       "tradeUsd": 647877072,
@@ -20412,10 +28178,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "FI",
-      "tradeUsd": 647799420,
-      "year": 2024,
+      "s": "DE",
+      "t": "PA",
+      "tradeUsd": 647847056,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20424,6 +28190,14 @@ window.countryMacroData = {
       "t": "RU",
       "tradeUsd": 647692022,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CY",
+      "t": "LY",
+      "tradeUsd": 647484488,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20444,9 +28218,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "TH",
-      "tradeUsd": 645926936,
+      "s": "IT",
+      "t": "IR",
+      "tradeUsd": 646180905,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20460,10 +28234,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "JP",
-      "tradeUsd": 645189950,
-      "year": 2023,
+      "s": "ID",
+      "t": "QA",
+      "tradeUsd": 645590552,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "PE",
+      "tradeUsd": 645310404,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20484,9 +28266,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "CN",
-      "tradeUsd": 642799090,
+      "s": "CL",
+      "t": "TH",
+      "tradeUsd": 644295388,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CO",
+      "t": "DO",
+      "tradeUsd": 643727560,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20508,6 +28298,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GT",
+      "t": "CR",
+      "tradeUsd": 641522206,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "IE",
+      "tradeUsd": 640313723,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AT",
       "t": "MY",
       "tradeUsd": 640175946,
@@ -20516,9 +28322,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "NO",
+      "t": "GR",
+      "tradeUsd": 639937173,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GB",
+      "t": "CL",
+      "tradeUsd": 639022542,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MY",
+      "t": "CR",
+      "tradeUsd": 638977985,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "BE",
+      "tradeUsd": 638921805,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NL",
       "t": "IQ",
       "tradeUsd": 638095885,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "FR",
+      "tradeUsd": 637583338,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "HU",
+      "tradeUsd": 637082682,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20540,6 +28394,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JP",
+      "t": "BH",
+      "tradeUsd": 636544378,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MA",
       "t": "CZ",
       "tradeUsd": 636499814,
@@ -20548,18 +28410,42 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CL",
-      "tradeUsd": 635363594,
+      "s": "NO",
+      "t": "IE",
+      "tradeUsd": 635449074,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "GB",
-      "t": "KW",
-      "tradeUsd": 633528121,
-      "year": 2024,
+      "t": "MX",
+      "tradeUsd": 634640248,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "BR",
+      "tradeUsd": 634608927,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AO",
+      "tradeUsd": 634338453,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "US",
+      "tradeUsd": 632564413,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20580,10 +28466,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "MY",
-      "tradeUsd": 631615978,
-      "year": 2023,
+      "s": "MM",
+      "t": "DE",
+      "tradeUsd": 631960924,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20592,6 +28478,14 @@ window.countryMacroData = {
       "t": "IL",
       "tradeUsd": 631560175,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "LY",
+      "tradeUsd": 630763051,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20612,17 +28506,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "IE",
-      "tradeUsd": 628873720,
-      "year": 2024,
+      "s": "EC",
+      "t": "IT",
+      "tradeUsd": 629334288,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "KR",
-      "tradeUsd": 628605015,
+      "s": "QA",
+      "t": "OM",
+      "tradeUsd": 628715610,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20636,17 +28530,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "AU",
-      "tradeUsd": 628301259,
+      "s": "HR",
+      "t": "FR",
+      "tradeUsd": 628561887,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "LT",
+      "tradeUsd": 628160449,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "PY",
+      "tradeUsd": 627892460,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "ID",
-      "tradeUsd": 628100754,
+      "s": "TN",
+      "t": "US",
+      "tradeUsd": 627160036,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20668,9 +28578,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PL",
+      "t": "LU",
+      "tradeUsd": 626595015,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IL",
       "t": "AE",
       "tradeUsd": 626573000,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "NL",
+      "tradeUsd": 626250777,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "DE",
+      "tradeUsd": 626162261,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "RS",
+      "tradeUsd": 626113660,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "PA",
+      "tradeUsd": 625847210,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20692,9 +28642,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "PE",
-      "tradeUsd": 624738402,
+      "s": "KR",
+      "t": "OM",
+      "tradeUsd": 625423707,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TZ",
+      "t": "AE",
+      "tradeUsd": 625152456,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20708,6 +28666,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "GT",
+      "t": "NL",
+      "tradeUsd": 624011666,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "FI",
       "t": "CZ",
       "tradeUsd": 622477202,
@@ -20716,18 +28682,50 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "CO",
-      "tradeUsd": 622168138,
+      "s": "TR",
+      "t": "JP",
+      "tradeUsd": 622140483,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IE",
+      "t": "IN",
+      "tradeUsd": 621522969,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "SA",
-      "tradeUsd": 619687303,
+      "s": "GH",
+      "t": "IT",
+      "tradeUsd": 621431440,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "ES",
+      "tradeUsd": 620904753,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "EC",
+      "tradeUsd": 620135571,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "MM",
+      "tradeUsd": 620091959,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20756,10 +28754,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HR",
+      "t": "SK",
+      "tradeUsd": 619246532,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SA",
       "t": "ZA",
       "tradeUsd": 617871912,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PE",
+      "t": "PA",
+      "tradeUsd": 617863093,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20772,9 +28786,81 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "NZ",
+      "tradeUsd": 617338724,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PT",
+      "t": "CZ",
+      "tradeUsd": 617200330,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PE",
+      "t": "BO",
+      "tradeUsd": 617064847,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AT",
+      "t": "NO",
+      "tradeUsd": 616461174,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "FR",
+      "tradeUsd": 616090615,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "DE",
+      "tradeUsd": 616079445,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "BE",
+      "tradeUsd": 615415491,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CM",
+      "t": "FR",
+      "tradeUsd": 615012972,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PH",
       "t": "CH",
-      "tradeUsd": 613552321,
+      "tradeUsd": 613678253,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "PA",
+      "tradeUsd": 613515486,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20783,14 +28869,6 @@ window.countryMacroData = {
       "s": "DK",
       "t": "CA",
       "tradeUsd": 613361417,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "PT",
-      "tradeUsd": 613177141,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -20828,10 +28906,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PL",
+      "t": "LU",
+      "tradeUsd": 611811956,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "UA",
       "t": "GB",
       "tradeUsd": 611118676,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ZA",
+      "t": "KE",
+      "tradeUsd": 611092523,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20852,9 +28946,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "VN",
-      "tradeUsd": 610279619,
+      "s": "DK",
+      "t": "IN",
+      "tradeUsd": 610463498,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PE",
+      "t": "PA",
+      "tradeUsd": 610058033,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20868,14 +28970,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "BD",
-      "tradeUsd": 609544289,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "QA",
       "t": "SA",
       "tradeUsd": 609203915,
@@ -20884,10 +28978,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "MM",
+      "tradeUsd": 609182299,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "SA",
       "t": "ZA",
       "tradeUsd": 607622054,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "BE",
+      "tradeUsd": 607570299,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "GT",
+      "tradeUsd": 607289527,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -20908,6 +29026,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "HR",
+      "t": "PL",
+      "tradeUsd": 606705145,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "UA",
       "t": "AT",
       "tradeUsd": 606640550,
@@ -20916,9 +29042,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DK",
+      "t": "LT",
+      "tradeUsd": 606230278,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "QA",
       "t": "ID",
       "tradeUsd": 606159880,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DZ",
+      "t": "ID",
+      "tradeUsd": 605924274,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -20948,14 +29090,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "CO",
-      "tradeUsd": 605045008,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "IE",
       "t": "GR",
       "tradeUsd": 604352092,
@@ -20964,10 +29098,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "SA",
-      "tradeUsd": 603741358,
-      "year": 2024,
+      "s": "LK",
+      "t": "DE",
+      "tradeUsd": 603886449,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SA",
+      "t": "FR",
+      "tradeUsd": 603587020,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -20996,18 +29138,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "GR",
-      "tradeUsd": 602445387,
-      "year": 2023,
+      "s": "JP",
+      "t": "BH",
+      "tradeUsd": 602520351,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "BD",
-      "tradeUsd": 601294261,
-      "year": 2023,
+      "s": "PT",
+      "t": "DK",
+      "tradeUsd": 601750351,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21015,6 +29157,38 @@ window.countryMacroData = {
       "s": "MX",
       "t": "IE",
       "tradeUsd": 600950959,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "BD",
+      "tradeUsd": 600839373,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "AE",
+      "tradeUsd": 600837744,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "NG",
+      "tradeUsd": 600823058,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "GT",
+      "tradeUsd": 600680784,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21052,18 +29226,58 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "AU",
-      "tradeUsd": 598687943,
+      "s": "IL",
+      "t": "TR",
+      "tradeUsd": 598584000,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "ES",
+      "tradeUsd": 598299676,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "HN",
+      "tradeUsd": 598223434,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IL",
-      "t": "TR",
-      "tradeUsd": 598584000,
+      "s": "BE",
+      "t": "ID",
+      "tradeUsd": 597357454,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CR",
+      "t": "HN",
+      "tradeUsd": 597351714,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "RU",
+      "tradeUsd": 597274158,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "CN",
+      "tradeUsd": 597241700,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21076,41 +29290,89 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "PL",
-      "tradeUsd": 596973056,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "CZ",
-      "tradeUsd": 596081660,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "CL",
-      "tradeUsd": 594291935,
+      "s": "US",
+      "t": "CI",
+      "tradeUsd": 596568616,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "AU",
-      "tradeUsd": 593162229,
+      "s": "IN",
+      "t": "SI",
+      "tradeUsd": 595889421,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "AO",
+      "tradeUsd": 595278456,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "LT",
+      "tradeUsd": 594709830,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "AR",
+      "tradeUsd": 593991573,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "TR",
+      "tradeUsd": 593504904,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "IT",
+      "tradeUsd": 592933487,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "ID",
       "t": "NZ",
-      "tradeUsd": 592988838,
+      "tradeUsd": 592873947,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NO",
+      "t": "RO",
+      "tradeUsd": 592523953,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IS",
+      "t": "GB",
+      "tradeUsd": 592418596,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "DZ",
+      "tradeUsd": 592157543,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21132,6 +29394,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ZA",
+      "t": "TZ",
+      "tradeUsd": 591353141,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LK",
+      "t": "IT",
+      "tradeUsd": 591047835,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "KW",
       "t": "CN",
       "tradeUsd": 590899280,
@@ -21140,25 +29418,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "MA",
-      "tradeUsd": 590704234,
+      "s": "BO",
+      "t": "PE",
+      "tradeUsd": 590334544,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GR",
-      "t": "AT",
-      "tradeUsd": 590693449,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "DK",
-      "tradeUsd": 589986181,
+      "s": "UG",
+      "t": "KE",
+      "tradeUsd": 589627906,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21168,14 +29438,6 @@ window.countryMacroData = {
       "t": "RU",
       "tradeUsd": 589537000,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "CO",
-      "tradeUsd": 588347650,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21204,10 +29466,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "RO",
-      "tradeUsd": 587360080,
-      "year": 2024,
+      "s": "MM",
+      "t": "US",
+      "tradeUsd": 587580058,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21215,14 +29477,6 @@ window.countryMacroData = {
       "s": "HK",
       "t": "SE",
       "tradeUsd": 586746356,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "DE",
-      "tradeUsd": 586343548,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21244,9 +29498,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JP",
+      "t": "CR",
+      "tradeUsd": 585112613,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "GH",
+      "tradeUsd": 584705158,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "HK",
       "t": "SE",
       "tradeUsd": 584607294,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "LT",
+      "tradeUsd": 583978938,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "CR",
+      "tradeUsd": 583805685,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21256,6 +29542,14 @@ window.countryMacroData = {
       "t": "IL",
       "tradeUsd": 583352263,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "FI",
+      "tradeUsd": 583290325,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21276,6 +29570,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "PH",
+      "t": "CA",
+      "tradeUsd": 582996684,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "DK",
       "tradeUsd": 582515516,
@@ -21284,18 +29586,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "EG",
-      "tradeUsd": 582092632,
+      "s": "IN",
+      "t": "FI",
+      "tradeUsd": 582477835,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "NG",
-      "tradeUsd": 581669279,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21308,10 +29602,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "KR",
-      "tradeUsd": 580499858,
-      "year": 2023,
+      "s": "OM",
+      "t": "QA",
+      "tradeUsd": 581005120,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21319,6 +29613,30 @@ window.countryMacroData = {
       "s": "AT",
       "t": "SA",
       "tradeUsd": 579946040,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "CI",
+      "tradeUsd": 579863731,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "AE",
+      "tradeUsd": 579404487,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "HR",
+      "tradeUsd": 578994041,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21332,18 +29650,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "PK",
-      "tradeUsd": 578631350,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "CA",
-      "tradeUsd": 578198726,
-      "year": 2023,
+      "s": "JP",
+      "t": "KH",
+      "tradeUsd": 578325396,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21364,10 +29674,10 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "DK",
-      "t": "AE",
-      "tradeUsd": 577706539,
-      "year": 2024,
+      "s": "PT",
+      "t": "SK",
+      "tradeUsd": 577586448,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21376,6 +29686,14 @@ window.countryMacroData = {
       "t": "KR",
       "tradeUsd": 577508762,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "GT",
+      "tradeUsd": 577223652,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21396,14 +29714,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "PT",
-      "tradeUsd": 576506267,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "HK",
       "t": "IE",
       "tradeUsd": 576292204,
@@ -21412,25 +29722,57 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "VN",
-      "tradeUsd": 576130988,
+      "s": "CL",
+      "t": "EC",
+      "tradeUsd": 575553233,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "MA",
-      "tradeUsd": 574769499,
+      "s": "IN",
+      "t": "HU",
+      "tradeUsd": 575462304,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "LU",
+      "tradeUsd": 575390777,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "KH",
+      "tradeUsd": 575087708,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ID",
+      "t": "JO",
+      "tradeUsd": 574815496,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "AO",
+      "tradeUsd": 574267179,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "GR",
-      "tradeUsd": 573918249,
+      "s": "US",
+      "t": "TZ",
+      "tradeUsd": 573380041,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21452,10 +29794,50 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "SI",
+      "tradeUsd": 572758202,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "UA",
+      "tradeUsd": 572580089,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "SG",
+      "tradeUsd": 572389749,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "NG",
       "t": "MY",
       "tradeUsd": 572240140,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "LY",
+      "tradeUsd": 572190016,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "IR",
+      "tradeUsd": 572035079,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21476,10 +29858,90 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "DE",
+      "t": "EC",
+      "tradeUsd": 571258474,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JO",
+      "t": "AE",
+      "tradeUsd": 571099517,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "HR",
+      "tradeUsd": 570966865,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "US",
+      "tradeUsd": 570867443,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CH",
+      "t": "VN",
+      "tradeUsd": 570446568,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "PK",
+      "tradeUsd": 570422014,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AE",
       "t": "ES",
       "tradeUsd": 569532088,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "GH",
+      "tradeUsd": 569497022,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "EG",
+      "tradeUsd": 569464683,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "CR",
+      "tradeUsd": 569402730,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "KE",
+      "tradeUsd": 568844633,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21492,10 +29954,50 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "SE",
-      "tradeUsd": 567151169,
+      "s": "BG",
+      "t": "UA",
+      "tradeUsd": 567443414,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "AO",
+      "tradeUsd": 567265582,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "HR",
+      "t": "PL",
+      "tradeUsd": 567232226,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "LY",
+      "tradeUsd": 567220437,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "GR",
+      "t": "RS",
+      "tradeUsd": 566604920,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "NL",
+      "tradeUsd": 566338335,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21508,18 +30010,82 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "IE",
-      "tradeUsd": 564018429,
+      "s": "EE",
+      "t": "DK",
+      "tradeUsd": 565583989,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "SG",
-      "tradeUsd": 564002837,
+      "s": "CH",
+      "t": "KW",
+      "tradeUsd": 565515053,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "DZ",
+      "tradeUsd": 565481245,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SV",
+      "t": "NI",
+      "tradeUsd": 564197057,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "NO",
+      "tradeUsd": 564155057,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "MA",
+      "tradeUsd": 564151727,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "SK",
+      "tradeUsd": 563593670,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "PK",
+      "tradeUsd": 563223524,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "CN",
+      "tradeUsd": 563111976,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "CN",
+      "tradeUsd": 562960449,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21533,16 +30099,48 @@ window.countryMacroData = {
     },
     {
       "s": "PH",
-      "t": "CH",
-      "tradeUsd": 561368149,
+      "t": "AU",
+      "tradeUsd": 561941531,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "KW",
-      "tradeUsd": 561181218,
+      "s": "PH",
+      "t": "CH",
+      "tradeUsd": 561595853,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "SK",
+      "tradeUsd": 560984536,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CL",
+      "t": "PY",
+      "tradeUsd": 560471624,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "MY",
+      "tradeUsd": 560168924,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "CA",
+      "tradeUsd": 560103110,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21550,32 +30148,32 @@ window.countryMacroData = {
     {
       "s": "ES",
       "t": "VN",
-      "tradeUsd": 560878177,
+      "tradeUsd": 559950977,
       "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "CA",
-      "tradeUsd": 559672653,
-      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
       "s": "SE",
-      "t": "TH",
-      "tradeUsd": 559171339,
+      "t": "KR",
+      "tradeUsd": 559547109,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "HK",
-      "tradeUsd": 558838235,
+      "s": "US",
+      "t": "TN",
+      "tradeUsd": 559366643,
       "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "MY",
+      "tradeUsd": 559302821,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21583,6 +30181,14 @@ window.countryMacroData = {
       "s": "KR",
       "t": "KW",
       "tradeUsd": 558443131,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "CR",
+      "tradeUsd": 558322091,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21604,9 +30210,73 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "AU",
-      "tradeUsd": 556465002,
+      "s": "BE",
+      "t": "DZ",
+      "tradeUsd": 557921686,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "EC",
+      "tradeUsd": 557234126,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MA",
+      "t": "BE",
+      "tradeUsd": 557038876,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "CY",
+      "tradeUsd": 556882203,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "BE",
+      "tradeUsd": 556814777,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "TZ",
+      "tradeUsd": 556645812,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CO",
+      "tradeUsd": 556346990,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "CZ",
+      "tradeUsd": 555590785,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "CH",
+      "tradeUsd": 555581811,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21628,18 +30298,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "VN",
-      "tradeUsd": 553855742,
+      "s": "BO",
+      "t": "KR",
+      "tradeUsd": 553788703,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "IR",
+      "tradeUsd": 553698922,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "IT",
-      "t": "IR",
-      "tradeUsd": 553799039,
-      "year": 2024,
+      "s": "TR",
+      "t": "JP",
+      "tradeUsd": 553165350,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21652,26 +30330,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "SA",
-      "tradeUsd": 552475577,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "VN",
-      "tradeUsd": 552019752,
+      "s": "US",
+      "t": "SK",
+      "tradeUsd": 552738983,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "IQ",
-      "tradeUsd": 551860867,
-      "year": 2023,
+      "s": "BG",
+      "t": "HR",
+      "tradeUsd": 552570406,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21684,25 +30354,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "MY",
-      "tradeUsd": 550627432,
+      "s": "PH",
+      "t": "CA",
+      "tradeUsd": 550645372,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "PK",
-      "tradeUsd": 550463435,
-      "year": 2023,
+      "s": "MX",
+      "t": "IN",
+      "tradeUsd": 550494571,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "KR",
-      "tradeUsd": 550454402,
+      "s": "RS",
+      "t": "SE",
+      "tradeUsd": 550459909,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "GB",
+      "tradeUsd": 550337313,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IQ",
+      "tradeUsd": 550033839,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21716,17 +30402,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "HU",
-      "t": "AU",
-      "tradeUsd": 549890506,
+      "s": "ES",
+      "t": "PL",
+      "tradeUsd": 549202119,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LV",
+      "t": "US",
+      "tradeUsd": 549022869,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "GB",
+      "tradeUsd": 548853436,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CL",
-      "t": "GB",
-      "tradeUsd": 548748471,
+      "s": "BG",
+      "t": "SK",
+      "tradeUsd": 548695604,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "CY",
+      "tradeUsd": 548326818,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21757,8 +30467,24 @@ window.countryMacroData = {
     },
     {
       "s": "PH",
-      "t": "CA",
-      "tradeUsd": 547538142,
+      "t": "AU",
+      "tradeUsd": 547349142,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BH",
+      "t": "NL",
+      "tradeUsd": 547296208,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UY",
+      "t": "AR",
+      "tradeUsd": 547242506,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21772,10 +30498,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "SE",
-      "tradeUsd": 546969889,
-      "year": 2023,
+      "s": "NO",
+      "t": "IE",
+      "tradeUsd": 546977286,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "JO",
+      "tradeUsd": 546846285,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
@@ -21788,17 +30522,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "RO",
-      "t": "IL",
-      "tradeUsd": 546655782,
+      "s": "ID",
+      "t": "JO",
+      "tradeUsd": 546657973,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "GB",
-      "tradeUsd": 546507266,
+      "s": "US",
+      "t": "LV",
+      "tradeUsd": 545858791,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21812,9 +30546,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "SA",
-      "tradeUsd": 544859229,
+      "s": "US",
+      "t": "CI",
+      "tradeUsd": 545430391,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "RU",
+      "tradeUsd": 545413080,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TN",
+      "t": "DZ",
+      "tradeUsd": 545104206,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KH",
+      "t": "TH",
+      "tradeUsd": 544374809,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "NL",
+      "tradeUsd": 544199391,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21828,6 +30594,62 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "JO",
+      "t": "AE",
+      "tradeUsd": 544102073,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DK",
+      "t": "GR",
+      "tradeUsd": 543886517,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EC",
+      "t": "BE",
+      "tradeUsd": 543604013,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "UA",
+      "tradeUsd": 543557742,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SK",
+      "t": "RS",
+      "tradeUsd": 543459695,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "UA",
+      "t": "IN",
+      "tradeUsd": 542829103,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IE",
+      "t": "IN",
+      "tradeUsd": 542410166,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CA",
       "t": "IE",
       "tradeUsd": 542394941,
@@ -21836,26 +30658,26 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PH",
-      "t": "AU",
-      "tradeUsd": 541891464,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "GR",
-      "tradeUsd": 541837063,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "MA",
       "t": "CN",
       "tradeUsd": 541670631,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "KE",
+      "tradeUsd": 541594940,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "BE",
+      "tradeUsd": 541195377,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21884,6 +30706,78 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CL",
+      "t": "GB",
+      "tradeUsd": 540355072,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BR",
+      "t": "JO",
+      "tradeUsd": 540264601,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BG",
+      "t": "RU",
+      "tradeUsd": 540233134,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KE",
+      "t": "NL",
+      "tradeUsd": 540137256,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SG",
+      "t": "NO",
+      "tradeUsd": 539916551,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BH",
+      "t": "NL",
+      "tradeUsd": 539836876,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "BE",
+      "tradeUsd": 539740335,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NI",
+      "t": "CA",
+      "tradeUsd": 539246128,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "KZ",
+      "tradeUsd": 538757716,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CZ",
       "t": "ZA",
       "tradeUsd": 538518040,
@@ -21892,9 +30786,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "ID",
-      "tradeUsd": 537260557,
+      "s": "LV",
+      "t": "UA",
+      "tradeUsd": 537976749,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21908,9 +30802,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MA",
-      "t": "AT",
-      "tradeUsd": 535028508,
+      "s": "ES",
+      "t": "HK",
+      "tradeUsd": 535587611,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "SG",
+      "tradeUsd": 535147725,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21924,10 +30826,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TR",
-      "t": "FI",
-      "tradeUsd": 534047669,
-      "year": 2024,
+      "s": "PE",
+      "t": "BO",
+      "tradeUsd": 534637328,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "UG",
+      "tradeUsd": 534020464,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21935,6 +30845,54 @@ window.countryMacroData = {
       "s": "MY",
       "t": "IR",
       "tradeUsd": 533763483,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AO",
+      "t": "IT",
+      "tradeUsd": 533755367,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "ES",
+      "t": "VN",
+      "tradeUsd": 533527015,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "AE",
+      "t": "AO",
+      "tradeUsd": 532716436,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "CM",
+      "tradeUsd": 532579587,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CL",
+      "tradeUsd": 532378943,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "DE",
+      "t": "IQ",
+      "tradeUsd": 531906967,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -21948,9 +30906,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "MX",
+      "t": "SA",
+      "tradeUsd": 531626370,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "VN",
+      "t": "LA",
+      "tradeUsd": 531622835,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "RO",
       "tradeUsd": 531494334,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "IT",
+      "tradeUsd": 530992194,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -21972,18 +30954,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "DZ",
-      "tradeUsd": 530383175,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "NZ",
       "t": "PH",
       "tradeUsd": 529908303,
       "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "NL",
+      "t": "CY",
+      "tradeUsd": 529499355,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -21999,14 +30981,6 @@ window.countryMacroData = {
       "s": "KR",
       "t": "RO",
       "tradeUsd": 528004369,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "SE",
-      "tradeUsd": 527650245,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -22036,14 +31010,6 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "FI",
-      "t": "ID",
-      "tradeUsd": 527026549,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
       "s": "AE",
       "t": "PL",
       "tradeUsd": 526906876,
@@ -22052,9 +31018,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "FI",
-      "tradeUsd": 526257809,
+      "s": "NO",
+      "t": "CA",
+      "tradeUsd": 526787697,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TR",
+      "t": "NO",
+      "tradeUsd": 526758919,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "LY",
+      "tradeUsd": 526316382,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22063,6 +31045,14 @@ window.countryMacroData = {
       "s": "FI",
       "t": "BR",
       "tradeUsd": 526199593,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "RU",
+      "tradeUsd": 526066141,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22092,6 +31082,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "ES",
+      "t": "LT",
+      "tradeUsd": 524793167,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "HU",
+      "tradeUsd": 524063564,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "EG",
       "t": "RU",
       "tradeUsd": 523956802,
@@ -22100,9 +31106,49 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "ES",
-      "t": "KZ",
-      "tradeUsd": 522632332,
+      "s": "NL",
+      "t": "MT",
+      "tradeUsd": 523544273,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "PK",
+      "tradeUsd": 523219522,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CA",
+      "t": "CL",
+      "tradeUsd": 523216401,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LU",
+      "t": "ES",
+      "tradeUsd": 522621209,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "GT",
+      "tradeUsd": 522572470,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "CO",
+      "tradeUsd": 522122340,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22116,17 +31162,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CZ",
-      "t": "BR",
-      "tradeUsd": 522025565,
+      "s": "JP",
+      "t": "RO",
+      "tradeUsd": 521941029,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "OM",
+      "t": "KW",
+      "tradeUsd": 521914127,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "JP",
-      "t": "RO",
-      "tradeUsd": 521941029,
+      "s": "UA",
+      "t": "US",
+      "tradeUsd": 521249747,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -22148,6 +31202,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IT",
+      "t": "EC",
+      "tradeUsd": 519876503,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "MY",
       "t": "NG",
       "tradeUsd": 519656971,
@@ -22164,25 +31226,73 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "HU",
-      "tradeUsd": 517528135,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "AT",
-      "tradeUsd": 515698111,
+      "s": "UG",
+      "t": "HK",
+      "tradeUsd": 519401909,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "TH",
-      "tradeUsd": 515537465,
+      "s": "PK",
+      "t": "FR",
+      "tradeUsd": 519131687,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "DE",
+      "tradeUsd": 519104537,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MX",
+      "t": "IN",
+      "tradeUsd": 518724999,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "EG",
+      "t": "IN",
+      "tradeUsd": 517444761,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "KR",
+      "t": "EC",
+      "tradeUsd": 516563044,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CZ",
+      "t": "JP",
+      "tradeUsd": 515738857,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CL",
+      "tradeUsd": 515321591,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SE",
+      "t": "IS",
+      "tradeUsd": 515183929,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22196,9 +31306,17 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "AE",
-      "tradeUsd": 513696299,
+      "s": "MY",
+      "t": "KH",
+      "tradeUsd": 514868620,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "MM",
+      "t": "ID",
+      "tradeUsd": 513598215,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22212,6 +31330,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "AU",
+      "t": "OM",
+      "tradeUsd": 513342191,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AR",
       "t": "IQ",
       "tradeUsd": 512622433,
@@ -22220,9 +31346,25 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "MX",
-      "t": "AE",
-      "tradeUsd": 512057061,
+      "s": "RS",
+      "t": "GB",
+      "tradeUsd": 512582124,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BO",
+      "t": "AR",
+      "tradeUsd": 512479598,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "PH",
+      "t": "GB",
+      "tradeUsd": 512243065,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -22236,9 +31378,9 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CH",
-      "t": "KZ",
-      "tradeUsd": 511284230,
+      "s": "SG",
+      "t": "CY",
+      "tradeUsd": 511476735,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22260,9 +31402,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "US",
+      "t": "BG",
+      "tradeUsd": 510833846,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "TH",
+      "t": "MX",
+      "tradeUsd": 509889595,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "SV",
+      "t": "NI",
+      "tradeUsd": 509787860,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "RU",
       "tradeUsd": 509656864,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "NZ",
+      "tradeUsd": 509529019,
       "year": 2023,
       "direction": "export",
       "weight": 1
@@ -22276,25 +31450,41 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "CO",
-      "t": "JP",
-      "tradeUsd": 508314467,
+      "s": "BR",
+      "t": "SI",
+      "tradeUsd": 509076660,
       "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "DK",
-      "tradeUsd": 507843539,
-      "year": 2023,
+      "s": "CO",
+      "t": "GT",
+      "tradeUsd": 508764497,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "TH",
-      "t": "SE",
-      "tradeUsd": 507700440,
+      "s": "CZ",
+      "t": "LV",
+      "tradeUsd": 508587389,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "LT",
+      "t": "TR",
+      "tradeUsd": 508466516,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CO",
+      "t": "JP",
+      "tradeUsd": 508314467,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22304,14 +31494,6 @@ window.countryMacroData = {
       "t": "GB",
       "tradeUsd": 507343898,
       "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "GB",
-      "tradeUsd": 507058163,
-      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -22332,18 +31514,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "SE",
-      "t": "ID",
-      "tradeUsd": 506386531,
-      "year": 2023,
+      "s": "SK",
+      "t": "DK",
+      "tradeUsd": 506485769,
+      "year": 2024,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "CA",
-      "t": "CL",
-      "tradeUsd": 506094965,
-      "year": 2024,
+      "s": "AO",
+      "t": "BR",
+      "tradeUsd": 506202542,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -22356,18 +31538,34 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "GB",
-      "t": "AR",
-      "tradeUsd": 505136408,
+      "s": "NO",
+      "t": "SG",
+      "tradeUsd": 505817852,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "JP",
+      "t": "TZ",
+      "tradeUsd": 505409209,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IN",
+      "t": "LY",
+      "tradeUsd": 505184185,
       "year": 2023,
       "direction": "export",
       "weight": 1
     },
     {
-      "s": "NG",
-      "t": "TR",
-      "tradeUsd": 504665974,
-      "year": 2024,
+      "s": "US",
+      "t": "BO",
+      "tradeUsd": 504549153,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -22396,9 +31594,33 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "IN",
+      "t": "FI",
+      "tradeUsd": 503824119,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AR",
       "t": "IE",
       "tradeUsd": 503757940,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "US",
+      "t": "TN",
+      "tradeUsd": 503588215,
+      "year": 2024,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "IT",
+      "t": "PK",
+      "tradeUsd": 501988222,
       "year": 2024,
       "direction": "export",
       "weight": 1
@@ -22420,10 +31642,18 @@ window.countryMacroData = {
       "weight": 1
     },
     {
-      "s": "PT",
-      "t": "DZ",
-      "tradeUsd": 501674110,
-      "year": 2024,
+      "s": "JP",
+      "t": "KH",
+      "tradeUsd": 501718634,
+      "year": 2023,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "BE",
+      "t": "CO",
+      "tradeUsd": 501336831,
+      "year": 2023,
       "direction": "export",
       "weight": 1
     },
@@ -22431,7526 +31661,6 @@ window.countryMacroData = {
       "s": "IL",
       "t": "AE",
       "tradeUsd": 500679000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "RO",
-      "tradeUsd": 499673694,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "IL",
-      "tradeUsd": 499205362,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "EG",
-      "tradeUsd": 498879117,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "NG",
-      "tradeUsd": 498147883,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "IE",
-      "tradeUsd": 496834839,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "IL",
-      "tradeUsd": 495344060,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "IE",
-      "tradeUsd": 494491171,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "BR",
-      "tradeUsd": 493855729,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CL",
-      "tradeUsd": 493388554,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "PK",
-      "tradeUsd": 492862191,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "MX",
-      "tradeUsd": 492672629,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "NG",
-      "tradeUsd": 492087673,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "ES",
-      "tradeUsd": 491920066,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "HK",
-      "tradeUsd": 491771551,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "IR",
-      "tradeUsd": 490932541,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "RO",
-      "tradeUsd": 490906865,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "MX",
-      "tradeUsd": 490768259,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "MY",
-      "tradeUsd": 489872776,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "ID",
-      "tradeUsd": 489497031,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "HK",
-      "tradeUsd": 489193010,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "PL",
-      "tradeUsd": 488042685,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "BR",
-      "tradeUsd": 487132977,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "IE",
-      "tradeUsd": 486325566,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PK",
-      "tradeUsd": 485985222,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "CH",
-      "tradeUsd": 485769836,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "MA",
-      "tradeUsd": 485161239,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "UA",
-      "tradeUsd": 482860962,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AT",
-      "tradeUsd": 481916273,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "RO",
-      "tradeUsd": 481413000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "BR",
-      "tradeUsd": 480820969,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "DE",
-      "tradeUsd": 480762869,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CL",
-      "tradeUsd": 477181540,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "ID",
-      "tradeUsd": 475703176,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "HK",
-      "tradeUsd": 475480505,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "HK",
-      "tradeUsd": 473960266,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "EG",
-      "tradeUsd": 473022487,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "CH",
-      "tradeUsd": 472285588,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MX",
-      "tradeUsd": 470485304,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "FI",
-      "tradeUsd": 470360031,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "CZ",
-      "tradeUsd": 469930262,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "RU",
-      "tradeUsd": 469750000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CA",
-      "tradeUsd": 468000457,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "FI",
-      "tradeUsd": 467864467,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "PK",
-      "tradeUsd": 467355956,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MX",
-      "tradeUsd": 467150670,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "HK",
-      "tradeUsd": 466260192,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "AU",
-      "tradeUsd": 465750000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "FI",
-      "tradeUsd": 465645384,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "HK",
-      "tradeUsd": 465284489,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "EG",
-      "tradeUsd": 465245773,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "KW",
-      "tradeUsd": 464400620,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "PK",
-      "tradeUsd": 463232552,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "HU",
-      "tradeUsd": 463005856,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "MY",
-      "tradeUsd": 461958756,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "GR",
-      "tradeUsd": 460857000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "PL",
-      "tradeUsd": 460856682,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "RU",
-      "tradeUsd": 460729074,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "RO",
-      "tradeUsd": 460336951,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "IR",
-      "tradeUsd": 460155767,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "SE",
-      "tradeUsd": 459463368,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "CH",
-      "tradeUsd": 459196421,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "DE",
-      "tradeUsd": 458736309,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "BD",
-      "tradeUsd": 456980049,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "IL",
-      "tradeUsd": 456094502,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "GB",
-      "tradeUsd": 456024284,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "MA",
-      "tradeUsd": 455676211,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "QA",
-      "tradeUsd": 455650731,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "CO",
-      "tradeUsd": 455587523,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "ID",
-      "tradeUsd": 455527811,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "NG",
-      "tradeUsd": 455145025,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AT",
-      "tradeUsd": 454388870,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "SA",
-      "tradeUsd": 453687719,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "GB",
-      "tradeUsd": 453213316,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "RO",
-      "tradeUsd": 453073959,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "KW",
-      "tradeUsd": 452832818,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PE",
-      "tradeUsd": 452257290,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "PK",
-      "tradeUsd": 451438830,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "ID",
-      "tradeUsd": 450890934,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "RO",
-      "tradeUsd": 450604998,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "CA",
-      "tradeUsd": 449675610,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "TR",
-      "tradeUsd": 449236683,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "MY",
-      "tradeUsd": 448902417,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CN",
-      "tradeUsd": 448794636,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "MA",
-      "tradeUsd": 448006508,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "ZA",
-      "tradeUsd": 447270719,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "EG",
-      "tradeUsd": 446743072,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "ID",
-      "tradeUsd": 446271705,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "HU",
-      "tradeUsd": 445589227,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "MX",
-      "tradeUsd": 444626481,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "TR",
-      "tradeUsd": 444597032,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "EG",
-      "tradeUsd": 444547434,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "ZA",
-      "tradeUsd": 443069106,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "AR",
-      "tradeUsd": 442731044,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "AE",
-      "tradeUsd": 442307826,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "FI",
-      "tradeUsd": 440089452,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "VN",
-      "tradeUsd": 439641316,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "PH",
-      "tradeUsd": 439521283,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "HU",
-      "tradeUsd": 439486754,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "GR",
-      "tradeUsd": 439314710,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "MA",
-      "tradeUsd": 439029377,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "PE",
-      "tradeUsd": 439026028,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "IL",
-      "tradeUsd": 438893347,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CA",
-      "tradeUsd": 438830408,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "AU",
-      "tradeUsd": 438500000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CZ",
-      "tradeUsd": 437797616,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "HU",
-      "tradeUsd": 437340044,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "FI",
-      "tradeUsd": 437211623,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "HK",
-      "tradeUsd": 436884389,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "ID",
-      "tradeUsd": 436757318,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PL",
-      "tradeUsd": 436739069,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "IL",
-      "tradeUsd": 436563032,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "MY",
-      "tradeUsd": 436550016,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "AE",
-      "tradeUsd": 436518068,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "UA",
-      "tradeUsd": 436173498,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PE",
-      "tradeUsd": 435671850,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "SA",
-      "tradeUsd": 435406620,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "BR",
-      "tradeUsd": 434170405,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "TH",
-      "tradeUsd": 433398145,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "RO",
-      "tradeUsd": 433309622,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "PL",
-      "tradeUsd": 432991884,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "CZ",
-      "tradeUsd": 432951810,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "MA",
-      "tradeUsd": 432901990,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CH",
-      "tradeUsd": 432157063,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "EG",
-      "tradeUsd": 432009737,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "KW",
-      "tradeUsd": 431195161,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "QA",
-      "tradeUsd": 428162111,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "UA",
-      "tradeUsd": 427990359,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "BD",
-      "tradeUsd": 427981481,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "GR",
-      "tradeUsd": 427837000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "DE",
-      "tradeUsd": 427693642,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "BR",
-      "tradeUsd": 427410519,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "AE",
-      "tradeUsd": 427217854,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "ZA",
-      "tradeUsd": 426622621,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "IQ",
-      "tradeUsd": 426027404,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "VN",
-      "tradeUsd": 425916895,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "TR",
-      "tradeUsd": 425675376,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CZ",
-      "tradeUsd": 425196875,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "SA",
-      "tradeUsd": 424885164,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "NG",
-      "tradeUsd": 422885300,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "CL",
-      "tradeUsd": 421931164,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "AR",
-      "tradeUsd": 421623493,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "DZ",
-      "tradeUsd": 420528997,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "KZ",
-      "tradeUsd": 420518258,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "GB",
-      "tradeUsd": 420100010,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "CA",
-      "tradeUsd": 419115491,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "VN",
-      "tradeUsd": 418972806,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "HU",
-      "tradeUsd": 418427097,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "KW",
-      "tradeUsd": 417836782,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "PL",
-      "tradeUsd": 416877000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "BD",
-      "tradeUsd": 416840052,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "PL",
-      "tradeUsd": 416238341,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "ES",
-      "tradeUsd": 416077299,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "EG",
-      "tradeUsd": 415952671,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CN",
-      "tradeUsd": 415890316,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "RO",
-      "tradeUsd": 414948021,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "MX",
-      "tradeUsd": 414882000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "JP",
-      "tradeUsd": 414716576,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "NZ",
-      "tradeUsd": 414540059,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "CA",
-      "tradeUsd": 414312843,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "PT",
-      "tradeUsd": 414212629,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "SA",
-      "tradeUsd": 413920429,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "CA",
-      "tradeUsd": 413739077,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "KZ",
-      "tradeUsd": 411912151,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "MX",
-      "tradeUsd": 411853485,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "IR",
-      "tradeUsd": 411284986,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "ID",
-      "tradeUsd": 411217435,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "PL",
-      "tradeUsd": 411145914,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "DK",
-      "tradeUsd": 411116024,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "ZA",
-      "tradeUsd": 410744322,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "MX",
-      "tradeUsd": 410502426,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CZ",
-      "tradeUsd": 410452851,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "GR",
-      "tradeUsd": 409158982,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "DE",
-      "tradeUsd": 409125522,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "GR",
-      "tradeUsd": 408651506,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "SG",
-      "tradeUsd": 408550041,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "ES",
-      "tradeUsd": 408469593,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "RO",
-      "tradeUsd": 407732885,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "BD",
-      "tradeUsd": 407153255,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "VN",
-      "tradeUsd": 406950909,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "FI",
-      "tradeUsd": 406750260,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "CL",
-      "tradeUsd": 405998314,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "PL",
-      "tradeUsd": 405986533,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "KW",
-      "tradeUsd": 404755040,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "EG",
-      "tradeUsd": 403855526,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "CA",
-      "tradeUsd": 403694126,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "EG",
-      "tradeUsd": 401754830,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "TH",
-      "tradeUsd": 401468893,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CH",
-      "tradeUsd": 401463961,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "MX",
-      "tradeUsd": 401259722,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "QA",
-      "tradeUsd": 401171614,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "CA",
-      "tradeUsd": 400676533,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "NG",
-      "tradeUsd": 400337432,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "MY",
-      "tradeUsd": 399796254,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "HU",
-      "tradeUsd": 398898174,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "PT",
-      "tradeUsd": 398826927,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "AE",
-      "tradeUsd": 398569025,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "KW",
-      "tradeUsd": 398424071,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "DK",
-      "tradeUsd": 397660996,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PT",
-      "tradeUsd": 396733654,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "FI",
-      "tradeUsd": 396149021,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "IE",
-      "tradeUsd": 394289723,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "AR",
-      "tradeUsd": 393751083,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "CN",
-      "tradeUsd": 393649889,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "PE",
-      "tradeUsd": 393305578,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IT",
-      "t": "BD",
-      "tradeUsd": 393250156,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "IE",
-      "tradeUsd": 392973250,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "KR",
-      "tradeUsd": 392904855,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "KZ",
-      "tradeUsd": 392693312,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "MA",
-      "tradeUsd": 392259695,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "SA",
-      "tradeUsd": 391679344,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "MA",
-      "tradeUsd": 391531783,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "FI",
-      "tradeUsd": 391417371,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "GR",
-      "tradeUsd": 391359696,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "UA",
-      "tradeUsd": 390832966,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "PL",
-      "tradeUsd": 390506972,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "AE",
-      "tradeUsd": 389912787,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "ES",
-      "tradeUsd": 389745939,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "UA",
-      "tradeUsd": 389244029,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "KZ",
-      "tradeUsd": 388812019,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "ZA",
-      "tradeUsd": 388811641,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "AE",
-      "tradeUsd": 388741750,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "CZ",
-      "tradeUsd": 388677218,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "CL",
-      "tradeUsd": 388668981,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "CA",
-      "tradeUsd": 388412154,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "PK",
-      "tradeUsd": 386539675,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "TR",
-      "tradeUsd": 386214524,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "TH",
-      "tradeUsd": 386140572,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "ID",
-      "tradeUsd": 386033470,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "CZ",
-      "tradeUsd": 385217001,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "ZA",
-      "tradeUsd": 384652075,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "IQ",
-      "tradeUsd": 384340464,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "HK",
-      "tradeUsd": 383856515,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "CL",
-      "tradeUsd": 383414984,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "AR",
-      "tradeUsd": 383052740,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "VN",
-      "tradeUsd": 383015004,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "NZ",
-      "tradeUsd": 382431098,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "GR",
-      "tradeUsd": 382143049,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "PK",
-      "tradeUsd": 381759380,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "AE",
-      "tradeUsd": 381022084,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "FI",
-      "tradeUsd": 380567709,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "EG",
-      "tradeUsd": 380193989,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "NG",
-      "tradeUsd": 380146733,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "VN",
-      "tradeUsd": 379807323,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "SE",
-      "tradeUsd": 379647040,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "ID",
-      "tradeUsd": 378908530,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "HK",
-      "tradeUsd": 378235553,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "IL",
-      "tradeUsd": 377452021,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "MY",
-      "tradeUsd": 377163053,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "NG",
-      "tradeUsd": 376713973,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "PL",
-      "tradeUsd": 376247278,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "KZ",
-      "tradeUsd": 375201799,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "RU",
-      "tradeUsd": 374837062,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "UA",
-      "tradeUsd": 374509552,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "UA",
-      "tradeUsd": 374211475,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "FI",
-      "tradeUsd": 372623878,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PL",
-      "tradeUsd": 372600390,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "CL",
-      "tradeUsd": 372551560,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "PL",
-      "tradeUsd": 371290000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "PH",
-      "tradeUsd": 370533330,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "TH",
-      "tradeUsd": 370194371,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "MX",
-      "tradeUsd": 369636746,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "RU",
-      "tradeUsd": 368973605,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "SA",
-      "tradeUsd": 368251615,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "PL",
-      "tradeUsd": 368081144,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "PE",
-      "tradeUsd": 367382822,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "PH",
-      "tradeUsd": 367114953,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "VN",
-      "tradeUsd": 366601780,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "DK",
-      "tradeUsd": 366540519,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "QA",
-      "tradeUsd": 366372568,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "SE",
-      "tradeUsd": 366139341,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "AE",
-      "tradeUsd": 366039084,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "PK",
-      "tradeUsd": 365824165,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "MA",
-      "tradeUsd": 365792841,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "HK",
-      "tradeUsd": 365021984,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "SE",
-      "tradeUsd": 364604587,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "SA",
-      "tradeUsd": 364298677,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "HK",
-      "tradeUsd": 364016699,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "QA",
-      "tradeUsd": 363982418,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "ZA",
-      "tradeUsd": 363852049,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "IL",
-      "tradeUsd": 363354947,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "TH",
-      "tradeUsd": 363217261,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "DK",
-      "tradeUsd": 363196351,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "CA",
-      "tradeUsd": 361826823,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "MA",
-      "tradeUsd": 361529813,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "DK",
-      "tradeUsd": 361203957,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "DK",
-      "tradeUsd": 361109210,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "BR",
-      "tradeUsd": 360281532,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "CL",
-      "tradeUsd": 360072850,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "GB",
-      "tradeUsd": 359351422,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "NG",
-      "tradeUsd": 358777400,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "ID",
-      "tradeUsd": 358166558,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "TH",
-      "tradeUsd": 358100000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "EG",
-      "tradeUsd": 358006780,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "MX",
-      "tradeUsd": 357446000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "AR",
-      "tradeUsd": 357426587,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "DK",
-      "tradeUsd": 356405199,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "DZ",
-      "tradeUsd": 356388105,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "NG",
-      "tradeUsd": 355463788,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "IL",
-      "tradeUsd": 354771469,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "VN",
-      "tradeUsd": 354745888,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "IE",
-      "tradeUsd": 353256819,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "CZ",
-      "tradeUsd": 353131032,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "PK",
-      "tradeUsd": 352370192,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "NG",
-      "tradeUsd": 352114140,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "TR",
-      "tradeUsd": 352078246,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IQ",
-      "tradeUsd": 350676788,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "SE",
-      "tradeUsd": 350536321,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CN",
-      "tradeUsd": 350385901,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "DK",
-      "tradeUsd": 349622265,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "EG",
-      "tradeUsd": 349204223,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "PH",
-      "tradeUsd": 349076254,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "TH",
-      "tradeUsd": 347851482,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "IL",
-      "tradeUsd": 346884752,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "HK",
-      "tradeUsd": 346850132,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "IQ",
-      "tradeUsd": 344928169,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "PT",
-      "tradeUsd": 344856641,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "TH",
-      "tradeUsd": 344853782,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "PH",
-      "tradeUsd": 344847090,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "MA",
-      "tradeUsd": 344771757,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "RU",
-      "tradeUsd": 344688089,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CZ",
-      "tradeUsd": 344400026,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "UA",
-      "tradeUsd": 343959193,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "TH",
-      "tradeUsd": 343662954,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "SG",
-      "tradeUsd": 342891809,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "HK",
-      "tradeUsd": 342393386,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "ZA",
-      "tradeUsd": 342362634,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "PK",
-      "tradeUsd": 341560153,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "UA",
-      "tradeUsd": 341293156,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "IL",
-      "tradeUsd": 341151581,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "GR",
-      "tradeUsd": 341135383,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "NZ",
-      "tradeUsd": 340554135,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "CL",
-      "tradeUsd": 339888799,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "HU",
-      "tradeUsd": 339638052,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "CZ",
-      "tradeUsd": 339556655,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "IR",
-      "tradeUsd": 338350089,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "TH",
-      "tradeUsd": 338213349,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "AE",
-      "tradeUsd": 336848402,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "VN",
-      "tradeUsd": 336761448,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "GR",
-      "tradeUsd": 336548441,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "HK",
-      "tradeUsd": 336370932,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PH",
-      "tradeUsd": 334882532,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CA",
-      "tradeUsd": 334705164,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "PE",
-      "tradeUsd": 334409917,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "PH",
-      "tradeUsd": 334390582,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "DK",
-      "tradeUsd": 333486193,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "JP",
-      "tradeUsd": 332180674,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "IL",
-      "tradeUsd": 331999642,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "HU",
-      "tradeUsd": 331950467,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "PE",
-      "tradeUsd": 331165531,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "AR",
-      "tradeUsd": 330647264,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "AE",
-      "tradeUsd": 330600215,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "MX",
-      "tradeUsd": 330465607,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "AT",
-      "tradeUsd": 330009656,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "ID",
-      "tradeUsd": 328164514,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "QA",
-      "tradeUsd": 327478092,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "EG",
-      "tradeUsd": 327465655,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "TH",
-      "tradeUsd": 326071000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "BD",
-      "tradeUsd": 325815418,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "MX",
-      "tradeUsd": 324906548,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "GR",
-      "tradeUsd": 324003604,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "MX",
-      "tradeUsd": 323692329,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "NG",
-      "tradeUsd": 323476404,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "EG",
-      "tradeUsd": 323381076,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "KZ",
-      "tradeUsd": 323344497,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "PH",
-      "tradeUsd": 321769346,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "PL",
-      "tradeUsd": 321734896,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "VN",
-      "tradeUsd": 321468865,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "KZ",
-      "tradeUsd": 320877363,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "MY",
-      "tradeUsd": 320822242,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "RO",
-      "tradeUsd": 320647688,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "TH",
-      "tradeUsd": 320567734,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "BR",
-      "tradeUsd": 319787384,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "MY",
-      "tradeUsd": 319764943,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "QA",
-      "tradeUsd": 318871442,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "QA",
-      "tradeUsd": 318275891,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "IL",
-      "tradeUsd": 318157293,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "NL",
-      "tradeUsd": 318103561,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AU",
-      "tradeUsd": 318070907,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "PE",
-      "tradeUsd": 318055322,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "NZ",
-      "tradeUsd": 317987454,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "DZ",
-      "tradeUsd": 317885308,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "NZ",
-      "tradeUsd": 317342697,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "SE",
-      "tradeUsd": 315968167,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "KW",
-      "tradeUsd": 315669739,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "IQ",
-      "tradeUsd": 315224913,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "RO",
-      "tradeUsd": 315044583,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "IL",
-      "tradeUsd": 314967939,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "EG",
-      "tradeUsd": 314037453,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "PH",
-      "tradeUsd": 313821375,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "PT",
-      "tradeUsd": 313265833,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "SG",
-      "tradeUsd": 312919921,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "CL",
-      "tradeUsd": 312588863,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "KW",
-      "tradeUsd": 312389171,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "TR",
-      "tradeUsd": 311619341,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "NZ",
-      "tradeUsd": 311197447,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "BD",
-      "tradeUsd": 311160974,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "ID",
-      "tradeUsd": 310767041,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AT",
-      "tradeUsd": 310595723,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "TR",
-      "tradeUsd": 310571598,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "MA",
-      "tradeUsd": 310542846,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "ES",
-      "tradeUsd": 310072254,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "BD",
-      "tradeUsd": 309502696,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "DZ",
-      "tradeUsd": 309215143,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "SG",
-      "tradeUsd": 309174954,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "BD",
-      "tradeUsd": 308959871,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "EG",
-      "tradeUsd": 308939334,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "IT",
-      "tradeUsd": 308856649,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "VN",
-      "tradeUsd": 308366206,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "BD",
-      "tradeUsd": 307857598,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "JP",
-      "tradeUsd": 307775067,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "BR",
-      "tradeUsd": 307258381,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "KW",
-      "tradeUsd": 307010079,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "UA",
-      "tradeUsd": 306832724,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "KW",
-      "tradeUsd": 306651998,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "JP",
-      "tradeUsd": 306280242,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "MY",
-      "tradeUsd": 305759174,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "IL",
-      "tradeUsd": 305584871,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "CL",
-      "tradeUsd": 304621034,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "EG",
-      "tradeUsd": 304360000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "NG",
-      "tradeUsd": 304195259,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "MY",
-      "tradeUsd": 304102576,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "IQ",
-      "tradeUsd": 304016175,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "CH",
-      "tradeUsd": 303257543,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "VN",
-      "tradeUsd": 302632353,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "TH",
-      "tradeUsd": 302310263,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "TH",
-      "tradeUsd": 301680859,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "PL",
-      "tradeUsd": 301556591,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AR",
-      "tradeUsd": 300460842,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "AR",
-      "tradeUsd": 300049339,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "RU",
-      "tradeUsd": 299267272,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AR",
-      "tradeUsd": 298949234,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "IE",
-      "tradeUsd": 298936332,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "AT",
-      "tradeUsd": 298093690,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "SG",
-      "tradeUsd": 298045430,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "NG",
-      "tradeUsd": 297462633,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "PE",
-      "tradeUsd": 296837956,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "DZ",
-      "tradeUsd": 296834922,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "KZ",
-      "tradeUsd": 296713966,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "VN",
-      "tradeUsd": 296586606,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "ZA",
-      "tradeUsd": 296375867,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CA",
-      "tradeUsd": 296246257,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "AU",
-      "tradeUsd": 295330384,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "NG",
-      "tradeUsd": 294494694,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "EG",
-      "tradeUsd": 293824851,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "SE",
-      "tradeUsd": 293568102,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "IE",
-      "tradeUsd": 293346240,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "RO",
-      "tradeUsd": 293276801,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "CL",
-      "tradeUsd": 292999438,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IQ",
-      "tradeUsd": 292985303,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "AR",
-      "tradeUsd": 292916570,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "DK",
-      "tradeUsd": 292133713,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "KZ",
-      "tradeUsd": 291925179,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "KZ",
-      "tradeUsd": 291483481,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "DZ",
-      "tradeUsd": 291457754,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "RO",
-      "tradeUsd": 291218722,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "TH",
-      "tradeUsd": 291207965,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "SA",
-      "tradeUsd": 291072543,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AE",
-      "tradeUsd": 290245632,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "KW",
-      "tradeUsd": 290194983,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "FI",
-      "tradeUsd": 290062408,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "MY",
-      "tradeUsd": 289944643,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "VN",
-      "tradeUsd": 289769973,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "GR",
-      "tradeUsd": 289758513,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "MA",
-      "tradeUsd": 289465701,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "SG",
-      "tradeUsd": 289406724,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "AE",
-      "tradeUsd": 289365610,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "DZ",
-      "tradeUsd": 288511316,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "MX",
-      "tradeUsd": 288494528,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "PK",
-      "tradeUsd": 288477479,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "QA",
-      "tradeUsd": 288112836,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "CL",
-      "tradeUsd": 287959051,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "PK",
-      "tradeUsd": 287830229,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "PH",
-      "tradeUsd": 287762000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "SG",
-      "tradeUsd": 286984503,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "TH",
-      "tradeUsd": 286464791,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "PK",
-      "tradeUsd": 286275470,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "SE",
-      "tradeUsd": 284507474,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "MX",
-      "tradeUsd": 284422538,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "KZ",
-      "tradeUsd": 284371197,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "IL",
-      "tradeUsd": 284215333,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "DZ",
-      "tradeUsd": 284136437,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "PL",
-      "tradeUsd": 284101577,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PT",
-      "tradeUsd": 283760204,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "IE",
-      "tradeUsd": 283590727,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PT",
-      "tradeUsd": 283388694,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "RU",
-      "tradeUsd": 282766919,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "EG",
-      "tradeUsd": 282744366,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "TH",
-      "tradeUsd": 282591213,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "MY",
-      "tradeUsd": 281522994,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "IQ",
-      "tradeUsd": 281054629,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "TH",
-      "tradeUsd": 280816585,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "RO",
-      "tradeUsd": 280389935,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "IL",
-      "tradeUsd": 280044322,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CA",
-      "tradeUsd": 279976317,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "GR",
-      "tradeUsd": 279476832,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "VN",
-      "tradeUsd": 279370471,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "GR",
-      "tradeUsd": 278843461,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "KW",
-      "tradeUsd": 278616968,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "SE",
-      "tradeUsd": 278560661,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "HK",
-      "tradeUsd": 278427779,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "KZ",
-      "tradeUsd": 277576461,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "MA",
-      "tradeUsd": 277070321,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "DK",
-      "tradeUsd": 277035862,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "RO",
-      "tradeUsd": 276488607,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "IQ",
-      "tradeUsd": 276344235,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "MA",
-      "tradeUsd": 275745278,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "PT",
-      "tradeUsd": 275036564,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "AE",
-      "tradeUsd": 274923057,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "TH",
-      "tradeUsd": 274546312,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PT",
-      "tradeUsd": 274493733,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "MA",
-      "tradeUsd": 274144928,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PH",
-      "tradeUsd": 273880894,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "IR",
-      "tradeUsd": 273828163,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "DK",
-      "tradeUsd": 273302649,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "IL",
-      "tradeUsd": 272873112,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "DZ",
-      "tradeUsd": 272833999,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "KW",
-      "tradeUsd": 272671193,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "PE",
-      "tradeUsd": 272256467,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CH",
-      "tradeUsd": 272000747,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "AU",
-      "tradeUsd": 271394020,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "SG",
-      "tradeUsd": 269578842,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "JP",
-      "t": "MA",
-      "tradeUsd": 269491991,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "DZ",
-      "tradeUsd": 269210559,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "CL",
-      "tradeUsd": 268714395,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "RU",
-      "tradeUsd": 268605148,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "AT",
-      "tradeUsd": 268402170,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CO",
-      "tradeUsd": 268358407,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "KW",
-      "tradeUsd": 268028150,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "TH",
-      "tradeUsd": 267946043,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "HU",
-      "tradeUsd": 267137188,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "MX",
-      "tradeUsd": 267117497,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "AE",
-      "tradeUsd": 266826231,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "EG",
-      "tradeUsd": 266513462,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "MY",
-      "tradeUsd": 266406524,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "HK",
-      "tradeUsd": 266053410,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "MY",
-      "tradeUsd": 265256657,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "KZ",
-      "tradeUsd": 265119446,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "VN",
-      "tradeUsd": 264328864,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "PL",
-      "tradeUsd": 264190379,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "GR",
-      "tradeUsd": 264160788,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "KZ",
-      "tradeUsd": 263945550,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "AR",
-      "tradeUsd": 263809916,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "PH",
-      "tradeUsd": 263804058,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "PE",
-      "tradeUsd": 263694436,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "DZ",
-      "tradeUsd": 263557978,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "VN",
-      "tradeUsd": 263518923,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "DE",
-      "tradeUsd": 262799385,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "IE",
-      "tradeUsd": 262753590,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "GR",
-      "tradeUsd": 262745917,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "IQ",
-      "tradeUsd": 262678079,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "HU",
-      "tradeUsd": 261533865,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "IT",
-      "tradeUsd": 261295934,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "CL",
-      "tradeUsd": 261171243,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "ID",
-      "tradeUsd": 260842938,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "EG",
-      "tradeUsd": 258500000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "CH",
-      "tradeUsd": 257994419,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "CO",
-      "tradeUsd": 257726957,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "GR",
-      "tradeUsd": 257555865,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "MA",
-      "tradeUsd": 257003029,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "DK",
-      "tradeUsd": 256578322,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "DZ",
-      "tradeUsd": 255821171,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "RU",
-      "tradeUsd": 255472845,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "ZA",
-      "tradeUsd": 255098919,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AU",
-      "tradeUsd": 255007759,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "KZ",
-      "tradeUsd": 254910440,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "HK",
-      "tradeUsd": 254049027,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "AE",
-      "tradeUsd": 254016150,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "KW",
-      "tradeUsd": 253998444,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "NZ",
-      "tradeUsd": 253912027,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "CA",
-      "tradeUsd": 253907808,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "QA",
-      "tradeUsd": 253787366,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "EG",
-      "tradeUsd": 253618177,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "PL",
-      "tradeUsd": 252924083,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "ZA",
-      "tradeUsd": 251707718,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "SG",
-      "tradeUsd": 251443358,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "FI",
-      "tradeUsd": 251415814,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "ZA",
-      "tradeUsd": 251279406,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "GR",
-      "tradeUsd": 251246423,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "PH",
-      "tradeUsd": 251197557,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "TH",
-      "tradeUsd": 251106584,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "CA",
-      "tradeUsd": 250965069,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "NG",
-      "tradeUsd": 250625629,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "MA",
-      "tradeUsd": 250252758,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "IL",
-      "tradeUsd": 249953419,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "DZ",
-      "tradeUsd": 249528374,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "GR",
-      "tradeUsd": 249480636,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "IE",
-      "tradeUsd": 249433189,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "VN",
-      "tradeUsd": 249333756,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "IQ",
-      "tradeUsd": 248586264,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "GR",
-      "tradeUsd": 248553902,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "HU",
-      "tradeUsd": 247634000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "AR",
-      "tradeUsd": 247452533,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "DZ",
-      "tradeUsd": 247235366,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "CL",
-      "tradeUsd": 246799032,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "IE",
-      "tradeUsd": 245806480,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "NZ",
-      "tradeUsd": 245624021,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "MY",
-      "tradeUsd": 245344721,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "GR",
-      "tradeUsd": 245197384,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "FI",
-      "tradeUsd": 244851517,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "NG",
-      "tradeUsd": 244486733,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "CL",
-      "tradeUsd": 244120228,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "SG",
-      "tradeUsd": 243721246,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "ZA",
-      "tradeUsd": 243713237,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "ZA",
-      "tradeUsd": 243155809,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "CO",
-      "tradeUsd": 243146479,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "JP",
-      "tradeUsd": 242863616,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "PT",
-      "tradeUsd": 242591049,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "PK",
-      "tradeUsd": 242283002,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "HU",
-      "tradeUsd": 241906758,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "PK",
-      "tradeUsd": 241822462,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "TR",
-      "tradeUsd": 241811470,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "VN",
-      "tradeUsd": 241605515,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "QA",
-      "tradeUsd": 241295414,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "CA",
-      "tradeUsd": 240478623,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "IQ",
-      "tradeUsd": 240389909,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "FI",
-      "tradeUsd": 240314424,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "GR",
-      "tradeUsd": 240130272,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "AR",
-      "tradeUsd": 239920917,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "FI",
-      "tradeUsd": 239871169,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "ES",
-      "tradeUsd": 238880629,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "QA",
-      "tradeUsd": 238829225,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "ZA",
-      "tradeUsd": 238034823,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "JP",
-      "tradeUsd": 237906645,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "PH",
-      "tradeUsd": 237371616,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "DZ",
-      "tradeUsd": 237236673,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "IE",
-      "tradeUsd": 236383049,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "AT",
-      "tradeUsd": 235906201,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "PT",
-      "tradeUsd": 235855729,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "GR",
-      "tradeUsd": 235762068,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "AU",
-      "tradeUsd": 235706135,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "PK",
-      "tradeUsd": 235616182,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "BR",
-      "tradeUsd": 234557400,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "GR",
-      "tradeUsd": 233834298,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "EG",
-      "tradeUsd": 233735074,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "IR",
-      "tradeUsd": 233237430,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "DK",
-      "tradeUsd": 232573284,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CZ",
-      "tradeUsd": 232174677,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "KW",
-      "tradeUsd": 232094219,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "MA",
-      "tradeUsd": 231982226,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "IE",
-      "tradeUsd": 231249942,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "ZA",
-      "tradeUsd": 230468745,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "IQ",
-      "tradeUsd": 230419466,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "IE",
-      "tradeUsd": 229340193,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NL",
-      "t": "BD",
-      "tradeUsd": 228408269,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "MA",
-      "tradeUsd": 227936925,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "PE",
-      "tradeUsd": 227215874,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "CL",
-      "tradeUsd": 226911104,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "AU",
-      "tradeUsd": 225760408,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "MA",
-      "tradeUsd": 225317380,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "AT",
-      "tradeUsd": 225257332,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "SA",
-      "tradeUsd": 225127485,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "PL",
-      "tradeUsd": 223875753,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "PT",
-      "tradeUsd": 223454115,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "AT",
-      "tradeUsd": 222806332,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "PK",
-      "tradeUsd": 222717993,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "IQ",
-      "tradeUsd": 222346896,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "VN",
-      "tradeUsd": 221540185,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "IR",
-      "tradeUsd": 221501472,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "AE",
-      "tradeUsd": 221163729,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "VN",
-      "tradeUsd": 221020169,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "MA",
-      "tradeUsd": 220933373,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "FI",
-      "tradeUsd": 220178429,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "NZ",
-      "tradeUsd": 219862169,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PT",
-      "tradeUsd": 219829694,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "AT",
-      "tradeUsd": 218814748,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "EG",
-      "tradeUsd": 218348340,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "KW",
-      "tradeUsd": 218307614,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "PH",
-      "tradeUsd": 218264504,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "AR",
-      "tradeUsd": 218005752,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "FI",
-      "tradeUsd": 217845509,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "NZ",
-      "tradeUsd": 217761609,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "DK",
-      "tradeUsd": 217388639,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "FI",
-      "tradeUsd": 216248504,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "AR",
-      "tradeUsd": 216022814,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "PT",
-      "tradeUsd": 215733619,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "CO",
-      "tradeUsd": 215293600,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "AE",
-      "tradeUsd": 215255352,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "TH",
-      "tradeUsd": 214117484,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "FI",
-      "tradeUsd": 214017067,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "PT",
-      "tradeUsd": 213875801,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "IL",
-      "tradeUsd": 213649685,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "TR",
-      "tradeUsd": 213282171,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PK",
-      "tradeUsd": 213055143,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "IQ",
-      "tradeUsd": 212954662,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "KR",
-      "tradeUsd": 212945200,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "IL",
-      "tradeUsd": 212652847,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "MA",
-      "tradeUsd": 212573610,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "AR",
-      "tradeUsd": 212396327,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "QA",
-      "tradeUsd": 212141873,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "FI",
-      "tradeUsd": 211842471,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "DK",
-      "tradeUsd": 211593421,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "QA",
-      "tradeUsd": 211591607,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "DK",
-      "tradeUsd": 211556191,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "KZ",
-      "tradeUsd": 211555903,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "BD",
-      "tradeUsd": 211022419,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "AE",
-      "tradeUsd": 210600115,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "SE",
-      "tradeUsd": 210453849,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "MA",
-      "tradeUsd": 210446168,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "IQ",
-      "tradeUsd": 209715862,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GB",
-      "t": "PE",
-      "tradeUsd": 209609402,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "BR",
-      "tradeUsd": 208916017,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "PH",
-      "tradeUsd": 208806661,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "BD",
-      "tradeUsd": 208627804,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "AE",
-      "tradeUsd": 208189026,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "CZ",
-      "tradeUsd": 207299390,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "ZA",
-      "tradeUsd": 207156316,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "BR",
-      "tradeUsd": 206867653,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "IE",
-      "tradeUsd": 206828729,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "IQ",
-      "tradeUsd": 206564676,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IR",
-      "tradeUsd": 206209485,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "AR",
-      "tradeUsd": 205672342,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "PH",
-      "tradeUsd": 205588803,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "AU",
-      "tradeUsd": 205575848,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CH",
-      "tradeUsd": 205297294,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "IL",
-      "tradeUsd": 205233510,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "VN",
-      "tradeUsd": 204993201,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MY",
-      "tradeUsd": 204971782,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "CO",
-      "tradeUsd": 204555440,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AU",
-      "tradeUsd": 204498633,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "IR",
-      "tradeUsd": 204430033,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "SA",
-      "tradeUsd": 203987620,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "CL",
-      "tradeUsd": 203950535,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "CZ",
-      "tradeUsd": 203324726,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "GR",
-      "tradeUsd": 202929669,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "CO",
-      "tradeUsd": 202629045,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AU",
-      "tradeUsd": 202486500,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PT",
-      "tradeUsd": 202445889,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "JP",
-      "tradeUsd": 202341258,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "AR",
-      "tradeUsd": 202339514,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "AU",
-      "tradeUsd": 202317646,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "DK",
-      "tradeUsd": 202175522,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "SG",
-      "tradeUsd": 202033975,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "JP",
-      "tradeUsd": 201930600,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "GR",
-      "tradeUsd": 201856620,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "HK",
-      "tradeUsd": 201735009,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "EG",
-      "tradeUsd": 201722159,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "NG",
-      "tradeUsd": 201676513,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "AT",
-      "tradeUsd": 201228888,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "AR",
-      "tradeUsd": 201147608,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "VN",
-      "tradeUsd": 200664843,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "RU",
-      "tradeUsd": 200373035,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "QA",
-      "t": "AU",
-      "tradeUsd": 200342277,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PK",
-      "tradeUsd": 200207334,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "ZA",
-      "tradeUsd": 200199000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "CH",
-      "tradeUsd": 199854883,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "GR",
-      "tradeUsd": 199700479,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "MY",
-      "tradeUsd": 199178120,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "CZ",
-      "tradeUsd": 199099000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "DK",
-      "tradeUsd": 199050632,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "PT",
-      "tradeUsd": 198957994,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "TR",
-      "tradeUsd": 198725650,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "IR",
-      "tradeUsd": 198716260,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "IR",
-      "tradeUsd": 197903117,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "ZA",
-      "tradeUsd": 197345139,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "PL",
-      "tradeUsd": 197032723,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "CA",
-      "tradeUsd": 196717140,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "PK",
-      "tradeUsd": 196517167,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "NZ",
-      "tradeUsd": 196333452,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "VN",
-      "tradeUsd": 196030133,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "AT",
-      "tradeUsd": 195975374,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "PK",
-      "tradeUsd": 195969254,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "NG",
-      "tradeUsd": 195963610,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "FI",
-      "tradeUsd": 195865649,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "PH",
-      "tradeUsd": 195290081,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "AR",
-      "tradeUsd": 195165544,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "AR",
-      "tradeUsd": 194517011,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IR",
-      "tradeUsd": 194459846,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "DK",
-      "tradeUsd": 194213857,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PE",
-      "tradeUsd": 194197899,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "EG",
-      "tradeUsd": 194129624,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "CH",
-      "tradeUsd": 194127424,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "IQ",
-      "tradeUsd": 193759806,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "MA",
-      "tradeUsd": 193628672,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "AT",
-      "tradeUsd": 193302019,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "CL",
-      "tradeUsd": 192948673,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "MY",
-      "tradeUsd": 192356457,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "NG",
-      "tradeUsd": 192269742,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PK",
-      "tradeUsd": 191957017,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "KR",
-      "tradeUsd": 191620459,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "IQ",
-      "tradeUsd": 191282831,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "ID",
-      "tradeUsd": 191259852,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "IQ",
-      "tradeUsd": 191077666,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "KW",
-      "tradeUsd": 191071821,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "DZ",
-      "tradeUsd": 191066283,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "KR",
-      "tradeUsd": 190935946,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "ZA",
-      "tradeUsd": 190840009,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "HU",
-      "tradeUsd": 190427892,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "IL",
-      "tradeUsd": 189772021,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "AR",
-      "tradeUsd": 189516762,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "NZ",
-      "tradeUsd": 189424420,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "CO",
-      "tradeUsd": 188610902,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "PT",
-      "tradeUsd": 188397042,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "ID",
-      "tradeUsd": 188081210,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "CL",
-      "tradeUsd": 188079611,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "SG",
-      "tradeUsd": 187893285,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "AR",
-      "tradeUsd": 187760776,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "IE",
-      "tradeUsd": 187605291,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "ID",
-      "tradeUsd": 187480759,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "IL",
-      "tradeUsd": 187269028,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "SA",
-      "tradeUsd": 186442643,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "SA",
-      "tradeUsd": 184992843,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "KR",
-      "tradeUsd": 184916442,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "TH",
-      "tradeUsd": 184898038,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ES",
-      "t": "BD",
-      "tradeUsd": 184875407,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "FI",
-      "tradeUsd": 184849872,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "IR",
-      "tradeUsd": 184795551,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "DZ",
-      "tradeUsd": 184769457,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "BR",
-      "tradeUsd": 184459585,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "RO",
-      "tradeUsd": 184446242,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "PH",
-      "tradeUsd": 184097125,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "PH",
-      "tradeUsd": 183994049,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IL",
-      "tradeUsd": 183634511,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "IR",
-      "tradeUsd": 183314167,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SA",
-      "t": "CL",
-      "tradeUsd": 183305192,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "SA",
-      "tradeUsd": 183140472,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "IQ",
-      "tradeUsd": 182917732,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "BD",
-      "tradeUsd": 182670667,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "CO",
-      "tradeUsd": 182346136,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "CO",
-      "tradeUsd": 181957270,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "NZ",
-      "tradeUsd": 180894794,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "DK",
-      "tradeUsd": 180874558,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "HU",
-      "tradeUsd": 180665000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "VN",
-      "tradeUsd": 180320002,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "PH",
-      "tradeUsd": 179707000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "PK",
-      "tradeUsd": 179681390,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "TH",
-      "tradeUsd": 179319491,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "SE",
-      "tradeUsd": 179242336,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AE",
-      "tradeUsd": 179189570,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "DZ",
-      "tradeUsd": 179180696,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "DK",
-      "tradeUsd": 178698886,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "IL",
-      "tradeUsd": 178094113,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "EG",
-      "tradeUsd": 178064050,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PE",
-      "t": "SE",
-      "tradeUsd": 178047627,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "GR",
-      "tradeUsd": 177563803,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "MX",
-      "tradeUsd": 176841047,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "NZ",
-      "tradeUsd": 176149537,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "DZ",
-      "tradeUsd": 176106892,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "RO",
-      "tradeUsd": 175799038,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CO",
-      "t": "MA",
-      "tradeUsd": 174871470,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "JP",
-      "tradeUsd": 174850879,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "NG",
-      "tradeUsd": 174314668,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "KR",
-      "tradeUsd": 174249688,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "UA",
-      "tradeUsd": 174158823,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "EG",
-      "tradeUsd": 174073851,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MY",
-      "tradeUsd": 173903833,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "HU",
-      "tradeUsd": 173684643,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "ZA",
-      "tradeUsd": 173291000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "ID",
-      "tradeUsd": 172950032,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "UA",
-      "tradeUsd": 172645184,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "DK",
-      "tradeUsd": 172163187,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "TH",
-      "tradeUsd": 172017444,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PE",
-      "tradeUsd": 171694272,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "SE",
-      "tradeUsd": 171510120,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "IR",
-      "tradeUsd": 171446529,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "VN",
-      "tradeUsd": 171106000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "MX",
-      "tradeUsd": 170998907,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "CO",
-      "tradeUsd": 170815478,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "AR",
-      "tradeUsd": 170532437,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "IT",
-      "tradeUsd": 170485866,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AT",
-      "t": "PH",
-      "tradeUsd": 170142653,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "ID",
-      "tradeUsd": 169881622,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "FI",
-      "tradeUsd": 169782305,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "KZ",
-      "tradeUsd": 169696397,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "IE",
-      "tradeUsd": 169691063,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "UA",
-      "tradeUsd": 169447000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "TH",
-      "tradeUsd": 169414933,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "RO",
-      "t": "CA",
-      "tradeUsd": 169229929,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "QA",
-      "tradeUsd": 168700589,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "CZ",
-      "tradeUsd": 168311674,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "AR",
-      "tradeUsd": 168107000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "NZ",
-      "tradeUsd": 168082453,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "IL",
-      "tradeUsd": 168011421,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "MY",
-      "tradeUsd": 168004837,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "MA",
-      "tradeUsd": 167752560,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "IE",
-      "tradeUsd": 167614561,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "IL",
-      "tradeUsd": 167613384,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "NZ",
-      "tradeUsd": 167353245,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HU",
-      "t": "MY",
-      "tradeUsd": 167187612,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "FI",
-      "tradeUsd": 167155508,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CA",
-      "t": "PK",
-      "tradeUsd": 167150861,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "EG",
-      "tradeUsd": 167116334,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "FI",
-      "tradeUsd": 166964005,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PK",
-      "tradeUsd": 166471929,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "AR",
-      "tradeUsd": 166261000,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "SE",
-      "tradeUsd": 166246513,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "KW",
-      "tradeUsd": 166168481,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "IQ",
-      "tradeUsd": 165946013,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ID",
-      "t": "IL",
-      "tradeUsd": 165768188,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "SG",
-      "tradeUsd": 165705185,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "DZ",
-      "tradeUsd": 165700605,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MA",
-      "t": "CL",
-      "tradeUsd": 165561648,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "CO",
-      "tradeUsd": 165478952,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TR",
-      "t": "AR",
-      "tradeUsd": 164850056,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SG",
-      "t": "NG",
-      "tradeUsd": 164003253,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "PK",
-      "tradeUsd": 163131488,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AR",
-      "t": "RO",
-      "tradeUsd": 163009452,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AU",
-      "t": "IR",
-      "tradeUsd": 162764880,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MA",
-      "tradeUsd": 162351670,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "FI",
-      "tradeUsd": 161738116,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "TH",
-      "t": "FI",
-      "tradeUsd": 161404843,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "HK",
-      "t": "KW",
-      "tradeUsd": 161278510,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "KR",
-      "tradeUsd": 160734023,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "CL",
-      "tradeUsd": 160541267,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "MA",
-      "tradeUsd": 160435625,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "BD",
-      "tradeUsd": 160239958,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "AE",
-      "t": "PT",
-      "tradeUsd": 159972507,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "DK",
-      "t": "MA",
-      "tradeUsd": 159913006,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "BR",
-      "t": "RO",
-      "tradeUsd": 159829502,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "NZ",
-      "tradeUsd": 159603980,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "PH",
-      "tradeUsd": 159440830,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PT",
-      "t": "EG",
-      "tradeUsd": 158971284,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PH",
-      "t": "AT",
-      "tradeUsd": 158335029,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "SE",
-      "t": "CO",
-      "tradeUsd": 158093898,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CH",
-      "t": "NG",
-      "tradeUsd": 158028554,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "AR",
-      "tradeUsd": 157866073,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PK",
-      "t": "QA",
-      "tradeUsd": 157832154,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KR",
-      "t": "IR",
-      "tradeUsd": 157623536,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "CL",
-      "tradeUsd": 157498210,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MY",
-      "t": "FI",
-      "tradeUsd": 157144048,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "CH",
-      "tradeUsd": 156431678,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NZ",
-      "t": "IT",
-      "tradeUsd": 156196853,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IL",
-      "t": "SE",
-      "tradeUsd": 155995000,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "PL",
-      "t": "PH",
-      "tradeUsd": 155818351,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "AE",
-      "tradeUsd": 155589437,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "DZ",
-      "tradeUsd": 155265420,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CL",
-      "t": "ID",
-      "tradeUsd": 155174460,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "PT",
-      "tradeUsd": 154636274,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "VN",
-      "t": "NG",
-      "tradeUsd": 154314772,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "GR",
-      "t": "DZ",
-      "tradeUsd": 153799886,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "ZA",
-      "t": "PL",
-      "tradeUsd": 153781682,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "IE",
-      "t": "AR",
-      "tradeUsd": 152259994,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "CZ",
-      "t": "NZ",
-      "tradeUsd": 152178460,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "UA",
-      "t": "CA",
-      "tradeUsd": 152139430,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KZ",
-      "t": "CZ",
-      "tradeUsd": 151931635,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "FI",
-      "t": "MA",
-      "tradeUsd": 151474466,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "ID",
-      "tradeUsd": 151336719,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "EG",
-      "t": "NG",
-      "tradeUsd": 150822316,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "KW",
-      "t": "VN",
-      "tradeUsd": 150411276,
-      "year": 2024,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "MX",
-      "t": "IL",
-      "tradeUsd": 150266194,
-      "year": 2023,
-      "direction": "export",
-      "weight": 1
-    },
-    {
-      "s": "NG",
-      "t": "CH",
-      "tradeUsd": 150235980,
       "year": 2024,
       "direction": "export",
       "weight": 1

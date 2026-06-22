@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: radial-gradient(120% 120% at 70% 20%, #161616 0%, #0a0a0a 60%);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .graph {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+  }
+  .content {
+    position: absolute;
+    inset: 0;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  .brandRow { display: flex; align-items: center; gap: 16px; }
+  .brandRow img { width: 56px; height: 56px; border-radius: 10px; }
+  .brandName {
+    font-size: 22px; font-weight: 600; letter-spacing: -0.2px; color: #eaeaea;
+  }
+  .title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 76px;
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+    max-width: 880px;
+  }
+  .title .accent { color: #e8453c; }
+  .sub {
+    margin-top: 18px;
+    font-size: 25px;
+    color: #9aa6b5;
+    max-width: 760px;
+    line-height: 1.35;
+  }
+  .stats { display: flex; gap: 56px; }
+  .stat .num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 46px; font-weight: 800; color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: #6f7f92; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;
+  }
+  .src {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; color: #5c5c5c; letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+  <svg class="graph" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#e8453c" stroke-opacity="0.12" stroke-width="1.5">
+      <line x1="900" y1="160" x2="1040" y2="300"/>
+      <line x1="900" y1="160" x2="780" y2="330"/>
+      <line x1="1040" y1="300" x2="980" y2="470"/>
+      <line x1="780" y1="330" x2="980" y2="470"/>
+      <line x1="900" y1="160" x2="980" y2="470"/>
+      <line x1="1040" y1="300" x2="780" y2="330"/>
+      <line x1="900" y1="160" x2="1120" y2="210"/>
+      <line x1="980" y1="470" x2="840" y2="540"/>
+    </g>
+    <g>
+      <circle cx="900" cy="160" r="46" fill="#e8453c" fill-opacity="0.42"/>
+      <circle cx="1040" cy="300" r="30" fill="#4c88cc" fill-opacity="0.4"/>
+      <circle cx="780" cy="330" r="34" fill="#e8453c" fill-opacity="0.32"/>
+      <circle cx="980" cy="470" r="24" fill="#f7b731" fill-opacity="0.38"/>
+      <circle cx="1120" cy="210" r="18" fill="#4caf50" fill-opacity="0.4"/>
+      <circle cx="840" cy="540" r="16" fill="#9b7ad8" fill-opacity="0.4"/>
+    </g>
+  </svg>
+
+  <div class="content">
+    <div class="brandRow">
+      <img src="../assets/monarch-logo.png" alt="">
+      <div class="brandName">Monarch Castle Technologies</div>
+    </div>
+
+    <div>
+      <div class="title">Country Macro<br><span class="accent">Intelligence</span></div>
+      <div class="sub">Global GDP &amp; bilateral trade flows across the world's largest economies.</div>
+    </div>
+
+    <div style="display:flex; align-items:flex-end; justify-content:space-between;">
+      <div class="stats">
+        <div class="stat"><div class="num">102</div><div class="lbl">Economies</div></div>
+        <div class="stat"><div class="num">3,814</div><div class="lbl">Trade Links</div></div>
+        <div class="stat"><div class="num">8</div><div class="lbl">Sectors</div></div>
+      </div>
+      <div class="src">World Bank · UN Comtrade</div>
+    </div>
+  </div>
+</body>
+</html>

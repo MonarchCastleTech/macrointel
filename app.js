@@ -1,6 +1,7 @@
 /**
- * Country Macro Viewer
- * SupplyChain-style interaction with country GDP bubbles and trade links.
+ * Country Macro Intelligence
+ * Interactive country GDP bubbles and bilateral trade links.
+ * Monarch Castle Technologies.
  */
 
 (function () {
@@ -22,6 +23,7 @@
   let graphLayer = null;
   let zoomBehavior = null;
   let settleTimer = null;
+  let fitTimer = null;
 
   let nodeSel = null;
   let linkSel = null;
@@ -29,10 +31,23 @@
 
   let W = window.innerWidth;
   let H = window.innerHeight;
+  let sizeFactor = 1;
 
   let availableYears = [];
+  let hintDismissed = false;
 
   const els = {};
+
+  // Viewport-relative pixel radius for a node. Keeps the largest bubble from
+  // dominating small screens while preserving relative GDP/score sizing.
+  function nodeRadius(node) {
+    return (node.displayZ || node.baseZ || 10) * sizeFactor;
+  }
+
+  function computeSizeFactor() {
+    const vmin = Math.min(W || window.innerWidth, H || window.innerHeight);
+    sizeFactor = clamp(vmin / 1000, 0.4, 1);
+  }
 
   const SECTOR_COLORS = {
     medicine: "#e8453c",
@@ -194,6 +209,7 @@
     setupSearch();
     setupSectorChips();
     setupBlocChips();
+    setupAuxiliaryUi();
 
     renderVisualization();
     updateStats();
@@ -201,8 +217,106 @@
     addSectorLegend();
     updateSectorLegend();
     updateLastUpdated();
+    populateAbout();
 
     hideLoading();
+    maybeShowHint();
+  }
+
+  // About panel, onboarding hint, modal backdrop, and the detail close button.
+  function setupAuxiliaryUi() {
+    const backdrop = document.createElement("div");
+    backdrop.id = "macroBackdrop";
+    document.body.appendChild(backdrop);
+    els.backdrop = backdrop;
+    els.aboutPanel = document.getElementById("aboutPanel");
+    els.hint = document.getElementById("macroHint");
+
+    const openAbout = () => {
+      closeModals();
+      els.aboutPanel?.classList.add("show");
+      backdrop.classList.add("show");
+    };
+
+    document.getElementById("btnAbout")?.addEventListener("click", openAbout);
+    document.getElementById("footerAbout")?.addEventListener("click", openAbout);
+    document.getElementById("closeAbout")?.addEventListener("click", closeModals);
+    backdrop.addEventListener("click", closeModals);
+
+    document.getElementById("hintDismiss")?.addEventListener("click", dismissHint);
+
+    document.getElementById("detailClose")?.addEventListener("click", () => {
+      els.detail.classList.remove("show");
+      selectedCountry = null;
+      lockId = null;
+      resetHighlight();
+    });
+  }
+
+  function closeModals() {
+    els.aboutPanel?.classList.remove("show");
+    els.backdrop?.classList.remove("show");
+    dismissHint();
+  }
+
+  function dismissHint() {
+    if (!els.hint) return;
+    els.hint.classList.remove("show");
+    els.backdrop?.classList.remove("show");
+    hintDismissed = true;
+    try {
+      window.localStorage.setItem("macrointelHintSeen", "1");
+    } catch (err) {
+      /* localStorage unavailable — ignore */
+    }
+  }
+
+  function maybeShowHint() {
+    let seen = false;
+    try {
+      seen = window.localStorage.getItem("macrointelHintSeen") === "1";
+    } catch (err) {
+      seen = false;
+    }
+    if (seen || !els.hint) return;
+    els.hint.classList.add("show");
+    els.backdrop?.classList.add("show");
+  }
+
+  function populateAbout() {
+    const meta = macroData.meta || {};
+    const coverage = meta.coverage || {};
+    const sources = meta.sources || {};
+    const aboutCoverage = document.getElementById("aboutCoverage");
+    const aboutSources = document.getElementById("aboutSources");
+
+    const linkCount = (coverage.bilateralLinks || macroData.links.length).toLocaleString("en-US");
+    const years = (meta.linkYears || []).join(", ");
+
+    if (aboutCoverage) {
+      const rows = [
+        ["Economies", String(coverage.countries || macroData.nodes.length)],
+        ["Bilateral links", linkCount],
+        ["Years", years || "-"],
+        ["Snapshot", meta.snapshotDate || "-"],
+      ];
+      aboutCoverage.innerHTML = rows
+        .map(([k, v]) => `<div class="aboutRow"><span>${escapeHtml(k)}</span><b>${escapeHtml(v)}</b></div>`)
+        .join("");
+    }
+
+    if (aboutSources) {
+      const labels = {
+        gdp: "GDP",
+        tradeTotals: "Trade totals",
+        bilateralLinks: "Bilateral links",
+        sectors: "Sector exports",
+        trade: "Trade",
+      };
+      aboutSources.innerHTML = Object.entries(sources)
+        .map(([k, v]) => `<div class="aboutRow"><span>${escapeHtml(labels[k] || toTitleCase(k))}</span><b>${escapeHtml(String(v))}</b></div>`)
+        .join("");
+    }
   }
 
   function cacheElements() {
@@ -417,11 +531,52 @@
   function setupSearch() {
     els.search.addEventListener("input", handleSearch);
     els.search.addEventListener("focus", handleSearchFocus);
+    els.search.addEventListener("keydown", handleSearchKeydown);
     els.search.addEventListener("blur", () => {
       setTimeout(() => {
         els.searchSuggest.style.display = "none";
+        els.search.setAttribute("aria-expanded", "false");
       }, 180);
     });
+  }
+
+  function handleSearchKeydown(event) {
+    const items = [...els.searchSuggest.querySelectorAll(".suggest-item")];
+    const open = els.searchSuggest.style.display !== "none" && items.length > 0;
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      if (!open) return;
+      event.preventDefault();
+      const current = items.findIndex((it) => it.classList.contains("active"));
+      let next = event.key === "ArrowDown" ? current + 1 : current - 1;
+      if (next < 0) next = items.length - 1;
+      if (next >= items.length) next = 0;
+      items.forEach((it) => it.classList.remove("active"));
+      items[next].classList.add("active");
+      items[next].scrollIntoView({ block: "nearest" });
+      return;
+    }
+
+    if (event.key === "Enter") {
+      if (!open) return;
+      const active = items.find((it) => it.classList.contains("active")) || items[0];
+      if (!active) return;
+      event.preventDefault();
+      selectCountryFromSearch(active.dataset.iso);
+    }
+  }
+
+  // Shared selection path for search (suggestion click / Enter) and the Top 10 list.
+  function selectCountryFromSearch(iso2) {
+    const node = macroData.nodes.find((country) => country.iso2 === iso2);
+    if (!node) return;
+    lockId = node.iso2;
+    selectCountry(node);
+    highlightNode(node);
+    focusNode(node);
+    els.search.value = "";
+    els.searchSuggest.style.display = "none";
+    els.search.setAttribute("aria-expanded", "false");
   }
 
   function handleGlobalKeydown(event) {
@@ -441,6 +596,11 @@
     }
 
     if (event.key !== "Escape") {
+      return;
+    }
+
+    if (els.aboutPanel?.classList.contains("show") || els.hint?.classList.contains("show")) {
+      closeModals();
       return;
     }
 
@@ -560,6 +720,11 @@
       settleTimer = null;
     }
 
+    if (fitTimer) {
+      clearTimeout(fitTimer);
+      fitTimer = null;
+    }
+
     if (simulation) {
       simulation.stop();
       simulation = null;
@@ -569,14 +734,16 @@
 
     W = els.viz.clientWidth;
     H = els.viz.clientHeight;
+    computeSizeFactor();
 
     const svgRoot = d3
       .select("#macroViz")
       .append("svg")
       .attr("width", W)
       .attr("height", H);
+    svg = svgRoot;
 
-    zoomBehavior = d3.zoom().on("zoom", (event) => {
+    zoomBehavior = d3.zoom().scaleExtent([0.2, 6]).on("zoom", (event) => {
       graphLayer.attr("transform", event.transform);
     });
 
@@ -607,6 +774,17 @@
         target: nodeByIso2.get(link.t),
       }))
       .filter((link) => link.source && link.target);
+
+    // Node degree in the currently rendered link set — drives stronger centering
+    // for unlinked nodes so they nestle near the cluster instead of drifting off.
+    const degByIso = new Map();
+    resolvedLinks.forEach((link) => {
+      degByIso.set(link.source.iso2, (degByIso.get(link.source.iso2) || 0) + 1);
+      degByIso.set(link.target.iso2, (degByIso.get(link.target.iso2) || 0) + 1);
+    });
+    macroData.nodes.forEach((node) => {
+      node._deg = degByIso.get(node.iso2) || 0;
+    });
 
     macroData.nodes.forEach((node) => {
       const prior = priorPositions.get(node.iso2);
@@ -644,7 +822,19 @@
       .selectAll("g")
       .data(macroData.nodes)
       .join("g")
+      .attr("class", "node")
       .attr("cursor", "pointer")
+      .attr("tabindex", 0)
+      .attr("role", "button")
+      .attr("aria-label", (d) => `${d.country}. GDP ${formatCurrency(d.gdpUsd)}. Press Enter for details.`)
+      .on("keydown", (event, node) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          lockId = node.iso2;
+          highlightNode(node);
+          selectCountry(node);
+        }
+      })
       .call(
         d3
           .drag()
@@ -667,7 +857,7 @@
     nodeSel
       .append("circle")
       .attr("class", "sector-ring")
-      .attr("r", (d) => (d.displayZ || d.baseZ || 10) + 4)
+      .attr("r", (d) => nodeRadius(d) + 4)
       .attr("fill", "none")
       .attr("stroke", "transparent")
       .attr("stroke-width", 1.2)
@@ -677,7 +867,7 @@
     nodeSel
       .append("circle")
       .attr("class", "mc")
-      .attr("r", (d) => d.displayZ || d.baseZ || 10)
+      .attr("r", (d) => nodeRadius(d))
       .attr("fill", (d) => getCountryColor(d))
       .attr("fill-opacity", 0.35)
       .attr("stroke", "#222")
@@ -717,7 +907,7 @@
       .append("text")
       .attr("class", "country-label")
       .text((d) => d.country)
-      .attr("dy", (d) => -(d.displayZ || d.baseZ || 10) - 4)
+      .attr("dy", (d) => -nodeRadius(d) - 4)
       .attr("text-anchor", "middle")
       .attr("fill", "#666")
       .attr("font-size", (d) => ((d.displayZ || d.baseZ || 10) >= 18 ? "9px" : "7px"))
@@ -728,7 +918,7 @@
       .append("text")
       .attr("class", "gdp-label")
       .text((d) => formatCurrency(d.gdpUsd))
-      .attr("dy", (d) => (d.displayZ || d.baseZ || 10) + 11)
+      .attr("dy", (d) => nodeRadius(d) + 11)
       .attr("text-anchor", "middle")
       .attr("fill", "#444")
       .attr("font-size", "6px")
@@ -746,13 +936,15 @@
           .strength((d) => (d.v || 1) * 0.11),
       )
       .force("charge", d3.forceManyBody().strength(-180))
-      .force("x", d3.forceX(W / 2).strength(0.03))
-      .force("y", d3.forceY(H / 2).strength(0.4))
-      .force("collision", d3.forceCollide().radius((d) => (d.displayZ || d.baseZ || 10) + 8))
+      // Unlinked nodes get a much stronger pull toward center so they settle
+      // among the cluster instead of drifting to an edge as a lone giant bubble.
+      .force("x", d3.forceX(W / 2).strength((d) => (d._deg === 0 ? 0.18 : 0.06)))
+      .force("y", d3.forceY(H / 2).strength((d) => (d._deg === 0 ? 0.18 : 0.4)))
+      .force("collision", d3.forceCollide().radius((d) => nodeRadius(d) + 8))
       .alphaDecay(0.016)
       .on("tick", () => {
         macroData.nodes.forEach((node) => {
-          const m = (node.displayZ || node.baseZ || 10) + 12;
+          const m = nodeRadius(node) + 12;
           node.x = Math.max(m, Math.min(W - m, node.x));
           node.y = Math.max(78 + m, Math.min(H - 20 - m, node.y));
         });
@@ -766,12 +958,15 @@
         nodeSel.attr("transform", (d) => `translate(${d.x},${d.y})`);
       });
 
+    fitTimer = setTimeout(() => fitToView(true), 1500);
+
     settleTimer = setTimeout(() => {
       if (simulation) simulation.stop();
+      fitToView(true);
       settleTimer = null;
     }, 7000);
 
-    svgRoot.transition().duration(450).call(zoomBehavior.transform, d3.zoomIdentity.scale(0.82));
+    svgRoot.call(zoomBehavior.transform, d3.zoomIdentity.scale(0.82));
 
     svgRoot.on("click", () => {
       if (lockId) {
@@ -782,6 +977,56 @@
     });
 
     updateSectorVisualization(false);
+  }
+
+  // Frame the whole graph within the visible canvas (accounting for the header
+  // band) so no node sits off-screen and small viewports are not dominated.
+  function fitToView(animate) {
+    if (!svg || !zoomBehavior) return;
+    const pts = macroData.nodes.filter((n) => Number.isFinite(n.x) && Number.isFinite(n.y));
+    if (pts.length === 0) return;
+
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    pts.forEach((n) => {
+      const r = nodeRadius(n) + 16;
+      if (n.x - r < minX) minX = n.x - r;
+      if (n.x + r > maxX) maxX = n.x + r;
+      if (n.y - r < minY) minY = n.y - r;
+      if (n.y + r > maxY) maxY = n.y + r;
+    });
+
+    const gw = maxX - minX;
+    const gh = maxY - minY;
+    if (!(gw > 0) || !(gh > 0)) return;
+
+    const padX = 24;
+    const padTop = 96;
+    const padBottom = 28;
+    const availW = Math.max(60, W - padX * 2);
+    const availH = Math.max(60, H - padTop - padBottom);
+    const k = clamp(Math.min(availW / gw, availH / gh), 0.25, 1.6);
+
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    const tx = W / 2 - cx * k;
+    const ty = (padTop + (H - padBottom)) / 2 - cy * k;
+
+    const transform = d3.zoomIdentity.translate(tx, ty).scale(k);
+    const target = animate ? svg.transition().duration(600) : svg;
+    target.call(zoomBehavior.transform, transform);
+  }
+
+  // Pan/zoom the camera to bring a programmatically selected node into view.
+  function focusNode(node) {
+    if (!svg || !zoomBehavior || !node || !Number.isFinite(node.x)) return;
+    const current = d3.zoomTransform(svg.node());
+    const k = clamp(Math.max(current.k, 0.9), 0.5, 2.2);
+    const tx = W / 2 - node.x * k;
+    const ty = (96 + (H - 28)) / 2 - node.y * k;
+    svg.transition().duration(500).call(zoomBehavior.transform, d3.zoomIdentity.translate(tx, ty).scale(k));
   }
 
   function filterLinks() {
@@ -1115,24 +1360,18 @@
     }
 
     els.searchSuggest.innerHTML = matches
-      .map((node) => {
-        return `<div class="suggest-item" data-iso="${node.iso2}">${escapeHtml(node.country)} (${node.iso2})</div>`;
+      .map((node, index) => {
+        return `<div class="suggest-item${index === 0 ? " active" : ""}" role="option" data-iso="${node.iso2}">${escapeHtml(node.country)} (${node.iso2})</div>`;
       })
       .join("");
 
     els.searchSuggest.style.display = "block";
+    els.search.setAttribute("aria-expanded", "true");
 
     els.searchSuggest.querySelectorAll(".suggest-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        const iso2 = item.dataset.iso;
-        const node = macroData.nodes.find((country) => country.iso2 === iso2);
-        if (!node) return;
-
-        lockId = node.iso2;
-        selectCountry(node);
-        highlightNode(node);
-        els.search.value = "";
-        els.searchSuggest.style.display = "none";
+      item.addEventListener("mousedown", (event) => {
+        event.preventDefault();
+        selectCountryFromSearch(item.dataset.iso);
       });
     });
   }
@@ -1217,6 +1456,24 @@
     if (!nodeSel || !linkSel) return;
 
     const conn = connected(node.iso2);
+
+    // A node with no links in the current view should not black out the entire
+    // graph — just emphasize the node itself and keep the rest legible.
+    if (conn.all.size <= 1) {
+      nodeSel
+        .select(".mc")
+        .transition()
+        .duration(150)
+        .attr("fill-opacity", (candidate) => (candidate.iso2 === node.iso2 ? 0.92 : 0.32));
+      if (labelSel) {
+        labelSel
+          .transition()
+          .duration(150)
+          .attr("fill-opacity", (candidate) => (candidate.iso2 === node.iso2 ? 1 : 0.55));
+      }
+      linkSel.transition().duration(150).attr("stroke-opacity", 0.16);
+      return;
+    }
 
     nodeSel
       .select(".mc")
@@ -1368,9 +1625,9 @@
   function getTradePartners(iso2) {
     const partnerMap = new Map();
 
-    macroData.links.forEach((link) => {
-      if (Number(link.year) !== currentYear) return;
-
+    // Aggregate over the SAME filtered link set the graph renders, so the
+    // detail panel's partners always match what is on screen.
+    filterLinks().forEach((link) => {
       const source = String(link.s || "").toUpperCase();
       const target = String(link.t || "").toUpperCase();
       const value = Number(link.tradeUsd || 0);
@@ -1446,6 +1703,7 @@
         lockId = country.iso2;
         selectCountry(country);
         highlightNode(country);
+        focusNode(country);
       });
     });
   }
@@ -1543,11 +1801,16 @@
   }
 
   function cycleDirection() {
-    const directions = ["both", "exports", "imports"];
+    // Source data is goods exports; an "exports" state would be identical to
+    // "both", so we cycle only between the two visually distinct views:
+    // outbound export flows vs. mirrored inbound (import) flows.
+    const directions = ["both", "imports"];
     const currentIndex = directions.indexOf(currentDirection);
     currentDirection = directions[(currentIndex + 1) % directions.length];
 
-    els.btnDirection.textContent = `Direction: ${toTitleCase(currentDirection)}`;
+    els.btnDirection.textContent = currentDirection === "both"
+      ? "Direction: Export Flows"
+      : "Direction: Inbound";
 
     renderVisualization();
     updateStats();
@@ -1985,14 +2248,17 @@
     }
   }
 
+  let resizeTimer = null;
   window.addEventListener("resize", () => {
-    W = window.innerWidth;
-    H = window.innerHeight;
-
-    if (macroData) {
-      renderVisualization();
-      updateStats();
-    }
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      if (macroData) {
+        renderVisualization();
+        updateStats();
+      }
+    }, 220);
   });
 
   if (document.readyState === "loading") {

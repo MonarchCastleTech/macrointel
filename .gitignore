@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build / data-refresh artifacts (regenerable via tools/)
+tools/.comtrade-cache/
+tools/new-links.json
+tools/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

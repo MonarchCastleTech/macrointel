@@ -3,11 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Country Macro Viewer | Global Trade & GDP</title>
+<title>Country Macro Intelligence — Global GDP &amp; Trade Flows | Monarch Castle Technologies</title>
+<meta name="description" content="Interactive map of global GDP and bilateral trade flows across 102 economies, with sector drilldowns and top-producer rankings. Built on World Bank and UN Comtrade data.">
+<meta name="author" content="Monarch Castle Technologies">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://akgularda.github.io/macrointel/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Monarch Castle Technologies">
+<meta property="og:title" content="Country Macro Intelligence — Global GDP &amp; Trade Flows">
+<meta property="og:description" content="Explore GDP and bilateral trade flows across 102 economies, with sector drilldowns and top-producer rankings. World Bank + UN Comtrade data.">
+<meta property="og:url" content="https://akgularda.github.io/macrointel/">
+<meta property="og:image" content="https://akgularda.github.io/macrointel/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Country Macro Intelligence — Global GDP &amp; Trade Flows">
+<meta name="twitter:description" content="Explore GDP and bilateral trade flows across 102 economies. World Bank + UN Comtrade data.">
+<meta name="twitter:image" content="https://akgularda.github.io/macrointel/assets/og-cover.png">
+
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="./data/country-macro-map.js"></script>
+<link rel="apple-touch-icon" href="./assets/monarch-logo.png">
+<link rel="manifest" href="./site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap">
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script defer src="./data/country-macro-map.js"></script>
+<script defer src="./app.js?v=20260622-rich"></script>
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Country Macro Intelligence",
+  "url": "https://akgularda.github.io/macrointel/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "Monarch Castle Technologies" },
+  "description": "Interactive visualization of global GDP and bilateral trade flows across 102 economies, with sector drilldowns and top-producer rankings, built on World Bank and UN Comtrade data."
+}
+</script>
 </head>
 <body>
   <div id="macroLoading">
@@ -15,10 +60,10 @@
     <div class="text">Loading country macro data...</div>
   </div>
 
-  <div id="macroTop">
+  <header id="macroTop">
     <div id="macroTitle">
       <span class="logoWrap">
-        <img src="./assets/monarch-logo.png" alt="Monarch Castle Technologies logo" class="logoImage">
+        <img src="./assets/monarch-logo.png" alt="Monarch Castle Technologies logo" class="logoImage" width="28" height="28">
       </span>
       <span class="name">Monarch Castle Technologies</span>
       <span class="sep">|</span>
@@ -38,28 +83,32 @@
         <b id="statGdp">$0T</b>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div id="macroBar">
+  <nav id="macroBar" aria-label="Visualization controls">
     <button id="btnYear" type="button" aria-label="Cycle available years">Year: 2024</button>
-    <button id="btnDirection" type="button" aria-label="Cycle trade direction filter">Direction: Both</button>
+    <button id="btnDirection" type="button" aria-label="Cycle trade direction filter">Direction: Export Flows</button>
     <button id="btnThreshold" type="button" aria-label="Cycle minimum trade threshold">Min Trade: $1B</button>
     <div class="sep"></div>
     <button id="btnBloc" type="button" aria-label="Open trade bloc filters">Bloc: Global</button>
     <button id="btnSector" type="button" aria-label="Open sector filters">Sectors</button>
+    <button id="btnAbout" type="button" aria-label="About and data sources">About</button>
     <button id="btnReset" type="button" aria-label="Reset all filters and selection">Reset</button>
-  </div>
+  </nav>
 
   <div id="macroSearchWrap">
-    <input type="text" id="macroSearch" placeholder="Search country..." autocomplete="off" aria-label="Search countries">
-    <div id="macroSearchSuggest"></div>
+    <input type="text" id="macroSearch" placeholder="Search country..." autocomplete="off" aria-label="Search countries" role="combobox" aria-expanded="false" aria-controls="macroSearchSuggest">
+    <div id="macroSearchSuggest" role="listbox" aria-label="Country suggestions"></div>
   </div>
 
   <div id="macroDetail" role="region" aria-label="Country details panel">
+    <button id="detailClose" type="button" aria-label="Close country details">&times;</button>
     <div class="detailHeader">
       <div class="detailFlag" id="detailFlag"></div>
-      <div class="detailName" id="detailName">Select a country</div>
-      <div class="detailIso" id="detailIso"></div>
+      <div class="detailHeaderText">
+        <div class="detailName" id="detailName">Select a country</div>
+        <div class="detailIso" id="detailIso"></div>
+      </div>
     </div>
     <div class="detailStats" id="detailStats">
       <div class="detailStat">
@@ -100,7 +149,7 @@
   <div id="macroTop10" role="region" aria-label="Top ten producers panel">
     <div class="top10Header">
       <span class="top10Title">Top 10 Producers</span>
-      <select id="top10Sector">
+      <select id="top10Sector" aria-label="Select product sector for top producers">
         <option value="all" selected>Default View</option>
         <option value="medicine">Medicine</option>
         <option value="electronics">Electronics</option>
@@ -115,9 +164,9 @@
     <div class="top10List" id="top10List"></div>
   </div>
 
-  <div id="macroViz"></div>
+  <main id="macroViz" role="img" aria-label="Force-directed graph of countries sized by GDP and connected by bilateral trade flows"></main>
 
-  <div id="macroTooltip" class="tooltip">
+  <div id="macroTooltip" class="tooltip" role="tooltip">
     <div class="tooltipName" id="tooltipName"></div>
     <div class="tooltipGdp" id="tooltipGdp"></div>
     <div class="tooltipTrade" id="tooltipTrade"></div>
@@ -128,9 +177,24 @@
       <span class="statusDot fresh"></span>
       <span id="lastUpdated">Last updated: -</span>
     </span>
+    <span class="footerSep">·</span>
+    <button type="button" id="footerAbout" class="footerLink">About &amp; sources</button>
   </div>
 
-  <div id="sectorFilterPanel">
+  <!-- First-load onboarding / encoding key -->
+  <div id="macroHint" role="dialog" aria-label="How to read this map" aria-modal="false">
+    <div class="hintTitle">Country Macro Intelligence</div>
+    <p class="hintLead">Global GDP and bilateral trade flows across 102 economies.</p>
+    <div class="hintKey">
+      <div class="hintKeyRow"><span class="keyDot keyDotBig"></span><span class="keyDot keyDotSmall"></span> Bubble <b>size</b> = GDP</div>
+      <div class="hintKeyRow"><span class="keyRamp"></span> Bubble <b>color</b> = GDP + trade intensity</div>
+      <div class="hintKeyRow"><span class="keyLine"></span> Line = <b>bilateral trade flow</b></div>
+    </div>
+    <p class="hintTip">Click a bubble for detail · search a country · pick a sector to rank top producers.</p>
+    <button type="button" id="hintDismiss">Got it</button>
+  </div>
+
+  <div id="sectorFilterPanel" role="region" aria-label="Sector filter">
     <h3>Sector Filter</h3>
     <div class="sectorChips" id="sectorChips"></div>
     <div class="filterActions">
@@ -139,7 +203,7 @@
     </div>
   </div>
 
-  <div id="blocFilterPanel">
+  <div id="blocFilterPanel" role="region" aria-label="Trade bloc filter">
     <h3>Trade Blocs (Multi-select)</h3>
     <div class="blocChips" id="blocChips"></div>
     <div class="filterSelectRow">
@@ -163,6 +227,29 @@
     </div>
   </div>
 
-  <script src="app.js?v=20260225-default-lens"></script>
+  <div id="aboutPanel" role="dialog" aria-label="About and data sources" aria-modal="false">
+    <h3>About &amp; Methodology</h3>
+    <p class="aboutLead">
+      <b>Country Macro Intelligence</b> visualizes GDP and bilateral trade for the world's largest
+      economies. Bubbles are countries (size and color encode economic weight); lines are bilateral
+      trade flows. Select a sector to rank the top 10 producers, or filter by trade bloc.
+    </p>
+    <div class="aboutBlock">
+      <div class="aboutBlockTitle">Coverage</div>
+      <div class="aboutSources" id="aboutCoverage"></div>
+    </div>
+    <div class="aboutBlock">
+      <div class="aboutBlockTitle">Data Sources</div>
+      <div class="aboutSources" id="aboutSources"></div>
+    </div>
+    <p class="aboutDisclaimer">
+      Figures are nominal USD and represent the most recent reported period. Trade values are
+      goods-only (UN Comtrade); national totals include services (World Bank). Treat as indicative,
+      not official statistics.
+    </p>
+    <div class="filterActions">
+      <button id="closeAbout" type="button" aria-label="Close about panel">Close</button>
+    </div>
+  </div>
 </body>
 </html>

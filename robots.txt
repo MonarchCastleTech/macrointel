@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akgularda.github.io/macrointel/sitemap.xml
