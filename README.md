@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/logo.png" alt="MacroIntel logo" width="140"/>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/monarchcastletech/macrointel/main/docs/logo-dark.png"><img src="docs/logo.png" alt="MacroIntel logo" width="140"></picture>
   <!-- CODEX: generate a clean, modern product logo for "MacroIntel" — a dark, financial-intelligence wordmark/emblem evoking a globe of connected trade nodes (force-directed graph motif). Deep navy / slate background (#0a0a0a–#0b1f3a) with a single accent (electric blue #1f6feb). No stock-photo realism; crisp vector look, transparent PNG, ~512px square. -->
 
   # MacroIntel
