@@ -24,9 +24,9 @@
 
 ## 🖼️ Preview
 <!-- CODEX: drop product screenshots into docs/ — capture from the live site at https://monarchcastletech.github.io/macrointel/ -->
-![MacroIntel — global GDP & trade-flow graph](docs/screenshot-1.png)
+<!-- ![MacroIntel — global GDP & trade-flow graph](docs/screenshot-1.png) (screenshot pending) -->
 <!-- CODEX: screenshot-1 — the main force-directed view: GDP bubbles sized by economic weight with bilateral trade links drawn between partners, dark theme, header stat bar visible. -->
-![MacroIntel — country detail & sector drilldown](docs/screenshot-2.png)
+<!-- ![MacroIntel — country detail & sector drilldown](docs/screenshot-2.png) (screenshot pending) -->
 <!-- CODEX: screenshot-2 — a country selected, showing the detail card (GDP, exports, imports, trade balance, top partners, sector exposure, bloc membership) and/or the sector top-producer panel open. -->
 
 ## 🧭 What it does
