@@ -240,6 +240,7 @@
 
     document.getElementById("btnAbout")?.addEventListener("click", openAbout);
     document.getElementById("footerAbout")?.addEventListener("click", openAbout);
+    document.getElementById("releaseAbout")?.addEventListener("click", openAbout);
     document.getElementById("closeAbout")?.addEventListener("click", closeModals);
     backdrop.addEventListener("click", closeModals);
 
@@ -289,9 +290,19 @@
     const sources = meta.sources || {};
     const aboutCoverage = document.getElementById("aboutCoverage");
     const aboutSources = document.getElementById("aboutSources");
+    const releaseCoverage = document.getElementById("releaseCoverage");
+    const releaseSources = document.getElementById("releaseSources");
+    const releaseMethodology = document.getElementById("releaseMethodology");
 
     const linkCount = (coverage.bilateralLinks || macroData.links.length).toLocaleString("en-US");
     const years = (meta.linkYears || []).join(", ");
+    const labels = {
+      gdp: "GDP",
+      tradeTotals: "Trade totals",
+      bilateralLinks: "Bilateral links",
+      sectors: "Sector exports",
+      trade: "Trade",
+    };
 
     if (aboutCoverage) {
       const rows = [
@@ -306,15 +317,22 @@
     }
 
     if (aboutSources) {
-      const labels = {
-        gdp: "GDP",
-        tradeTotals: "Trade totals",
-        bilateralLinks: "Bilateral links",
-        sectors: "Sector exports",
-        trade: "Trade",
-      };
       aboutSources.innerHTML = Object.entries(sources)
         .map(([k, v]) => `<div class="aboutRow"><span>${escapeHtml(labels[k] || toTitleCase(k))}</span><b>${escapeHtml(String(v))}</b></div>`)
+        .join("");
+    }
+
+    if (releaseCoverage) {
+      releaseCoverage.textContent = `${coverage.countries || macroData.nodes.length} economies · ${linkCount} links · ${years || "year unavailable"}`;
+    }
+
+    if (releaseMethodology) {
+      releaseMethodology.textContent = `Methodology: current-USD World Bank GDP and national trade totals; ${years || "available"} annual UN Comtrade goods-flow and sector snapshots.`;
+    }
+
+    if (releaseSources) {
+      releaseSources.innerHTML = Object.entries(sources)
+        .map(([key, value]) => `<span class="releaseSource"><b>${escapeHtml(labels[key] || toTitleCase(key))}:</b> ${escapeHtml(String(value))}</span>`)
         .join("");
     }
   }
@@ -710,6 +728,16 @@
     if (edgeScopeEl) edgeScopeEl.value = blocEdgeScope;
   }
 
+  function deterministicUnit(input, salt = "") {
+    const text = `${salt}:${String(input)}`;
+    let hash = 2166136261;
+    for (let index = 0; index < text.length; index += 1) {
+      hash ^= text.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return (hash >>> 0) / 4294967295;
+  }
+
   function renderVisualization() {
     const priorPositions = new Map(
       macroData.nodes.map((node) => [node.iso2, { x: node.x, y: node.y }]),
@@ -792,8 +820,8 @@
         node.x = prior.x;
         node.y = prior.y;
       } else {
-        node.x = W * 0.1 + Math.random() * W * 0.8;
-        node.y = H * 0.2 + Math.random() * H * 0.6;
+        node.x = W * (0.1 + deterministicUnit(node.iso2, "x") * 0.8);
+        node.y = H * (0.2 + deterministicUnit(node.iso2, "y") * 0.6);
       }
       node.displayZ = node.baseZ;
     });
@@ -1961,19 +1989,24 @@
 
   function updateLastUpdated() {
     const label = document.getElementById("lastUpdated");
-    if (!label) return;
+    const releaseDate = document.getElementById("releaseDate");
+    if (!label && !releaseDate) return;
 
     const sourceDate =
       macroData?.meta?.snapshotDate
       || (macroData?.meta?.generatedAt ? new Date(macroData.meta.generatedAt).toISOString().split("T")[0] : null);
 
     if (sourceDate) {
-      label.textContent = `Last updated: ${sourceDate}`;
+      if (label) label.textContent = `Freshness: snapshot ${sourceDate}`;
+      if (releaseDate) {
+        releaseDate.textContent = `Snapshot ${sourceDate}`;
+        releaseDate.setAttribute("datetime", sourceDate);
+      }
       return;
     }
 
-    const today = new Date().toISOString().split("T")[0];
-    label.textContent = `Last updated: ${today}`;
+    if (label) label.textContent = "Freshness: release date unavailable";
+    if (releaseDate) releaseDate.textContent = "Release date unavailable";
   }
 
   function normalizeBlocSelection(blocIds) {
