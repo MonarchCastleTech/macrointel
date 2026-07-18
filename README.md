@@ -125,7 +125,10 @@ The preview is maintained as a repository asset; the live interface or generated
 
 ## Data and methodology
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the implementation files in this repository. Source dates, transformation steps, and known gaps must travel with analytical outputs.
+- [data/](data/)
+- [tools/](tools/)
+
+These repository-specific sources define the methodology or provenance boundary. Source dates, transformation steps, and known gaps must travel with analytical outputs.
 
 ## Update frequency
 
@@ -137,21 +140,12 @@ Source-dependent. World Bank and UN Comtrade snapshots are refreshed through the
 python -m http.server 8080
 ```
 
-```shell
-node --test tests/repository-hygiene.test.mjs
-```
-
 Run only in a trusted development environment and review repository-specific prerequisites before using networked or hardware features.
 
 ## Architecture
 
-- `404.html` — repository entry point or configuration.
-- `app.js` — repository entry point or configuration.
-- `assets/` — implementation or data module.
-- `CITATION.cff` — repository entry point or configuration.
-- `data/` — implementation or data module.
-- `favicon.svg` — repository entry point or configuration.
-- `index.html` — repository entry point or configuration.
+- `app.js` — repository-specific implementation, data, or configuration boundary.
+- `tools/` — repository-specific implementation, data, or configuration boundary.
 
 ## Tests
 
