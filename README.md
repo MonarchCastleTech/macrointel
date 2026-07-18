@@ -38,7 +38,7 @@ MacroIntel turns two of the most authoritative open economic datasets into a sin
 
 **Bloc analysis.** Apply any of 18 trade blocs as a lens — combine them with union or intersection member logic, and choose whether edges count as in-bloc when both endpoints are members (internal) or when at least one is (touching).
 
-**Country deep-dives.** Selecting an economy opens a detail card with GDP, exports, imports, trade balance, leading trading partners, sector exposure, and bloc membership — with each figure flagged as observed or estimated.
+**Country deep-dives.** Selecting an economy opens a detail card with GDP, exports, imports, trade balance, major trading partners, sector exposure, and bloc membership — with each figure flagged as observed or estimated.
 
 **Navigation.** Type `/` to search, arrow through suggestions, `Enter` to focus a country, `Esc` to dismiss. Selecting a node flies the camera to it; the view re-frames to fit on reset.
 
