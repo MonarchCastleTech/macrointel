@@ -106,8 +106,8 @@ html, body {
 }
 
 #macroTitle .logoWrap {
-  width: 28px;
-  height: 28px;
+  width: 150px;
+  height: 40px;
   border-radius: 1px;
   overflow: hidden;
   display: inline-flex;
@@ -120,6 +120,18 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 #macroTitle .name {
@@ -1480,8 +1492,8 @@ button:focus-visible, select:focus-visible, input:focus-visible {
 
 @media (max-width: 768px) {
   #macroTitle .logoWrap {
-    width: 30px;
-    height: 30px;
+    width: 118px;
+    height: 32px;
   }
 
   #macroTitle .endorsement {

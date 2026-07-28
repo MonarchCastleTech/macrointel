@@ -15,12 +15,12 @@ function textOf(markup) {
 }
 
 test("product identity, endorsement, and heading hierarchy are explicit", () => {
-  const logo = resolve(root, "assets", "monarch-logo.png");
+  const logo = resolve(root, "assets", "macrointel-logo-dark.png");
   assert.ok(existsSync(logo));
   assert.ok(statSync(logo).size > 100);
   assert.match(
     html,
-    /<img src="\.\/assets\/monarch-logo\.png" alt="MacroIntel — Monarch Castle Technologies"/,
+    /<img src="\.\/assets\/macrointel-logo-dark\.png" alt="MacroIntel"/,
   );
   assert.ok(html.includes("Part of Monarch Castle Technologies"));
 
@@ -34,6 +34,12 @@ test("product identity, endorsement, and heading hierarchy are explicit", () => 
   ]) {
     assert.match(html, new RegExp(`<h2\\b[^>]*>${heading}</h2>`));
   }
+});
+
+test("top bar uses the official dark MacroIntel lockup", () => {
+  assert.match(html, /src="\.\/assets\/macrointel-logo-dark\.png"/);
+  assert.match(html, /alt="MacroIntel"/);
+  assert.doesNotMatch(css, /filter:\s*[^;]*(brightness|saturate|contrast)\(/);
 });
 
 test("release freshness, methodology, and source attribution stay visible", () => {
