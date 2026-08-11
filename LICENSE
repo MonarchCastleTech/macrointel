@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Data attribution: GDP and national trade totals from the World Bank
-(NY.GDP.MKTP.CD, NE.EXP.GNFS.CD, NE.IMP.GNFS.CD). Bilateral trade flows and
-sector exports from UN Comtrade (HS classification). This project is not
-affiliated with or endorsed by the World Bank or the United Nations.
