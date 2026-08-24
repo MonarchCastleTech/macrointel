@@ -19,7 +19,7 @@ test("MonarchCastleTech/macrointel exposes the complete repository documentation
   assert.ok(match, "README must include the managed repository-hygiene block");
   assert.ok(contract.includes("MacroIntel — macro-economic intelligence dashboard mapping global GDP & bilateral trade flows across 102 economies (World Bank + UN Comtrade). A Monarch Castle Technologies product."), "README purpose must match the canonical registry");
   assert.match(contract, /lifecycle-active/);
-  assert.ok(contract.includes("https://monarchcastle.tech/macrointel/"));
+  assert.ok(contract.includes("https://monarchcastletech.github.io/macrointel/"));
   for (const heading of expectedHeadings) assert.ok(contract.includes(`## ${heading}`), `missing heading: ${heading}`);
   for (const evidence of methodologyEvidence) {
     assert.ok(existsSync(resolve(root, evidence)), `missing methodology evidence: ${evidence}`);
