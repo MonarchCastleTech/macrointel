@@ -288,6 +288,7 @@
     const meta = macroData.meta || {};
     const coverage = meta.coverage || {};
     const sources = meta.sources || {};
+    const families = meta.families || {};
     const aboutCoverage = document.getElementById("aboutCoverage");
     const aboutSources = document.getElementById("aboutSources");
     const releaseCoverage = document.getElementById("releaseCoverage");
@@ -309,7 +310,8 @@
         ["Economies", String(coverage.countries || macroData.nodes.length)],
         ["Bilateral links", linkCount],
         ["Years", years || "-"],
-        ["Snapshot", meta.snapshotDate || "-"],
+        ["Release built", meta.snapshotDate || "-"],
+        ["Observed periods", Object.values(families).map((family) => family.observedYears).filter(Boolean).join(" · ") || years || "-"],
       ];
       aboutCoverage.innerHTML = rows
         .map(([k, v]) => `<div class="aboutRow"><span>${escapeHtml(k)}</span><b>${escapeHtml(v)}</b></div>`)
@@ -318,7 +320,11 @@
 
     if (aboutSources) {
       aboutSources.innerHTML = Object.entries(sources)
-        .map(([k, v]) => `<div class="aboutRow"><span>${escapeHtml(labels[k] || toTitleCase(k))}</span><b>${escapeHtml(String(v))}</b></div>`)
+        .map(([k, v]) => {
+          const family = families[k] || {};
+          const detail = family.observedYears ? ` · observed ${family.observedYears} · retrieved ${String(family.retrievedAt || "").slice(0, 10)}` : "";
+          return `<div class="aboutRow"><span>${escapeHtml(labels[k] || toTitleCase(k))}</span><b>${escapeHtml(String(v) + detail)}</b></div>`;
+        })
         .join("");
     }
 
@@ -327,12 +333,16 @@
     }
 
     if (releaseMethodology) {
-      releaseMethodology.textContent = `Methodology: current-USD World Bank GDP and national trade totals; ${years || "available"} annual UN Comtrade goods-flow and sector snapshots.`;
+      releaseMethodology.textContent = `Methodology: latest source-reported current-USD World Bank indicators; ${years || "available"} annual UN Comtrade goods-flow and sector releases. Each family is dated independently.`;
     }
 
     if (releaseSources) {
       releaseSources.innerHTML = Object.entries(sources)
-        .map(([key, value]) => `<span class="releaseSource"><b>${escapeHtml(labels[key] || toTitleCase(key))}:</b> ${escapeHtml(String(value))}</span>`)
+        .map(([key, value]) => {
+          const family = families[key] || {};
+          const period = family.observedYears ? ` · ${family.observedYears}` : "";
+          return `<span class="releaseSource"><b>${escapeHtml(labels[key] || toTitleCase(key))}:</b> ${escapeHtml(String(value) + period)}</span>`;
+        })
         .join("");
     }
   }
@@ -1990,6 +2000,7 @@
   function updateLastUpdated() {
     const label = document.getElementById("lastUpdated");
     const releaseDate = document.getElementById("releaseDate");
+    const statusDot = document.querySelector("#macroFooter .statusDot");
     if (!label && !releaseDate) return;
 
     const sourceDate =
@@ -1997,15 +2008,21 @@
       || (macroData?.meta?.generatedAt ? new Date(macroData.meta.generatedAt).toISOString().split("T")[0] : null);
 
     if (sourceDate) {
-      if (label) label.textContent = `Freshness: snapshot ${sourceDate}`;
+      const ageDays = (Date.now() - Date.parse(sourceDate)) / 86400000;
+      const latestObserved = macroData?.meta?.families?.bilateralLinks?.observedYears || macroData?.meta?.linkYears?.[0];
+      if (label) label.textContent = `${ageDays > 45 ? "Last verified" : "Verified"} ${sourceDate} · trade ${latestObserved || "period unavailable"}`;
+      if (statusDot) {
+        statusDot.classList.remove("fresh", "stale", "outdated");
+        statusDot.classList.add(ageDays <= 14 ? "fresh" : ageDays <= 45 ? "stale" : "outdated");
+      }
       if (releaseDate) {
-        releaseDate.textContent = `Snapshot ${sourceDate}`;
+        releaseDate.textContent = `Built ${sourceDate}`;
         releaseDate.setAttribute("datetime", sourceDate);
       }
       return;
     }
 
-    if (label) label.textContent = "Freshness: release date unavailable";
+    if (label) label.textContent = "Verified release date unavailable";
     if (releaseDate) releaseDate.textContent = "Release date unavailable";
   }
 

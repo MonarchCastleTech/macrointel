@@ -1,134 +1,132 @@
-// Regenerate bilateral export links for all node countries from UN Comtrade public preview.
-// Same source already credited in meta.sources.trade. Real data, not fabricated.
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from "node:fs";
+import path from "node:path";
 
-const ROOT = path.resolve(process.argv[2] || '.');
-const DATA = path.join(ROOT, 'data', 'country-macro-map.js');
-const CACHE = path.join(ROOT, 'tools', '.comtrade-cache');
-fs.mkdirSync(CACHE, { recursive: true });
+const root = path.resolve(process.argv[2] || ".");
+const dataPath = path.join(root, "data", "country-macro-map.js");
+const cacheDir = path.join(root, "tools", ".comtrade-cache");
+const outputPath = path.join(root, "tools", "new-trade-release.json");
+const targetYear = Number(process.env.MACRO_TARGET_YEAR || new Date().getUTCFullYear() - 1);
+const valueFloor = 5e8;
+const sectorCodes = { 30: "medicine", 85: "electronics", 87: "automotive", 27: "energy", 10: "agriculture", 61: "textiles", 72: "metals", 29: "chemicals" };
+const sectorQuery = Object.keys(sectorCodes).join(",");
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const YEARS = [2024, 2023];
-const VALUE_FLOOR = 5e8; // $500M — keep links meaningful but allow low thresholds in UI
-const DELAY_MS = 450;
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+fs.mkdirSync(cacheDir, { recursive: true });
+const scope = {};
+new Function("window", fs.readFileSync(dataPath, "utf8"))(scope);
+const data = scope.countryMacroData;
+const nodeIso2 = new Set(data.nodes.map((node) => node.iso2));
 
-function loadData() {
-  const src = fs.readFileSync(DATA, 'utf8');
-  const g = {};
-  // eslint-disable-next-line no-new-func
-  new Function('window', src)(g);
-  return g.countryMacroData;
-}
-
-async function getJSON(url, tries = 5) {
-  for (let i = 0; i < tries; i++) {
+async function fetchJson(url, attempts = 5) {
+  let lastError;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 45_000);
     try {
-      const ctl = new AbortController();
-      const t = setTimeout(() => ctl.abort(), 30000);
-      const r = await fetch(url, { signal: ctl.signal, headers: { accept: 'application/json' } });
-      clearTimeout(t);
-      if (r.status === 429 || r.status >= 500) {
-        const wait = [4000, 10000, 20000, 35000, 50000][i] || 60000;
-        console.log(`  ${r.status} -> backoff ${wait}ms`);
-        await sleep(wait);
-        continue;
-      }
-      if (!r.ok) return { _err: r.status };
-      return await r.json();
-    } catch (e) {
-      const wait = [3000, 8000, 15000, 25000, 40000][i] || 50000;
-      console.log(`  fetch err ${e.message} -> wait ${wait}ms`);
-      await sleep(wait);
+      const response = await fetch(url, {
+        signal: controller.signal,
+        headers: { accept: "application/json", "user-agent": "MacroIntel-data-refresh/1.0" },
+      });
+      if (response.status === 429 || response.status >= 500) throw new Error(`HTTP ${response.status}`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+      if (attempt + 1 < attempts) await sleep([3_000, 8_000, 15_000, 25_000][attempt]);
+    } finally {
+      clearTimeout(timeout);
     }
   }
-  return { _err: 'exhausted' };
+  throw new Error(`UN Comtrade request failed: ${lastError?.message || "unknown error"}`);
 }
 
-async function main() {
-  const data = loadData();
-  const nodeIso = new Set(data.nodes.map((n) => n.iso2));
-
-  const repJson = await getJSON('https://comtradeapi.un.org/files/v1/app/reference/Reporters.json');
-  const reporters = repJson.results || repJson;
-  const iso2ToCode = {};
-  const codeToIso2 = {};
-  for (const r of reporters) {
-    if (!r.reporterCodeIsoAlpha2) continue;
-    // Keep every code -> iso2 (incl. historical) so partner codes still resolve.
-    codeToIso2[r.reporterCode] = r.reporterCodeIsoAlpha2;
-    // But only fetch using ACTIVE reporter codes — Reporters.json also lists
-    // expired historical splits (e.g. US 841 ...1980, India 356 ...1974) that
-    // return zero rows for recent years.
-    if (r.entryExpiredDate) continue;
-    iso2ToCode[r.reporterCodeIsoAlpha2] = r.reporterCode;
-  }
-  // partner codes -> iso2
-  const parJson = await getJSON('https://comtradeapi.un.org/files/v1/app/reference/partnerAreas.json');
-  const partners = parJson.results || parJson;
-  for (const p of partners) {
-    if (p.PartnerCodeIsoAlpha2 && !codeToIso2[p.PartnerCode]) codeToIso2[p.PartnerCode] = p.PartnerCodeIsoAlpha2;
-  }
-
-  const reporterNodes = data.nodes.filter((n) => iso2ToCode[n.iso2]);
-  const noReporter = data.nodes.filter((n) => !iso2ToCode[n.iso2]).map((n) => n.iso2);
-  console.log(`Reporters available for ${reporterNodes.length}/${data.nodes.length} nodes. No reporter code: ${JSON.stringify(noReporter)}`);
-
-  const links = [];
-  let done = 0;
-  for (const node of reporterNodes) {
-    const code = iso2ToCode[node.iso2];
-    for (const year of YEARS) {
-      const cacheFile = path.join(CACHE, `${code}_${year}.json`);
-      let rows;
-      if (fs.existsSync(cacheFile)) {
-        rows = JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
-      } else {
-        const url = `https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=${code}&period=${year}&flowCode=X&cmdCode=TOTAL`;
-        const j = await getJSON(url);
-        if (j._err) {
-          console.log(`  ${node.iso2} ${year}: ERR ${j._err}`);
-          await sleep(DELAY_MS);
-          continue;
-        }
-        rows = (j.data || [])
-          .filter((x) => x.partnerCode && x.partnerCode !== 0)
-          .map((x) => ({ p: x.partnerCode, v: Number(x.primaryValue || x.cifvalue || x.fobvalue || 0) }));
-        fs.writeFileSync(cacheFile, JSON.stringify(rows));
-        await sleep(DELAY_MS);
-      }
-      for (const row of rows) {
-        const tIso = codeToIso2[row.p];
-        if (!tIso || !nodeIso.has(tIso) || tIso === node.iso2) continue;
-        if (!(row.v >= VALUE_FLOOR)) continue;
-        links.push({ s: node.iso2, t: tIso, tradeUsd: Math.round(row.v), year, direction: 'export', weight: 1 });
-      }
-    }
-    done++;
-    if (done % 10 === 0) console.log(`  ...${done}/${reporterNodes.length} reporters, ${links.length} links so far`);
-  }
-
-  // dedup (keep max value per s,t,year)
-  const map = new Map();
-  for (const l of links) {
-    const k = `${l.s}|${l.t}|${l.year}`;
-    if (!map.has(k) || map.get(k).tradeUsd < l.tradeUsd) map.set(k, l);
-  }
-  const finalLinks = [...map.values()].sort((a, b) => b.tradeUsd - a.tradeUsd);
-
-  // coverage
-  const deg = {};
-  data.nodes.forEach((n) => (deg[n.iso2] = 0));
-  finalLinks.forEach((l) => { deg[l.s]++; deg[l.t]++; });
-  const zero = data.nodes.filter((n) => deg[n.iso2] === 0).map((n) => n.iso2);
-  const byYear = {};
-  finalLinks.forEach((l) => (byYear[l.year] = (byYear[l.year] || 0) + 1));
-
-  console.log(`\nFINAL: ${finalLinks.length} links | by year ${JSON.stringify(byYear)}`);
-  console.log(`Connected nodes: ${data.nodes.length - zero.length}/${data.nodes.length} | still zero: ${JSON.stringify(zero)}`);
-
-  fs.writeFileSync(path.join(ROOT, 'tools', 'new-links.json'), JSON.stringify(finalLinks));
-  console.log('Wrote tools/new-links.json');
+async function cachedRows(key, url) {
+  const cachePath = path.join(cacheDir, `${key}.json`);
+  if (fs.existsSync(cachePath)) return JSON.parse(fs.readFileSync(cachePath, "utf8"));
+  const response = await fetchJson(url);
+  const rows = Array.isArray(response?.data) ? response.data : [];
+  fs.writeFileSync(cachePath, JSON.stringify(rows));
+  await sleep(500);
+  return rows;
 }
 
-main().catch((e) => { console.error('FATAL', e); process.exit(1); });
+const reporterResponse = await fetchJson("https://comtradeapi.un.org/files/v1/app/reference/Reporters.json");
+const partnerResponse = await fetchJson("https://comtradeapi.un.org/files/v1/app/reference/partnerAreas.json");
+const reporters = reporterResponse.results || reporterResponse;
+const partners = partnerResponse.results || partnerResponse;
+const iso2ToCode = {};
+const codeToIso2 = {};
+
+for (const reporter of reporters) {
+  const iso2 = reporter.reporterCodeIsoAlpha2;
+  if (!iso2) continue;
+  codeToIso2[reporter.reporterCode] = iso2;
+  if (!reporter.entryExpiredDate) iso2ToCode[iso2] = reporter.reporterCode;
+}
+for (const partner of partners) {
+  if (partner.PartnerCodeIsoAlpha2) codeToIso2[partner.PartnerCode] = partner.PartnerCodeIsoAlpha2;
+}
+
+const links = [];
+const sectorValues = Object.fromEntries(Object.values(sectorCodes).map((id) => [id, []]));
+let linkReporters = 0;
+let sectorReporters = 0;
+const eligible = data.nodes.filter((node) => iso2ToCode[node.iso2]);
+
+for (let index = 0; index < eligible.length; index += 1) {
+  const node = eligible[index];
+  const code = iso2ToCode[node.iso2];
+  const base = "https://comtradeapi.un.org/public/v1/preview/C/A/HS";
+  const totalUrl = `${base}?reporterCode=${code}&period=${targetYear}&flowCode=X&cmdCode=TOTAL&maxRecords=500`;
+  const totalRows = await cachedRows(`${code}_${targetYear}_total`, totalUrl);
+  let reporterLinkCount = 0;
+  for (const row of totalRows) {
+    const target = codeToIso2[row.partnerCode];
+    const value = Number(row.primaryValue ?? row.fobvalue ?? row.cifvalue ?? 0);
+    if (!target || !nodeIso2.has(target) || target === node.iso2 || value < valueFloor) continue;
+    links.push({ s: node.iso2, t: target, tradeUsd: Math.round(value), year: targetYear, direction: "export", weight: 1 });
+    reporterLinkCount += 1;
+  }
+  if (reporterLinkCount) linkReporters += 1;
+
+  const sectorUrl = `${base}?reporterCode=${code}&period=${targetYear}&flowCode=X&partnerCode=0&cmdCode=${sectorQuery}&maxRecords=500`;
+  const sectorRows = await cachedRows(`${code}_${targetYear}_sectors`, sectorUrl);
+  let reporterSectorCount = 0;
+  for (const row of sectorRows) {
+    const sector = sectorCodes[String(row.cmdCode)];
+    const value = Number(row.primaryValue ?? row.fobvalue ?? row.cifvalue ?? 0);
+    if (!sector || !(value > 0)) continue;
+    sectorValues[sector].push({ iso2: node.iso2, value: Math.round(value) });
+    reporterSectorCount += 1;
+  }
+  if (reporterSectorCount) sectorReporters += 1;
+  if ((index + 1) % 10 === 0) console.log(`${index + 1}/${eligible.length} reporters · ${links.length} links`);
+}
+
+const deduplicated = new Map();
+for (const link of links) {
+  const key = `${link.s}|${link.t}|${link.year}`;
+  if (!deduplicated.has(key) || deduplicated.get(key).tradeUsd < link.tradeUsd) deduplicated.set(key, link);
+}
+const finalLinks = [...deduplicated.values()].sort((a, b) => b.tradeUsd - a.tradeUsd);
+const connectedEconomies = new Set(finalLinks.flatMap((link) => [link.s, link.t])).size;
+for (const values of Object.values(sectorValues)) values.sort((a, b) => b.value - a.value || a.iso2.localeCompare(b.iso2));
+
+if (linkReporters < 60 || finalLinks.length < 1_500 || connectedEconomies < 90) {
+  throw new Error(`UN Comtrade bilateral coverage too small: ${linkReporters} reporters, ${finalLinks.length} links, ${connectedEconomies} connected economies`);
+}
+if (sectorReporters < 60 || Object.values(sectorValues).some((values) => values.length < 50)) {
+  throw new Error(`UN Comtrade sector coverage too small: ${sectorReporters} reporters`);
+}
+
+const result = {
+  retrievedAt: new Date().toISOString(),
+  targetYear,
+  linkReporters,
+  connectedEconomies,
+  sectorReporters,
+  links: finalLinks,
+  sectorValues,
+};
+fs.writeFileSync(outputPath, `${JSON.stringify(result)}\n`);
+console.log(`Wrote ${path.relative(root, outputPath)}: ${finalLinks.length} links, ${sectorReporters} sector reporters`);

@@ -44,7 +44,7 @@ test("top bar uses the official dark MacroIntel lockup", () => {
 
 test("release freshness, methodology, and source attribution stay visible", () => {
   assert.match(html, /<aside id="releaseProvenance"[^>]*aria-labelledby="releaseProvenanceTitle"/);
-  assert.match(html, /<span class="releaseLabel">Freshness<\/span>/);
+  assert.match(html, /<span class="releaseLabel">Verified release<\/span>/);
   assert.match(html, /<time id="releaseDate"/);
   assert.match(html, /id="releaseMethodology"/);
   assert.match(html, /id="releaseSources"/);
@@ -52,6 +52,24 @@ test("release freshness, methodology, and source attribution stay visible", () =
   assert.match(app, /Object\.entries\(sources\)/);
   assert.match(app, /releaseSources/);
   assert.match(app, /releaseMethodology/);
+  assert.match(app, /Each family is dated independently/);
+  assert.match(app, /families\[key\]/);
+  assert.doesNotMatch(css, /@keyframes pulse/);
+});
+
+test("keyless refresh is autonomous, gated, and checked after deployment", () => {
+  const worldBank = readFileSync(resolve(root, "tools", "refresh-world-bank.mjs"), "utf8");
+  const comtrade = readFileSync(resolve(root, "tools", "enrich-links.mjs"), "utf8");
+  const verifier = readFileSync(resolve(root, "tools", "verify-dataset.mjs"), "utf8");
+  assert.match(workflow, /schedule:/);
+  assert.match(workflow, /tools\/refresh-world-bank\.mjs/);
+  assert.match(workflow, /tools\/enrich-links\.mjs/);
+  assert.match(workflow, /tools\/verify-dataset\.mjs/);
+  assert.match(workflow, /Verify live deployment/);
+  assert.match(worldBank, /api\.worldbank\.org\/v2/);
+  assert.match(comtrade, /public\/v1\/preview/);
+  assert.doesNotMatch(`${worldBank}\n${comtrade}`, /subscription-key|API_KEY|COMTRADE_KEY/);
+  assert.match(verifier, /contentHash/);
 });
 
 test("rendering and interaction contracts are deterministic and keyboard operable", () => {
@@ -86,6 +104,8 @@ test("shared tokens and responsive presentation prevent narrow-screen overflow",
   assert.match(css, /min-width:\s*0/);
   assert.match(workflow, /node --test tests\/\*\.test\.mjs/);
   assert.match(workflow, /node --check app\.js/);
+  assert.ok(!html.includes("akgularda.github.io/macrointel"));
+  assert.ok(html.includes("monarchcastletech.github.io/macrointel"));
 });
 
 test("published copy avoids prohibited certainty and advice claims", () => {

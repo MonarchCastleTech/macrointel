@@ -651,7 +651,6 @@ html, body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
 }
 
 #macroFooter .statusDot.fresh {
@@ -664,11 +663,6 @@ html, body {
 
 #macroFooter .statusDot.outdated {
   background: #f44336;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.9); }
 }
 
 /* Loading */

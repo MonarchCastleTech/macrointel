@@ -52,7 +52,7 @@ Per Monarch Castle doctrine — **evidence before assertion**. Every figure in M
 | Bilateral trade links | **UN Comtrade** | HS `TOTAL` goods exports, annual |
 | Sector exports | **UN Comtrade** | HS chapters, goods exports |
 
-- **Snapshot.** The shipped dataset (`data/country-macro-map.js`) was generated **2026-06-22**, covering **102 economies**, **3,814 bilateral links**, and years **2024 / 2023**. Generation timestamp and source registry are embedded in `window.countryMacroData.meta`.
+- **Verified release.** The shipped dataset (`data/country-macro-map.js`) carries its build time, family-specific observed periods, retrieval dates, coverage, and SHA-256 content checksum in `window.countryMacroData.meta`.
 - **Per-figure provenance.** Country values carry observed-vs-estimated flags (e.g. `exportsEstimated`, `importsEstimated`) so the dashboard can distinguish reported data from modeled fills.
 - **Honest caveats.** Bilateral links cover economies that report goods trade to UN Comtrade; a few late or non-reporters (e.g. Russia, Taiwan) appear with full GDP/trade totals but without outbound bilateral links. Values are nominal USD; trade links are goods-only (Comtrade) while national totals include services (World Bank). **Treat as indicative analytical intelligence, not official statistics.**
 
@@ -61,7 +61,7 @@ Per Monarch Castle doctrine — **evidence before assertion**. Every figure in M
 - **Visualization:** [D3.js](https://d3js.org/) v7 (force-directed graph).
 - **Markup & styling:** HTML5 + CSS3, dark theme; Bricolage Grotesque / Inter / JetBrains Mono typography.
 - **Data layer:** precomputed `window.countryMacroData` blob in `data/country-macro-map.js`.
-- **Refresh tooling:** Node ESM scripts (`tools/enrich-links.mjs`, `tools/splice-links.mjs`) against the UN Comtrade public API.
+- **Refresh tooling:** keyless World Bank Indicators and UN Comtrade preview clients with coverage gates, checksum verification, and last-known-good preservation.
 - **CI / deploy:** GitHub Actions (`.github/workflows/pages.yml`) → **GitHub Pages** (static hosting).
 
 ## 🚀 Getting started
@@ -80,11 +80,13 @@ npx http-server . -p 8080
 Or simply open `index.html` directly in a browser.
 
 ### Refresh the dataset
-Bilateral links are regenerated from the UN Comtrade public API:
+The same three commands used by the weekly GitHub Action rebuild every public-data family. Nothing is published unless coverage, schema, observation periods, and checksum pass:
 
 ```bash
-node tools/enrich-links.mjs .   # fetch fresh bilateral exports -> tools/new-links.json
-node tools/splice-links.mjs .   # splice into data/country-macro-map.js + update metadata
+node tools/refresh-world-bank.mjs .
+node tools/enrich-links.mjs .
+node tools/splice-links.mjs .
+node tools/verify-dataset.mjs .
 ```
 
 ### Deploy
@@ -97,7 +99,7 @@ Pushes to `main` deploy automatically via GitHub Actions. Ensure **Settings → 
 ## 📜 License
 See `LICENSE` (MIT). © 2026 Monarch Castle Holdings · Ankara, Türkiye. Not affiliated with the World Bank or the United Nations.
 
-<div align="center"><sub>🏰 Monarch Castle Holdings — turning open-source noise into lawful, verified, decision-grade intelligence.</sub></div>
+<div align="center"><sub>🏰 Monarch Castle Holdings — traceable analysis from public data.</sub></div>
 
 ---
 
@@ -132,7 +134,7 @@ These repository-specific sources define the methodology or provenance boundary.
 
 ## Update frequency
 
-Source-dependent. World Bank and UN Comtrade snapshots are refreshed through the repository tooling.
+Weekly, with an on-demand trigger. Source failure or insufficient coverage fails the run and leaves the last verified release online.
 
 ## Quick start
 

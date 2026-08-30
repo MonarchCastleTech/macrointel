@@ -3,10 +3,12 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: "17 3 * * 0"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -16,6 +18,7 @@ concurrency:
 
 jobs:
   deploy:
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,11 +26,38 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh public-data release
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          node tools/refresh-world-bank.mjs .
+          node tools/enrich-links.mjs .
+          node tools/splice-links.mjs .
 
       - name: Validate Pages bundle
         run: |
+          node tools/verify-dataset.mjs .
           node --test tests/*.test.mjs
           node --check app.js
+          node --check tools/refresh-world-bank.mjs
+          node --check tools/enrich-links.mjs
+          node --check tools/splice-links.mjs
+
+      - name: Record verified scheduled release
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/country-macro-map.js
+          git diff --cached --quiet || git commit -m "data: publish verified macro release"
+          git push
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,4 +70,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify live deployment
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          curl --fail --location --retry 5 --retry-delay 3 "$SITE_URL" -o /tmp/index.html
+          grep -q "MacroIntel" /tmp/index.html
+          curl --fail --location --retry 5 --retry-delay 3 "${SITE_URL}data/country-macro-map.js" -o /tmp/data.js
+          grep -q "contentHash" /tmp/data.js
 

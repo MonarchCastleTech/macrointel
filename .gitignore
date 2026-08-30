@@ -4,6 +4,8 @@ node_modules/
 # Build / data-refresh artifacts (regenerable via tools/)
 tools/.comtrade-cache/
 tools/new-links.json
+tools/new-world-bank.json
+tools/new-trade-release.json
 tools/*.log
 
 # OS / editor

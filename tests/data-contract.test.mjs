@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import test from "node:test";
 import vm from "node:vm";
+import { createHash } from "node:crypto";
 
 const root = resolve(import.meta.dirname, "..");
 const dataPath = resolve(root, "data", "country-macro-map.js");
@@ -43,6 +44,22 @@ test("release sources are explicit for every rendered data family", () => {
   for (const attribution of Object.values(meta.sources)) {
     assert.ok(String(attribution).trim().length >= 20);
   }
+});
+
+test("release provenance dates each family and verifies the record checksum", () => {
+  const data = loadDataset();
+  for (const family of ["gdp", "tradeTotals", "bilateralLinks", "sectors"]) {
+    assert.match(data.meta.families[family].retrievedAt, /^\d{4}-\d{2}-\d{2}T/);
+    assert.ok(String(data.meta.families[family].observedYears).length >= 4);
+  }
+  const payload = {
+    nodes: data.nodes,
+    links: data.links,
+    sectors: data.sectors,
+    topProducersBySectorYear: data.topProducersBySectorYear,
+    sectorValuesBySectorYear: data.sectorValuesBySectorYear,
+  };
+  assert.equal(data.meta.contentHash, createHash("sha256").update(JSON.stringify(payload)).digest("hex"));
 });
 
 test("country and link records preserve typed, connected identifiers", () => {
