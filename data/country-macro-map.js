@@ -1,19 +1,19 @@
 /**
  * MacroIntel verified dataset release
- * Built: 2026-08-30T08:24:52.371Z
+ * Built: 2026-09-06T08:09:18.998Z
  * Sources: World Bank Indicators API + UN Comtrade public preview
  */
 
 window.countryMacroData = {
   "meta": {
-    "generatedAt": "2026-08-30T08:24:52.371Z",
+    "generatedAt": "2026-09-06T08:09:18.998Z",
     "sources": {
       "gdp": "World Bank Indicators API · NY.GDP.MKTP.CD",
       "tradeTotals": "World Bank Indicators API · NE.EXP.GNFS.CD / NE.IMP.GNFS.CD",
       "bilateralLinks": "UN Comtrade public preview · HS TOTAL annual exports",
       "sectors": "UN Comtrade public preview · selected HS chapter annual exports"
     },
-    "snapshotDate": "2026-08-30",
+    "snapshotDate": "2026-09-06",
     "linkYears": [
       2025,
       2024
@@ -24,36 +24,36 @@ window.countryMacroData = {
     ],
     "coverage": {
       "countries": 102,
-      "bilateralLinks": 3537,
-      "latestBilateralLinks": 1663,
+      "bilateralLinks": 3553,
+      "latestBilateralLinks": 1679,
       "latestConnectedEconomies": 99,
       "note": "Coverage varies with source reporting calendars; every family shows its observed period and retrieval date."
     },
     "families": {
       "gdp": {
-        "retrievedAt": "2026-08-30T08:08:53.412Z",
+        "retrievedAt": "2026-09-06T07:55:07.040Z",
         "observedYears": "2025",
         "countries": 101
       },
       "tradeTotals": {
-        "retrievedAt": "2026-08-30T08:08:53.412Z",
+        "retrievedAt": "2026-09-06T07:55:07.040Z",
         "observedYears": "2025 exports · 2025 imports",
         "countries": 101
       },
       "bilateralLinks": {
-        "retrievedAt": "2026-08-30T08:23:31.786Z",
+        "retrievedAt": "2026-09-06T08:09:18.931Z",
         "observedYears": "2025",
-        "reporters": 67,
-        "links": 1663,
+        "reporters": 68,
+        "links": 1679,
         "connectedEconomies": 99
       },
       "sectors": {
-        "retrievedAt": "2026-08-30T08:23:31.786Z",
+        "retrievedAt": "2026-09-06T08:09:18.931Z",
         "observedYears": "2025",
-        "reporters": 71
+        "reporters": 72
       }
     },
-    "contentHash": "13f1fd70ad76085363bb5cf79bb8c233930bac0eefdb58c2a7b29a22a185bfe7"
+    "contentHash": "fab98797e9b19989b3fe4648f3d194c77072e47e74eb5761ae2cf1ca7bf94e86"
   },
   "nodes": [
     {
@@ -5364,6 +5364,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "CH",
+      "tradeUsd": 4267284513,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "IE",
       "t": "JP",
       "tradeUsd": 4255220600,
@@ -5783,6 +5791,14 @@ window.countryMacroData = {
       "s": "IN",
       "t": "KE",
       "tradeUsd": 3719125507,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "NL",
+      "tradeUsd": 3714944598,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -8724,6 +8740,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "VN",
+      "tradeUsd": 1579742463,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "AR",
       "t": "SA",
       "tradeUsd": 1576384991,
@@ -8743,6 +8767,14 @@ window.countryMacroData = {
       "s": "BG",
       "t": "FR",
       "tradeUsd": 1573453920,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "US",
+      "tradeUsd": 1573005582,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -8951,6 +8983,14 @@ window.countryMacroData = {
       "s": "NL",
       "t": "TH",
       "tradeUsd": 1507858303,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "FR",
+      "tradeUsd": 1502937826,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -9431,6 +9471,14 @@ window.countryMacroData = {
       "s": "SG",
       "t": "LK",
       "tradeUsd": 1356392111,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "BE",
+      "tradeUsd": 1354665460,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -10044,6 +10092,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "DE",
+      "tradeUsd": 1195111110,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "PT",
       "t": "US",
       "tradeUsd": 1195098768,
@@ -10319,6 +10375,14 @@ window.countryMacroData = {
       "s": "FI",
       "t": "LV",
       "tradeUsd": 1137959553,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "CN",
+      "tradeUsd": 1136021106,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -11516,6 +11580,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "ES",
+      "tradeUsd": 931087614,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CO",
       "t": "BE",
       "tradeUsd": 930335292,
@@ -11924,6 +11996,22 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "IT",
+      "tradeUsd": 856877937,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "GB",
+      "tradeUsd": 856359124,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "CZ",
       "t": "KZ",
       "tradeUsd": 855278459,
@@ -12287,6 +12375,14 @@ window.countryMacroData = {
       "s": "CZ",
       "t": "GR",
       "tradeUsd": 803049448,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "MY",
+      "tradeUsd": 801437735,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -13300,6 +13396,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "IN",
+      "tradeUsd": 668596026,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "JP",
       "t": "BH",
       "tradeUsd": 668193718,
@@ -13716,6 +13820,14 @@ window.countryMacroData = {
       "weight": 1
     },
     {
+      "s": "CI",
+      "t": "TR",
+      "tradeUsd": 612093972,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
       "s": "LT",
       "t": "CZ",
       "tradeUsd": 612089901,
@@ -13783,6 +13895,14 @@ window.countryMacroData = {
       "s": "ZA",
       "t": "TZ",
       "tradeUsd": 605153650,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "BR",
+      "tradeUsd": 605000258,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -14351,6 +14471,14 @@ window.countryMacroData = {
       "s": "DE",
       "t": "DO",
       "tradeUsd": 553829480,
+      "year": 2025,
+      "direction": "export",
+      "weight": 1
+    },
+    {
+      "s": "CI",
+      "t": "CA",
+      "tradeUsd": 552350381,
       "year": 2025,
       "direction": "export",
       "weight": 1
@@ -34002,8 +34130,24 @@ window.countryMacroData = {
           "value": 16259265
         },
         {
+          "iso2": "CI",
+          "value": 16046112
+        },
+        {
+          "iso2": "CI",
+          "value": 16046112
+        },
+        {
           "iso2": "TH",
           "value": 15864675
+        },
+        {
+          "iso2": "CI",
+          "value": 14945127
+        },
+        {
+          "iso2": "CI",
+          "value": 14945127
         },
         {
           "iso2": "MX",
@@ -34602,6 +34746,14 @@ window.countryMacroData = {
           "value": 623824
         },
         {
+          "iso2": "CI",
+          "value": 573762
+        },
+        {
+          "iso2": "CI",
+          "value": 573762
+        },
+        {
           "iso2": "RO",
           "value": 572813
         },
@@ -34632,6 +34784,14 @@ window.countryMacroData = {
         {
           "iso2": "DE",
           "value": 522459
+        },
+        {
+          "iso2": "CI",
+          "value": 513072
+        },
+        {
+          "iso2": "CI",
+          "value": 513072
         },
         {
           "iso2": "TH",
@@ -35308,6 +35468,14 @@ window.countryMacroData = {
         {
           "iso2": "TR",
           "value": 14512
+        },
+        {
+          "iso2": "CI",
+          "value": 14153
+        },
+        {
+          "iso2": "CI",
+          "value": 14153
         },
         {
           "iso2": "FI",
@@ -36500,6 +36668,14 @@ window.countryMacroData = {
           "value": 3802591506
         },
         {
+          "iso2": "CI",
+          "value": 3702510444
+        },
+        {
+          "iso2": "CI",
+          "value": 3702510285
+        },
+        {
           "iso2": "HU",
           "value": 3693011325
         },
@@ -36688,6 +36864,14 @@ window.countryMacroData = {
           "value": 2341018629
         },
         {
+          "iso2": "CI",
+          "value": 2281281053
+        },
+        {
+          "iso2": "CI",
+          "value": 2281281053
+        },
+        {
           "iso2": "SK",
           "value": 2271020990
         },
@@ -36866,6 +37050,14 @@ window.countryMacroData = {
         {
           "iso2": "PT",
           "value": 1215663160
+        },
+        {
+          "iso2": "CI",
+          "value": 1194497331
+        },
+        {
+          "iso2": "CI",
+          "value": 1194497172
         },
         {
           "iso2": "GR",
@@ -37506,6 +37698,22 @@ window.countryMacroData = {
         {
           "iso2": "BG",
           "value": 121496369
+        },
+        {
+          "iso2": "CI",
+          "value": 112139341
+        },
+        {
+          "iso2": "CI",
+          "value": 112139341
+        },
+        {
+          "iso2": "CI",
+          "value": 110772333
+        },
+        {
+          "iso2": "CI",
+          "value": 110772333
         },
         {
           "iso2": "MX",
@@ -38290,6 +38498,14 @@ window.countryMacroData = {
         {
           "iso2": "ES",
           "value": 3800683
+        },
+        {
+          "iso2": "CI",
+          "value": 3795319
+        },
+        {
+          "iso2": "CI",
+          "value": 3795319
         },
         {
           "iso2": "CY",
@@ -39292,6 +39508,14 @@ window.countryMacroData = {
           "value": 25846
         },
         {
+          "iso2": "CI",
+          "value": 25066
+        },
+        {
+          "iso2": "CI",
+          "value": 25066
+        },
+        {
           "iso2": "GB",
           "value": 24766
         },
@@ -40102,6 +40326,14 @@ window.countryMacroData = {
         {
           "iso2": "ES",
           "value": 166
+        },
+        {
+          "iso2": "CI",
+          "value": 159
+        },
+        {
+          "iso2": "CI",
+          "value": 159
         },
         {
           "iso2": "FR",
@@ -42290,6 +42522,14 @@ window.countryMacroData = {
           "value": 1236299
         },
         {
+          "iso2": "CI",
+          "value": 1190265
+        },
+        {
+          "iso2": "CI",
+          "value": 1190170
+        },
+        {
           "iso2": "TR",
           "value": 1184735
         },
@@ -42312,6 +42552,14 @@ window.countryMacroData = {
         {
           "iso2": "RS",
           "value": 1046871
+        },
+        {
+          "iso2": "CI",
+          "value": 1037919
+        },
+        {
+          "iso2": "CI",
+          "value": 1037824
         },
         {
           "iso2": "TH",
@@ -42876,6 +43124,14 @@ window.countryMacroData = {
         {
           "iso2": "PA",
           "value": 152041
+        },
+        {
+          "iso2": "CI",
+          "value": 149435
+        },
+        {
+          "iso2": "CI",
+          "value": 149435
         },
         {
           "iso2": "ES",
@@ -43818,6 +44074,14 @@ window.countryMacroData = {
           "value": 3191
         },
         {
+          "iso2": "CI",
+          "value": 2911
+        },
+        {
+          "iso2": "CI",
+          "value": 2911
+        },
+        {
           "iso2": "HU",
           "value": 2889
         },
@@ -44256,6 +44520,14 @@ window.countryMacroData = {
         {
           "iso2": "ES",
           "value": 100
+        },
+        {
+          "iso2": "CI",
+          "value": 95
+        },
+        {
+          "iso2": "CI",
+          "value": 95
         },
         {
           "iso2": "MT",
@@ -46228,6 +46500,14 @@ window.countryMacroData = {
           "value": 9217943
         },
         {
+          "iso2": "CI",
+          "value": 9203497
+        },
+        {
+          "iso2": "CI",
+          "value": 9203497
+        },
+        {
           "iso2": "GB",
           "value": 9185410
         },
@@ -46424,6 +46704,14 @@ window.countryMacroData = {
           "value": 4867505
         },
         {
+          "iso2": "CI",
+          "value": 4801116
+        },
+        {
+          "iso2": "CI",
+          "value": 4801116
+        },
+        {
           "iso2": "RO",
           "value": 4745722
         },
@@ -46514,6 +46802,14 @@ window.countryMacroData = {
         {
           "iso2": "DO",
           "value": 3419641
+        },
+        {
+          "iso2": "CI",
+          "value": 3244478
+        },
+        {
+          "iso2": "CI",
+          "value": 3244478
         },
         {
           "iso2": "FI",
@@ -46902,6 +47198,14 @@ window.countryMacroData = {
         {
           "iso2": "BO",
           "value": 1119682
+        },
+        {
+          "iso2": "CI",
+          "value": 1118713
+        },
+        {
+          "iso2": "CI",
+          "value": 1118713
         },
         {
           "iso2": "GH",
@@ -48054,6 +48358,14 @@ window.countryMacroData = {
         {
           "iso2": "NO",
           "value": 39627
+        },
+        {
+          "iso2": "CI",
+          "value": 39189
+        },
+        {
+          "iso2": "CI",
+          "value": 39189
         },
         {
           "iso2": "RO",
@@ -50834,6 +51146,14 @@ window.countryMacroData = {
           "value": 3631803
         },
         {
+          "iso2": "CI",
+          "value": 3624358
+        },
+        {
+          "iso2": "CI",
+          "value": 3624358
+        },
+        {
           "iso2": "HU",
           "value": 3583266
         },
@@ -50928,6 +51248,14 @@ window.countryMacroData = {
         {
           "iso2": "FI",
           "value": 2931611
+        },
+        {
+          "iso2": "CI",
+          "value": 2926316
+        },
+        {
+          "iso2": "CI",
+          "value": 2926316
         },
         {
           "iso2": "FR",
@@ -51392,6 +51720,14 @@ window.countryMacroData = {
         {
           "iso2": "GB",
           "value": 648018
+        },
+        {
+          "iso2": "CI",
+          "value": 629173
+        },
+        {
+          "iso2": "CI",
+          "value": 629173
         },
         {
           "iso2": "NO",
@@ -52364,6 +52700,14 @@ window.countryMacroData = {
         {
           "iso2": "PT",
           "value": 69781
+        },
+        {
+          "iso2": "CI",
+          "value": 68851
+        },
+        {
+          "iso2": "CI",
+          "value": 68851
         },
         {
           "iso2": "FI",
@@ -55722,6 +56066,14 @@ window.countryMacroData = {
           "value": 21
         },
         {
+          "iso2": "CI",
+          "value": 18
+        },
+        {
+          "iso2": "CI",
+          "value": 18
+        },
+        {
           "iso2": "FR",
           "value": 18
         },
@@ -57504,6 +57856,14 @@ window.countryMacroData = {
           "value": 10364527
         },
         {
+          "iso2": "CI",
+          "value": 10264001
+        },
+        {
+          "iso2": "CI",
+          "value": 10263527
+        },
+        {
           "iso2": "TR",
           "value": 9887322
         },
@@ -57514,6 +57874,14 @@ window.countryMacroData = {
         {
           "iso2": "NO",
           "value": 9469054
+        },
+        {
+          "iso2": "CI",
+          "value": 9255603
+        },
+        {
+          "iso2": "CI",
+          "value": 9255130
         },
         {
           "iso2": "TR",
@@ -58140,6 +58508,14 @@ window.countryMacroData = {
           "value": 851133
         },
         {
+          "iso2": "CI",
+          "value": 833799
+        },
+        {
+          "iso2": "CI",
+          "value": 833799
+        },
+        {
           "iso2": "TR",
           "value": 828233
         },
@@ -58546,6 +58922,14 @@ window.countryMacroData = {
         {
           "iso2": "LU",
           "value": 169958
+        },
+        {
+          "iso2": "CI",
+          "value": 167492
+        },
+        {
+          "iso2": "CI",
+          "value": 167492
         },
         {
           "iso2": "CA",
@@ -59336,6 +59720,14 @@ window.countryMacroData = {
           "value": 7255
         },
         {
+          "iso2": "CI",
+          "value": 7107
+        },
+        {
+          "iso2": "CI",
+          "value": 7107
+        },
+        {
           "iso2": "TH",
           "value": 6717
         },
@@ -59718,6 +60110,14 @@ window.countryMacroData = {
         {
           "iso2": "NO",
           "value": 494
+        },
+        {
+          "iso2": "CI",
+          "value": 474
+        },
+        {
+          "iso2": "CI",
+          "value": 474
         },
         {
           "iso2": "PT",
@@ -61414,6 +61814,14 @@ window.countryMacroData = {
           "value": 139802889
         },
         {
+          "iso2": "CI",
+          "value": 135647948
+        },
+        {
+          "iso2": "CI",
+          "value": 135512969
+        },
+        {
           "iso2": "FI",
           "value": 129899546
         },
@@ -61448,6 +61856,14 @@ window.countryMacroData = {
         {
           "iso2": "TR",
           "value": 117011141
+        },
+        {
+          "iso2": "CI",
+          "value": 116045885
+        },
+        {
+          "iso2": "CI",
+          "value": 115910906
         },
         {
           "iso2": "PK",
@@ -62414,6 +62830,14 @@ window.countryMacroData = {
           "value": 13266126
         },
         {
+          "iso2": "CI",
+          "value": 13118412
+        },
+        {
+          "iso2": "CI",
+          "value": 13118412
+        },
+        {
           "iso2": "ES",
           "value": 13079386
         },
@@ -62816,6 +63240,14 @@ window.countryMacroData = {
         {
           "iso2": "RS",
           "value": 6347771
+        },
+        {
+          "iso2": "CI",
+          "value": 6320064
+        },
+        {
+          "iso2": "CI",
+          "value": 6320064
         },
         {
           "iso2": "ES",
@@ -64962,6 +65394,14 @@ window.countryMacroData = {
           "value": 135497
         },
         {
+          "iso2": "CI",
+          "value": 134980
+        },
+        {
+          "iso2": "CI",
+          "value": 134980
+        },
+        {
           "iso2": "RO",
           "value": 134707
         },
@@ -64988,6 +65428,14 @@ window.countryMacroData = {
         {
           "iso2": "DO",
           "value": 124250
+        },
+        {
+          "iso2": "CI",
+          "value": 122187
+        },
+        {
+          "iso2": "CI",
+          "value": 122187
         },
         {
           "iso2": "TH",
@@ -65644,6 +66092,14 @@ window.countryMacroData = {
         {
           "iso2": "DO",
           "value": 41661
+        },
+        {
+          "iso2": "CI",
+          "value": 41400
+        },
+        {
+          "iso2": "CI",
+          "value": 41400
         },
         {
           "iso2": "MT",
@@ -69812,6 +70268,10 @@ window.countryMacroData = {
           "value": 41289990
         },
         {
+          "iso2": "CI",
+          "value": 40441247
+        },
+        {
           "iso2": "TR",
           "value": 40438831
         },
@@ -69858,6 +70318,10 @@ window.countryMacroData = {
         {
           "iso2": "TH",
           "value": 38452113
+        },
+        {
+          "iso2": "CI",
+          "value": 38423120
         },
         {
           "iso2": "FI",
@@ -69944,6 +70408,10 @@ window.countryMacroData = {
           "value": 32132254
         },
         {
+          "iso2": "CI",
+          "value": 31095517
+        },
+        {
           "iso2": "PT",
           "value": 30777969
         },
@@ -69970,6 +70438,10 @@ window.countryMacroData = {
         {
           "iso2": "CH",
           "value": 29814106
+        },
+        {
+          "iso2": "CI",
+          "value": 29476158
         },
         {
           "iso2": "FR",
@@ -70468,6 +70940,10 @@ window.countryMacroData = {
           "value": 8130432
         },
         {
+          "iso2": "CI",
+          "value": 8094489
+        },
+        {
           "iso2": "TR",
           "value": 8056246
         },
@@ -70478,6 +70954,10 @@ window.countryMacroData = {
         {
           "iso2": "CH",
           "value": 7901239
+        },
+        {
+          "iso2": "CI",
+          "value": 7695721
         },
         {
           "iso2": "KW",
@@ -71144,6 +71624,10 @@ window.countryMacroData = {
           "value": 2026780
         },
         {
+          "iso2": "CI",
+          "value": 2018128
+        },
+        {
           "iso2": "LV",
           "value": 1978919
         },
@@ -71218,6 +71702,10 @@ window.countryMacroData = {
         {
           "iso2": "KW",
           "value": 1628186
+        },
+        {
+          "iso2": "CI",
+          "value": 1619359
         },
         {
           "iso2": "TR",
@@ -71326,6 +71814,14 @@ window.countryMacroData = {
         {
           "iso2": "KW",
           "value": 1297626
+        },
+        {
+          "iso2": "CI",
+          "value": 1246581
+        },
+        {
+          "iso2": "CI",
+          "value": 1246581
         },
         {
           "iso2": "SK",
@@ -71798,6 +72294,10 @@ window.countryMacroData = {
         {
           "iso2": "FR",
           "value": 401184
+        },
+        {
+          "iso2": "CI",
+          "value": 398769
         },
         {
           "iso2": "KW",
@@ -73590,6 +74090,14 @@ window.countryMacroData = {
         {
           "iso2": "MT",
           "value": 4793
+        },
+        {
+          "iso2": "CI",
+          "value": 4661
+        },
+        {
+          "iso2": "CI",
+          "value": 4661
         },
         {
           "iso2": "FI",
