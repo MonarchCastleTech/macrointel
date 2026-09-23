@@ -1095,7 +1095,7 @@
           filtered.push(link);
         } else {
           // Fallback when source dataset only contains exports: mirror flow direction.
-          filtered.push({ ...link, s: link.t, t: link.s, direction: "import" });
+          filtered.push({ ...link, s: link.t, t: link.s, direction: "import", mirroredFromExport: true });
         }
       }
     }
@@ -1461,7 +1461,9 @@
 
     els.tooltipName.textContent = `${source?.country || link.s} -> ${target?.country || link.t}`;
     els.tooltipName.style.color = "#ddd";
-    els.tooltipGdp.textContent = `Year: ${link.year} | Direction: ${link.direction}`;
+    els.tooltipGdp.textContent = link.mirroredFromExport
+      ? `Year: ${link.year} | Inbound view of partner-reported exports (mirror estimate)`
+      : `Year: ${link.year} | Direction: ${link.direction}`;
     els.tooltipTrade.textContent = `Trade: ${formatCurrency(link.tradeUsd)}`;
 
     els.tooltip.style.display = "block";
@@ -1848,7 +1850,7 @@
 
     els.btnDirection.textContent = currentDirection === "both"
       ? "Direction: Export Flows"
-      : "Direction: Inbound";
+      : "Direction: Inbound mirror";
 
     renderVisualization();
     updateStats();
