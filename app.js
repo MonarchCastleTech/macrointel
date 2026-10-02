@@ -227,7 +227,8 @@
   function setupAuxiliaryUi() {
     const backdrop = document.createElement("div");
     backdrop.id = "macroBackdrop";
-    document.body.appendChild(backdrop);
+    // Keep the backdrop in the same stacking context as the full-screen panels.
+    (document.querySelector(".monarch-product-surface") || document.body).appendChild(backdrop);
     els.backdrop = backdrop;
     els.aboutPanel = document.getElementById("aboutPanel");
     els.hint = document.getElementById("macroHint");
