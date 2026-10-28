@@ -1576,9 +1576,10 @@
     els.detailExports.textContent = `${formatCurrency(country.exportsUsd)} (${Number.isInteger(country.exportsYear) ? country.exportsYear : "year unavailable"})`;
     els.detailImports.textContent = `${formatCurrency(country.importsUsd)} (${Number.isInteger(country.importsYear) ? country.importsYear : "year unavailable"})`;
 
+    const comparableYears = Number.isInteger(country.exportsYear) && country.exportsYear === country.importsYear;
     const balance = country.exportsUsd - country.importsUsd;
-    els.detailBalance.textContent = `${balance >= 0 ? "+" : ""}${formatCurrency(balance)}`;
-    els.detailBalance.style.color = balance >= 0 ? "var(--green)" : "var(--acc)";
+    els.detailBalance.textContent = comparableYears ? `${balance >= 0 ? "+" : ""}${formatCurrency(balance)} (${country.exportsYear})` : "Unavailable: years differ or are unknown";
+    els.detailBalance.style.color = comparableYears ? (balance >= 0 ? "var(--green)" : "var(--acc)") : "";
 
     const partners = getTradePartners(country.iso2).slice(0, 6);
     els.detailPartners.innerHTML = partners.length > 0
@@ -1642,15 +1643,15 @@
     if (els.detailProvenance) {
       els.detailProvenance.innerHTML = `
         <div class="sectorItem">
-          <span>Trade totals (${currentYear})</span>
+          <span>Trade totals</span>
           <b>${formatProvenanceLabel(tradeProvenance)}</b>
         </div>
         <div class="sectorItem">
-          <span>Exports value</span>
+          <span>Exports value (${Number.isInteger(country.exportsYear) ? country.exportsYear : "year unavailable"})</span>
           <b>${formatProvenanceLabel(exportsProvenance)}</b>
         </div>
         <div class="sectorItem">
-          <span>Imports value</span>
+          <span>Imports value (${Number.isInteger(country.importsYear) ? country.importsYear : "year unavailable"})</span>
           <b>${formatProvenanceLabel(importsProvenance)}</b>
         </div>
         <div class="sectorItem">
