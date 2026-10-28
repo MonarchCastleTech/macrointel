@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { readCachedRows, writeCachedRows } from "./trade-cache.mjs";
 
 const root = path.resolve(process.argv[2] || ".");
 const dataPath = path.join(root, "data", "country-macro-map.js");
@@ -10,6 +11,7 @@ const valueFloor = 5e8;
 const sectorCodes = { 30: "medicine", 85: "electronics", 87: "automotive", 27: "energy", 10: "agriculture", 61: "textiles", 72: "metals", 29: "chemicals" };
 const sectorQuery = Object.keys(sectorCodes).join(",");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const retrievalDates = [];
 
 fs.mkdirSync(cacheDir, { recursive: true });
 const scope = {};
@@ -42,10 +44,12 @@ async function fetchJson(url, attempts = 5) {
 
 async function cachedRows(key, url) {
   const cachePath = path.join(cacheDir, `${key}.json`);
-  if (fs.existsSync(cachePath)) return JSON.parse(fs.readFileSync(cachePath, "utf8"));
+  const cached = readCachedRows(cachePath);
+  if (cached) { retrievalDates.push(cached.retrievedAt); return cached.rows; }
   const response = await fetchJson(url);
   const rows = Array.isArray(response?.data) ? response.data : [];
-  fs.writeFileSync(cachePath, JSON.stringify(rows));
+  const saved = writeCachedRows(cachePath, rows);
+  retrievalDates.push(saved.retrievedAt);
   await sleep(500);
   return rows;
 }
@@ -120,7 +124,7 @@ if (sectorReporters < 60 || Object.values(sectorValues).some((values) => values.
 }
 
 const result = {
-  retrievedAt: new Date().toISOString(),
+  retrievedAt: retrievalDates.sort()[0],
   targetYear,
   linkReporters,
   connectedEconomies,

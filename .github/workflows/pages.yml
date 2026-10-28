@@ -34,12 +34,28 @@ jobs:
         with:
           node-version: 22
 
+      - name: Restore completed trade requests
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/cache/restore@v6
+        with:
+          path: tools/.comtrade-cache
+          key: macrointel-trade-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            macrointel-trade-${{ runner.os }}-
+
       - name: Refresh public-data release
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           node tools/refresh-world-bank.mjs .
           node tools/enrich-links.mjs .
           node tools/splice-links.mjs .
+
+      - name: Save completed trade requests
+        if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') }}
+        uses: actions/cache/save@v6
+        with:
+          path: tools/.comtrade-cache
+          key: macrointel-trade-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Validate Pages bundle
         run: |
