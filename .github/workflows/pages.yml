@@ -78,6 +78,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
+      - name: Version deployed assets by content
+        run: node tools/version-assets.mjs .
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
