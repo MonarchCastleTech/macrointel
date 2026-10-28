@@ -1,12 +1,12 @@
 /**
  * MacroIntel verified dataset release
- * Built: 2026-10-28T08:47:31.188Z
+ * Built: 2026-10-28T09:44:56.046Z
  * Sources: World Bank Indicators API + UN Comtrade public preview
  */
 
 window.countryMacroData = {
   "meta": {
-    "generatedAt": "2026-10-28T08:47:31.188Z",
+    "generatedAt": "2026-10-28T09:44:56.046Z",
     "sources": {
       "gdp": "World Bank Indicators API · NY.GDP.MKTP.CD",
       "tradeTotals": "World Bank Indicators API · NE.EXP.GNFS.CD / NE.IMP.GNFS.CD",
@@ -31,14 +31,14 @@ window.countryMacroData = {
     },
     "families": {
       "gdp": {
-        "retrievedAt": "2026-10-28T08:40:42.313Z",
-        "observedYears": "2025",
+        "retrievedAt": "2026-10-28T09:44:52.998Z",
+        "observedYears": "2024–2025",
         "countries": 101
       },
       "tradeTotals": {
-        "retrievedAt": "2026-10-28T08:40:42.313Z",
-        "observedYears": "2025 exports · 2025 imports",
-        "countries": 101
+        "retrievedAt": "2026-10-28T09:44:52.998Z",
+        "observedYears": "2022–2025 exports · 2022–2025 imports",
+        "countries": 97
       },
       "bilateralLinks": {
         "retrievedAt": "2026-10-28T08:27:03.745Z",
@@ -53,7 +53,7 @@ window.countryMacroData = {
         "reporters": 80
       }
     },
-    "contentHash": "4fc4d0e516aa3941872fc10f4eb5c760294691385581a01dae74cf994a89e3af"
+    "contentHash": "16055d61aae9c51ece470bea0a6fd6b471f0d5fc22d0b18d009cbb762e27b57a"
   },
   "nodes": [
     {
@@ -61,14 +61,14 @@ window.countryMacroData = {
       "iso3": "USA",
       "country": "United States",
       "gdpUsd": 30769700000000,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 3215368000000,
+      "importsUsd": 4113828000000,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 60,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "CN",
@@ -103,14 +103,14 @@ window.countryMacroData = {
       "iso3": "JPN",
       "country": "Japan",
       "gdpUsd": 4435162999977,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 920960002390,
+      "importsUsd": 958381808469,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 28,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "IN",
@@ -421,15 +421,15 @@ window.countryMacroData = {
       "iso2": "AE",
       "iso3": "ARE",
       "country": "United Arab Emirates",
-      "gdpUsd": 0,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "gdpUsd": 552324919096,
+      "exportsUsd": 558401633764,
+      "importsUsd": 481851599728,
       "exportsEstimated": false,
       "importsEstimated": false,
-      "bubbleRadius": 8,
-      "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "bubbleRadius": 15,
+      "gdpYear": 2024,
+      "exportsYear": 2023,
+      "importsYear": 2023
     },
     {
       "iso2": "SG",
@@ -730,14 +730,14 @@ window.countryMacroData = {
       "iso3": "KAZ",
       "country": "Kazakhstan",
       "gdpUsd": 306239209650,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 92070351467,
+      "importsUsd": 74543688674,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 13,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "PE",
@@ -758,14 +758,14 @@ window.countryMacroData = {
       "iso3": "IRQ",
       "country": "Iraq",
       "gdpUsd": 254367293538,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 111195200000,
+      "importsUsd": 104517100000,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 13,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "DZ",
@@ -786,14 +786,14 @@ window.countryMacroData = {
       "iso3": "NZL",
       "country": "New Zealand",
       "gdpUsd": 264057413740,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 64603559667,
+      "importsUsd": 67872925251,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 13,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "GR",
@@ -842,14 +842,14 @@ window.countryMacroData = {
       "iso3": "QAT",
       "country": "Qatar",
       "gdpUsd": 215559615385,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 161692857143,
+      "importsUsd": 74520054945,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 12,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2022,
+      "importsYear": 2022
     },
     {
       "iso2": "UA",
@@ -884,14 +884,14 @@ window.countryMacroData = {
       "iso3": "KWT",
       "country": "Kuwait",
       "gdpUsd": 157209026926,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 89713098852,
+      "importsUsd": 61521205383,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 12,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "ET",
@@ -1010,14 +1010,14 @@ window.countryMacroData = {
       "iso3": "OMN",
       "country": "Oman",
       "gdpUsd": 109604780696,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 70788296489,
+      "importsUsd": 52261638492,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 11,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "AO",
@@ -1122,14 +1122,14 @@ window.countryMacroData = {
       "iso3": "PAN",
       "country": "Panama",
       "gdpUsd": 90462600000,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 38380161300,
+      "importsUsd": 34017704900,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 11,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "LT",
@@ -1150,14 +1150,14 @@ window.countryMacroData = {
       "iso3": "GHA",
       "country": "Ghana",
       "gdpUsd": 114209905279,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 29197465999,
+      "importsUsd": 28244066026,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 11,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "UY",
@@ -1220,14 +1220,14 @@ window.countryMacroData = {
       "iso3": "BOL",
       "country": "Bolivia",
       "gdpUsd": 64768947525,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 11763846802,
+      "importsUsd": 14018232750,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 10,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "UG",
@@ -1304,14 +1304,14 @@ window.countryMacroData = {
       "iso3": "BHR",
       "country": "Bahrain",
       "gdpUsd": 48965725532,
-      "exportsUsd": 0,
-      "importsUsd": 0,
+      "exportsUsd": 41303457447,
+      "importsUsd": 33044414894,
       "exportsEstimated": false,
       "importsEstimated": false,
       "bubbleRadius": 10,
       "gdpYear": 2025,
-      "exportsYear": 2025,
-      "importsYear": 2025
+      "exportsYear": 2024,
+      "importsYear": 2024
     },
     {
       "iso2": "KH",
