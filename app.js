@@ -1432,7 +1432,7 @@
 
     els.tooltipName.textContent = node.country;
     els.tooltipName.style.color = sectorColor;
-    els.tooltipGdp.textContent = `GDP: ${formatCurrency(node.gdpUsd)} | ${currentYear}`;
+    els.tooltipGdp.textContent = `GDP: ${formatCurrency(node.gdpUsd)} | ${Number.isInteger(node.gdpYear) ? node.gdpYear : "year unavailable"}`;
 
     const sectorSummary = inDefaultSectorMode
       ? `<div style="margin-top:6px;color:#aab6c7;font-weight:600;">Default lens: ${Math.round((node.defaultLensScore || 0) * 100)}/100</div>
@@ -1444,8 +1444,8 @@
 
     els.tooltipTrade.innerHTML = `
       <div>Total trade links (${currentYear}): ${formatCurrency(getTotalTrade(node.iso2))}</div>
-      <div>Exports: ${formatCurrency(node.exportsUsd)}</div>
-      <div>Imports: ${formatCurrency(node.importsUsd)}</div>
+      <div>Exports: ${formatCurrency(node.exportsUsd)} (${Number.isInteger(node.exportsYear) ? node.exportsYear : "year unavailable"})</div>
+      <div>Imports: ${formatCurrency(node.importsUsd)} (${Number.isInteger(node.importsYear) ? node.importsYear : "year unavailable"})</div>
       <div>Trade data: ${formatProvenanceLabel(tradeProvenance)}</div>
       <div>Blocs: ${blocNames.length > 0 ? escapeHtml(blocNames.join(", ")) : "None in configured blocs"}</div>
       <div>${inDefaultSectorMode ? "Default lens" : `${toTitleCase(selectedSector)} data`}: ${inDefaultSectorMode ? "GDP + Trade Heat" : formatProvenanceLabel(sectorProvenance)}</div>
@@ -1572,9 +1572,9 @@
     els.detailName.style.color = sectorColor;
     els.detailIso.textContent = `${country.iso2} | ${country.iso3}`;
 
-    els.detailGdp.textContent = formatCurrency(country.gdpUsd);
-    els.detailExports.textContent = formatCurrency(country.exportsUsd);
-    els.detailImports.textContent = formatCurrency(country.importsUsd);
+    els.detailGdp.textContent = `${formatCurrency(country.gdpUsd)} (${Number.isInteger(country.gdpYear) ? country.gdpYear : "year unavailable"})`;
+    els.detailExports.textContent = `${formatCurrency(country.exportsUsd)} (${Number.isInteger(country.exportsYear) ? country.exportsYear : "year unavailable"})`;
+    els.detailImports.textContent = `${formatCurrency(country.importsUsd)} (${Number.isInteger(country.importsYear) ? country.importsYear : "year unavailable"})`;
 
     const balance = country.exportsUsd - country.importsUsd;
     els.detailBalance.textContent = `${balance >= 0 ? "+" : ""}${formatCurrency(balance)}`;

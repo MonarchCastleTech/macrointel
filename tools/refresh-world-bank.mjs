@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { latestWorldBankValues } from "./world-bank-values.mjs";
 
 const root = path.resolve(process.argv[2] || ".");
 const dataPath = path.join(root, "data", "country-macro-map.js");
@@ -48,15 +49,7 @@ async function collectIndicator(code) {
   const rows = Array.isArray(response) ? response[1] : null;
   if (!Array.isArray(rows)) throw new Error(`World Bank returned no rows for ${code}`);
 
-  const values = {};
-  for (const row of rows) {
-    const iso3 = String(row.countryiso3code || "").toUpperCase();
-    const value = Number(row.value);
-    const year = Number(row.date);
-    if (!wanted.has(iso3) || !Number.isFinite(value) || value < 0 || !Number.isInteger(year)) continue;
-    if (!values[iso3] || year > values[iso3].year) values[iso3] = { value, year };
-  }
-  return values;
+  return latestWorldBankValues(rows, wanted);
 }
 
 const result = { retrievedAt: new Date().toISOString(), targetYear, indicators: {} };

@@ -53,6 +53,9 @@ test("release freshness, methodology, and source attribution stay visible", () =
   assert.match(app, /releaseSources/);
   assert.match(app, /releaseMethodology/);
   assert.match(app, /Each family is dated independently/);
+  assert.match(app, /Number\.isInteger\(country\.gdpYear\)/);
+  assert.match(app, /Number\.isInteger\(country\.exportsYear\)/);
+  assert.match(app, /Number\.isInteger\(country\.importsYear\)/);
   assert.match(app, /families\[key\]/);
   assert.doesNotMatch(css, /@keyframes pulse/);
 });
