@@ -1,19 +1,19 @@
 /**
  * MacroIntel verified dataset release
- * Built: 2026-10-28T09:44:56.046Z
+ * Built: 2026-11-01T10:27:49.381Z
  * Sources: World Bank Indicators API + UN Comtrade public preview
  */
 
 window.countryMacroData = {
   "meta": {
-    "generatedAt": "2026-10-28T09:44:56.046Z",
+    "generatedAt": "2026-11-01T10:27:49.381Z",
     "sources": {
       "gdp": "World Bank Indicators API · NY.GDP.MKTP.CD",
       "tradeTotals": "World Bank Indicators API · NE.EXP.GNFS.CD / NE.IMP.GNFS.CD",
       "bilateralLinks": "UN Comtrade public preview · HS TOTAL annual exports",
       "sectors": "UN Comtrade public preview · selected HS chapter annual exports"
     },
-    "snapshotDate": "2026-10-28",
+    "snapshotDate": "2026-11-01",
     "linkYears": [
       2025,
       2024
@@ -31,12 +31,12 @@ window.countryMacroData = {
     },
     "families": {
       "gdp": {
-        "retrievedAt": "2026-10-28T09:44:52.998Z",
+        "retrievedAt": "2026-11-01T10:27:45.715Z",
         "observedYears": "2024–2025",
         "countries": 101
       },
       "tradeTotals": {
-        "retrievedAt": "2026-10-28T09:44:52.998Z",
+        "retrievedAt": "2026-11-01T10:27:45.715Z",
         "observedYears": "2022–2025 exports · 2022–2025 imports",
         "countries": 97
       },
